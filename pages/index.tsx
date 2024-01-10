@@ -5,20 +5,48 @@ export type ItemType = {
   type: "large" | "small" | "banner";
   img?: string;
   text?: string;
+  height?: string;
+  title?: string;
+  titleColor?: string;
+  titleAlign?: string;
+  minHeight?: string;
 }
 
 const config: ItemType[] = [
   {
     type: "large",
-    img: "/images/img001.png",
+    img: "/images/1.png",
+    minHeight: "400px",
+    height: "40vw"
   },
   {
     type: "small",
-    img: "/images/img002.png",
+    img: "/images/7.png",
+    minHeight: "400px",
+    height: "40vw",
+    title: "Lorem Ipsum",
+    titleColor: "white",
+    titleAlign: "end",
   },
   {
     type: "small",
-    img: "/images/img003.png",
+    img: "/images/8.png",
+    minHeight: "400px",
+    height: "40vw"
+
+  },
+  {
+    type: "small",
+    img: "/images/2.png",
+    minHeight: "400px",
+    height: "40vw"
+  },
+  {
+    type: "small",
+    img: "/images/3.png",
+    minHeight: "400px",
+    height: "40vw"
+
   },
   {
     type: "banner",
@@ -27,18 +55,47 @@ const config: ItemType[] = [
   {
     type: "large",
     img: "/images/img004.png",
+    minHeight: "400px",
+    height: "50vw",
+    title: "Lorem Ipsum",
+    titleColor: "white",
+    titleAlign: "end",
   },
   {
     type: "small",
-    img: "/images/img005.png",
+    img: "/images/5.png",
+    minHeight: "400px",
+    height: "40vw"
   },
   {
     type: "small",
+    img: "/images/6.png",
+    minHeight: "400px",
+    height: "40vw"
+  },
+  {
+    type: "small",
+    img: "/images/2.png",
+    minHeight: "400px",
+    height: "40vw"
+  },
+  {
+    type: "small",
+    img: "/images/3.png",
+    minHeight: "400px",
+    height: "40vw"
+  },
+  {
+    type: "large",
     img: "/images/img006.png",
+    minHeight: "400px",
+    height: "30vw"
   },
   {
     type: "large",
     img: "/images/img007.png",
+    minHeight: "400px",
+    height: "50vw"
   },
 ]
 
@@ -46,15 +103,15 @@ export default function HomePage() {
 
   const BuildSectionComponent = (item: ItemType, index: Number) => {
 
-    const { type, img, text } = item
-
     switch (item.type) {
       case "large":
-        return <SectionLarge type={type} img={img} text={text} key={`SectionLarge-${index}`} />
+        // IT's THE SAME
+        // return <SectionLarge  height={height} type={type} img={img} text={text} key={`SectionLarge-${index}`} />
+        return <SectionLarge {...item} key={`SectionLarge-${index}`} />
       case "small":
-        return <SectionSmall type={type} img={img} text={text} key={`SectionSmall-${index}`} />
+        return <SectionSmall {...item} key={`SectionSmall-${index}`} />
       case "banner":
-        return <SectionBanner type={type} img={img} text={text} key={`SectionBanner-${index}`} />
+        return <SectionBanner {...item} key={`SectionBanner-${index}`} />
       default:
         return <></>
     }
@@ -71,7 +128,7 @@ export default function HomePage() {
       <main className={`stretch`}>
         <Home />
         <div className='container-fluid'>
-          <div className='row'>  
+          <div className='row'>
             {config.map((item, index) => BuildSectionComponent(item, index))}
           </div>
         </div>
@@ -85,14 +142,17 @@ export const Home = () => {
   return (
     <div className='Home stretch'>
       <div className='container'>
-        <div className='row justify-content-between'>
+        <div className='row justify-content-between align-items-center'>
           <div className='w-fit-content d-flex'>
-            <h1 className='f-86'><b>aire</b></h1>
+            <h1 className='f-150 f-helvetica f-heavy mb-0'>
+              <span className='ls-n-7'>ai</span>
+              <span className="ls-n-2">re</span>
+            </h1>
           </div>
-          <div className='w-fit-content d-flex flex-column mt-3'>
-            <p className='f-40 lh-34 mb-0 c-black'><b>diseño</b></p>
-            <p className='f-40 lh-34 mb-0 c-black'><b>audiovisual</b></p>
-            <p className='f-40 lh-34 mb-0 c-black'><b>comunicacion</b></p>
+          <div className='w-fit-content d-flex flex-column'>
+            <p className='f-40 f-helvetica f-heavy lh-30 ls-n-2 mb-0 c-black'><b>diseño</b></p>
+            <p className='f-40 f-helvetica f-heavy lh-30 ls-n-2 mb-0 c-black'><b>audiovisual</b></p>
+            <p className='f-40 f-helvetica f-heavy lh-30 ls-n-2 mb-0 c-black'><b>comunicacion</b></p>
           </div>
         </div>
       </div>
@@ -102,23 +162,57 @@ export const Home = () => {
 
 
 
-export const SectionLarge = ({ text, type, img }: ItemType) => {
+export const SectionLarge = ({ text, type, img, height, title, titleColor, titleAlign, minHeight }: ItemType) => {
+
+  const style = {
+    backgroundImage: `url(${img})`,
+    height: height ? height : "50vw",
+    minHeight: minHeight ? minHeight : "auto",
+    alignItems: titleAlign ? titleAlign : "start",
+    display: "flex"
+  }
+
+  const titleStyle = {
+    color: titleColor ? titleColor : "black"
+  }
+
   return (
-    <div className='Section SectionLarge col-12' style={{ backgroundImage: `url(${img})` }}>
+    <div className='Section SectionLarge col-12' style={style}>
+      {title && <p className='f-50' style={titleStyle}><b>{title}</b></p>}
     </div>
   )
 }
 
-export const SectionSmall = ({ text, type, img }: ItemType) => {
+export const SectionSmall = ({ text, type, img, height, title, titleColor, titleAlign, minHeight }: ItemType) => {
+
+  const style = {
+    backgroundImage: `url(${img})`,
+    height: height ? height : "50vw",
+    minHeight: minHeight ? minHeight : "auto",
+    alignItems: titleAlign ? titleAlign : "start",
+    display: "flex"
+  }
+
+  const titleStyle = {
+    color: titleColor ? titleColor : "black"
+  }
+
   return (
-    <div className='Section SectionSmall col-12 col-md-6' style={{ backgroundImage: `url(${img})` }}>
+    <div className='Section SectionSmall col-12 col-md-6' style={style}>
+      {title && <p className='f-50' style={titleStyle}><b>{title}</b></p>}
     </div>
   )
 }
 
-export const SectionBanner = ({ text, type, img }: ItemType) => {
+export const SectionBanner = ({ text, type, img, height }: ItemType) => {
+
+  const style = {
+    backgroundImage: `url(${img})`,
+    height: height ? height : "50vw"
+  }
+
   return (
-    <div className='Section SectionBanner col-12' style={{ backgroundImage: `url(${img})` }}>
+    <div className='Section SectionBanner col-12' style={style}>
       <p className='f-50 c-white'><b>{text}</b></p>
     </div>
   )

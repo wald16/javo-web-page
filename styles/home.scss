@@ -9,4 +9,10 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
+  filter: grayscale(40%);
+  transition: all 0.2s ease;
+  &:hover {
+    filter: grayscale(0%);
+  }
 }
