@@ -4,15 +4,40 @@
 }
 
 .Section {
-  height: 550px;
+  min-height: 300px;
   background-color: black;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  opacity: 0.6;
   cursor: pointer;
   filter: grayscale(40%);
-  transition: all 0.2s ease;
+  transition: filter 0.2s ease-in-out, opacity 1s ease-in-out;
+  overflow: hidden;
+
+  .SectionImage {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scale(1);
+    transition: all 1s ease-in;
+  }
+  .SectionText {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    .SectionTextHolder {
+      padding: 10px;
+    }
+  }
   &:hover {
+    opacity: 1;
     filter: grayscale(0%);
+
+    .SectionImage {
+      transform: scale(1.1);
+      transition: all 3s ease-in;
+    }
   }
 }

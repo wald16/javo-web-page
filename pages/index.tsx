@@ -8,8 +8,12 @@ export type ItemType = {
   height?: string;
   title?: string;
   titleColor?: string;
-  titleAlign?: string;
+  textAlign?: string;
+  description?: string;
+  descriptionColor?: string;
   minHeight?: string;
+  mobileHeight?: string;
+  mobileMinHeight?: string;
 }
 
 const config: ItemType[] = [
@@ -17,73 +21,82 @@ const config: ItemType[] = [
     type: "large",
     img: "/images/1.png",
     minHeight: "400px",
-    height: "40vw"
+    height: "40vh",
+    mobileHeight: "320px",
+    mobileMinHeight: "auto",
   },
   {
     type: "small",
     img: "/images/7.png",
     minHeight: "400px",
-    height: "40vw",
+    height: "40vh",
     title: "Lorem Ipsum",
     titleColor: "white",
-    titleAlign: "end",
+    textAlign: "end",
   },
   {
     type: "small",
     img: "/images/8.png",
     minHeight: "400px",
-    height: "40vw"
+    height: "40vh"
 
   },
   {
     type: "small",
     img: "/images/2.png",
     minHeight: "400px",
-    height: "40vw"
+    height: "40vh"
   },
   {
     type: "small",
     img: "/images/3.png",
     minHeight: "400px",
-    height: "40vw"
+    height: "40vh"
 
   },
   {
     type: "banner",
-    text: "lorem ipsum",
+    title: "Lorem Ipsum",
+    titleColor: "white",
+    description: "Lorem Ipsum is simply dummy text.",
+    descriptionColor: "#c0c0c0",
+    textAlign: "center",
+    height: "50vh",
   },
   {
     type: "large",
     img: "/images/img004.png",
     minHeight: "400px",
-    height: "50vw",
+    height: "50vh",
     title: "Lorem Ipsum",
     titleColor: "white",
-    titleAlign: "end",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    descriptionColor: "#c0c0c0",
+    textAlign: "end",
   },
   {
     type: "small",
     img: "/images/5.png",
     minHeight: "400px",
-    height: "40vw"
+    height: "40vh"
   },
   {
     type: "small",
     img: "/images/6.png",
     minHeight: "400px",
-    height: "40vw"
+    height: "40vh"
   },
   {
     type: "small",
     img: "/images/2.png",
     minHeight: "400px",
-    height: "40vw"
+    height: "40vh"
   },
   {
     type: "small",
     img: "/images/3.png",
     minHeight: "400px",
-    height: "40vw"
+    height: "40vh"
   },
   {
     type: "large",
@@ -162,13 +175,32 @@ export const Home = () => {
 
 
 
-export const SectionLarge = ({ text, type, img, height, title, titleColor, titleAlign, minHeight }: ItemType) => {
+export const SectionLarge = ({
+  text,
+  type,
+  img,
+  height,
+  title,
+  titleColor,
+  textAlign,
+  description,
+  descriptionColor,
+  minHeight,
+  mobileHeight,
+  mobileMinHeight,
+}: ItemType) => {
 
   const style = {
     backgroundImage: `url(${img})`,
     height: height ? height : "50vw",
     minHeight: minHeight ? minHeight : "auto",
-    alignItems: titleAlign ? titleAlign : "start",
+    display: "flex"
+  }
+
+  const styleMobile = {
+    backgroundImage: `url(${img})`,
+    height: mobileHeight ? mobileHeight : height ? height : "50vw",
+    minHeight: mobileMinHeight ? mobileMinHeight : minHeight ? minHeight : "50vw",
     display: "flex"
   }
 
@@ -176,44 +208,139 @@ export const SectionLarge = ({ text, type, img, height, title, titleColor, title
     color: titleColor ? titleColor : "black"
   }
 
+  const descriptionStyle = {
+    color: descriptionColor ? descriptionColor : "black"
+  }
+
+  const textStyle = {
+    justifyContent: textAlign ? textAlign : "start",
+    display: "flex",
+    flexDirection: "column" as "column",
+    textShadow: "0px 0px 7px black",
+  }
+
   return (
-    <div className='Section SectionLarge col-12' style={style}>
-      {title && <p className='f-50' style={titleStyle}><b>{title}</b></p>}
+    <div className='Section SectionLarge col-12 p-0'>
+      <div className='SectionImage d-none d-md-flex' style={style} />
+      <div className='SectionImage d-flex d-md-none' style={styleMobile} />
+      {title || description ? (
+        <div className='SectionText'>
+          <div className='SectionTextHolder' style={textStyle}>
+            {title && <p className='f-50 lh-48' style={titleStyle}><b>{title}</b></p>}
+            {description && <p className='f-50 lh-48' style={descriptionStyle}><b>{description}</b></p>}
+          </div>
+        </div>
+      ) : <></>}
     </div>
   )
 }
 
-export const SectionSmall = ({ text, type, img, height, title, titleColor, titleAlign, minHeight }: ItemType) => {
+export const SectionSmall = ({
+  text,
+  type,
+  img,
+  height,
+  title,
+  titleColor,
+  textAlign,
+  description,
+  descriptionColor,
+  minHeight,
+  mobileHeight,
+  mobileMinHeight,
+}: ItemType) => {
 
   const style = {
     backgroundImage: `url(${img})`,
     height: height ? height : "50vw",
     minHeight: minHeight ? minHeight : "auto",
-    alignItems: titleAlign ? titleAlign : "start",
     display: "flex"
+  }
+
+  const styleMobile = {
+    backgroundImage: `url(${img})`,
+    height: mobileHeight ? mobileHeight : height ? height : "50vw",
+    minHeight: mobileMinHeight ? mobileMinHeight : minHeight ? minHeight : "50vw",
+    display: "flex"
+  }
+
+
+  const titleStyle = {
+    color: titleColor ? titleColor : "black"
+  }
+
+  const descriptionStyle = {
+    color: descriptionColor ? descriptionColor : "black"
+  }
+
+  const textStyle = {
+    justifyContent: textAlign ? textAlign : "start",
+    display: "flex",
+    flexDirection: "column" as "column",
+    textShadow: "0px 0px 7px black",
+  }
+
+  return (
+    <div className='Section SectionSmall col-12 col-md-6 p-0'>
+      <div className='SectionImage d-none d-md-flex' style={style} />
+      <div className='SectionImage d-flex d-md-none' style={styleMobile} />
+      {title || description ? (
+        <div className='SectionText'>
+          <div className='SectionTextHolder' style={textStyle}>
+            {title && <p className='f-50 lh-48' style={titleStyle}><b>{title}</b></p>}
+            {description && <p className='f-50 lh-48' style={descriptionStyle}><b>{description}</b></p>}
+          </div>
+        </div>
+      ) : <></>}
+    </div>
+  )
+}
+
+export const SectionBanner = ({ 
+  text,
+  type,
+  img,
+  height,
+  title,
+  titleColor,
+  textAlign,
+  description,
+  descriptionColor,
+  minHeight,
+  mobileHeight,
+  mobileMinHeight,
+}: ItemType) => {
+
+  const style = {
+    backgroundImage: `url(${img})`,
+    height: height ? height : "50vh"
   }
 
   const titleStyle = {
     color: titleColor ? titleColor : "black"
   }
 
-  return (
-    <div className='Section SectionSmall col-12 col-md-6' style={style}>
-      {title && <p className='f-50' style={titleStyle}><b>{title}</b></p>}
-    </div>
-  )
-}
+  const descriptionStyle = {
+    color: descriptionColor ? descriptionColor : "black"
+  }
 
-export const SectionBanner = ({ text, type, img, height }: ItemType) => {
-
-  const style = {
-    backgroundImage: `url(${img})`,
-    height: height ? height : "50vw"
+  const textStyle = {
+    justifyContent: textAlign ? textAlign : "start",
+    display: "flex",
+    flexDirection: "column" as "column",
+    textShadow: "0px 0px 7px black",
   }
 
   return (
     <div className='Section SectionBanner col-12' style={style}>
-      <p className='f-50 c-white'><b>{text}</b></p>
+      {title || description ? (
+        <div className='SectionText'>
+          <div className='SectionTextHolder' style={textStyle}>
+            {title && <p className='f-50 lh-48' style={titleStyle}><b>{title}</b></p>}
+            {description && <p className='f-50 lh-48' style={descriptionStyle}><b>{description}</b></p>}
+          </div>
+        </div>
+      ) : <></>}
     </div>
   )
 }
