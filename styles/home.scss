@@ -1,6 +1,7 @@
 .Home {
   background-color: $orange;
   min-height: 90vh;
+  z-index: 9999;
 }
 
 .Section {
@@ -20,6 +21,7 @@
     transform: scale(1);
     transition: all 1s ease-in;
   }
+
   .SectionText {
     position: absolute;
     width: 100%;
@@ -27,10 +29,12 @@
     top: 0px;
     left: 0px;
     display: flex;
+
     .SectionTextHolder {
       padding: 10px;
     }
   }
+
   &:hover {
     opacity: 1;
     filter: grayscale(0%);
@@ -38,6 +42,62 @@
     .SectionImage {
       transform: scale(1.1);
       transition: all 3s ease-in;
+    }
+  }
+}
+
+
+.Header {
+  background-color: #ea581d;
+  position: fixed;
+  right: 0px;
+  width: fit-content;
+  z-index: 999;
+  padding: 16px;
+  top: 40px;
+  transition: all 0.2s ease-in-out;
+
+  .close-icon,
+  .open-icon {
+    p {
+      font-weight: bold;
+      color: black;
+      cursor: pointer;
+      font-size: 20px;
+      margin-bottom: 0px;
+    }
+
+  }
+
+  &.active {
+    .items {
+      transition: all 0.2s ease-in-out;
+      width: 200px;
+      height: 150px;
+      max-width: fit-content;
+      max-height: fit-content;
+    }
+  }
+
+  .items {
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+
+    .item {
+      padding: 2px;
+
+      h3 {
+        font-size: 20px;
+        margin-bottom: 0px;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          color: black;
+        }
+      }
     }
   }
 }

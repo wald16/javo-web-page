@@ -1,10 +1,13 @@
 import Head from 'next/head'
+import { useRouter } from 'next/router';
+import React from 'react';
 
 
 export type ItemType = {
-  type: "large" | "small" | "banner";
+  type: "large" | "small" | "banner" | "key-link";
   img?: string;
   text?: string;
+  href?: string;
   height?: string;
   title?: string;
   titleColor?: string;
@@ -17,6 +20,7 @@ export type ItemType = {
 }
 
 const config: ItemType[] = [
+  
   {
     type: "large",
     img: "/images/1.png",
@@ -24,6 +28,10 @@ const config: ItemType[] = [
     height: "40vh",
     mobileHeight: "320px",
     mobileMinHeight: "auto",
+  },
+  {
+    type: "key-link",
+    href: "campanas",
   },
   {
     type: "small",
@@ -52,7 +60,10 @@ const config: ItemType[] = [
     img: "/images/3.png",
     minHeight: "400px",
     height: "40vh"
-
+  },
+  {
+    type: "key-link",
+    href: "identidad",
   },
   {
     type: "banner",
@@ -73,6 +84,10 @@ const config: ItemType[] = [
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     descriptionColor: "#c0c0c0",
     textAlign: "end",
+  },
+  {
+    type: "key-link",
+    href: "espacios",
   },
   {
     type: "small",
@@ -99,10 +114,18 @@ const config: ItemType[] = [
     height: "40vh"
   },
   {
+    type: "key-link",
+    href: "popurri",
+  },
+  {
     type: "large",
     img: "/images/img006.png",
     minHeight: "400px",
     height: "30vw"
+  },
+  {
+    type: "key-link",
+    href: "nosotros",
   },
   {
     type: "large",
@@ -125,6 +148,8 @@ export default function HomePage() {
         return <SectionSmall {...item} key={`SectionSmall-${index}`} />
       case "banner":
         return <SectionBanner {...item} key={`SectionBanner-${index}`} />
+      case "key-link":
+          return <SectionKeyLink {...item} key={`SectionKeyLink-${index}`} />
       default:
         return <></>
     }
@@ -140,6 +165,7 @@ export default function HomePage() {
       </Head>
       <main className={`stretch`}>
         <Home />
+        <Header />
         <div className='container-fluid'>
           <div className='row'>
             {config.map((item, index) => BuildSectionComponent(item, index))}
@@ -150,6 +176,51 @@ export default function HomePage() {
   )
 }
 
+export const Header = () => {
+  const router = useRouter();
+
+  const items = [
+    {
+      key: "campanas",
+      name: "Campañas"
+    },
+    {
+      key: "identidad",
+      name: "Identidad"
+    },
+    {
+      key: "espacios",
+      name: "Espacios"
+    },
+    {
+      key: "popurri",
+      name: "Popurri"
+    },
+    {
+      key: "nosotros",
+      name: "Nosotros"
+    },
+  ]
+
+  const [active, setActive] = React.useState(false);
+
+  return (
+    <div className={`Header ${active ? "active" : ""}`}>
+      {!active ? (
+        <div className='open-icon' onClick={() => setActive(true)}><p>O</p></div>
+      ) : (
+        <div className='close-icon' onClick={() => setActive(false)}><p>X</p></div>
+      )}
+      <div className='items'>
+        {items.map((item, index) => (
+          <div className='item' key={item.key} onClick={() => router.push("#"+item.key)}>
+            <h3>{item.name}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
 
 export const Home = () => {
   return (
@@ -296,7 +367,7 @@ export const SectionSmall = ({
   )
 }
 
-export const SectionBanner = ({ 
+export const SectionBanner = ({
   text,
   type,
   img,
@@ -342,5 +413,13 @@ export const SectionBanner = ({
         </div>
       ) : <></>}
     </div>
+  )
+}
+
+export const SectionKeyLink = ({
+  type,href,
+}: ItemType) => {
+  return (
+    <div className='SectionKeyLink' id={href} />
   )
 }
