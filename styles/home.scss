@@ -101,3 +101,33 @@
     }
   }
 }
+
+
+.Modal-Wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.211);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .Modal {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    min-width: 400px;
+    min-height: 400px;
+    background-color: #ea581d;
+    z-index: 9999;
+    .Modal-Header {}
+
+    .Modal-Body {
+      .top {}
+
+      .bottom {}
+    }
+
+    .Modal-Footer {}
+
+  }
+}
