@@ -151,7 +151,7 @@ const config: ItemType[] = [
     mobileHeight: "320px",
     mobileMinHeight: "auto",
     clickeable: false,
-    title: "VIDEO BRO",
+    title: "VIDEO",
     titleColor: "white",
     video: "   "
   },
