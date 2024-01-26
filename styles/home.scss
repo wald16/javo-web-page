@@ -9,16 +9,18 @@
   background-color: black;
   opacity: 0.6;
   cursor: pointer;
-  filter: grayscale(40%);
+  filter: grayscale(0%);
   transition: filter 0.2s ease-in-out, opacity 1s ease-in-out;
   overflow: hidden;
 
   .SectionImage {
     width: 100%;
+    height: 100%;
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transform: scale(1);
+
     transition: all 1s ease-in;
   }
 
@@ -32,17 +34,23 @@
 
     .SectionTextHolder {
       padding: 10px;
+
+      .title {
+        margin-bottom: 20px;
+        font-size: 80px;
+        line-height: 70px;
+      }
+
+      .description {
+
+        line-height: 60px;
+        width: 50%
+      }
     }
   }
 
   &:hover {
-    opacity: 1;
-    filter: grayscale(0%);
-
-    .SectionImage {
-      transform: scale(1.1);
-      transition: all 3s ease-in;
-    }
+    filter: hue-rotate(180deg);
   }
 }
 
@@ -111,6 +119,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   .Modal {
     display: flex;
     width: fit-content;
@@ -119,6 +128,7 @@
     min-height: 400px;
     background-color: #ea581d;
     z-index: 9999;
+
     .Modal-Header {}
 
     .Modal-Body {
@@ -129,5 +139,116 @@
 
     .Modal-Footer {}
 
+  }
+}
+
+.footer {
+  min-height: 400px;
+  background-color: white;
+  color: black;
+
+  .finalContent {
+    font-size: 80px;
+    font-weight: 600;
+    padding: 0px 10px;
+    color: $orange;
+    margin-top: -30px;
+    display: flex;
+
+    p {
+      margin: 0px;
+    }
+    .phrase{
+      // background-color: red;
+      height: 100px;
+      color: gray;
+      display: flex;
+      justify-content:end;
+      align-items: left;
+      text-align: left;
+    }
+    .city{
+      color: black;
+      // background-color: red;
+      margin-left: 20px;
+      margin-bottom: 10px;
+      font-size: 30px;
+      display: flex;
+      align-items: end;
+    }
+  }
+
+  .footerTitle {
+    padding: 10px;
+    margin-top: -20px;
+    margin-bottom: -40px;
+    color: black;
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: -5px;
+  }
+
+  .footerText {
+    padding: 10px;
+    color: gray;
+    font-size: 50px;
+    font-weight: 700;
+    word-wrap: break-word;
+    text-align: start;
+    word-spacing: 0px;
+    p{
+      margin: -20px 5px;
+    }
+  }
+
+  .blockContainer {
+    width: 100%;
+    color: black;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+
+    .block {
+      margin: 10px;
+
+      .blockText {
+        word-wrap: break-word;
+        text-align: center;
+      }
+
+      .blockTitle {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+      }
+    }
+
+  }
+
+  .biographies {
+    justify-content: start;
+    height: 300px;
+    margin-bottom: 30px;
+    padding: 10px;
+    display: flex;
+
+    .biographie {
+      height: 100%;
+      width: 300px;
+
+      .image {
+        background-color: green;
+        width: 100%;
+        height: 80%;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .name {
+        color: cornflowerblue;
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
   }
 }

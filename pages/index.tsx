@@ -18,18 +18,142 @@ export type ItemType = {
   minHeight?: string;
   mobileHeight?: string;
   mobileMinHeight?: string;
+  fontSize?: number,
+  video?: string,
+  bkg?: string
 }
 
-const config: ItemType[] = [
+// const config: ItemType[] = [
 
+//   {
+//     type: "large",
+//     img: "/images/1.png",
+//     minHeight: "400px",
+//     height: "40vh",
+//     mobileHeight: "320px",
+//     mobileMinHeight: "auto",
+//     clickeable: true,
+//   },
+//   {
+//     type: "key-link",
+//     href: "campanas",
+//   },
+//   {
+//     type: "small",
+//     img: "/images/7.png",
+//     minHeight: "400px",
+//     height: "40vh",
+//     title: "Lorem Ipsum",
+//     titleColor: "white",
+//     textAlign: "end",
+//   },
+//   {
+//     type: "small",
+//     img: "/images/8.png",
+//     minHeight: "400px",
+//     height: "40vh"
+
+//   },
+//   {
+//     type: "small",
+//     img: "/images/2.png",
+//     minHeight: "400px",
+//     height: "40vh"
+//   },
+//   {
+//     type: "small",
+//     img: "/images/3.png",
+//     minHeight: "400px",
+//     height: "40vh"
+//   },
+//   {
+//     type: "key-link",
+//     href: "identidad",
+//   },
+//   {
+//     type: "banner",
+//     title: "Lorem Ipsum",
+//     titleColor: "white",
+//     description: "Lorem Ipsum is simply dummy text.",
+//     descriptionColor: "#c0c0c0",
+//     textAlign: "center",
+//     height: "50vh",
+//   },
+//   {
+//     type: "large",
+//     img: "/images/img004.png",
+//     minHeight: "400px",
+//     height: "50vh",
+//     title: "Lorem Ipsum",
+//     titleColor: "white",
+//     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+//     descriptionColor: "#c0c0c0",
+//     textAlign: "end",
+//   },
+//   {
+//     type: "key-link",
+//     href: "espacios",
+//   },
+//   {
+//     type: "small",
+//     img: "/images/5.png",
+//     minHeight: "400px",
+//     height: "40vh"
+//   },
+//   {
+//     type: "small",
+//     img: "/images/6.png",
+//     minHeight: "400px",
+//     height: "40vh"
+//   },
+//   {
+//     type: "small",
+//     img: "/images/2.png",
+//     minHeight: "400px",
+//     height: "40vh"
+//   },
+//   {
+//     type: "small",
+//     img: "/images/3.png",
+//     minHeight: "400px",
+//     height: "40vh"
+//   },
+//   {
+//     type: "key-link",
+//     href: "popurri",
+//   },
+//   {
+//     type: "large",
+//     img: "/images/img006.png",
+//     minHeight: "400px",
+//     height: "30vw"
+//   },
+//   {
+//     type: "key-link",
+//     href: "nosotros",
+//   },
+//   {
+//     type: "large",
+//     img: "/images/img9.jpg",
+//     title:"Nosotros",
+//     titleColor:"white",
+//     minHeight: "400px",
+//     height: "50vw",
+//     clickeable: true,
+//   },
+// ]
+
+const config: ItemType[] = [
   {
     type: "large",
-    img: "/images/1.png",
     minHeight: "400px",
     height: "40vh",
     mobileHeight: "320px",
     mobileMinHeight: "auto",
-    clickeable: true,
+    clickeable: false,
+    title: "VIDEO BRO",
+    titleColor: "white",
+    video: "   "
   },
   {
     type: "key-link",
@@ -37,7 +161,58 @@ const config: ItemType[] = [
   },
   {
     type: "small",
-    img: "/images/7.png",
+    img: "/images/img3.jpg",
+    minHeight: "400px",
+    height: "40vh",
+    title: "Campañas",
+    titleColor: "white",
+    textAlign: "end",
+  },
+  {
+    type: "small",
+    img: "/images/img4.jpg",
+    minHeight: "400px",
+    height: "40vh"
+  },
+  {
+    type: "small",
+    img: "/images/img5.jpg",
+    minHeight: "400px",
+    height: "40vh"
+  },
+  {
+    type: "small",
+    img: "/images/img13.jpg",
+    minHeight: "400px",
+    height: "40vh"
+  },
+  {
+    type: "large",
+    minHeight: "400px",
+    height: "40vh",
+    mobileHeight: "320px",
+    mobileMinHeight: "auto",
+    clickeable: false,
+    title: "Hacemos comunicación visual ",
+    titleColor: "orange",
+    descriptionColor: "white",
+    description: "Diseñamos y esarrollamos proyectos efectivos que potencian relatos y fortalecen marcas",
+    textAlign: "left",
+  },
+  {
+    type: "large",
+    minHeight: "500px",
+    img: "/images/img8.jpg",
+    height: "50vh",
+    mobileHeight: "420px",
+    mobileMinHeight: "auto",
+    clickeable: false,
+    title: "LARGE BUT HIGHER",
+    titleColor: "white"
+  },
+  {
+    type: "small",
+    img: "/images/img14.jpg",
     minHeight: "400px",
     height: "40vh",
     title: "Lorem Ipsum",
@@ -46,96 +221,43 @@ const config: ItemType[] = [
   },
   {
     type: "small",
-    img: "/images/8.png",
-    minHeight: "400px",
-    height: "40vh"
-
-  },
-  {
-    type: "small",
-    img: "/images/2.png",
+    img: "/images/img11.jpg",
     minHeight: "400px",
     height: "40vh"
   },
   {
     type: "small",
-    img: "/images/3.png",
+    img: "/images/img6.jpg",
     minHeight: "400px",
     height: "40vh"
   },
   {
-    type: "key-link",
-    href: "identidad",
+    type: "small",
+    img: "/images/img7.jpg",
+    minHeight: "400px",
+    height: "40vh"
   },
   {
-    type: "banner",
-    title: "Lorem Ipsum",
+    type: "large",
+    minHeight: "300px",
+    height: "30vh",
+    mobileHeight: "420px",
+    mobileMinHeight: "auto",
+    img: "/images/img10.jpg",
+    clickeable: false,
+    title: "LARGE BUT SHORTER",
+    titleColor: "white"
+  },
+  {
+    type: "large",
+    img: "/images/img9.jpg",
+    title: "Nosotros",
     titleColor: "white",
-    description: "Lorem Ipsum is simply dummy text.",
-    descriptionColor: "#c0c0c0",
-    textAlign: "center",
-    height: "50vh",
-  },
-  {
-    type: "large",
-    img: "/images/img004.png",
-    minHeight: "400px",
-    height: "50vh",
-    title: "Lorem Ipsum",
-    titleColor: "white",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    descriptionColor: "#c0c0c0",
-    textAlign: "end",
-  },
-  {
-    type: "key-link",
-    href: "espacios",
-  },
-  {
-    type: "small",
-    img: "/images/5.png",
-    minHeight: "400px",
-    height: "40vh"
-  },
-  {
-    type: "small",
-    img: "/images/6.png",
-    minHeight: "400px",
-    height: "40vh"
-  },
-  {
-    type: "small",
-    img: "/images/2.png",
-    minHeight: "400px",
-    height: "40vh"
-  },
-  {
-    type: "small",
-    img: "/images/3.png",
-    minHeight: "400px",
-    height: "40vh"
-  },
-  {
-    type: "key-link",
-    href: "popurri",
-  },
-  {
-    type: "large",
-    img: "/images/img006.png",
-    minHeight: "400px",
-    height: "30vw"
-  },
-  {
-    type: "key-link",
-    href: "nosotros",
-  },
-  {
-    type: "large",
-    img: "/images/img007.png",
-    minHeight: "400px",
+    minHeight: "500px",
     height: "50vw",
     clickeable: true,
   },
+
 ]
 
 export default function HomePage() {
@@ -177,6 +299,7 @@ export default function HomePage() {
           </div>
         </div>
         {modalInfo && (<Modal modalInfo={modalInfo} setModalInfo={setModalInfo} />)}
+        <Footer />
       </main>
     </>
   )
@@ -185,7 +308,7 @@ export default function HomePage() {
 export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, modalInfo: ItemType }) => {
   return (
     <div className='Modal-Wrapper'>
-      <div className='Modal' style={{ backgroundImage: `url(${modalInfo.img})`}}>
+      <div className='Modal' style={{ backgroundImage: `url(${modalInfo.img})` }}>
         <div className='Modal-Header'>
           <p className='close p-2' onClick={() => setModalInfo(undefined)}>X</p>
         </div>
@@ -283,14 +406,16 @@ export const SectionLarge = (props: ItemType & { setModalInfo: Function }) => {
     minHeight,
     mobileHeight,
     mobileMinHeight,
-    setModalInfo
+    setModalInfo,
+    fontSize
   } = props;
 
   const style = {
     backgroundImage: `url(${img})`,
     height: height ? height : "50vw",
     minHeight: minHeight ? minHeight : "auto",
-    display: "flex"
+    display: "flex",
+
   }
 
   const styleMobile = {
@@ -301,7 +426,8 @@ export const SectionLarge = (props: ItemType & { setModalInfo: Function }) => {
   }
 
   const titleStyle = {
-    color: titleColor ? titleColor : "black"
+    color: titleColor ? titleColor : "black",
+    fontSize: fontSize
   }
 
   const descriptionStyle = {
@@ -313,6 +439,7 @@ export const SectionLarge = (props: ItemType & { setModalInfo: Function }) => {
     display: "flex",
     flexDirection: "column" as "column",
     textShadow: "0px 0px 7px black",
+
   }
 
   return (
@@ -322,11 +449,99 @@ export const SectionLarge = (props: ItemType & { setModalInfo: Function }) => {
       {title || description ? (
         <div className='SectionText'>
           <div className='SectionTextHolder' style={textStyle}>
-            {title && <p className='f-50 lh-48' style={titleStyle}><b>{title}</b></p>}
-            {description && <p className='f-50 lh-48' style={descriptionStyle}><b>{description}</b></p>}
+            {title && <p className='f-50 lh-48 title' style={titleStyle}><b>{title}</b></p>}
+            {description && <p className='f-50 lh-48 description' style={descriptionStyle}><b>{description}</b></p>}
           </div>
         </div>
       ) : <></>}
+    </div>
+  )
+}
+export const Footer = () => {
+  const content = [
+    {
+      title: "Campañas",
+      text: "SOMETHIN SOMETHING SOMETHING SOMETHINB SOMETHING SOMETHING SOMETHING SOMETHING"
+    },
+    {
+      title: "Ciudades",
+      text: "SOMETHIN SOMETHING SOMETHING SOMETHINB SOMETHING SOMETHING SOMETHING SOMETHING"
+    }, {
+      title: "Espacios",
+      text: "SOMETHIN SOMETHING SOMETHING SOMETHINB SOMETHING SOMETHING SOMETHING SOMETHING"
+    }, {
+      title: "Consultorias",
+      text: "SOMETHIN SOMETHING SOMETHING SOMETHINB SOMETHING SOMETHING SOMETHING SOMETHING"
+    },
+  ]
+  const biographies = [
+    {
+      name: "Javier Cerruti",
+      src: "/images/img1.jpg",
+    },
+    {
+      name: "Gustavo Wald",
+      src: "/images/img12.jpeg",
+    }
+  ]
+  return (
+    <div className='footer col-12 p-0'>
+      <div className="footerTextHolder">
+        <div className="footerTitle">
+          Somos
+        </div>
+        <div className="footerText">
+          <p>
+            gente que busca resolver cada
+          </p>
+          <p>
+            nueva situación con potencia,
+          </p>
+          <p>
+            buen diseño y eficacia.
+          </p>
+        </div>
+      </div>
+      <div className="blockContainer">
+        {content.map((c, i) => {
+          return (
+            <div className='block'>
+              <div className="blockTitle">
+                <p>{c.title}</p>
+              </div>
+              <div className="blockText">
+                <p>{c.text}</p>
+              </div>
+            </div>
+          )
+        })}
+      </div>
+      <div className="biographies">
+        {biographies.map((b, i) => {
+          return (
+            <div className="biographie">
+              <div className="image" style={{ backgroundImage: `url(${b.src})` }}>
+              </div>
+              <div className="name">
+                <p>{b.name}</p>
+              </div>
+            </div>
+          )
+        })}
+      </div>
+      <div className="finalContent">
+        <p>aire</p>
+        <div className='w-fit-content mb-0 phrase d-flex flex-column'>
+          <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>diseño</b></p>
+          <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>audiovisual</b></p>
+          <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>comunicacion</b></p>
+        </div>
+        <div  className='city' >
+          <p>
+            Buenos Aires
+          </p>
+        </div>
+      </div>
     </div>
   )
 }
