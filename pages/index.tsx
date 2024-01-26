@@ -505,7 +505,7 @@ export const Footer = () => {
       <div className="blockContainer">
         {content.map((c, i) => {
           return (
-            <div className='block'>
+            <div key={i} className='block'>
               <div className="blockTitle">
                 <p>{c.title}</p>
               </div>
@@ -519,7 +519,7 @@ export const Footer = () => {
       <div className="biographies">
         {biographies.map((b, i) => {
           return (
-            <div className="biographie">
+            <div key={i} className="biographie">
               <div className="image" style={{ backgroundImage: `url(${b.src})` }}>
               </div>
               <div className="name">
