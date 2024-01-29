@@ -4,11 +4,17 @@
   z-index: 9999;
 }
 
+.clickeable {
+  cursor: pointer;
+  &:hover {
+    filter: hue-rotate(180deg);
+    transition: all 2s ease; // Added transition for rotation
+  }
+}
+
 .Section {
   min-height: 300px;
   background-color: black;
-  opacity: 0.6;
-  cursor: pointer;
   filter: grayscale(0%);
   transition: filter 0.2s ease-in-out, opacity 1s ease-in-out;
   overflow: hidden;
@@ -20,7 +26,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
     transition: all 1s ease-in;
   }
 
@@ -47,10 +52,6 @@
         width: 50%
       }
     }
-  }
-
-  &:hover {
-    filter: hue-rotate(180deg);
   }
 }
 
@@ -112,33 +113,84 @@
 
 
 .Modal-Wrapper {
+  @mixin scrollbar() {
+    &::-webkit-scrollbar {
+      width: 14px;
+      height: 18px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      height: 6px;
+      border: 4px solid rgba(0, 0, 0, 0);
+      background-clip: padding-box;
+      border-radius: 7px;
+      background-color: rgba(255, 255, 255, 0.552);
+      box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+    }
+  
+    &::-webkit-scrollbar-button {
+      width: 0;
+      height: 0;
+      display: none;
+    }
+  
+    &::-webkit-scrollbar-corner {
+      background-color: tranparent;
+    }
+  
+  }
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.211);
+  background-color: rgba(0, 0, 0, 0.644);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 99999;
 
-  .Modal {
-    display: flex;
+  .modalBody {
+    background-color: $orange;
     width: fit-content;
     height: fit-content;
-    min-width: 400px;
+    min-width: 500px;
     min-height: 400px;
-    background-color: #ea581d;
-    z-index: 9999;
+    max-width: 650px;
+    max-height: 550px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
 
-    .Modal-Header {}
-
-    .Modal-Body {
-      .top {}
-
-      .bottom {}
+    .closer {
+      color: blacclickeable;
+      font-size: 40px;
+      margin-top: -5px;
     }
 
-    .Modal-Footer {}
+    .modalTextContainer {
+      width: 100%;
+      height: fit-content;
+      max-height: 200px;
+      background-color: rgba(0, 0, 0, 0.747);
+      position: absolute;
+      bottom: 0px;
+      padding: 10px;
+      overflow-y: scroll;
+      @include scrollbar();
+       .modalTitle {
+        font-size: 20px;
+        font-weight: 600;
+        color: $green;
+      }
 
+      .modalText {
+        font-size: 15px;
+        word-wrap: break-word;
+
+        p {
+          margin: 0px;
+        }
+      }
+    }
   }
 }
 
@@ -158,16 +210,18 @@
     p {
       margin: 0px;
     }
-    .phrase{
+
+    .phrase {
       // background-color: red;
       height: 100px;
       color: gray;
       display: flex;
-      justify-content:end;
+      justify-content: end;
       align-items: left;
       text-align: left;
     }
-    .city{
+
+    .city {
       color: black;
       // background-color: red;
       margin-left: 20px;
@@ -196,7 +250,8 @@
     word-wrap: break-word;
     text-align: start;
     word-spacing: 0px;
-    p{
+
+    p {
       margin: -20px 5px;
     }
   }
@@ -252,3 +307,4 @@
     }
   }
 }
+

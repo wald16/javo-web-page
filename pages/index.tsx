@@ -20,7 +20,9 @@ export type ItemType = {
   mobileMinHeight?: string;
   fontSize?: number,
   video?: string,
-  bkg?: string
+  bkg?: string,
+  modalTitle?:string,
+  modalText?:string
 }
 
 // const config: ItemType[] = [
@@ -161,6 +163,7 @@ const config: ItemType[] = [
   },
   {
     type: "small",
+    clickeable: true,
     img: "/images/img3.jpg",
     minHeight: "400px",
     height: "40vh",
@@ -170,18 +173,21 @@ const config: ItemType[] = [
   },
   {
     type: "small",
+    clickeable: true,
     img: "/images/img4.jpg",
     minHeight: "400px",
     height: "40vh"
   },
   {
     type: "small",
+    clickeable: true,
     img: "/images/img5.jpg",
     minHeight: "400px",
     height: "40vh"
   },
   {
     type: "small",
+    clickeable: true,
     img: "/images/img13.jpg",
     minHeight: "400px",
     height: "40vh"
@@ -207,11 +213,12 @@ const config: ItemType[] = [
     mobileHeight: "420px",
     mobileMinHeight: "auto",
     clickeable: false,
-    title: "LARGE BUT HIGHER",
+    // title: "LARGE BUT HIGHER",
     titleColor: "white"
   },
   {
     type: "small",
+    clickeable: true,
     img: "/images/img14.jpg",
     minHeight: "400px",
     height: "40vh",
@@ -221,18 +228,21 @@ const config: ItemType[] = [
   },
   {
     type: "small",
+    clickeable: true,
     img: "/images/img11.jpg",
     minHeight: "400px",
     height: "40vh"
   },
   {
     type: "small",
+    clickeable: true,
     img: "/images/img6.jpg",
     minHeight: "400px",
     height: "40vh"
   },
   {
     type: "small",
+    clickeable: true,
     img: "/images/img7.jpg",
     minHeight: "400px",
     height: "40vh"
@@ -245,7 +255,7 @@ const config: ItemType[] = [
     mobileMinHeight: "auto",
     img: "/images/img10.jpg",
     clickeable: false,
-    title: "LARGE BUT SHORTER",
+    // title: "LARGE BUT SHORTER",
     titleColor: "white"
   },
   {
@@ -305,22 +315,7 @@ export default function HomePage() {
   )
 }
 
-export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, modalInfo: ItemType }) => {
-  return (
-    <div className='Modal-Wrapper'>
-      <div className='Modal' style={{ backgroundImage: `url(${modalInfo.img})` }}>
-        <div className='Modal-Header'>
-          <p className='close p-2' onClick={() => setModalInfo(undefined)}>X</p>
-        </div>
-        <div className='Modal-Body'>
-          <div className='top'></div>
-          <div className='bottom'></div>
-        </div>
-        <div className='Modal-Footer'></div>
-      </div>
-    </div>
-  )
-}
+
 export const Header = () => {
   const router = useRouter();
 
@@ -457,6 +452,133 @@ export const SectionLarge = (props: ItemType & { setModalInfo: Function }) => {
     </div>
   )
 }
+
+export const SectionSmall = (props: ItemType & { setModalInfo: Function }) => {
+  const {
+    text,
+    type,
+    img,
+    height,
+    clickeable,
+    title,
+    titleColor,
+    textAlign,
+    description,
+    descriptionColor,
+    minHeight,
+    mobileHeight,
+    mobileMinHeight,
+    setModalInfo,
+    modalTitle,
+    modalText
+  } = props;
+
+  const style = {
+    backgroundImage: `url(${img})`,
+    height: height ? height : "50vw",
+    minHeight: minHeight ? minHeight : "auto",
+    display: "flex"
+  }
+
+  const styleMobile = {
+    backgroundImage: `url(${img})`,
+    height: mobileHeight ? mobileHeight : height ? height : "50vw",
+    minHeight: mobileMinHeight ? mobileMinHeight : minHeight ? minHeight : "50vw",
+    display: "flex"
+  }
+
+
+  const titleStyle = {
+    color: titleColor ? titleColor : "black"
+  }
+
+  const descriptionStyle = {
+    color: descriptionColor ? descriptionColor : "black"
+  }
+
+  const textStyle = {
+    justifyContent: textAlign ? textAlign : "start",
+    display: "flex",
+    flexDirection: "column" as "column",
+    textShadow: "0px 0px 7px black",
+  }
+
+  return (
+    <div className={`Section SectionSmall col-12 col-md-6 p-0 ${clickeable ? "clickeable" : ""}`} onClick={() => { clickeable ? setModalInfo(props as ItemType) : () => { } }}>
+      <div className='SectionImage d-none d-md-flex' style={style} />
+      <div className='SectionImage d-flex d-md-none' style={styleMobile} />
+      {title || description ? (
+        <div className='SectionText'>
+          <div className='SectionTextHolder' style={textStyle}>
+            {title && <p className='f-50 lh-48' style={titleStyle}><b>{title}</b></p>}
+            {description && <p className='f-50 lh-48' style={descriptionStyle}><b>{description}</b></p>}
+          </div>
+        </div>
+      ) : <></>}
+    </div>
+  )
+}
+
+export const SectionBanner = (props: ItemType & { setModalInfo: Function }) => {
+  const {
+    text,
+    type,
+    img,
+    height,
+    title,
+    clickeable,
+    titleColor,
+    textAlign,
+    description,
+    descriptionColor,
+    minHeight,
+    mobileHeight,
+    mobileMinHeight,
+    setModalInfo
+  } = props;
+
+  const style = {
+    backgroundImage: `url(${img})`,
+    height: height ? height : "50vh"
+  }
+
+  const titleStyle = {
+    color: titleColor ? titleColor : "black"
+  }
+
+  const descriptionStyle = {
+    color: descriptionColor ? descriptionColor : "black"
+  }
+
+  const textStyle = {
+    justifyContent: textAlign ? textAlign : "start",
+    display: "flex",
+    flexDirection: "column" as "column",
+    textShadow: "0px 0px 7px black",
+  }
+
+  return (
+    <div className='Section SectionBanner col-12' style={style} onClick={() => { clickeable ? setModalInfo(props as ItemType) : () => { } }}>
+      {title || description ? (
+        <div className='SectionText'>
+          <div className='SectionTextHolder' style={textStyle}>
+            {title && <p className='f-50 lh-48' style={titleStyle}><b>{title}</b></p>}
+            {description && <p className='f-50 lh-48' style={descriptionStyle}><b>{description}</b></p>}
+          </div>
+        </div>
+      ) : <></>}
+    </div>
+  )
+}
+
+export const SectionKeyLink = ({
+  type, href, setModalInfo
+}: ItemType & { setModalInfo: Function }) => {
+  return (
+    <div className='SectionKeyLink' id={href} />
+  )
+}
+
 export const Footer = () => {
   const content = [
     {
@@ -536,7 +658,7 @@ export const Footer = () => {
           <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>audiovisual</b></p>
           <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>comunicacion</b></p>
         </div>
-        <div  className='city' >
+        <div className='city' >
           <p>
             Buenos Aires
           </p>
@@ -545,127 +667,34 @@ export const Footer = () => {
     </div>
   )
 }
+export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, modalInfo: ItemType }) => {
 
-export const SectionSmall = (props: ItemType & { setModalInfo: Function }) => {
-  const {
-    text,
-    type,
-    img,
-    height,
-    clickeable,
-    title,
-    titleColor,
-    textAlign,
-    description,
-    descriptionColor,
-    minHeight,
-    mobileHeight,
-    mobileMinHeight,
-    setModalInfo
-  } = props;
-
-  const style = {
-    backgroundImage: `url(${img})`,
-    height: height ? height : "50vw",
-    minHeight: minHeight ? minHeight : "auto",
-    display: "flex"
-  }
-
-  const styleMobile = {
-    backgroundImage: `url(${img})`,
-    height: mobileHeight ? mobileHeight : height ? height : "50vw",
-    minHeight: mobileMinHeight ? mobileMinHeight : minHeight ? minHeight : "50vw",
-    display: "flex"
-  }
-
-
-  const titleStyle = {
-    color: titleColor ? titleColor : "black"
-  }
-
-  const descriptionStyle = {
-    color: descriptionColor ? descriptionColor : "black"
-  }
-
-  const textStyle = {
-    justifyContent: textAlign ? textAlign : "start",
-    display: "flex",
-    flexDirection: "column" as "column",
-    textShadow: "0px 0px 7px black",
-  }
-
-  return (
-    <div className='Section SectionSmall col-12 col-md-6 p-0' onClick={() => { clickeable ? setModalInfo(props as ItemType) : () => { } }}>
-      <div className='SectionImage d-none d-md-flex' style={style} />
-      <div className='SectionImage d-flex d-md-none' style={styleMobile} />
-      {title || description ? (
-        <div className='SectionText'>
-          <div className='SectionTextHolder' style={textStyle}>
-            {title && <p className='f-50 lh-48' style={titleStyle}><b>{title}</b></p>}
-            {description && <p className='f-50 lh-48' style={descriptionStyle}><b>{description}</b></p>}
+  if (modalInfo !== undefined) {
+    return (
+      <div className='Modal-Wrapper'>
+        <div className="modalBody" style={{ backgroundImage: `url(${modalInfo.img})` }}>
+          <div className="closer" onClick={() => { setModalInfo(undefined) }}>
+            <img src="/icons/cruz.png" alt="" />
+          </div>
+          <div className="modalTextContainer">
+            <div className="modalTitle">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, eaque.
+              </p>
+            </div>
+            <div className="modalText">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Porro, necessitatibus voluptates! Atque, dolorem a similique alias
+                quisquam consequatur ut dignissimos enim deserunt corrupti suscipit
+                placeat eveniet reiciendis inventore natus aliquam, temporibus ratione
+                dolor. Iste iusto quisquam ea consectetur similique ipsa laborum obcaecati
+                commodi. Atque earum cupiditate tenetur, quibusdam rerum qui?
+              </p>
+            </div>
           </div>
         </div>
-      ) : <></>}
-    </div>
-  )
-}
-
-export const SectionBanner = (props: ItemType & { setModalInfo: Function }) => {
-  const {
-    text,
-    type,
-    img,
-    height,
-    title,
-    clickeable,
-    titleColor,
-    textAlign,
-    description,
-    descriptionColor,
-    minHeight,
-    mobileHeight,
-    mobileMinHeight,
-    setModalInfo
-  } = props;
-
-  const style = {
-    backgroundImage: `url(${img})`,
-    height: height ? height : "50vh"
+      </div>
+    )
   }
-
-  const titleStyle = {
-    color: titleColor ? titleColor : "black"
-  }
-
-  const descriptionStyle = {
-    color: descriptionColor ? descriptionColor : "black"
-  }
-
-  const textStyle = {
-    justifyContent: textAlign ? textAlign : "start",
-    display: "flex",
-    flexDirection: "column" as "column",
-    textShadow: "0px 0px 7px black",
-  }
-
-  return (
-    <div className='Section SectionBanner col-12' style={style} onClick={() => { clickeable ? setModalInfo(props as ItemType) : () => { } }}>
-      {title || description ? (
-        <div className='SectionText'>
-          <div className='SectionTextHolder' style={textStyle}>
-            {title && <p className='f-50 lh-48' style={titleStyle}><b>{title}</b></p>}
-            {description && <p className='f-50 lh-48' style={descriptionStyle}><b>{description}</b></p>}
-          </div>
-        </div>
-      ) : <></>}
-    </div>
-  )
-}
-
-export const SectionKeyLink = ({
-  type, href, setModalInfo
-}: ItemType & { setModalInfo: Function }) => {
-  return (
-    <div className='SectionKeyLink' id={href} />
-  )
 }
