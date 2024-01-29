@@ -23,6 +23,7 @@ body {
   filter: grayscale(0%);
   transition: filter 0.2s ease-in-out, opacity 1s ease-in-out;
   overflow: hidden;
+  height: fit-content;
 
   .SectionImage {
     width: 100%;
@@ -60,6 +61,32 @@ body {
   }
 }
 
+// seccion mas proyectos
+.proyects {
+  .sectionText {
+
+    .SectionTextHolder {
+      justify-content: end;
+      display: flex;
+      flex-direction: column;
+      text-shadow: 0px 0px 7px black;
+      width: 100%;
+      align-content: end;
+      flex-wrap: wrap;
+
+    }
+  }
+
+  .title {
+    font-size: 50px !important;
+    margin-bottom: 0px !important;
+    color: $gray !important;
+  }
+
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
 
 .Header {
   background-color: #ea581d;
@@ -244,13 +271,45 @@ body {
     padding: 0px 10px;
     color: $orange;
     margin-top: -30px;
+    margin-bottom: 20px;
     display: flex;
+
     font-family: Arial, Helvetica, sans-serif;
 
-    .footerLogo {
+    .sectionLeft {
+      display: flex;
+      width: 50%;
+      justify-content: space-between;
+
+    }
+
+    .sectionRight {
+      // background-color: red;
+      display: flex;
+      width: 50%;
+      align-items:end;
+      justify-content: right;
+      padding-right: 10px;
+      margin-bottom: -20px;
+      color: $gray;
+    }
+
+    .brand {
       margin: 0px;
       margin-right: 15px;
+
+      p {
+        // background-color: red;
+        font-size: 120px;
+        padding: 0%;
+        margin: 0%;
+        margin-bottom: -40px;
+        font-family: helvetica;
+        letter-spacing: -7px;
+        font-weight: bolder;
+      }
     }
+
 
     .phrase {
       // background-color: red;
@@ -260,16 +319,25 @@ body {
       justify-content: end;
       align-items: left;
       text-align: left;
+      margin-top: 35px;
+      margin-left: -70px;
     }
 
     .city {
       color: black;
       // background-color: red;
-      margin-left: 40px;
-      margin-bottom: -5px;
+      margin-left: 50px;
+      margin-bottom: -20px;
       font-size: 30px;
       display: flex;
       align-items: end;
+      font-size: helvetica;
+      font-weight: 700;
+      letter-spacing: -2px;
+    }
+
+    .mail {
+      font-size: 30px;
     }
   }
 
@@ -303,19 +371,26 @@ body {
     display: flex;
     overflow: hidden;
     justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
 
     .block {
       margin: 10px;
 
       .blockText {
         word-wrap: break-word;
-        text-align: center;
+        text-align: left;
+        color: $gray;
+        text-transform: capitalize;
+        font-weight: 700;
       }
 
       .blockTitle {
-        text-align: center;
-        font-size: 30px;
-        font-weight: 500;
+        text-align: left;
+        font-size: 40px;
+        margin-bottom: -20px;
+        margin-top: 30px;
+        font-weight: 800;
+        letter-spacing: -2px !important;
       }
     }
 
@@ -341,9 +416,15 @@ body {
       }
 
       .name {
-        color: cornflowerblue;
-        font-size: 20px;
-        font-weight: 500;
+        font-family: Arial, Helvetica, sans-serif;
+        color: $gray;
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: -1px;
+
+        &:hover {
+          color: $black;
+        }
       }
     }
   }

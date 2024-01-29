@@ -20,7 +20,8 @@ export type ItemType = {
   mobileMinHeight?: string;
   fontSize?: number,
   video?: string,
-  bkg?: string
+  bkg?: string,
+  extraClass?: string
 }
 
 // const config: ItemType[] = [
@@ -202,9 +203,9 @@ const config: ItemType[] = [
     mobileMinHeight: "auto",
     clickeable: false,
     title: "Hacemos comunicación visual ",
-    titleColor: "orange",
-    descriptionColor: "white",
-    description: "Diseñamos y esarrollamos proyectos efectivos que potencian relatos y fortalecen marcas",
+    titleColor: "white",
+    descriptionColor: "#FF5500",
+    description: "Diseñamos y desarrollamos proyectos efectivos que potencian relatos y fortalecen marcas",
     textAlign: "left",
   },
   {
@@ -275,11 +276,12 @@ const config: ItemType[] = [
   {
     type: "large",
     img: "/images/img9.jpg",
-    title: "Nosotros",
+    title: "Mas proyectos...",
     titleColor: "white",
     minHeight: "500px",
     height: "50vw",
     clickeable: false,
+    extraClass: "proyects"
   },
 
 ]
@@ -423,7 +425,8 @@ export const SectionLarge = (props: ItemType & { setModalInfo: Function }) => {
     mobileHeight,
     mobileMinHeight,
     setModalInfo,
-    fontSize
+    fontSize,
+    extraClass,
   } = props;
 
   const style = {
@@ -459,7 +462,7 @@ export const SectionLarge = (props: ItemType & { setModalInfo: Function }) => {
   }
 
   return (
-    <div className='Section SectionLarge col-12 p-0' onClick={() => { clickeable ? setModalInfo(props as ItemType) : () => { } }}>
+    <div className={`Section SectionLarge col-12 p-0 ${extraClass}`} onClick={() => { clickeable ? setModalInfo(props as ItemType) : () => { } }}>
       <div className='SectionImage d-none d-md-flex' style={style} />
       <div className='SectionImage d-flex d-md-none' style={styleMobile} />
       {title || description ? (
@@ -602,18 +605,18 @@ export const SectionKeyLink = ({
 export const Footer = () => {
   const content = [
     {
-      title: "Campañas",
-      text: "SOMETHIN SOMETHING SOMETHING SOMETHINB SOMETHING SOMETHING SOMETHING SOMETHING"
+      title: "campañas",
+      text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aperiam magni alias perspiciatis tempora odio placeat quibusdam laboriosam."
     },
     {
-      title: "Ciudades",
-      text: "SOMETHIN SOMETHING SOMETHING SOMETHINB SOMETHING SOMETHING SOMETHING SOMETHING"
+      title: "ciudades",
+      text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aperiam magni alias perspiciatis tempora odio placeat quibusdam laboriosam."
     }, {
-      title: "Espacios",
-      text: "SOMETHIN SOMETHING SOMETHING SOMETHINB SOMETHING SOMETHING SOMETHING SOMETHING"
+      title: "espacios",
+      text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aperiam magni alias perspiciatis tempora odio placeat quibusdam laboriosam."
     }, {
-      title: "Consultorias",
-      text: "SOMETHIN SOMETHING SOMETHING SOMETHINB SOMETHING SOMETHING SOMETHING SOMETHING"
+      title: "consultorias",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aperiam magni alias perspiciatis tempora odio placeat quibusdam laboriosam."
     },
   ]
   const biographies = [
@@ -672,16 +675,29 @@ export const Footer = () => {
         })}
       </div>
       <div className="finalContent">
-        <p>aire</p>
-        <div className='w-fit-content mb-0 phrase d-flex flex-column'>
-          <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>diseño</b></p>
-          <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>audiovisual</b></p>
-          <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>comunicacion</b></p>
+        <div className="sectionLeft">
+          <div className="brand">
+            <p>aire</p>
+
+          </div>
+          <div className='phrase w-fit-content mb-0 phrase d-flex flex-column'>
+            <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>diseño</b></p>
+            <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>audiovisual</b></p>
+            <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>comunicacion</b></p>
+          </div>
+          <div className='city' >
+            <p>
+              Buenos Aires
+            </p>
+          </div>
         </div>
-        <div className='city' >
-          <p>
-            Buenos Aires
-          </p>
+        <div className="sectionRight">
+          <div className="mail">
+            <p>
+
+              xxxxxxxxx@gamil.com
+            </p>
+          </div>
         </div>
       </div>
     </div>
