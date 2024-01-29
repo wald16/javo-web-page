@@ -20,9 +20,7 @@ export type ItemType = {
   mobileMinHeight?: string;
   fontSize?: number,
   video?: string,
-  bkg?: string,
-  modalTitle?:string,
-  modalText?:string
+  bkg?: string
 }
 
 // const config: ItemType[] = [
@@ -148,8 +146,8 @@ export type ItemType = {
 const config: ItemType[] = [
   {
     type: "large",
-    minHeight: "400px",
-    height: "40vh",
+    minHeight: "600px",
+    height: "50vh",
     mobileHeight: "320px",
     mobileMinHeight: "auto",
     clickeable: false,
@@ -193,6 +191,10 @@ const config: ItemType[] = [
     height: "40vh"
   },
   {
+    type: "key-link",
+    href: "identidad",
+  },
+  {
     type: "large",
     minHeight: "400px",
     height: "40vh",
@@ -204,6 +206,10 @@ const config: ItemType[] = [
     descriptionColor: "white",
     description: "Diseñamos y esarrollamos proyectos efectivos que potencian relatos y fortalecen marcas",
     textAlign: "left",
+  },
+  {
+    type: "key-link",
+    href: "espacios",
   },
   {
     type: "large",
@@ -248,6 +254,10 @@ const config: ItemType[] = [
     height: "40vh"
   },
   {
+    type: "key-link",
+    href: "popurri",
+  },
+  {
     type: "large",
     minHeight: "300px",
     height: "30vh",
@@ -259,13 +269,17 @@ const config: ItemType[] = [
     titleColor: "white"
   },
   {
+    type: "key-link",
+    href: "nosotros",
+  },
+  {
     type: "large",
     img: "/images/img9.jpg",
     title: "Nosotros",
     titleColor: "white",
     minHeight: "500px",
     height: "50vw",
-    clickeable: true,
+    clickeable: false,
   },
 
 ]
@@ -469,8 +483,7 @@ export const SectionSmall = (props: ItemType & { setModalInfo: Function }) => {
     mobileHeight,
     mobileMinHeight,
     setModalInfo,
-    modalTitle,
-    modalText
+
   } = props;
 
   const style = {
