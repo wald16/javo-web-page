@@ -360,10 +360,17 @@ export const Header = () => {
 
   return (
     <div className={`Header ${active ? "active" : ""}`}>
+      <div className="logo">
+        aire
+      </div>
       {!active ? (
-        <div className='open-icon' onClick={() => setActive(true)}><p>O</p></div>
+        <div className='open-icon' onClick={() => setActive(true)}>
+          <img src="/icons/menu.png" alt="" />
+        </div>
       ) : (
-        <div className='close-icon' onClick={() => setActive(false)}><p>X</p></div>
+        <div className='close-icon' onClick={() => setActive(false)}>
+          <img src="/icons/cruz.png" alt="" />
+        </div>
       )}
       <div className='items'>
         {items.map((item, index) => (
