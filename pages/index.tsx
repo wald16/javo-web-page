@@ -694,7 +694,6 @@ export const Footer = () => {
         <div className="sectionRight">
           <div className="mail">
             <p>
-
               xxxxxxxxx@gamil.com
             </p>
           </div>
@@ -704,7 +703,7 @@ export const Footer = () => {
   )
 }
 export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, modalInfo: ItemType }) => {
-
+  const [active, setActive] = React.useState<Boolean>(false)
   if (modalInfo !== undefined) {
     return (
       <div className='Modal-Wrapper'>
@@ -712,21 +711,29 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
           <div className="closer" onClick={() => { setModalInfo(undefined) }}>
             <img src="/icons/cruz.png" alt="" />
           </div>
-          <div className="modalTextContainer">
-            <div className="modalTitle">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, eaque.
-              </p>
+          <div className="modalContent">
+            <div className={`${active ? "d-none" : "modalButton"}`} onClick={() => { setActive(!active) }}>
+              <img src="/icons/chevronup.png" alt="" />
             </div>
-            <div className="modalText">
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Porro, necessitatibus voluptates! Atque, dolorem a similique alias
-                quisquam consequatur ut dignissimos enim deserunt corrupti suscipit
-                placeat eveniet reiciendis inventore natus aliquam, temporibus ratione
-                dolor. Iste iusto quisquam ea consectetur similique ipsa laborum obcaecati
-                commodi. Atque earum cupiditate tenetur, quibusdam rerum qui?
-              </p>
+            <div className={`modalTextContainer ${active ? "active" : ""}`}>
+              <div className={`${active ? "closer" : "d-none"}`} onClick={() => { setActive(!active) }}>
+                <img src="/icons/cruz.png" alt="" />
+              </div>
+              <div className="modalTitle">
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, eaque.
+                </p>
+              </div>
+              <div className="modalText">
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Porro, necessitatibus voluptates! Atque, dolorem a similique alias
+                  quisquam consequatur ut dignissimos enim deserunt corrupti suscipit
+                  placeat eveniet reiciendis inventore natus aliquam, temporibus ratione
+                  dolor. Iste iusto quisquam ea consectetur similique ipsa laborum obcaecati
+                  commodi. Atque earum cupiditate tenetur, quibusdam rerum qui?
+                </p>
+              </div>
             </div>
           </div>
         </div>
