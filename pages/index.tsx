@@ -154,7 +154,7 @@ const config: ItemType[] = [
     clickeable: false,
     title: "VIDEO",
     titleColor: "white",
-    video: "   "
+    video: "/videos/banner.mp4"
   },
   {
     type: "key-link",
@@ -166,7 +166,7 @@ const config: ItemType[] = [
     img: "/images/img3.jpg",
     minHeight: "400px",
     height: "40vh",
-    title: "Campañas",
+    title: "campañas",
     titleColor: "white",
     textAlign: "end",
   },
@@ -202,10 +202,10 @@ const config: ItemType[] = [
     mobileHeight: "320px",
     mobileMinHeight: "auto",
     clickeable: false,
-    title: "Hacemos comunicación visual ",
+    title: "hacemos comunicación visual ",
     titleColor: "white",
     descriptionColor: "#FF5500",
-    description: "Diseñamos y desarrollamos proyectos efectivos que potencian relatos y fortalecen marcas",
+    description: "diseñamos y desarrollamos proyectos efectivos que potencian relatos y fortalecen marcas",
     textAlign: "left",
   },
   {
@@ -229,7 +229,7 @@ const config: ItemType[] = [
     img: "/images/img14.jpg",
     minHeight: "400px",
     height: "40vh",
-    title: "Lorem Ipsum",
+    title: "lorem Ipsum",
     titleColor: "white",
     textAlign: "end",
   },
@@ -276,7 +276,7 @@ const config: ItemType[] = [
   {
     type: "large",
     img: "/images/img9.jpg",
-    title: "Mas proyectos...",
+    title: "mas proyectos...",
     titleColor: "white",
     minHeight: "500px",
     height: "50vw",
@@ -427,6 +427,7 @@ export const SectionLarge = (props: ItemType & { setModalInfo: Function }) => {
     setModalInfo,
     fontSize,
     extraClass,
+    video
   } = props;
 
   const style = {
@@ -460,21 +461,37 @@ export const SectionLarge = (props: ItemType & { setModalInfo: Function }) => {
     textShadow: "0px 0px 7px black",
 
   }
-
-  return (
-    <div className={`Section SectionLarge col-12 p-0 ${extraClass}`} onClick={() => { clickeable ? setModalInfo(props as ItemType) : () => { } }}>
-      <div className='SectionImage d-none d-md-flex' style={style} />
-      <div className='SectionImage d-flex d-md-none' style={styleMobile} />
-      {title || description ? (
-        <div className='SectionText'>
-          <div className='SectionTextHolder' style={textStyle}>
-            {title && <p className='f-50 lh-48 title' style={titleStyle}><b>{title}</b></p>}
-            {description && <p className='f-50 lh-48 description' style={descriptionStyle}><b>{description}</b></p>}
+  if (video) {
+    return (
+      <div className={`Section SectionLarge col-12 p-0 ${extraClass}`} onClick={() => { clickeable ? setModalInfo(props as ItemType) : () => { } }}>
+        <video src="/videos/banner.mp4" autoPlay={true} loop={true} muted={true} className='bannerVideo' id="myVideo">
+        </video>
+        {title || description ? (
+          <div className='SectionText'>
+            <div className='SectionTextHolder' style={textStyle}>
+              {title && <p className='f-50 lh-48 title' style={titleStyle}><b>{title}</b></p>}
+              {description && <p className='f-50 lh-48 description' style={descriptionStyle}><b>{description}</b></p>}
+            </div>
           </div>
-        </div>
-      ) : <></>}
-    </div>
-  )
+        ) : <></>}
+      </div>
+    )
+  } else {
+    return (
+      <div className={`Section SectionLarge col-12 p-0 ${extraClass}`} onClick={() => { clickeable ? setModalInfo(props as ItemType) : () => { } }}>
+        <div className='SectionImage d-none d-md-flex' style={style} />
+        <div className='SectionImage d-flex d-md-none' style={styleMobile} />
+        {title || description ? (
+          <div className='SectionText'>
+            <div className='SectionTextHolder' style={textStyle}>
+              {title && <p className='f-50 lh-48 title' style={titleStyle}><b>{title}</b></p>}
+              {description && <p className='f-50 lh-48 description' style={descriptionStyle}><b>{description}</b></p>}
+            </div>
+          </div>
+        ) : <></>}
+      </div>
+    )
+  }
 }
 
 export const SectionSmall = (props: ItemType & { setModalInfo: Function }) => {

@@ -20,7 +20,10 @@ body {
     transition: all 2s ease; // Added transition for rotation
   }
 }
-
+.bannerVideo{
+  width: 100%;
+  height: 100%;
+}
 .Section {
   min-height: 300px;
   background-color: black;
@@ -109,8 +112,16 @@ body {
     letter-spacing: -3px;
   }
 
+.open-icon{
+  transform:translateX(-5px) ;
+}
+.close-icon{
+  // transform: translateY(-10px);
+  transform: translate3d(-20px, 10px,0px);
+}
   .close-icon,
   .open-icon {
+
     p {
       font-weight: bold;
       color: black;
