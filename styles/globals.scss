@@ -177,3 +177,47 @@ body,
 .f-heavy {
   font-weight: 800;
 }
+
+
+.Shown {
+  opacity: 0;
+
+  &.shown-start {
+    animation: ShownAnimation 0.3s forwards ease-in-out;
+  }
+
+  &.inshown-start {
+    animation: ShownAnimation 0.3s reverse ease-in-out !important;
+  }
+
+  &.toggled {
+    &:not(.shown-start) {
+      animation: HideAnimation 0.3s forwards ease-in-out;
+    }
+  }
+}
+
+
+
+@keyframes ShownAnimation {
+  0% {
+    display: block;
+  }
+
+  1% {
+    display: block;
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  10% {
+    display: block;
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

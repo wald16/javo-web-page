@@ -1,3 +1,4 @@
+import { Shown } from '@/components/Shown';
 import Head from 'next/head'
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -11,6 +12,7 @@ export type ItemType = {
   height?: string;
   clickeable?: boolean;
   title?: string;
+  category?: string;
   titleColor?: string;
   textAlign?: string;
   description?: string;
@@ -147,6 +149,7 @@ export type ItemType = {
 const config: ItemType[] = [
   {
     type: "large",
+    category: "campanas",
     minHeight: "600px",
     height: "50vh",
     mobileHeight: "320px",
@@ -162,6 +165,7 @@ const config: ItemType[] = [
   },
   {
     type: "small",
+    category: "campanas",
     clickeable: true,
     img: "/images/img3.jpg",
     minHeight: "400px",
@@ -197,6 +201,7 @@ const config: ItemType[] = [
   },
   {
     type: "large",
+    category: "campanas",
     minHeight: "400px",
     height: "40vh",
     mobileHeight: "320px",
@@ -290,6 +295,8 @@ export default function HomePage() {
 
   const [modalInfo, setModalInfo] = React.useState<ItemType>();
 
+  const [activeFilter, setActiveFilter] = React.useState();
+
   const BuildSectionComponent = (item: ItemType, index: Number, setModalInfo: Function) => {
 
     switch (item.type) {
@@ -307,6 +314,14 @@ export default function HomePage() {
         return <></>
     }
   }
+  const checkFilter = (item: ItemType) => {
+    console.log("activeFilter", activeFilter)
+    if (activeFilter) {
+      return (item.category === activeFilter)
+    } else {
+      return true
+    }
+  }
 
   return (
     <>
@@ -318,10 +333,10 @@ export default function HomePage() {
       </Head>
       <main className={`stretch`}>
         <Home />
-        <Header />
+        <Header activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
         <div className='container-fluid'>
           <div className='row'>
-            {config.map((item, index) => BuildSectionComponent(item, index, setModalInfo))}
+            {config.filter(checkFilter).map((item, index) => (BuildSectionComponent(item, index, setModalInfo)))}
           </div>
         </div>
         {modalInfo && (<Modal modalInfo={modalInfo} setModalInfo={setModalInfo} />)}
@@ -332,7 +347,7 @@ export default function HomePage() {
 }
 
 
-export const Header = () => {
+export const Header = ({ activeFilter, setActiveFilter }: { activeFilter?: string, setActiveFilter: Function }) => {
   const router = useRouter();
 
   const items = [
@@ -360,6 +375,12 @@ export const Header = () => {
 
   const [active, setActive] = React.useState(false);
 
+  const doFiltering = (key: string) => {
+    console.log("BARTO", key)
+
+    if (key == activeFilter) setActiveFilter(undefined)
+    else setActiveFilter(key)
+  }
   return (
     <div className={`Header ${active ? "active" : ""}`}>
       <div className="logo">
@@ -376,7 +397,7 @@ export const Header = () => {
       )}
       <div className='items'>
         {items.map((item, index) => (
-          <div className='item' key={item.key} onClick={() => router.push("#" + item.key)}>
+          <div className={`item ${item.key == activeFilter ? "active" : ""}`} key={item.key} onClick={() => /*router.push("#" + item.key)*/ doFiltering(item.key)}>
             <h3>{item.name}</h3>
           </div>
         ))}
@@ -464,31 +485,35 @@ export const SectionLarge = (props: ItemType & { setModalInfo: Function }) => {
   if (video) {
     return (
       <div className={`Section SectionLarge col-12 p-0 ${extraClass}`} onClick={() => { clickeable ? setModalInfo(props as ItemType) : () => { } }}>
-        <video src="/videos/banner.mp4" autoPlay={true} loop={true} muted={true} className='bannerVideo' id="myVideo">
-        </video>
-        {title || description ? (
-          <div className='SectionText'>
-            <div className='SectionTextHolder' style={textStyle}>
-              {title && <p className='f-50 lh-48 title' style={titleStyle}><b>{title}</b></p>}
-              {description && <p className='f-50 lh-48 description' style={descriptionStyle}><b>{description}</b></p>}
+        <Shown partiallyVisible={true} >
+          <video src="/videos/banner.mp4" autoPlay={true} loop={true} muted={true} className='bannerVideo' id="myVideo">
+          </video>
+          {title || description ? (
+            <div className='SectionText'>
+              <div className='SectionTextHolder' style={textStyle}>
+                {title && <p className='f-50 lh-48 title' style={titleStyle}><b>{title}</b></p>}
+                {description && <p className='f-50 lh-48 description' style={descriptionStyle}><b>{description}</b></p>}
+              </div>
             </div>
-          </div>
-        ) : <></>}
+          ) : <></>}
+        </Shown>
       </div>
     )
   } else {
     return (
       <div className={`Section SectionLarge col-12 p-0 ${extraClass}`} onClick={() => { clickeable ? setModalInfo(props as ItemType) : () => { } }}>
-        <div className='SectionImage d-none d-md-flex' style={style} />
-        <div className='SectionImage d-flex d-md-none' style={styleMobile} />
-        {title || description ? (
-          <div className='SectionText'>
-            <div className='SectionTextHolder' style={textStyle}>
-              {title && <p className='f-50 lh-48 title' style={titleStyle}><b>{title}</b></p>}
-              {description && <p className='f-50 lh-48 description' style={descriptionStyle}><b>{description}</b></p>}
+        <Shown partiallyVisible={true} >
+          <div className='SectionImage d-none d-md-flex' style={style} />
+          <div className='SectionImage d-flex d-md-none' style={styleMobile} />
+          {title || description ? (
+            <div className='SectionText'>
+              <div className='SectionTextHolder' style={textStyle}>
+                {title && <p className='f-50 lh-48 title' style={titleStyle}><b>{title}</b></p>}
+                {description && <p className='f-50 lh-48 description' style={descriptionStyle}><b>{description}</b></p>}
+              </div>
             </div>
-          </div>
-        ) : <></>}
+          ) : <></>}
+        </Shown>
       </div>
     )
   }
@@ -545,16 +570,18 @@ export const SectionSmall = (props: ItemType & { setModalInfo: Function }) => {
 
   return (
     <div className={`Section SectionSmall col-12 col-md-6 p-0 ${clickeable ? "clickeable" : ""}`} onClick={() => { clickeable ? setModalInfo(props as ItemType) : () => { } }}>
-      <div className='SectionImage d-none d-md-flex' style={style} />
-      <div className='SectionImage d-flex d-md-none' style={styleMobile} />
-      {title || description ? (
-        <div className='SectionText'>
-          <div className='SectionTextHolder' style={textStyle}>
-            {title && <p className='f-50 lh-48' style={titleStyle}><b>{title}</b></p>}
-            {description && <p className='f-50 lh-48' style={descriptionStyle}><b>{description}</b></p>}
+      <Shown partiallyVisible={true} >
+        <div className='SectionImage d-none d-md-flex' style={style} />
+        <div className='SectionImage d-flex d-md-none' style={styleMobile} />
+        {title || description ? (
+          <div className='SectionText'>
+            <div className='SectionTextHolder' style={textStyle}>
+              {title && <p className='f-50 lh-48' style={titleStyle}><b>{title}</b></p>}
+              {description && <p className='f-50 lh-48' style={descriptionStyle}><b>{description}</b></p>}
+            </div>
           </div>
-        </div>
-      ) : <></>}
+        ) : <></>}
+      </Shown>
     </div>
   )
 }
@@ -599,14 +626,16 @@ export const SectionBanner = (props: ItemType & { setModalInfo: Function }) => {
 
   return (
     <div className='Section SectionBanner col-12' style={style} onClick={() => { clickeable ? setModalInfo(props as ItemType) : () => { } }}>
-      {title || description ? (
-        <div className='SectionText'>
-          <div className='SectionTextHolder' style={textStyle}>
-            {title && <p className='f-50 lh-48' style={titleStyle}><b>{title}</b></p>}
-            {description && <p className='f-50 lh-48' style={descriptionStyle}><b>{description}</b></p>}
+      <Shown partiallyVisible={true} >
+        {title || description ? (
+          <div className='SectionText'>
+            <div className='SectionTextHolder' style={textStyle}>
+              {title && <p className='f-50 lh-48' style={titleStyle}><b>{title}</b></p>}
+              {description && <p className='f-50 lh-48' style={descriptionStyle}><b>{description}</b></p>}
+            </div>
           </div>
-        </div>
-      ) : <></>}
+        ) : <></>}
+      </Shown>
     </div>
   )
 }
@@ -758,3 +787,5 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
     )
   }
 }
+
+
