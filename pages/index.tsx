@@ -11,6 +11,7 @@ export type ItemType = {
   href?: string;
   height?: string;
   clickeable?: boolean;
+  showOnlyOnFilter?: boolean;
   title?: string;
   category?: string;
   titleColor?: string;
@@ -165,6 +166,7 @@ const config: ItemType[] = [
   },
   {
     type: "small",
+    showOnlyOnFilter: true,
     category: "campanas",
     clickeable: true,
     img: "/images/img3.jpg",
@@ -176,6 +178,8 @@ const config: ItemType[] = [
   },
   {
     type: "small",
+    showOnlyOnFilter: true,
+    category: "campanas",
     clickeable: true,
     img: "/images/img4.jpg",
     minHeight: "400px",
@@ -315,11 +319,10 @@ export default function HomePage() {
     }
   }
   const checkFilter = (item: ItemType) => {
-    console.log("activeFilter", activeFilter)
     if (activeFilter) {
       return (item.category === activeFilter)
     } else {
-      return true
+      return (item.showOnlyOnFilter != true)
     }
   }
 
@@ -681,6 +684,7 @@ export const Footer = () => {
         <div className="footerTitle">
           Somos
         </div>
+        <button onClick={() => window.scrollTo(0,0)} type="button"> BACK TO HOME</button>
         <div className="footerText">
           <p>
             gente que busca resolver cada
