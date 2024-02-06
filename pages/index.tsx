@@ -1,8 +1,7 @@
 import { Shown } from '@/components/Shown';
 import Head from 'next/head'
-import { useRouter } from 'next/router';
 import React from 'react';
-
+import { FilterBar } from '@/components/FilterBar';
 
 export type ItemType = {
   type: "large" | "small" | "banner" | "key-link";
@@ -27,139 +26,8 @@ export type ItemType = {
   extraClass?: string
 }
 
-// const config: ItemType[] = [
-
-//   {
-//     type: "large",
-//     img: "/images/1.png",
-//     minHeight: "400px",
-//     height: "40vh",
-//     mobileHeight: "320px",
-//     mobileMinHeight: "auto",
-//     clickeable: true,
-//   },
-//   {
-//     type: "key-link",
-//     href: "campanas",
-//   },
-//   {
-//     type: "small",
-//     img: "/images/7.png",
-//     minHeight: "400px",
-//     height: "40vh",
-//     title: "Lorem Ipsum",
-//     titleColor: "white",
-//     textAlign: "end",
-//   },
-//   {
-//     type: "small",
-//     img: "/images/8.png",
-//     minHeight: "400px",
-//     height: "40vh"
-
-//   },
-//   {
-//     type: "small",
-//     img: "/images/2.png",
-//     minHeight: "400px",
-//     height: "40vh"
-//   },
-//   {
-//     type: "small",
-//     img: "/images/3.png",
-//     minHeight: "400px",
-//     height: "40vh"
-//   },
-//   {
-//     type: "key-link",
-//     href: "identidad",
-//   },
-//   {
-//     type: "banner",
-//     title: "Lorem Ipsum",
-//     titleColor: "white",
-//     description: "Lorem Ipsum is simply dummy text.",
-//     descriptionColor: "#c0c0c0",
-//     textAlign: "center",
-//     height: "50vh",
-//   },
-//   {
-//     type: "large",
-//     img: "/images/img004.png",
-//     minHeight: "400px",
-//     height: "50vh",
-//     title: "Lorem Ipsum",
-//     titleColor: "white",
-//     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-//     descriptionColor: "#c0c0c0",
-//     textAlign: "end",
-//   },
-//   {
-//     type: "key-link",
-//     href: "espacios",
-//   },
-//   {
-//     type: "small",
-//     img: "/images/5.png",
-//     minHeight: "400px",
-//     height: "40vh"
-//   },
-//   {
-//     type: "small",
-//     img: "/images/6.png",
-//     minHeight: "400px",
-//     height: "40vh"
-//   },
-//   {
-//     type: "small",
-//     img: "/images/2.png",
-//     minHeight: "400px",
-//     height: "40vh"
-//   },
-//   {
-//     type: "small",
-//     img: "/images/3.png",
-//     minHeight: "400px",
-//     height: "40vh"
-//   },
-//   {
-//     type: "key-link",
-//     href: "popurri",
-//   },
-//   {
-//     type: "large",
-//     img: "/images/img006.png",
-//     minHeight: "400px",
-//     height: "30vw"
-//   },
-//   {
-//     type: "key-link",
-//     href: "nosotros",
-//   },
-//   {
-//     type: "large",
-//     img: "/images/img9.jpg",
-//     title:"Nosotros",
-//     titleColor:"white",
-//     minHeight: "400px",
-//     height: "50vw",
-//     clickeable: true,
-//   },
-// ]
 
 const config: ItemType[] = [
-  {
-    type: "large",
-    category: "campanas",
-    minHeight: "600px",
-    height: "50vh",
-    mobileHeight: "320px",
-    mobileMinHeight: "auto",
-    clickeable: false,
-    title: "VIDEO",
-    titleColor: "white",
-    video: "/videos/banner.mp4"
-  },
   {
     type: "key-link",
     href: "campanas",
@@ -336,79 +204,20 @@ export default function HomePage() {
       </Head>
       <main className={`stretch`}>
         <Home />
-        <Header activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
+        <FilterBar activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
         <div className='container-fluid'>
           <div className='row'>
             {config.filter(checkFilter).map((item, index) => (BuildSectionComponent(item, index, setModalInfo)))}
           </div>
         </div>
+
+
         {modalInfo && (<Modal modalInfo={modalInfo} setModalInfo={setModalInfo} />)}
         <Footer />
       </main>
     </>
   )
 }
-
-
-export const Header = ({ activeFilter, setActiveFilter }: { activeFilter?: string, setActiveFilter: Function }) => {
-  const router = useRouter();
-
-  const items = [
-    {
-      key: "campanas",
-      name: "Campañas"
-    },
-    {
-      key: "identidad",
-      name: "Identidad"
-    },
-    {
-      key: "espacios",
-      name: "Espacios"
-    },
-    {
-      key: "popurri",
-      name: "Popurri"
-    },
-    {
-      key: "nosotros",
-      name: "Nosotros"
-    },
-  ]
-
-  const [active, setActive] = React.useState(false);
-
-  const doFiltering = (key: string) => {
-    console.log("BARTO", key)
-
-    if (key == activeFilter) setActiveFilter(undefined)
-    else setActiveFilter(key)
-  }
-  return (
-    <div className={`Header ${active ? "active" : ""}`}>
-      <div className="logo">
-        aire
-      </div>
-      {!active ? (
-        <div className='open-icon' onClick={() => setActive(true)}>
-          <img src="/icons/menu.png" alt="" />
-        </div>
-      ) : (
-        <div className='close-icon' onClick={() => setActive(false)}>
-          <img src="/icons/cruz.png" alt="" />
-        </div>
-      )}
-      <div className='items'>
-        {items.map((item, index) => (
-          <div className={`item ${item.key == activeFilter ? "active" : ""}`} key={item.key} onClick={() => /*router.push("#" + item.key)*/ doFiltering(item.key)}>
-            <h3>{item.name}</h3>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
-
 export const Home = () => {
   return (
     <div className='Home stretch'>
@@ -684,7 +493,7 @@ export const Footer = () => {
         <div className="footerTitle">
           Somos
         </div>
-        <button onClick={() => window.scrollTo(0,0)} type="button"> BACK TO HOME</button>
+        <button onClick={() => window.scrollTo(0, 0)} type="button"> BACK TO HOME</button>
         <div className="footerText">
           <p>
             gente que busca resolver cada
