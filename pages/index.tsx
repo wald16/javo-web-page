@@ -28,14 +28,9 @@ export type ItemType = {
 
 
 const config: ItemType[] = [
-  {
-    type: "key-link",
-    href: "campanas",
-  },
+
   {
     type: "small",
-    showOnlyOnFilter: true,
-    category: "campanas",
     clickeable: true,
     img: "/images/img3.jpg",
     minHeight: "400px",
@@ -43,39 +38,35 @@ const config: ItemType[] = [
     title: "campañas",
     titleColor: "white",
     textAlign: "end",
+    category: "campañas"
   },
   {
     type: "small",
-    showOnlyOnFilter: true,
-    category: "campanas",
     clickeable: true,
     img: "/images/img4.jpg",
     minHeight: "400px",
-    height: "40vh"
+    height: "40vh",
+    category: "campañas"
   },
   {
     type: "small",
-    category:"identidad",
     clickeable: true,
     img: "/images/img5.jpg",
     minHeight: "400px",
-    height: "40vh"
+    height: "40vh",
+    category: "identidad"
   },
   {
     type: "small",
     clickeable: true,
     img: "/images/img13.jpg",
-    category:"identidad",
     minHeight: "400px",
-    height: "40vh"
+    height: "40vh",
+    category: "identidad"
   },
-  {
-    type: "key-link",
-    href: "identidad",
-  },
+
   {
     type: "large",
-    category: "campanas",
     minHeight: "400px",
     height: "40vh",
     mobileHeight: "320px",
@@ -86,11 +77,9 @@ const config: ItemType[] = [
     descriptionColor: "#FF5500",
     description: "diseñamos y desarrollamos proyectos efectivos que potencian relatos y fortalecen marcas",
     textAlign: "left",
+    category: "espacios"
   },
-  {
-    type: "key-link",
-    href: "espacios",
-  },
+
   {
     type: "large",
     minHeight: "500px",
@@ -98,7 +87,7 @@ const config: ItemType[] = [
     height: "50vh",
     mobileHeight: "420px",
     mobileMinHeight: "auto",
-    category:"espacios",
+    category: "espacios",
     clickeable: false,
     // title: "LARGE BUT HIGHER",
     titleColor: "white"
@@ -107,7 +96,7 @@ const config: ItemType[] = [
     type: "small",
     clickeable: true,
     img: "/images/img14.jpg",
-    category:"espacios",
+    category: "identidad",
     minHeight: "400px",
     height: "40vh",
     title: "lorem Ipsum",
@@ -117,8 +106,9 @@ const config: ItemType[] = [
   {
     type: "small",
     clickeable: true,
-    img: "/images/img11.jpg", 
+    img: "/images/img11.jpg",
     minHeight: "400px",
+    category: "identidad",
     height: "40vh"
   },
   {
@@ -126,22 +116,20 @@ const config: ItemType[] = [
     clickeable: true,
     img: "/images/img6.jpg",
     minHeight: "400px",
-    category:"campanas",    
+    category: "nosotros",
     height: "40vh",
-    showOnlyOnFilter:true,
+
   },
   {
+    category: "nosotros",
     type: "small",
     clickeable: true,
     img: "/images/img7.jpg",
     minHeight: "400px",
     height: "40vh",
-    showOnlyOnFilter:true,
+
   },
-  {
-    type: "key-link",
-    href: "popurri",
-  },
+
   {
     type: "large",
     minHeight: "300px",
@@ -151,11 +139,9 @@ const config: ItemType[] = [
     img: "/images/img10.jpg",
     clickeable: false,
     // title: "LARGE BUT SHORTER",
-    titleColor: "white"
-  },
-  {
-    type: "key-link",
-    href: "nosotros",
+    titleColor: "white",
+    category: "campañas",
+    showOnlyOnFilter: true,
   },
   {
     type: "large",
@@ -165,6 +151,8 @@ const config: ItemType[] = [
     minHeight: "500px",
     height: "50vw",
     clickeable: false,
+    showOnlyOnFilter: true,
+    category: "identidad",
     extraClass: "proyects"
   },
 

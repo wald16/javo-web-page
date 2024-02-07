@@ -6,7 +6,7 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
 
     const items = [
         {
-            key: "campanas",
+            key: "campañas",
             name: "Campañas"
         },
         {
