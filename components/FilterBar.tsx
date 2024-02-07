@@ -36,7 +36,7 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
     }
     return (
         <>
-            <div className={`container Header ${active ? "active" : ""}`}>
+            <div id="filter" className={`container Header ${active ? "active" : ""}`}>
                 <div className='row'>
                     <div className="col-12 d-flex items">
                         {items.map((i, index) => {
@@ -46,9 +46,12 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
                 </div>
             </div>
 
-            <div onClick={() => setActiveFilter(undefined)} className="resetButton">
+            <a href="#filter">
 
-            </div>
+                <div onClick={() => setActiveFilter(undefined)} className="resetButton">
+                    <img src="/icons/reset.png" alt="" />
+                </div>
+            </a>
         </>
     )
 }

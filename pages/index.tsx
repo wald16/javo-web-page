@@ -55,6 +55,7 @@ const config: ItemType[] = [
   },
   {
     type: "small",
+    category:"identidad",
     clickeable: true,
     img: "/images/img5.jpg",
     minHeight: "400px",
@@ -64,6 +65,7 @@ const config: ItemType[] = [
     type: "small",
     clickeable: true,
     img: "/images/img13.jpg",
+    category:"identidad",
     minHeight: "400px",
     height: "40vh"
   },
@@ -96,6 +98,7 @@ const config: ItemType[] = [
     height: "50vh",
     mobileHeight: "420px",
     mobileMinHeight: "auto",
+    category:"espacios",
     clickeable: false,
     // title: "LARGE BUT HIGHER",
     titleColor: "white"
@@ -104,6 +107,7 @@ const config: ItemType[] = [
     type: "small",
     clickeable: true,
     img: "/images/img14.jpg",
+    category:"espacios",
     minHeight: "400px",
     height: "40vh",
     title: "lorem Ipsum",
@@ -113,7 +117,7 @@ const config: ItemType[] = [
   {
     type: "small",
     clickeable: true,
-    img: "/images/img11.jpg",
+    img: "/images/img11.jpg", 
     minHeight: "400px",
     height: "40vh"
   },
@@ -122,14 +126,17 @@ const config: ItemType[] = [
     clickeable: true,
     img: "/images/img6.jpg",
     minHeight: "400px",
-    height: "40vh"
+    category:"campanas",    
+    height: "40vh",
+    showOnlyOnFilter:true,
   },
   {
     type: "small",
     clickeable: true,
     img: "/images/img7.jpg",
     minHeight: "400px",
-    height: "40vh"
+    height: "40vh",
+    showOnlyOnFilter:true,
   },
   {
     type: "key-link",
@@ -493,7 +500,6 @@ export const Footer = () => {
         <div className="footerTitle">
           Somos
         </div>
-        <button onClick={() => window.scrollTo(0, 0)} type="button"> BACK TO HOME</button>
         <div className="footerText">
           <p>
             gente que busca resolver cada
