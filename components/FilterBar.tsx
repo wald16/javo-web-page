@@ -27,7 +27,10 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
 
     const doFiltering = (key: string) => {
         console.log("BARTO", key)
-        if (key == activeFilter) setActiveFilter(undefined)
+        if (key == activeFilter) {
+            setActiveFilter(undefined)
+            setActive(false)
+        }
         else setActiveFilter(key)
     }
     const handleClick = (key: string) => {
@@ -38,16 +41,14 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
         <>
             <div id="filter" className={`container Header ${active ? "active" : ""}`}>
                 <div className='row'>
-                    <div className="col-12 d-flex items">
+                    <div className="col-12 items">
                         {items.map((i, index) => {
-                            return <div className={`item col-3 ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key) /*router.push("#" + item.key)*/} key={i.key} ><p>{i.name}</p></div>
+                            return <div className={`item col-md-3 col-12 ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key) /*router.push("#" + item.key)*/} key={i.key} ><p>{i.name}</p></div>
                         })}
                     </div>
                 </div>
             </div>
-
             <a href="#filter">
-
                 <div onClick={() => setActiveFilter(undefined)} className="resetButton">
                     <img src="/icons/reset.png" alt="" />
                 </div>

@@ -2,7 +2,7 @@ import { Shown } from '@/components/Shown';
 import Head from 'next/head'
 import React from 'react';
 import { FilterBar } from '@/components/FilterBar';
-
+import Video from '@/components/video';
 export type ItemType = {
   type: "large" | "small" | "banner" | "key-link";
   img?: string;
@@ -199,6 +199,7 @@ export default function HomePage() {
       </Head>
       <main className={`stretch`}>
         <Home />
+        <Video/>
         <FilterBar activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
         <div className='container-fluid'>
           <div className='row'>
