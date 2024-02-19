@@ -7,19 +7,23 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
     const items = [
         {
             key: "campañas",
-            name: "Campañas"
+            name: "Campañas",
+            text: "hacemos campañas que son re buenas porque somos re buenos"
         },
         {
             key: "identidad",
-            name: "Identidad"
+            name: "Identidad",
+            text: "hacemos identidades que son re buenas porque somos re buenos"
         },
         {
             key: "espacios",
-            name: "Espacios"
+            name: "Espacios",
+            text: "hacemos espacios que son re buenas porque somos re buenos"
         },
         {
             key: "nosotros",
-            name: "Nosotros"
+            name: "Nosotros",
+            text: "somos re buenos"
         },
     ]
 

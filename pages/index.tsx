@@ -199,7 +199,7 @@ export default function HomePage() {
       </Head>
       <main className={`stretch`}>
         <Home />
-        <Video/>
+        <Video />
         <FilterBar activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
         <div className='container-fluid'>
           <div className='row'>
@@ -487,17 +487,17 @@ export const Footer = () => {
     <div className='footer col-12 p-0'>
       <div className="footerTextHolder">
         <div className="footerTitle">
-          Somos
+          buscamos
         </div>
         <div className="footerText">
           <p>
-            gente que busca resolver cada
+            resolver cada nueva situación
           </p>
           <p>
-            nueva situación con potencia,
+            con potencia, buen diseño
           </p>
           <p>
-            buen diseño y eficacia.
+            y eficacia.
           </p>
         </div>
       </div>
@@ -534,15 +534,18 @@ export const Footer = () => {
             <p>aire</p>
 
           </div>
-          <div className='phrase w-fit-content mb-0 phrase d-flex flex-column'>
-            <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>diseño</b></p>
-            <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>audiovisual</b></p>
-            <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>comunicacion</b></p>
-          </div>
-          <div className='city' >
-            <p>
-              Buenos Aires
-            </p>
+          <div className="texts">
+
+            <div className='phrase w-fit-content mb-0 phrase d-flex flex-column'>
+              <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>diseño</b></p>
+              <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>audiovisual</b></p>
+              <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>comunicacion</b></p>
+            </div>
+            <div className='city' >
+              <p>
+                Buenos Aires
+              </p>
+            </div>
           </div>
         </div>
         <div className="sectionRight">
@@ -563,7 +566,9 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
       <div className='Modal-Wrapper'>
         <div className="modalBody" style={{ backgroundImage: `url(${modalInfo.img})` }}>
           <div className="closer" onClick={() => { setModalInfo(undefined) }}>
-            <img src="/icons/cruz.png" alt="" />
+            <div className="imgBg">
+              <img src="/icons/cruz.png" alt="" />
+            </div>
           </div>
           <div className="modalContent">
             <div className={`${active ? "d-none" : "modalButton"}`} onClick={() => { setActive(!active) }}>
