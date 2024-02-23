@@ -25,6 +25,7 @@ export type ItemType = {
   bkg?: string,
   extraClass?: string,
   secondaryImgs?: string[],
+  secondaryVideos?: string[],
   details: string
 }
 
@@ -97,6 +98,9 @@ const config: ItemType[] = [
       "/images/img13.jpg",
       "/images/img2.jpg",
       "/images/img1.jpg",
+    ],
+    secondaryVideos: [
+      "/videos/banner.mp4",
     ]
   },
 
@@ -273,6 +277,13 @@ export default function HomePage() {
     }
   }
 
+  React.useEffect(() => {
+    const ele = document.querySelector('html')
+    if(ele) {
+      if(modalInfo) ele.style.overflow = 'hidden'
+      else ele.style.overflow = 'auto'
+    }
+  },[modalInfo])
   return (
     <>
       <Head>
@@ -645,40 +656,68 @@ export const Footer = () => {
 }
 export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, modalInfo: ItemType }) => {
   const [active, setActive] = React.useState<Boolean>(false)
+  const checkItems = modalInfo.secondaryImgs ? "Graphic" : "Video"
+  const [selection, setSelection] = React.useState<"Video" | "Graphic">(checkItems)
 
-
-
-  if (modalInfo !== undefined && modalInfo.secondaryImgs) {
-    return (
-      <div className='Modal-Wrapper'>
-        <div className="modalBody">
-          <div className="closer" onClick={() => { setModalInfo(undefined) }}>
-            <div className="imgBg">
-              <img src="/icons/cruz.png" alt="" />
+  return (
+    <div className='Modal-Wrapper'>
+      <div className="modalBody">
+        <div className="closer">
+          <div className="imgBg" onClick={() => { setModalInfo(undefined) }}>
+            <img src="/icons/cruz.png" alt="" />
+          </div>
+          {modalInfo.secondaryVideos && (
+            <div className={`imgBg tabSelector ${selection == "Video" ? "active" : ""}`} onClick={() => setSelection("Video")}>
+              <p className='mb-0 px-2 py-1 f-24 lh-32'>AudioVisual</p>
             </div>
-          </div>
-          <div className="modalImages">
-            {modalInfo.secondaryImgs.map((src, index) => {
-              return (
-                <img src={src} key={index} alt="" />
-              )
-            })}
-          </div>
-          <div className={`${active ? "d-none" : "modalButton"}`} onClick={() => { setActive(true) }}>
-            <img src="/icons/chevronup.png" />
-          </div>
-          <div className={`${active ? "modaltextContainer" : "d-none"}`}>
-            <img src="/icons/cruz.png" onClick={() => { setActive(false) }} alt="" />
-            <div className="modalTitle">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+          )}
+          {modalInfo.secondaryImgs && (
+            <div className={`imgBg tabSelector ${selection == "Graphic" ? "active" : ""}`} onClick={() => setSelection("Graphic")}>
+              <p className='mb-0 px-2 py-1 f-24 lh-32'>Grafica</p>
             </div>
-          </div>
-
-
+          )}
         </div>
+        {selection === "Graphic" && modalInfo.secondaryImgs && (
+          <div className='Graphic'>
+            <div className="modalImages">
+              {modalInfo.secondaryImgs.map((src, index) => {
+                return (
+                  <img src={src} key={index} alt="" />
+                )
+              })}
+            </div>
+            <div className={`${active ? "d-none" : "modalButton"}`} onClick={() => { setActive(true) }}>
+              <img src="/icons/chevronup.png" />
+            </div>
+            <div className={`${active ? "modaltextContainer" : "d-none"}`}>
+              <img src="/icons/cruz.png" onClick={() => { setActive(false) }} alt="" />
+              <div className="modalTitle">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+              </div>
+            </div>
+          </div>
+        )}
+        {selection === "Video" && modalInfo.secondaryVideos && (
+          <div className='Video'>
+            <div className="modalImages">
+              {modalInfo.secondaryVideos.map((src, index) => {
+                return (
+                  <video key={index} className="bannerVideo" autoPlay={true} muted loop src={src} typeof="video/mp4"></video>
+                )
+              })}
+            </div>
+            {modalInfo.secondaryVideos.length > 2 && (
+              <div className={`${active ? "d-none" : "modalButton"}`} onClick={() => { setActive(true) }}>
+                <img src="/icons/chevronup.png" />
+              </div>
+            )}
+          </div>
+        )}
+
       </div>
-    )
-  }
+    </div>
+  )
+
 }
 
 

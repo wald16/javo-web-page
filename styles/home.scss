@@ -109,14 +109,12 @@ body {
   }
 }
 
-.Header {
+.Filter {
   width: 100vw;
-  height: 25vh;
   justify-content: start;
   background-color: black;
 
   &.active {
-    height: 35vh;
   }
 
 
@@ -143,10 +141,17 @@ body {
   .row {
     margin-top: 15px;
   }
+  .pushedCol {
+    margin-right: 16px;
+    width: calc(100% - 16px);
+  }
 
   .items,
   .mobileItems {
-
+    @media screen and (max-width: 1200px) {
+      flex-direction: column;
+      
+    }
     display: flex;
 
     .item {
@@ -253,7 +258,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow-y: scroll;
+    overflow-y: auto;
+
+    @media screen and (max-width: 768px) {
+      width: 80%;
+      height: 80%;
+      
+    }
 
     .modaltextContainer {
       width: 55%;
@@ -265,7 +276,13 @@ body {
       z-index: 99;
       
     }
-
+    .Video {
+      background-color: black;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     .closer {
 
 
@@ -277,8 +294,17 @@ body {
 
       .imgBg {
         width: fit-content;
-        height: fit-content;
+        height: 64px;
+        cursor: pointer;
         background-color: rgba(0, 0, 0, 0.725);
+      }
+      .tabSelector {
+        position: relative;
+        top: -40px;
+        height: 40px;
+        &.active {
+          background-color: red;
+        }
       }
 
       img {
@@ -333,7 +359,7 @@ body {
 
     .modalImages {
       width: 100%;
-      position: absolute;
+      // position: absolute;
       z-index: 9;
 
       img {
@@ -531,7 +557,7 @@ body {
 .videoContainer {
   background-color: red;
   width: 100vw;
-  height: 80vh;
+  // height: 80vh;
 
 
   .bannerVideo {

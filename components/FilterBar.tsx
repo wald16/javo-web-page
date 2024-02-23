@@ -7,12 +7,12 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
     const items = [
         {
             key: "identidad",
-            name: "Identidad",
+            name: "identidad",
             text: "hacemos identidades que son re buenas porque somos re buenos"
         },
         {
             key: "campañas",
-            name: "Campañas",
+            name: "campañas",
             text: "Lorem ipsum amb al rabia magnis dis parturient montes nascetur ridiculus mus"
 
         },
@@ -23,7 +23,7 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
         },
         {
             key: "espacios",
-            name: "Espacios",
+            name: "espacios",
             text: "hacemos espacios que son re buenas porque somos re buenos"
         },
         {
@@ -33,8 +33,8 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
         },
         {
             key: "nosotros",
-            name: "Nosotros",
-            text: "somos re buenos"
+            name: "nosotros",
+            text: ""
         },
     ]
 
@@ -42,7 +42,6 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
     const [text, setText] = React.useState("")
 
     const doFiltering = (key: string) => {
-        console.log("BARTO", key)
         if (key == activeFilter) {
             setActiveFilter(undefined)
             setActive(false)
@@ -59,35 +58,56 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
             setText("")
         } else setText(_text)
     }
-    const reset = () => { 
-         setActiveFilter("")
-         setText("")
-         setActive(false)
+    const reset = () => {
+        setActiveFilter("")
+        setText("")
+        setActive(false)
     }
+
+    const getLastPositionActive = () => {
+        let index = 0;
+        items.map((i, _index) => {
+            if (i.key == activeFilter) {
+                index = _index
+            }
+        })
+        return index
+    }
+
     return (
         <>
-            <div id="filter" className={`Header ${active ? "active" : ""}`}>
+            <div id="filter" className={`Filter ${active ? "active" : ""}`}>
                 <div className='row'>
-                    <div className=" items">
-                        {items.map((i, index) => {
-                            if (i.text === text) {
+                    <div className='col-12 pushedCol'>
+                        <div className=" items">
+                            {items.map((i, index) => {
                                 return (
-                                    <div className="itemContainer">
-                                        <div className={`item  ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text) /*router.push("#" + item.key)*/} key={i.key} ><p>{i.name}</p></div>
-
-                                        <div className={`text ${i.key == activeFilter ? "active" : ""}`}>
-
-                                            {text}
-
-                                        </div>
+                                    <div className="itemContainer" key={index}>
+                                        <div className={`item col-2 col-md-12  ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text)} key={i.key} ><p>{i.name}</p></div>
+                                        {i.key == activeFilter && (
+                                            <div className={`text d-flex d-lg-none ${i.key == activeFilter ? "active" : ""}`}>
+                                                {text}
+                                            </div>
+                                        )}
                                     </div>
                                 )
-                            } else return (
-                                <div className="itemContainer">
-                                    <div className={`item col-2 col-md-12  ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text) /*router.push("#" + item.key)*/} key={i.key} ><p>{i.name}</p></div>
-                                </div>
-                            )
-                        })}
+                            })}
+                        </div>
+                        <div className=" items">
+
+                            {[...items].filter((i: any, _index: number) => (_index <= getLastPositionActive())).map((i, index) => {
+                                return (
+                                    <div className="itemContainer" key={index}>
+                                        <div className={`item col-2 col-md-12 opacity-0 h-0 d-none d-lg-flex ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text)} key={i.key} ><p>{i.name}</p></div>
+                                        {i.key == activeFilter && (
+                                            <div className={`text d-none d-lg-flex ${i.key == activeFilter ? "active" : ""}`}>
+                                                {text}
+                                            </div>
+                                        )}
+                                    </div>
+                                )
+                            })}
+                        </div>
                     </div>
                 </div>
             </div>
