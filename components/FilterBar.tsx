@@ -6,19 +6,30 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
 
     const items = [
         {
-            key: "campañas",
-            name: "Campañas",
-            text: "hacemos campañas que son re buenas porque somos re buenos"
-        },
-        {
             key: "identidad",
             name: "Identidad",
             text: "hacemos identidades que son re buenas porque somos re buenos"
         },
         {
+            key: "campañas",
+            name: "Campañas",
+            text: "Lorem ipsum amb al rabia magnis dis parturient montes nascetur ridiculus mus"
+
+        },
+        {
+            key: "ciudades",
+            name: "ciudades",
+            text: "hacemos ciudades que son re buenas porque somos re buenos"
+        },
+        {
             key: "espacios",
             name: "Espacios",
             text: "hacemos espacios que son re buenas porque somos re buenos"
+        },
+        {
+            key: "poupurri",
+            name: "poupurri",
+            text: "hacemos poupurris que son re buenas porque somos re buenos"
         },
         {
             key: "nosotros",
@@ -28,33 +39,61 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
     ]
 
     const [active, setActive] = React.useState(false);
+    const [text, setText] = React.useState("")
 
     const doFiltering = (key: string) => {
         console.log("BARTO", key)
         if (key == activeFilter) {
             setActiveFilter(undefined)
             setActive(false)
+
         }
-        else setActiveFilter(key)
+        else {
+            setActiveFilter(key)
+            setActive(true)
+        }
     }
-    const handleClick = (key: string) => {
+    const handleClick = (key: string, _text: string) => {
         doFiltering(key)
-        setActive(true)
+        if (_text === text) {
+            setText("")
+        } else setText(_text)
+    }
+    const reset = () => { 
+         setActiveFilter("")
+         setText("")
+         setActive(false)
     }
     return (
         <>
-            <div id="filter" className={`container Header ${active ? "active" : ""}`}>
+            <div id="filter" className={`Header ${active ? "active" : ""}`}>
                 <div className='row'>
-                    <div className="col-12 items">
+                    <div className=" items">
                         {items.map((i, index) => {
-                            return <div className={`item col-md-3 col-12 ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key) /*router.push("#" + item.key)*/} key={i.key} ><p>{i.name}</p></div>
+                            if (i.text === text) {
+                                return (
+                                    <div className="itemContainer">
+                                        <div className={`item  ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text) /*router.push("#" + item.key)*/} key={i.key} ><p>{i.name}</p></div>
+
+                                        <div className={`text ${i.key == activeFilter ? "active" : ""}`}>
+
+                                            {text}
+
+                                        </div>
+                                    </div>
+                                )
+                            } else return (
+                                <div className="itemContainer">
+                                    <div className={`item col-2 col-md-12  ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text) /*router.push("#" + item.key)*/} key={i.key} ><p>{i.name}</p></div>
+                                </div>
+                            )
                         })}
                     </div>
                 </div>
             </div>
             <a href="#filter">
-                <div onClick={() => setActiveFilter(undefined)} className="resetButton">
-                    <img src="/icons/reset.png" alt="" />
+                <div onClick={() => reset()} className={`resetButton ${active ? "active" : ""}`}>
+                    <img src={` ${active ? "icons/reset.png" : "icons/flecha.png"}`} alt="" />
                 </div>
             </a>
         </>

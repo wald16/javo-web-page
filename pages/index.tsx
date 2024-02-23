@@ -23,7 +23,9 @@ export type ItemType = {
   fontSize?: number,
   video?: string,
   bkg?: string,
-  extraClass?: string
+  extraClass?: string,
+  secondaryImgs?: string[],
+  details: string
 }
 
 
@@ -31,42 +33,76 @@ const config: ItemType[] = [
 
   {
     type: "small",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
     clickeable: true,
     img: "/images/img3.jpg",
     minHeight: "400px",
     height: "40vh",
-    title: "campañas",
+    title: "lorem ipsum",
     titleColor: "white",
     textAlign: "end",
-    category: "campañas"
+    category: "campañas",
+    secondaryImgs: [
+      "/images/img3.jpg",
+      "/images/img2.jpg",
+      "/images/img1.jpg",
+    ]
   },
   {
     type: "small",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "lorem ipsum",
+    titleColor: "white",
+    textAlign: "end",
     clickeable: true,
     img: "/images/img4.jpg",
     minHeight: "400px",
     height: "40vh",
-    category: "campañas"
+    category: "campañas",
+    secondaryImgs: [
+      "/images/img4.jpg",
+      "/images/img2.jpg",
+      "/images/img1.jpg",
+    ]
   },
   {
     type: "small",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "lorem ipsum",
+    titleColor: "white",
+    textAlign: "end",
     clickeable: true,
     img: "/images/img5.jpg",
     minHeight: "400px",
     height: "40vh",
-    category: "identidad"
+    category: "identidad",
+    secondaryImgs: [
+      "/images/img5.jpg",
+      "/images/img2.jpg",
+      "/images/img1.jpg",
+    ]
   },
   {
     type: "small",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "lorem ipsum",
+    titleColor: "white",
+    textAlign: "end",
     clickeable: true,
     img: "/images/img13.jpg",
     minHeight: "400px",
     height: "40vh",
-    category: "identidad"
+    category: "identidad",
+    secondaryImgs: [
+      "/images/img13.jpg",
+      "/images/img2.jpg",
+      "/images/img1.jpg",
+    ]
   },
 
   {
     type: "large",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
     minHeight: "400px",
     height: "40vh",
     mobileHeight: "320px",
@@ -77,11 +113,17 @@ const config: ItemType[] = [
     descriptionColor: "#FF5500",
     description: "diseñamos y desarrollamos proyectos efectivos que potencian relatos y fortalecen marcas",
     textAlign: "left",
-    category: "espacios"
+    category: "espacios",
+    extraClass: "noHover",
+
   },
 
   {
     type: "large",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "lorem ipsum",
+    titleColor: "white",
+    textAlign: "end",
     minHeight: "500px",
     img: "/images/img8.jpg",
     height: "50vh",
@@ -89,49 +131,90 @@ const config: ItemType[] = [
     mobileMinHeight: "auto",
     category: "espacios",
     clickeable: false,
-    // title: "LARGE BUT HIGHER",
-    titleColor: "white"
+    secondaryImgs: [
+      "/images/img8.jpg",
+      "/images/img2.jpg",
+      "/images/img1.jpg",
+    ]
+
   },
   {
     type: "small",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "lorem ipsum",
     clickeable: true,
     img: "/images/img14.jpg",
     category: "identidad",
     minHeight: "400px",
     height: "40vh",
-    title: "lorem Ipsum",
     titleColor: "white",
     textAlign: "end",
+    secondaryImgs: [
+      "/images/img14.jpg",
+      "/images/img2.jpg",
+      "/images/img1.jpg",
+    ]
   },
   {
     type: "small",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "lorem ipsum",
+    titleColor: "white",
+    textAlign: "end",
     clickeable: true,
     img: "/images/img11.jpg",
     minHeight: "400px",
     category: "identidad",
-    height: "40vh"
+    height: "40vh",
+    secondaryImgs: [
+      "/images/img11.jpg",
+      "/images/img2.jpg",
+      "/images/img1.jpg",
+    ]
   },
   {
     type: "small",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "lorem ipsum",
+    titleColor: "white",
+    textAlign: "end",
     clickeable: true,
     img: "/images/img6.jpg",
     minHeight: "400px",
     category: "nosotros",
     height: "40vh",
+    secondaryImgs: [
+      "/images/img6.jpg",
+      "/images/img2.jpg",
+      "/images/img1.jpg",
+    ]
 
   },
   {
     category: "nosotros",
     type: "small",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "lorem ipsum",
+    titleColor: "white",
+    textAlign: "end",
     clickeable: true,
     img: "/images/img7.jpg",
     minHeight: "400px",
     height: "40vh",
+    secondaryImgs: [
+      "/images/img7.jpg",
+      "/images/img2.jpg",
+      "/images/img1.jpg",
+    ]
 
   },
 
   {
     type: "large",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "lorem ipsum",
+    titleColor: "white",
+    textAlign: "end",
     minHeight: "300px",
     height: "30vh",
     mobileHeight: "420px",
@@ -139,15 +222,16 @@ const config: ItemType[] = [
     img: "/images/img10.jpg",
     clickeable: false,
     // title: "LARGE BUT SHORTER",
-    titleColor: "white",
     category: "campañas",
     showOnlyOnFilter: true,
   },
   {
     type: "large",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "lorem ipsum",
     img: "/images/img9.jpg",
-    title: "mas proyectos...",
     titleColor: "white",
+    textAlign: "end",
     minHeight: "500px",
     height: "50vw",
     clickeable: false,
@@ -384,7 +468,7 @@ export const SectionSmall = (props: ItemType & { setModalInfo: Function }) => {
         {title || description ? (
           <div className='SectionText'>
             <div className='SectionTextHolder' style={textStyle}>
-              {title && <p className='f-50 lh-48' style={titleStyle}><b>{title}</b></p>}
+              {title && <p className='f-50 lh-48 title' style={titleStyle}><b>{title}</b></p>}
               {description && <p className='f-50 lh-48' style={descriptionStyle}><b>{description}</b></p>}
             </div>
           </div>
@@ -418,11 +502,11 @@ export const SectionBanner = (props: ItemType & { setModalInfo: Function }) => {
   }
 
   const titleStyle = {
-    color: titleColor ? titleColor : "black"
+    color: titleColor ? titleColor : "white"
   }
 
   const descriptionStyle = {
-    color: descriptionColor ? descriptionColor : "black"
+    color: descriptionColor ? descriptionColor : "white"
   }
 
   const textStyle = {
@@ -438,7 +522,7 @@ export const SectionBanner = (props: ItemType & { setModalInfo: Function }) => {
         {title || description ? (
           <div className='SectionText'>
             <div className='SectionTextHolder' style={textStyle}>
-              {title && <p className='f-50 lh-48' style={titleStyle}><b>{title}</b></p>}
+              {title && <p className='f-50 lh-48 title' style={titleStyle}><b>{title}</b></p>}
               {description && <p className='f-50 lh-48' style={descriptionStyle}><b>{description}</b></p>}
             </div>
           </div>
@@ -561,40 +645,36 @@ export const Footer = () => {
 }
 export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, modalInfo: ItemType }) => {
   const [active, setActive] = React.useState<Boolean>(false)
-  if (modalInfo !== undefined) {
+
+
+
+  if (modalInfo !== undefined && modalInfo.secondaryImgs) {
     return (
       <div className='Modal-Wrapper'>
-        <div className="modalBody" style={{ backgroundImage: `url(${modalInfo.img})` }}>
+        <div className="modalBody">
           <div className="closer" onClick={() => { setModalInfo(undefined) }}>
             <div className="imgBg">
               <img src="/icons/cruz.png" alt="" />
             </div>
           </div>
-          <div className="modalContent">
-            <div className={`${active ? "d-none" : "modalButton"}`} onClick={() => { setActive(!active) }}>
-              <img src="/icons/chevronup.png" alt="" />
-            </div>
-            <div className={`modalTextContainer ${active ? "active" : ""}`}>
-              <div className={`${active ? "closer" : "d-none"}`} onClick={() => { setActive(!active) }}>
-                <img src="/icons/cruz.png" alt="" />
-              </div>
-              <div className="modalTitle">
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, eaque.
-                </p>
-              </div>
-              <div className="modalText">
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Porro, necessitatibus voluptates! Atque, dolorem a similique alias
-                  quisquam consequatur ut dignissimos enim deserunt corrupti suscipit
-                  placeat eveniet reiciendis inventore natus aliquam, temporibus ratione
-                  dolor. Iste iusto quisquam ea consectetur similique ipsa laborum obcaecati
-                  commodi. Atque earum cupiditate tenetur, quibusdam rerum qui?
-                </p>
-              </div>
+          <div className="modalImages">
+            {modalInfo.secondaryImgs.map((src, index) => {
+              return (
+                <img src={src} key={index} alt="" />
+              )
+            })}
+          </div>
+          <div className={`${active ? "d-none" : "modalButton"}`} onClick={() => { setActive(true) }}>
+            <img src="/icons/chevronup.png" />
+          </div>
+          <div className={`${active ? "modaltextContainer" : "d-none"}`}>
+            <img src="/icons/cruz.png" onClick={() => { setActive(false) }} alt="" />
+            <div className="modalTitle">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
             </div>
           </div>
+
+
         </div>
       </div>
     )
@@ -602,3 +682,33 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
 }
 
 
+{/* <div className="modalTitle">
+<p>
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, eaque.
+</p>
+</div>
+<div className="modalText">
+<p>
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+  Porro, necessitatibus voluptates! Atque, dolorem a similique alias
+  quisquam consequatur ut dignissimos enim deserunt corrupti suscipit
+  placeat eveniet reiciendis inventore natus aliquam, temporibus ratione
+  dolor. Iste iusto quisquam ea consectetur similique ipsa laborum obcaecati
+  commodi. Atque earum cupiditate tenetur, quibusdam rerum qui?
+</p>
+</div> */}
+
+
+// <div className={`${active ? "d-none" : "modalButton"}`} onClick={() => { setActive(!active) }}>
+// <img src="/icons/chevronup.png" alt="" />
+// </div>
+// <div className="modalTextContainer">
+
+// <div className="title">
+//   Lorem ipsum dolor sit amet.
+// </div>
+
+// <div className="text">
+//   HOLA MUNDO
+// </div>
+// </div>

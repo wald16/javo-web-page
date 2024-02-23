@@ -30,9 +30,21 @@ body {
   min-height: 300px;
   background-color: black;
   filter: grayscale(0%);
-  transition: filter 0.2s ease-in-out, opacity 1s ease-in-out;
   overflow: hidden;
   height: fit-content;
+  transition: all ease-in 1s;
+
+  &:hover {
+    .title {
+      transition: all ease-in 1s;
+      display: block;
+    }
+  }
+
+  .title {
+    display: none;
+  }
+
 
   .SectionImage {
     width: 100%;
@@ -91,11 +103,38 @@ body {
   }
 }
 
+.noHover {
+  .title {
+    display: block;
+  }
+}
+
 .Header {
   width: 100vw;
-  height: fit-content;
-  padding: 10px 0px;
-  align-items: center;
+  height: 25vh;
+  justify-content: start;
+  background-color: black;
+
+  &.active {
+    height: 35vh;
+  }
+
+
+
+  // display: flex;
+  .itemContainer {
+    .text {
+      width: fit-content;
+      font-size: 35px;
+      font-weight: 600;
+
+      margin-left: 15px;
+      color: $gray;
+      font-family: Helvetica;
+
+    }
+  }
+
 
   @media (max-width:768px) {
     padding: 10px;
@@ -107,19 +146,19 @@ body {
 
   .items,
   .mobileItems {
-    justify-content: space-evenly;
 
-    @media (min-width:768px) {
-      display: flex;
-    }
+    display: flex;
 
     .item {
-      text-align: center;
+      text-align: left;
       font-size: 30px;
       font-weight: 500;
-      opacity: 0.5;
       justify-content: center;
       align-items: center;
+      color: $gray;
+
+      height: fit-content;
+      width: fit-content;
 
       @media (min-width:768px) {
         margin: 0px 10px;
@@ -131,20 +170,25 @@ body {
 
       &:hover {
         transition: all ease 0.3s;
+        color: $green;
         opacity: 1;
         cursor: pointer;
       }
 
       &.active {
         opacity: 1;
+        cursor: pointer;
+        color: $green;
       }
     }
 
     p {
       padding: 5px;
       margin: 0px;
-      border: 1px solid white;
+      // border: 1px solid white;
       border-radius: 8px;
+      font-family: Helvetica;
+      font-weight: bolder;
     }
 
 
@@ -166,41 +210,27 @@ body {
   align-items: center;
   transition: all ease 1s;
 
-  &:hover {
-    transition: all ease 1s;
-    transform: rotate(-360deg);
-    cursor: pointer;
+  img {
+    animation: smallerBounce 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+
+  &.active {
+    img {
+
+      animation: none;
+    }
+
+    &:hover {
+      transition: all ease 1s;
+      transform: rotate(-360deg);
+      cursor: pointer;
+    }
   }
 }
 
 .Modal-Wrapper {
-  @mixin scrollbar() {
-    &::-webkit-scrollbar {
-      width: 14px;
-      height: 18px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      height: 6px;
-      border: 4px solid rgba(0, 0, 0, 0);
-      background-clip: padding-box;
-      border-radius: 7px;
-      background-color: rgba(255, 255, 255, 0.552);
-      box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
-    }
-
-    &::-webkit-scrollbar-button {
-      width: 0;
-      height: 0;
-      display: none;
-    }
-
-    &::-webkit-scrollbar-corner {
-      background-color: tranparent;
-    }
-
-  }
-
   position: fixed;
   width: 100%;
   height: 100%;
@@ -215,23 +245,35 @@ body {
     width: fit-content;
     height: fit-content;
     min-width: 500px;
-    min-height: 400px;
-    max-width: 650px;
-    max-height: 550px;
+    width: 55%;
+    height: 60%;
     background-size: cover;
     background-position: center;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: scroll;
+
+    .modaltextContainer {
+      width: 55%;
+      height: 170px;
+      background-color: black;
+      opacity: 0.8;
+      position: fixed;
+      bottom: 20%;
+      z-index: 99;
+      
+    }
 
     .closer {
 
 
       font-size: 40px;
-
+      z-index: 99;
       display: flex;
-      justify-content: end;
+      justify-content: start;
+      position: fixed;
 
       .imgBg {
         width: fit-content;
@@ -253,7 +295,15 @@ body {
       }
     }
 
+    @keyframes smallerBounce {
+      from {
+        transform: translate3d(0, 5px, 0);
+      }
 
+      to {
+        transform: translate3d(0, -5px, 0);
+      }
+    }
 
     @keyframes bounce {
       from {
@@ -273,55 +323,24 @@ body {
       animation: bounce 1s;
       animation-direction: alternate;
       animation-iteration-count: infinite;
+      position: fixed;
+      z-index: 99;
+      bottom: 20%;
+      left: 0%;
+      right: 0%;
     }
 
-    .modalTextContainer {
+
+    .modalImages {
       width: 100%;
-      height: 0px;
-      max-height: 200px;
-      background-color: rgba(0, 0, 0, 0.747);
       position: absolute;
-      bottom: 0px;
-      padding: 10px;
-      overflow-y: scroll;
-      overflow-x: hidden;
-      opacity: 0;
+      z-index: 9;
 
-      .closer {
-        // background-color: red;
-        filter: invert(1);
-        justify-content: end;
-        display: flex;
-        height: 50px;
-      }
-
-      &.active {
-        flex-direction: column;
-        height: fit-content;
-        opacity: 1;
-      }
-
-      @include scrollbar();
-
-      .modalTitle {
-        font-size: 20px;
-        font-weight: 600;
-        color: $green;
-        font-family: Arial, Helvetica, sans-serif;
-        margin-top: -50px;
-
-      }
-
-      .modalText {
-        font-size: 15px;
-        word-wrap: break-word;
-        font-family: Arial, Helvetica, sans-serif;
-
-        p {
-          margin: 0px;
-        }
+      img {
+        width: 100%;
       }
     }
+
   }
 }
 
@@ -343,14 +362,16 @@ body {
     .sectionLeft {
       display: flex;
       width: 45%;
-      justify-content:space-between;
+      justify-content: space-between;
       padding-left: 10px;
-      .texts{
+
+      .texts {
         display: flex;
         justify-content: space-around;
         width: 65%;
 
       }
+
       .city {
         color: black;
         // background-color: red;
@@ -406,9 +427,9 @@ body {
     }
 
 
-   
 
-   
+
+
 
     .mail {
       font-size: 30px;
@@ -510,12 +531,13 @@ body {
 .videoContainer {
   background-color: red;
   width: 100vw;
-  height: fit-content;
+  height: 80vh;
+
 
   .bannerVideo {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     margin-bottom: -20px;
   }
 }
