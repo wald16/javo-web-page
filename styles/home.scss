@@ -114,8 +114,7 @@ body {
   justify-content: start;
   background-color: black;
 
-  &.active {
-  }
+  &.active {}
 
 
 
@@ -126,7 +125,9 @@ body {
       font-size: 35px;
       font-weight: 600;
 
+      max-width: 500px;
       margin-left: 15px;
+      margin-bottom: 20px;
       color: $gray;
       font-family: Helvetica;
 
@@ -141,6 +142,7 @@ body {
   .row {
     margin-top: 15px;
   }
+
   .pushedCol {
     margin-right: 16px;
     width: calc(100% - 16px);
@@ -150,8 +152,9 @@ body {
   .mobileItems {
     @media screen and (max-width: 1200px) {
       flex-direction: column;
-      
+
     }
+
     display: flex;
 
     .item {
@@ -263,7 +266,7 @@ body {
     @media screen and (max-width: 768px) {
       width: 80%;
       height: 80%;
-      
+
     }
 
     .modaltextContainer {
@@ -274,8 +277,9 @@ body {
       position: fixed;
       bottom: 20%;
       z-index: 99;
-      
+
     }
+
     .Video {
       background-color: black;
       height: 100%;
@@ -283,6 +287,7 @@ body {
       align-items: center;
       justify-content: center;
     }
+
     .closer {
 
 
@@ -298,10 +303,12 @@ body {
         cursor: pointer;
         background-color: rgba(0, 0, 0, 0.725);
       }
+
       .tabSelector {
         position: relative;
         top: -40px;
         height: 40px;
+
         &.active {
           background-color: red;
         }

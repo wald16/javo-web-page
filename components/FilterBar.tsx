@@ -85,7 +85,7 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
                                     <div className="itemContainer" key={index}>
                                         <div className={`item col-2 col-md-12  ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text)} key={i.key} ><p>{i.name}</p></div>
                                         {i.key == activeFilter && (
-                                            <div className={`text d-flex d-lg-none ${i.key == activeFilter ? "active" : ""}`}>
+                                            <div className={`text d-flex d-xl-none ${i.key == activeFilter ? "active" : ""}`}>
                                                 {text}
                                             </div>
                                         )}
@@ -100,7 +100,7 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
                                     <div className="itemContainer" key={index}>
                                         <div className={`item col-2 col-md-12 opacity-0 h-0 d-none d-lg-flex ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text)} key={i.key} ><p>{i.name}</p></div>
                                         {i.key == activeFilter && (
-                                            <div className={`text d-none d-lg-flex ${i.key == activeFilter ? "active" : ""}`}>
+                                            <div className={`text d-none d-xl-flex ${i.key == activeFilter ? "active" : ""}`}>
                                                 {text}
                                             </div>
                                         )}
