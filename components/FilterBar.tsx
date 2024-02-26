@@ -8,7 +8,7 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
         {
             key: "identidad",
             name: "identidad",
-            text: "hacemos identidades que son re buenas porque somos re buenos"
+            text: "Lorem ipsum amb al rabia magnis dis parturient montes nascetur ridiculus mus"
         },
         {
             key: "campañas",
@@ -19,17 +19,17 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
         {
             key: "ciudades",
             name: "ciudades",
-            text: "hacemos ciudades que son re buenas porque somos re buenos"
+            text: "Lorem ipsum amb al rabia magnis dis parturient montes nascetur ridiculus mus"
         },
         {
             key: "espacios",
             name: "espacios",
-            text: "hacemos espacios que son re buenas porque somos re buenos"
+            text: "Lorem ipsum amb al rabia magnis dis parturient montes nascetur ridiculus mus"
         },
         {
             key: "poupurri",
             name: "poupurri",
-            text: "hacemos poupurris que son re buenas porque somos re buenos"
+            text: "Lorem ipsum amb al rabia magnis dis parturient montes nascetur ridiculus mus"
         },
         {
             key: "nosotros",
@@ -41,23 +41,20 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
     const [active, setActive] = React.useState(false);
     const [text, setText] = React.useState("")
 
-    const doFiltering = (key: string) => {
+    const handleClick = (key: string, _text: string) => {
         if (key == activeFilter) {
             setActiveFilter(undefined)
             setActive(false)
+            setText("")
 
         }
         else {
             setActiveFilter(key)
             setActive(true)
+            setText(_text)
         }
     }
-    const handleClick = (key: string, _text: string) => {
-        doFiltering(key)
-        if (_text === text) {
-            setText("")
-        } else setText(_text)
-    }
+    
     const reset = () => {
         setActiveFilter("")
         setText("")
