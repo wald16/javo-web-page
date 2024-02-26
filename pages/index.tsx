@@ -279,11 +279,11 @@ export default function HomePage() {
 
   React.useEffect(() => {
     const ele = document.querySelector('html')
-    if(ele) {
-      if(modalInfo) ele.style.overflow = 'hidden'
+    if (ele) {
+      if (modalInfo) ele.style.overflow = 'hidden'
       else ele.style.overflow = 'auto'
     }
-  },[modalInfo])
+  }, [modalInfo])
   return (
     <>
       <Head>
@@ -658,7 +658,13 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
   const [active, setActive] = React.useState<Boolean>(false)
   const checkItems = modalInfo.secondaryImgs ? "Graphic" : "Video"
   const [selection, setSelection] = React.useState<"Video" | "Graphic">(checkItems)
-
+  const lastImageChecker = (_index: number) => {
+    _index = _index + 1
+    const length = modalInfo.secondaryImgs?.length
+    if (_index === length) {
+      return true
+    } else return false
+  }
   return (
     <div className='Modal-Wrapper'>
       <div className="modalBody">
@@ -668,12 +674,12 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
           </div>
           {modalInfo.secondaryVideos && (
             <div className={`imgBg tabSelector ${selection == "Video" ? "active" : ""}`} onClick={() => setSelection("Video")}>
-              <p className='mb-0 px-2 py-1 f-24 lh-32'>AudioVisual</p>
+              <p className='mb-0 px-2  f-32 lh-32'>audioVisual</p>
             </div>
           )}
           {modalInfo.secondaryImgs && (
             <div className={`imgBg tabSelector ${selection == "Graphic" ? "active" : ""}`} onClick={() => setSelection("Graphic")}>
-              <p className='mb-0 px-2 py-1 f-24 lh-32'>Grafica</p>
+              <p className='mb-0 px-2  f-32 lh-32'>grafica</p>
             </div>
           )}
         </div>
@@ -681,19 +687,11 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
           <div className='Graphic'>
             <div className="modalImages">
               {modalInfo.secondaryImgs.map((src, index) => {
+                
                 return (
-                  <img src={src} key={index} alt="" />
+                  <img src={src} key={index} className={lastImageChecker(index)  ? "lastImg" : ""} alt="" />
                 )
               })}
-            </div>
-            <div className={`${active ? "d-none" : "modalButton"}`} onClick={() => { setActive(true) }}>
-              <img src="/icons/chevronup.png" />
-            </div>
-            <div className={`${active ? "modaltextContainer" : "d-none"}`}>
-              <img src="/icons/cruz.png" onClick={() => { setActive(false) }} alt="" />
-              <div className="modalTitle">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
-              </div>
             </div>
           </div>
         )}

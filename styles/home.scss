@@ -90,7 +90,8 @@ body {
 
       .title {
         margin-bottom: 20px;
-        font-size: 80px;
+        margin-left: 20px;
+        font-size: 45px;
         line-height: 70px;
       }
 
@@ -159,6 +160,7 @@ body {
     }
 
     display: flex;
+
     .item {
       text-align: left;
       font-size: 30px;
@@ -251,7 +253,7 @@ body {
   z-index: 99999;
 
   .modalBody {
-    background-color: $orange;
+    background-color: $black;
     width: fit-content;
     height: fit-content;
     min-width: 500px;
@@ -291,12 +293,10 @@ body {
     }
 
     .closer {
-
-
       font-size: 40px;
       z-index: 99;
       display: flex;
-      justify-content: start;
+      justify-content: end;
       position: fixed;
 
       .imgBg {
@@ -308,11 +308,25 @@ body {
 
       .tabSelector {
         position: relative;
-        top: -40px;
-        height: 40px;
+        top: -55px;
+        height: 55px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        font-family: helvetica;
+        background-color: #7E7E7E;
+        color: $gray;
+        transition: all ease-in 0.2s;
 
         &.active {
-          background-color: red;
+          transition: all ease-in 0.2s;
+          color: $green;
+          background-color: #3A3E47;
+        }
+
+        &:hover {
+          transition: all ease-in 0.2s;
+          color: $green;
         }
       }
 
@@ -370,9 +384,15 @@ body {
       width: 100%;
       // position: absolute;
       z-index: 9;
+      height: 100%;
 
       img {
         width: 100%;
+        border-bottom: 10px solid black;
+      }
+
+      .lastImg {
+        border: none;
       }
     }
 
