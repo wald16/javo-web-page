@@ -104,7 +104,9 @@ body {
   }
 }
 
-.noHover {
+.textModule {
+  height: fit-content;
+
   .title {
     display: block;
   }
@@ -256,7 +258,7 @@ body {
     background-color: $black;
     width: fit-content;
     height: fit-content;
-    min-width: 500px;
+    min-width: 300px;
     width: 55%;
     height: 60%;
     background-size: cover;
@@ -269,8 +271,7 @@ body {
 
     @media screen and (max-width: 768px) {
       width: 80%;
-      height: 80%;
-
+      height: 50%;
     }
 
     .modaltextContainer {
@@ -389,9 +390,11 @@ body {
       img {
         width: 100%;
         max-height: 360px;
+
         @media screen and (min-width:1200px) {
           max-height: 420px;
         }
+
         border-bottom: 10px solid black;
       }
 
@@ -403,189 +406,416 @@ body {
   }
 }
 
-.footer {
+.footerContainer {
+  width: 100vw;
   height: fit-content;
-  background-color: white;
-  color: black;
+  min-height: 300px;
+  background-color: $white;
+  font-size: 80px;
+  font-weight: bold;
 
-  .finalContent {
-    font-size: 80px;
-    font-weight: 600;
-    padding: 0px 10px;
-    color: $orange;
-    margin-top: -30px;
-    margin-bottom: 20px;
-    display: flex;
-    font-family: Arial, Helvetica, sans-serif;
-
-    .sectionLeft {
-      display: flex;
-      width: 45%;
-      justify-content: space-between;
-      padding-left: 10px;
-
-      .texts {
-        display: flex;
-        justify-content: space-around;
-        width: 65%;
-
-      }
-
-      .city {
-        color: black;
-        // background-color: red;
-        // margin-left: 0px;
-        margin-bottom: -20px;
-        font-size: 30px;
-        display: flex;
-        align-items: end;
-        font-size: helvetica;
-        font-weight: bolder;
-        letter-spacing: -2px;
-      }
-
-      .phrase {
-        // background-color: red;
-        height: 100px;
-        color: gray;
-        display: flex;
-        justify-content: end;
-        align-items: left;
-        text-align: left;
-        margin-top: 35px;
-      }
-
-    }
-
-    .sectionRight {
-      // background-color: red;
-      display: flex;
-      width: 50%;
-      align-items: end;
-      justify-content: right;
-      padding-right: 10px;
-      margin-bottom: -20px;
-      color: $gray;
-
-    }
-
-    .brand {
-      margin: 0px;
-      margin-right: 15px;
-
-      p {
-        // background-color: red;
-        font-size: 120px;
-        padding: 0%;
-        margin: 0%;
-        margin-bottom: -40px;
-        font-family: helvetica;
-        letter-spacing: -7px;
-        font-weight: bolder;
-      }
-    }
-
-
-
-
-
-
-    .mail {
-      font-size: 30px;
-    }
-  }
-
-  .footerTitle {
-    padding: 10px;
-    margin-top: -20px;
-    margin-bottom: -40px;
+  .title {
     color: black;
     font-size: 100px;
-    font-weight: 700;
     letter-spacing: -5px;
+    margin-top: -10px;
+    margin-left: 10px;
+    margin-bottom: -30px;
+    font-family: helvetica;
+    font-weight: bolder;
   }
 
-  .footerText {
-    padding: 10px;
-    color: gray;
+  .subTitle {
+    font-weight: bold;
+    margin-left: 15px;
     font-size: 50px;
-    font-weight: 700;
-    word-wrap: break-word;
-    text-align: start;
-    word-spacing: 0px;
-
-    p {
-      margin: -20px 5px;
-      word-spacing: -5px;
-    }
+    line-height: 55px;
+    color: $gray;
   }
 
-  .blockContainer {
+  .textsContainer {
     width: 100%;
-    color: black;
+    margin: auto;
+    height: fit-content;
+    min-height: 100px;
+    margin-bottom: 40px;
+    // margin-top: 100px;
     display: flex;
-    overflow: hidden;
-    justify-content: space-between;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-left: 10px;
+    justify-content: left;
+    // background-color: red;
 
-    .block {
-      margin: 10px;
+    .textContent {
+      max-width: 25%;
+      margin-right: 40px;
+      margin-left: 10px;
+      height: fit-content;
+      min-height: 250px;
+      // margin: 10px;
+      // background-color: green;
 
-      .blockText {
-        word-wrap: break-word;
-        text-align: left;
-        color: $gray;
-        text-transform: capitalize;
-        font-weight: 700;
+      .textTitle {
+        font-size: 30px;
+        font-family: helvetica;
+        color: $black;
+        font-weight: bolder;
       }
 
-      .blockTitle {
-        text-align: left;
-        font-size: 40px;
-        margin-bottom: -20px;
-        margin-top: 30px;
-        font-weight: 800;
-        letter-spacing: -2px !important;
+      .text {
+        font-size: 23px;
+        color: $gray;
+        font-family: helvetica;
+        font-weight: 400;
+        line-height: 25px;
       }
     }
-
   }
 
   .biographies {
-    justify-content: start;
-    height: 300px;
+    width: 100%;
+    // background-color: green;
     margin-bottom: 30px;
-    padding: 10px;
-    padding-left: 20px;
+    height: fit-content;
     display: flex;
+    color: $black;
 
     .biographie {
-      height: 100%;
-      width: 300px;
+      font-size: 30px;
+      width: 20%;
+      height: 300px;
+      margin-left: 10px;
+      // background-color: blue;
+      display: flex;
+      flex-direction: column;
+      font-weight: bolder;
+      color: $gray;
 
-      .image {
-        background-color: green;
+      .biographieImg {
         width: 100%;
-        height: 80%;
-        background-size: cover;
+        height: 90%;
         background-position: center;
+        background-size: cover;
+        filter: grayscale(0.6);
+        margin-bottom: 20px;
+
+        &.active {
+          filter: grayscale(0);
+        }
+
+        // background-color: red;
       }
 
-      .name {
-        font-family: Arial, Helvetica, sans-serif;
-        color: $gray;
-        font-size: 25px;
-        font-weight: 700;
-        letter-spacing: -1px;
+      .biographieName {
+        color: #3A3E47;
+        font-weight: bolder;
+        font-family: helvetica;
 
-        &:hover {
+        &.active {
           color: $black;
         }
       }
     }
+
+    .biographieText {
+      width: 50%;
+      // background-color: red;
+      height: 240px;
+      padding: 10px;
+      color: black;
+      margin-top: -15px;
+      margin-left: 30px;
+
+      .name {
+        line-height: 25px;
+        font-size: 30px;
+        font-weight: bolder;
+        // background-color: red;
+        margin-bottom: 20px;
+      }
+
+      .text {
+        line-height: 30px;
+        font-size: 25px;
+        font-weight: 600;
+      }
+    }
+
+  }
+
+  .finalContent {
+    width: 100%;
+    height: fit-content;
+    padding-left: 10px;
+    // background-color: red;
+    display: flex;
+    align-items: center;
+
+    .left {
+      display: flex;
+      align-items: center;
+
+      .brand {
+        font-size: 160px;
+        font-weight: bolder;
+        color: $orange;
+        letter-spacing: -5px;
+        margin-bottom: -25px;
+      }
+
+      .phrase {
+        margin: 0px;
+        margin-bottom: -70px;
+        margin-left: 30px;
+        color: $gray;
+
+        p {
+          color: #7e7e7e;
+          font-size: 45px;
+          margin-bottom: 10px;
+          font-weight: bolder;
+          // background-color: red;
+        }
+      }
+    }
+
   }
 }
+
+
+// .footer {
+//   height: fit-content;
+//   background-color: white;
+//   color: black;
+
+//   .finalContent {
+//     font-size: 80px;
+//     font-weight: 600;
+//     padding: 0px 10px;
+//     color: $orange;
+//     margin-top: -30px;
+//     margin-bottom: 20px;
+//     display: flex;
+//     font-family: Arial, Helvetica, sans-serif;
+
+//     .sectionLeft {
+//       display: flex;
+//       width: 45%;
+//       justify-content: space-between;
+//       padding-left: 10px;
+
+//       .texts {
+//         display: flex;
+//         justify-content: space-around;
+//         width: 65%;
+
+//       }
+
+//       .city {
+//         color: black;
+//         // background-color: red;
+//         // margin-left: 0px;
+//         margin-bottom: -20px;
+//         font-size: 30px;
+//         display: flex;
+//         align-items: end;
+//         font-size: helvetica;
+//         font-weight: bolder;
+//         letter-spacing: -2px;
+//       }
+
+//       .phrase {
+//         // background-color: red;
+//         height: 100px;
+//         color: gray;
+//         display: flex;
+//         justify-content: end;
+//         align-items: left;
+//         text-align: left;
+//         margin-top: 35px;
+//       }
+
+//     }
+
+//     .sectionRight {
+//       // background-color: red;
+//       display: flex;
+//       width: 50%;
+//       align-items: end;
+//       justify-content: right;
+//       padding-right: 10px;
+//       margin-bottom: -20px;
+//       color: $gray;
+
+//     }
+
+//     .brand {
+//       margin: 0px;
+//       margin-right: 15px;
+
+//       p {
+//         // background-color: red;
+//         font-size: 120px;
+//         padding: 0%;
+//         margin: 0%;
+//         margin-bottom: -40px;
+//         font-family: helvetica;
+//         letter-spacing: -7px;
+//         font-weight: bolder;
+//       }
+//     }
+
+
+
+
+
+
+//     .mail {
+//       font-size: 30px;
+//     }
+//   }
+
+//   .footerTitle {
+//     padding: 10px;
+//     margin-top: -20px;
+//     margin-bottom: -40px;
+//     color: black;
+//     font-size: 100px;
+//     font-weight: 700;
+//     letter-spacing: -5px;
+//   }
+
+//   .footerText {
+//     padding: 10px;
+//     color: gray;
+//     font-size: 50px;
+//     font-weight: 700;
+//     word-wrap: break-word;
+//     text-align: start;
+//     word-spacing: 0px;
+
+//     p {
+//       margin: -20px 5px;
+//       word-spacing: -5px;
+//     }
+//   }
+
+//   .blockContainer {
+//     width: 100%;
+//     color: black;
+//     display: flex;
+//     overflow: hidden;
+//     justify-content: space-between;
+//     font-family: Arial, Helvetica, sans-serif;
+//     padding-left: 10px;
+
+//     .block {
+//       margin: 10px;
+
+//       .blockText {
+//         word-wrap: break-word;
+//         text-align: left;
+//         color: $gray;
+//         text-transform: capitalize;
+//         font-weight: 700;
+//       }
+
+//       .blockTitle {
+//         text-align: left;
+//         font-size: 40px;
+//         margin-bottom: -20px;
+//         margin-top: 30px;
+//         font-weight: 800;
+//         letter-spacing: -2px !important;
+//       }
+//     }
+
+//   }
+
+//   .biographies {
+//     justify-content: start;
+//     height: 300px;
+//     margin-bottom: 30px;
+//     padding: 10px;
+//     padding-left: 20px;
+//     display: flex;
+//     width: 100%;
+
+//     @media screen and (max-width:768px) {
+//       flex-direction: column
+//     }
+
+//     .text {
+//       width: 50%;
+//       height: 80%;
+
+//       // margin-left: 40px;
+//       // background-color: red;
+//       p {
+//         margin-bottom: 0px;
+//         margin-top: -15px;
+//         line-height: 30px;
+//         padding: 10px;
+//         font-size: 30px;
+//         font-weight: 700;
+//         color: $black;
+
+//         @media screen and (max-width:1440px) {
+//           font-size: 25px;
+//         }
+
+//         @media screen and (max-width:992px) {
+//           font-size: 20px;
+//           line-height: 20px;
+//         }
+
+//         @media screen and (max-width:768px) {
+//           font-size: 15px;
+//           line-height: 20px;
+//         }
+
+//         @media screen and (max-width:500px) {
+//           line-height: 15px;
+//           font-size: 10px;
+//         }
+//       }
+//     }
+
+//     .biographie {
+//       height: 100%;
+//       width: 25%;
+
+//       @media screen and (max-width:768px) {
+//         width: 100%;
+
+//       }
+
+//       .image {
+//         background-color: green;
+//         width: 100%;
+//         height: 80%;
+//         background-size: cover;
+//         background-position: center;
+//         filter: grayscale(1);
+
+//         &.active {
+//           filter: grayscale(0);
+//         }
+//       }
+
+//       .name {
+//         font-family: Arial, Helvetica, sans-serif;
+//         color: $gray;
+//         font-size: 25px;
+//         font-weight: 700;
+//         letter-spacing: -1px;
+//         margin-bottom: 30px;
+
+//         &.active {
+//           color: $black;
+//         }
+//       }
+//     }
+//   }
+// }
 
 .videoContainer {
   background-color: red;

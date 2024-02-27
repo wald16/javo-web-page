@@ -1,6 +1,6 @@
 import { Shown } from '@/components/Shown';
 import Head from 'next/head'
-import React from 'react';
+import React, { useState } from 'react';
 import { FilterBar } from '@/components/FilterBar';
 import Video from '@/components/video';
 export type ItemType = {
@@ -29,7 +29,14 @@ export type ItemType = {
   details: string
 }
 
-
+let text =
+  <>
+    Hacemos
+    <br />
+    comuicación
+    <br />
+    audiovisual
+  </>
 const config: ItemType[] = [
 
   {
@@ -104,6 +111,7 @@ const config: ItemType[] = [
     ]
   },
 
+
   {
     type: "large",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
@@ -111,14 +119,16 @@ const config: ItemType[] = [
     height: "40vh",
     mobileHeight: "320px",
     mobileMinHeight: "auto",
+    fontSize: 70,
     clickeable: false,
-    title: "hacemos comunicación visual ",
+    title: text,
     titleColor: "white",
     descriptionColor: "#FF5500",
+
     description: "diseñamos y desarrollamos proyectos efectivos que potencian relatos y fortalecen marcas",
     textAlign: "left",
     category: "espacios",
-    extraClass: "noHover",
+    extraClass: "textModule",
 
   },
 
@@ -572,88 +582,94 @@ export const Footer = () => {
     {
       name: "Javier Cerruti",
       src: "/images/img1.jpg",
+      key: "Javier",
+      text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sequi tempore tenetur ab nemo! Facilis totam debitis eos dolor veritatis iusto sapiente earum accusantium ea eligendi exercitationem aut, ducimus consequatur nobis incidunt omnis fuga? Aperiam esse et odit? Minus provident ipsum nulla inventore veniam adipisci sapiente facilis quibusdam qui natus! rabia",
     },
     {
       name: "Gustavo Wald",
       src: "/images/img12.jpeg",
+      key: "gustavo",
+      text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sequi tempore tenetur ab nemo! Facilis totam debitis eos dolor veritatis iusto sapiente earum accusantium ea eligendi exercitationem aut, ducimus consequatur nobis incidunt omnis fuga? Aperiam esse et odit? Minus provident ipsum nulla inventore veniam adipisci sapiente facilis quibusdam qui natus! rabia",
+
     }
   ]
+  const [activeBio, setActiveBio] = useState<string>("")
+  const [bioText, setBioText] = useState<string>("")
+  const [bioName, setBioName] = useState<string>("")
+  const handleHover = (bio: string, text: string, name: string) => {
+    setActiveBio(bio)
+    setBioText(text)
+    setBioName(name)
+  }
   return (
-    <div className='footer col-12 p-0'>
-      <div className="footerTextHolder">
-        <div className="footerTitle">
-          buscamos
-        </div>
-        <div className="footerText">
-          <p>
-            resolver cada nueva situación
-          </p>
-          <p>
-            con potencia, buen diseño
-          </p>
-          <p>
-            y eficacia.
+    <div className="footerContainer">
+      <div className="titleWrapper">
+        <div className="titleContent">
+          <p className='title'>
+            buscamos
           </p>
         </div>
+        <div className="subtitleContent">
+          <p className='subTitle'>resolver cada nueva situación <br /> con potencia, buen diseño <br /> y eficacia.  </p>
+        </div>
       </div>
-      <div className="blockContainer">
-        {content.map((c, i) => {
-          return (
-            <div key={i} className='block'>
-              <div className="blockTitle">
-                <p>{c.title}</p>
-              </div>
-              <div className="blockText">
-                <p>{c.text}</p>
-              </div>
-            </div>
-          )
-        })}
+
+      <div className="textsContainer">
+
+        <div className="textContent">
+          <div className="textTitle">campañas</div>
+          <div className="text">Encaminamos la solucion visual de campañas comerciales y del universo publico, en la dimensión y escala acorde a cada circunstancia</div>
+        </div>
+        <div className="textContent">
+          <div className="textTitle">ciudades</div>
+          <div className="text">Abordamos el universo de comunicación visual que la gestión de ciudades requiere; con criterio global y práctico para la gestión y la comunidad.</div>
+        </div> <div className="textContent">
+          <div className="textTitle">espacios</div>
+          <div className="text">Diseñamos espacios expositivos de alto impacto, combinando poder con sutileza. Experiencias sensoriales, bellas y efectivas que perfeccionan relatos y fortalecen marcas.</div>
+        </div> <div className="textContent">
+          <div className="textTitle">consultoria</div>
+          <div className="text">Sabemos orientar, diseñar y optimizar equipos de diseño y producción audiovisual de organizaciones; en la búsqueda de maximizar sus potencialidades.</div>
+        </div>
+
       </div>
+
       <div className="biographies">
         {biographies.map((b, i) => {
           return (
-            <div key={i} className="biographie">
-              <div className="image" style={{ backgroundImage: `url(${b.src})` }}>
-              </div>
-              <div className="name">
-                <p>{b.name}</p>
-              </div>
+            <div className="biographie" onMouseEnter={() => handleHover(b.key, b.text, b.key)} onMouseLeave={() => handleHover("", "", "")} >
+              <div className={b.key === activeBio ? "biographieImg active" : "biographieImg inactive"} style={{ backgroundImage: `url(${b.src})` }} ></div>
+              <div className={b.key === activeBio ? "biographieName active" : "biographieName"}><p> {b.name} </p>  </div>
             </div>
           )
         })}
+        <div className={activeBio !== "" ? "biographieText" : "d-none"}>
+          <p className='name'>
+            {bioName}:
+          </p>
+          <p className='text'>
+            {bioText}
+          </p>
+        </div>
       </div>
+
+
       <div className="finalContent">
-        <div className="sectionLeft">
+        <div className="left">
           <div className="brand">
-            <p>aire</p>
-
+            aire
           </div>
-          <div className="texts">
-
-            <div className='phrase w-fit-content mb-0 phrase d-flex flex-column'>
-              <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>diseño</b></p>
-              <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>audiovisual</b></p>
-              <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>comunicacion</b></p>
-            </div>
-            <div className='city' >
-              <p>
-                Buenos Aires
-              </p>
-            </div>
+          <div className="phrase">
+            <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>diseño</b></p>
+            <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>audiovisual</b></p>
+            <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>comunicacion</b></p>
           </div>
         </div>
-        <div className="sectionRight">
-          <div className="mail">
-            <p>
-              xxxxxxxxx@gamil.com
-            </p>
-          </div>
-        </div>
+        <div className="right"></div>
       </div>
     </div>
   )
 }
+
 export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, modalInfo: ItemType }) => {
   const [active, setActive] = React.useState<Boolean>(false)
   const checkItems = modalInfo.secondaryImgs ? "Graphic" : "Video"
@@ -687,9 +703,9 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
           <div className='Graphic'>
             <div className="modalImages">
               {modalInfo.secondaryImgs.map((src, index) => {
-                
+
                 return (
-                  <img src={src} key={index} className={lastImageChecker(index)  ? "lastImg" : ""} alt="" />
+                  <img src={src} key={index} className={lastImageChecker(index) ? "lastImg" : ""} alt="" />
                 )
               })}
             </div>
@@ -748,4 +764,85 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
 // <div className="text">
 //   HOLA MUNDO
 // </div>
+// </div>
+
+
+// <div className='footer col-12 p-0'>
+//   <div className="footerTextHolder">
+//     <div className="footerTitle">
+//       buscamos
+//     </div>
+//     <div className="footerText">
+//       <p>
+//         resolver cada nueva situación
+//       </p>
+//       <p>
+//         con potencia, buen diseño
+//       </p>
+//       <p>
+//         y eficacia.
+//       </p>
+//     </div>
+//   </div>
+//   <div className="blockContainer">
+//     {content.map((c, i) => {
+//       return (
+//         <div key={i} className='block'>
+//           <div className="blockTitle">
+//             <p>{c.title}</p>
+//           </div>
+//           <div className="blockText">
+//             <p>{c.text}</p>
+//           </div>
+//         </div>
+//       )
+//     })}
+//   </div>
+//   <div className="biographies">
+//     {biographies.map((b, i) => {
+//       return (
+//         <>
+//           <div key={i} onMouseEnter={() => handleHover(b.key, b.text)} onMouseLeave={() => handleHover("", "")} className="biographie">
+//             <div className={b.key === activeBio || activeBio === "" ? "image active" : "image"} style={{ backgroundImage: `url(${b.src})` }}>
+//             </div>
+//             <div className={b.key === activeBio || activeBio === "" ? "name active" : "name"}>
+//               <p>{b.name}</p>
+//             </div>
+//           </div>
+//         </>
+//       )
+//     })}
+//     <div className={activeBio !== "" ? "text active" : "d-none"}>
+//       <p>{bioText}</p>
+
+//     </div>
+//   </div>
+//   <div className="finalContent">
+//     <div className="sectionLeft">
+//       <div className="brand">
+//         <p>aire</p>
+
+//       </div>
+//       <div className="texts">
+
+//         <div className='phrase w-fit-content mb-0 phrase d-flex flex-column'>
+//           <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>diseño</b></p>
+//           <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>audiovisual</b></p>
+//           <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>comunicacion</b></p>
+//         </div>
+//         <div className='city' >
+//           <p>
+//             Buenos Aires
+//           </p>
+//         </div>
+//       </div>
+//     </div>
+//     <div className="sectionRight">
+//       <div className="mail">
+//         <p>
+//           xxxxxxxxx@gamil.com
+//         </p>
+//       </div>
+//     </div>
+//   </div>
 // </div>
