@@ -29,7 +29,7 @@ export type ItemType = {
   details: string
 }
 
-let text =
+const text =
   <>
     Hacemos
     <br />
@@ -37,6 +37,7 @@ let text =
     <br />
     audiovisual
   </>
+  const _text = text as unknown
 const config: ItemType[] = [
 
   {
@@ -121,7 +122,7 @@ const config: ItemType[] = [
     mobileMinHeight: "auto",
     fontSize: 70,
     clickeable: false,
-    title: text,
+    title: _text as string,
     titleColor: "white",
     descriptionColor: "#FF5500",
 
@@ -636,7 +637,7 @@ export const Footer = () => {
       <div className="biographies">
         {biographies.map((b, i) => {
           return (
-            <div className="biographie" onMouseEnter={() => handleHover(b.key, b.text, b.key)} onMouseLeave={() => handleHover("", "", "")} >
+            <div className="biographie" key={b.key} onMouseEnter={() => handleHover(b.key, b.text, b.key)} onMouseLeave={() => handleHover("", "", "")} >
               <div className={b.key === activeBio ? "biographieImg active" : "biographieImg inactive"} style={{ backgroundImage: `url(${b.src})` }} ></div>
               <div className={b.key === activeBio ? "biographieName active" : "biographieName"}><p> {b.name} </p>  </div>
             </div>
