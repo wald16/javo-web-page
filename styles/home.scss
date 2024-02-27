@@ -487,7 +487,7 @@ body {
       display: flex;
       flex-direction: column;
       font-weight: bolder;
-      color: $gray;
+      color: #a5a5a5;
 
       .biographieImg {
         width: 100%;
@@ -505,7 +505,7 @@ body {
       }
 
       .biographieName {
-        color: #3A3E47;
+        color: #a5a5a5;
         font-weight: bolder;
         font-family: helvetica;
 
@@ -568,7 +568,7 @@ body {
         color: $gray;
 
         p {
-          color: #7e7e7e;
+          color: #a5a5a5;
           font-size: 45px;
           margin-bottom: 10px;
           font-weight: bolder;

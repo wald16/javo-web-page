@@ -237,7 +237,7 @@ const config: ItemType[] = [
     clickeable: false,
     // title: "LARGE BUT SHORTER",
     category: "campañas",
-    showOnlyOnFilter: true,
+    showOnlyOnFilter: false,
   },
   {
     type: "large",
@@ -249,7 +249,7 @@ const config: ItemType[] = [
     minHeight: "500px",
     height: "50vw",
     clickeable: false,
-    showOnlyOnFilter: true,
+    showOnlyOnFilter: false,
     category: "identidad",
     extraClass: "proyects"
   },
