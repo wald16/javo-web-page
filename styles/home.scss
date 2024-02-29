@@ -496,6 +496,7 @@ body {
         background-size: cover;
         filter: grayscale(0.6);
         margin-bottom: 20px;
+        transition: all ease-in 0.2s;
 
         &.active {
           filter: grayscale(0);
@@ -508,7 +509,7 @@ body {
         color: #a5a5a5;
         font-weight: bolder;
         font-family: helvetica;
-
+        transition: all ease-in 0.2s;
         &.active {
           color: $black;
         }
@@ -594,7 +595,7 @@ body {
       color: #7E7E7E;
       margin-right: 30px;
       margin-bottom: -125px;
-      
+
     }
   }
 }

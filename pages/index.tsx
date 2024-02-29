@@ -638,8 +638,8 @@ export const Footer = () => {
         {biographies.map((b, i) => {
           return (
             <div className="biographie" key={b.key} onMouseEnter={() => handleHover(b.key, b.text, b.key)} onMouseLeave={() => handleHover("", "", "")} >
-              <div className={b.key === activeBio ? "biographieImg active" : "biographieImg inactive"} style={{ backgroundImage: `url(${b.src})` }} ></div>
-              <div className={b.key === activeBio ? "biographieName active" : "biographieName"}><p> {b.name} </p>  </div>
+              <div className={b.key === activeBio || activeBio === "" ? "biographieImg active" : "biographieImg inactive"} style={{ backgroundImage: `url(${b.src})` }} ></div>
+              <div className={b.key === activeBio || activeBio === "" ? "biographieName active" : "biographieName"}><p> {b.name} </p>  </div>
             </div>
           )
         })}
