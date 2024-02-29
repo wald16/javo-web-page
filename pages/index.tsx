@@ -334,7 +334,7 @@ export const Home = () => {
           <div className='w-fit-content d-flex flex-column'>
             <p className='f-40 f-helvetica f-heavy lh-30 ls-n-2 mb-0 c-black'><b>diseño</b></p>
             <p className='f-40 f-helvetica f-heavy lh-30 ls-n-2 mb-0 c-black'><b>audiovisual</b></p>
-            <p className='f-40 f-helvetica f-heavy lh-30 ls-n-2 mb-0 c-black'><b>comunicacion</b></p>
+            <p className='f-40 f-helvetica f-heavy lh-30 ls-n-2 mb-0 c-black'><b>comunicación</b></p>
           </div>
         </div>
       </div>
@@ -662,7 +662,7 @@ export const Footer = () => {
           <div className="phrase">
             <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>diseño</b></p>
             <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>audiovisual</b></p>
-            <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>comunicacion</b></p>
+            <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>comunicación</b></p>
           </div>
           <div className="city">
             <p>
@@ -838,7 +838,7 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
 //         <div className='phrase w-fit-content mb-0 phrase d-flex flex-column'>
 //           <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>diseño</b></p>
 //           <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>audiovisual</b></p>
-//           <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>comunicacion</b></p>
+//           <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>comunicación</b></p>
 //         </div>
 //         <div className='city' >
 //           <p>
