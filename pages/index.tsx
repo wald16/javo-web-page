@@ -117,7 +117,7 @@ const config: ItemType[] = [
     type: "large",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
     minHeight: "400px",
-    height: "40vh",
+    height: "100vh",
     mobileHeight: "320px",
     mobileMinHeight: "auto",
     fontSize: 70,
@@ -141,8 +141,8 @@ const config: ItemType[] = [
     textAlign: "end",
     minHeight: "500px",
     img: "/images/img8.jpg",
-    height: "50vh",
-    mobileHeight: "420px",
+    height: "100vh",
+    mobileHeight: "720px",
     mobileMinHeight: "auto",
     category: "espacios",
     clickeable: false,
@@ -418,7 +418,7 @@ export const SectionLarge = (props: ItemType & { setModalInfo: Function }) => {
       <div className={`Section SectionLarge col-12 p-0 ${extraClass}`} onClick={() => { clickeable ? setModalInfo(props as ItemType) : () => { } }}>
         <Shown partiallyVisible={true} >
           <div className='SectionImage d-none d-md-flex' style={style} />
-          <div className='SectionImage d-flex d-md-none' style={styleMobile} />
+          <div className='SectionImage mobileImage d-flex d-md-none' style={styleMobile} />
           {title || description ? (
             <div className='SectionText'>
               <div className='SectionTextHolder' style={textStyle}>
@@ -486,7 +486,7 @@ export const SectionSmall = (props: ItemType & { setModalInfo: Function }) => {
     <div className={`Section SectionSmall col-12 col-md-6 p-0 ${clickeable ? "clickeable" : ""}`} onClick={() => { clickeable ? setModalInfo(props as ItemType) : () => { } }}>
       <Shown partiallyVisible={true} >
         <div className='SectionImage d-none d-md-flex' style={style} />
-        <div className='SectionImage d-flex d-md-none' style={styleMobile} />
+        <div className='SectionImage mobileImage d-flex d-md-none' style={styleMobile} />
         {title || description ? (
           <div className='SectionText'>
             <div className='SectionTextHolder' style={textStyle}>

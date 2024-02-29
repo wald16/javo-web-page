@@ -27,12 +27,14 @@ body {
 }
 
 .Section {
-  min-height: 300px;
   background-color: black;
   filter: grayscale(0%);
   overflow: hidden;
   height: fit-content;
   transition: all ease-in 1s;
+  object-fit: cover;
+  object-position: bottom;
+  background-position: bottom;
 
   &:hover {
     .title {
@@ -49,11 +51,17 @@ body {
   .SectionImage {
     width: 100%;
     height: 100%;
-
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     transition: all 1s ease-in;
+    min-height: 400px;
+  }
+  .mobileImage{
+    min-height: unset !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &.proyects {
@@ -122,6 +130,10 @@ body {
   font-family: helvetica;
   font-weight: bold;
   padding-left: 30px;
+
+  @media screen and (max-width:1024px) {
+    height: fit-content;
+  }
 
   &.active {
     height: fit-content;
@@ -515,7 +527,7 @@ body {
       .biographieImg {
         width: 100%;
         height: 200px;
-        background-position:center;
+        background-position: center;
         background-size: cover;
         filter: grayscale(0.6);
         margin-bottom: 20px;
