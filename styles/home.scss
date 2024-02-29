@@ -548,6 +548,8 @@ body {
     // background-color: red;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    font-family: helvetica;
 
     .left {
       display: flex;
@@ -558,13 +560,14 @@ body {
         font-weight: bolder;
         color: $orange;
         letter-spacing: -5px;
-        margin-bottom: -25px;
+        margin-bottom: -15px;
       }
 
       .phrase {
         margin: 0px;
-        margin-bottom: -70px;
+        margin-bottom: -65px;
         margin-left: 30px;
+        margin-right: 30px;
         color: $gray;
 
         p {
@@ -575,8 +578,24 @@ body {
           // background-color: red;
         }
       }
+
+      .city {
+        // background-color: red;
+        color: $black;
+        margin-bottom: -145px;
+        font-size: 30px;
+        font-weight: bold;
+      }
     }
 
+    .right {
+      // background-color: blue;
+      font-size: 40px;
+      color: #7E7E7E;
+      margin-right: 30px;
+      margin-bottom: -125px;
+      
+    }
   }
 }
 

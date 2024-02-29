@@ -37,7 +37,7 @@ const text =
     <br />
     audiovisual
   </>
-  const _text = text as unknown
+const _text = text as unknown
 const config: ItemType[] = [
 
   {
@@ -664,8 +664,17 @@ export const Footer = () => {
             <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>audiovisual</b></p>
             <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>comunicacion</b></p>
           </div>
+          <div className="city">
+            <p>
+              Buenos Aires
+            </p>
+          </div>
         </div>
-        <div className="right"></div>
+        <div className="right">
+          <div className="contact">
+            xxxxxxxxx@gmail.com
+          </div>
+        </div>
       </div>
     </div>
   )
