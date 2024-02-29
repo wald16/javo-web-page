@@ -54,7 +54,7 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
             setText(_text)
         }
     }
-    
+
     const reset = () => {
         setActiveFilter("")
         setText("")
@@ -78,16 +78,31 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
                     <div className='col-12 pushedCol'>
                         <div className=" items">
                             {items.map((i, index) => {
-                                return (
-                                    <div className="itemContainer" key={index}>
-                                        <div className={`item col-2 col-md-12  ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text)} key={i.key} ><p>{i.name}</p></div>
-                                        {i.key == activeFilter && (
-                                            <div className={`text d-flex d-xl-none ${i.key == activeFilter ? "active" : ""}`}>
-                                                {text}
+                                if (i.key !== "nosotros") {
+                                    return (
+                                        <div className="itemContainer" key={index}>
+                                            <div className={`item col-2 col-md-12  ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text)} key={i.key} ><p>{i.name}</p></div>
+                                            {i.key == activeFilter && (
+                                                <div className={`text d-flex d-xl-none ${i.key == activeFilter ? "active" : ""}`}>
+                                                    {text}
+                                                </div>
+                                            )}
+                                        </div>
+                                    )
+                                } else {
+                                    return (
+                                        <a href="#nosotros">
+                                            <div className="itemContainer" key={index}>
+                                                <div className={`item col-2 col-md-12  ${i.key == activeFilter ? "active" : ""}`} key={i.key} ><p>{i.name}</p></div>
+                                                {i.key == activeFilter && (
+                                                    <div className={`text d-flex d-xl-none ${i.key == activeFilter ? "active" : ""}`}>
+                                                        {text}
+                                                    </div>
+                                                )}
                                             </div>
-                                        )}
-                                    </div>
-                                )
+                                        </a>
+                                    )
+                                }
                             })}
                         </div>
                         <div className=" items">

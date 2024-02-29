@@ -603,7 +603,7 @@ export const Footer = () => {
     setBioName(name)
   }
   return (
-    <div className="footerContainer">
+    <div  id='nosotros' className="footerContainer">
       <div className="titleWrapper">
         <div className="titleContent">
           <p className='title'>
