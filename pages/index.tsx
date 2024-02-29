@@ -24,7 +24,7 @@ export type ItemType = {
   video?: string,
   bkg?: string,
   extraClass?: string,
-  secondaryImgs?: string[],
+  secondaryImgs?: { src: string, position: string }[],
   secondaryVideos?: string[],
   details: string
 }
@@ -52,9 +52,9 @@ const config: ItemType[] = [
     textAlign: "end",
     category: "campañas",
     secondaryImgs: [
-      "/images/img3.jpg",
-      "/images/img2.jpg",
-      "/images/img1.jpg",
+      { src: "/images/img3.jpg", position: "top" },
+      { src: "/images/img2.jpg", position: "top" },
+      { src: "/images/img3.jpg", position: "top" },
     ]
   },
   {
@@ -69,9 +69,9 @@ const config: ItemType[] = [
     height: "40vh",
     category: "campañas",
     secondaryImgs: [
-      "/images/img4.jpg",
-      "/images/img2.jpg",
-      "/images/img1.jpg",
+      { src: "/images/img4.jpg", position: "top" },
+      { src: "/images/img2.jpg", position: "top" },
+      { src: "/images/img4.jpg", position: "top" },
     ]
   },
   {
@@ -86,9 +86,9 @@ const config: ItemType[] = [
     height: "40vh",
     category: "identidad",
     secondaryImgs: [
-      "/images/img5.jpg",
-      "/images/img2.jpg",
-      "/images/img1.jpg",
+      { src: "/images/img5.jpg", position: "top" },
+      { src: "/images/img2.jpg", position: "top" },
+      { src: "/images/img5.jpg", position: "top" },
     ]
   },
   {
@@ -103,9 +103,9 @@ const config: ItemType[] = [
     height: "40vh",
     category: "identidad",
     secondaryImgs: [
-      "/images/img13.jpg",
-      "/images/img2.jpg",
-      "/images/img1.jpg",
+      { src: "/images/img13.jpg", position: "top" },
+      { src: "/images/img12.jpg", position: "top" },
+      { src: "/images/img13.jpg", position: "top" },
     ],
     secondaryVideos: [
       "/videos/banner.mp4",
@@ -147,9 +147,9 @@ const config: ItemType[] = [
     category: "espacios",
     clickeable: false,
     secondaryImgs: [
-      "/images/img8.jpg",
-      "/images/img2.jpg",
-      "/images/img1.jpg",
+      { src: "/images/img8.jpg", position: "top" },
+      { src: "/images/img2.jpg", position: "top" },
+      { src: "/images/img8.jpg", position: "top" },
     ]
 
   },
@@ -165,9 +165,9 @@ const config: ItemType[] = [
     titleColor: "white",
     textAlign: "end",
     secondaryImgs: [
-      "/images/img14.jpg",
-      "/images/img2.jpg",
-      "/images/img1.jpg",
+      { src: "/images/img14.jpg", position: "top" },
+      { src: "/images/img12.jpg", position: "top" },
+      { src: "/images/img14.jpg", position: "top" },
     ]
   },
   {
@@ -182,9 +182,9 @@ const config: ItemType[] = [
     category: "identidad",
     height: "40vh",
     secondaryImgs: [
-      "/images/img11.jpg",
-      "/images/img2.jpg",
-      "/images/img1.jpg",
+      { src: "/images/img11.jpg", position: "top" },
+      { src: "/images/img12.jpg", position: "top" },
+      { src: "/images/img11.jpg", position: "top" },
     ]
   },
   {
@@ -199,9 +199,9 @@ const config: ItemType[] = [
     category: "nosotros",
     height: "40vh",
     secondaryImgs: [
-      "/images/img6.jpg",
-      "/images/img2.jpg",
-      "/images/img1.jpg",
+      { src: "/images/img6.jpg", position: "top" },
+      { src: "/images/img2.jpg", position: "top" },
+      { src: "/images/img6.jpg", position: "top" },
     ]
 
   },
@@ -217,9 +217,9 @@ const config: ItemType[] = [
     minHeight: "400px",
     height: "40vh",
     secondaryImgs: [
-      "/images/img7.jpg",
-      "/images/img2.jpg",
-      "/images/img1.jpg",
+      { src: "/images/img7.jpg", position: "top" },
+      { src: "/images/img2.jpg", position: "top" },
+      { src: "/images/img7.jpg", position: "top" },
     ]
 
   },
@@ -712,10 +712,10 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
         {selection === "Graphic" && modalInfo.secondaryImgs && (
           <div className='Graphic'>
             <div className="modalImages">
-              {modalInfo.secondaryImgs.map((src, index) => {
+              {modalInfo.secondaryImgs.map((image: { src: string, position: string }, index: number) => {
 
                 return (
-                  <img src={src} key={index} className={lastImageChecker(index) ? "lastImg" : ""} alt="" />
+                  <img src={image.src} key={index} style={{ objectPosition: image.position }} className={lastImageChecker(index) ? "lastImg" : ""} alt="" />
                 )
               })}
             </div>
