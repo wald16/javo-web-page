@@ -91,8 +91,8 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
                                     )
                                 } else {
                                     return (
-                                        <a href="#nosotros">
-                                            <div className="itemContainer" key={index}>
+                                        <a href="#nosotros"  key={index}>
+                                            <div className="itemContainer">
                                                 <div className={`item col-2 col-md-12  ${i.key == activeFilter ? "active" : ""}`} key={i.key} ><p>{i.name}</p></div>
                                                 {i.key == activeFilter && (
                                                     <div className={`text d-flex d-xl-none ${i.key == activeFilter ? "active" : ""}`}>

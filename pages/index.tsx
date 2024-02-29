@@ -117,7 +117,7 @@ const config: ItemType[] = [
     type: "large",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
     minHeight: "400px",
-    height: "100vh",
+    height: "70vh",
     mobileHeight: "320px",
     mobileMinHeight: "auto",
     fontSize: 70,
