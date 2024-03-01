@@ -35,7 +35,7 @@ const text =
     <br />
     comuicación
     <br />
-    audiovisual
+    visual
   </>
 const _text = text as unknown
 const config: ItemType[] = [
@@ -400,8 +400,8 @@ export const SectionLarge = (props: ItemType & { setModalInfo: Function }) => {
     return (
       <div className={`Section SectionLarge col-12 p-0 ${extraClass}`} onClick={() => { clickeable ? setModalInfo(props as ItemType) : () => { } }}>
         <Shown partiallyVisible={true} >
-          <video src="/videos/banner.mp4" autoPlay={true} loop={true} muted={true} className='bannerVideo' id="myVideo">
-          </video>
+          {/* <video src="/videos/banner.mp4" autoPlay={true} loop={true} muted={true} className='bannerVideo' id="myVideo"> */}
+          {/* </video> */}
           {title || description ? (
             <div className='SectionText'>
               <div className='SectionTextHolder' style={textStyle}>

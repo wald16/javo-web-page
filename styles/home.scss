@@ -26,6 +26,13 @@ body {
   height: 100%;
 }
 
+.sectionLarge{
+  .mobileImage{
+    display:none !important;
+  }
+}
+
+
 .Section {
   background-color: black;
   filter: grayscale(0%);
@@ -57,7 +64,8 @@ body {
     transition: all 1s ease-in;
     min-height: 400px;
   }
-  .mobileImage{
+
+  .mobileImage {
     min-height: unset !important;
     background-position: center;
     background-repeat: no-repeat;
@@ -105,18 +113,32 @@ body {
 
       .description {
         line-height: 50px;
-      width: 70%;
+        width: 70%;
         padding-left: 20px;
       }
     }
   }
+    @media screen and (max-width:768px) {
+      .SectionImage,.mobileImage{
+        height: 60vh!important;
+      }
+    }
+    @media screen and (max-width:768px) {
+      .SectionImage,.mobileImage{
+        height: 60vh!important;
+      }
+    }
 }
 
 .textModule {
   height: fit-content;
+  min-height: 80vh;
 
   .title {
     display: block;
+  }
+  .description{
+    background-color: blue;
   }
 }
 
