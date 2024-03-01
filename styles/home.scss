@@ -6,6 +6,22 @@ body {
   padding: 0%;
 }
 
+.bannerContent {
+  width: 100vw;
+  padding: 0px 25px;
+
+  .logo {
+    color: blue;
+  }
+
+  .bannerPhrase {
+    p {
+
+      color: $black;
+    }
+  }
+}
+
 .Home {
   background-color: $orange;
   min-height: 90vh;
@@ -343,68 +359,68 @@ body {
       justify-content: center;
     }
 
-      // .closer {
-      //   font-size: 40px;
-      //   z-index: 99;
-      //   display: flex;
-      //   justify-content: end;
-      //   position: fixed;
+    // .closer {
+    //   font-size: 40px;
+    //   z-index: 99;
+    //   display: flex;
+    //   justify-content: end;
+    //   position: fixed;
 
-      //   .imgBg {
-      //     width: fit-content;
-      //     height: 64px;
-      //     cursor: pointer;
-      //     background-color: rgba(0, 0, 0, 0.725);
-      //   }
+    //   .imgBg {
+    //     width: fit-content;
+    //     height: 64px;
+    //     cursor: pointer;
+    //     background-color: rgba(0, 0, 0, 0.725);
+    //   }
 
-      //   .tabSelector {
-      //     position: relative;
-      //     top: -55px;
-      //     height: 55px;
-      //     padding: 20px;
-      //     display: flex;
-      //     align-items: center;
-      //     font-family: helvetica;
-      //     background-color: #7E7E7E;
-      //     color: $gray;
-      //     transition: all ease-in 0.2s;
+    //   .tabSelector {
+    //     position: relative;
+    //     top: -55px;
+    //     height: 55px;
+    //     padding: 20px;
+    //     display: flex;
+    //     align-items: center;
+    //     font-family: helvetica;
+    //     background-color: #7E7E7E;
+    //     color: $gray;
+    //     transition: all ease-in 0.2s;
 
-      //     &.active {
-      //       transition: all ease-in 0.2s;
-      //       color: $green;
-      //       background-color: #3A3E47;
-      //     }
+    //     &.active {
+    //       transition: all ease-in 0.2s;
+    //       color: $green;
+    //       background-color: #3A3E47;
+    //     }
 
-      //     &:hover {
-      //       transition: all ease-in 0.2s;
-      //       color: $green;
-      //     }
-      //   }
+    //     &:hover {
+    //       transition: all ease-in 0.2s;
+    //       color: $green;
+    //     }
+    //   }
 
-      //   img {
+    //   img {
 
-      //     transition: all ease-in 0.2s;
+    //     transition: all ease-in 0.2s;
 
-      //     &:hover {
-      //       font-size: 70px;
-      //       cursor: pointer;
-      //       scale: 1.05;
-      //       transition: all ease-in 0.2s
-      //     }
+    //     &:hover {
+    //       font-size: 70px;
+    //       cursor: pointer;
+    //       scale: 1.05;
+    //       transition: all ease-in 0.2s
+    //     }
 
-      //   }
-      // }
-      .modalHeader {
+    //   }
+    // }
+    .modalHeader {
 
-        position: absolute;
-        width: 100%;
-        margin-top: -24px;
+      position: absolute;
+      width: 100%;
+      margin-top: -24px;
 
-      }
+    }
 
-      .modalContent {
-        overflow: auto;
-      }
+    .modalContent {
+      overflow: auto;
+    }
 
     @keyframes smallerBounce {
       from {

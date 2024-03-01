@@ -323,18 +323,18 @@ export default function HomePage() {
 export const Home = () => {
   return (
     <div className='Home stretch'>
-      <div className='container'>
-        <div className='row justify-content-between align-items-center'>
+      <div className=''>
+        <div className='row justify-content-between align-items-center bannerContent'>
           <div className='w-fit-content d-flex'>
             <h1 className='f-150 f-helvetica f-heavy mb-0'>
               <span className='ls-n-7'>ai</span>
               <span className="ls-n-2">re</span>
             </h1>
           </div>
-          <div className='w-fit-content d-flex flex-column'>
-            <p className='f-40 f-helvetica f-heavy lh-30 ls-n-2 mb-0 c-black'><b>diseño</b></p>
-            <p className='f-40 f-helvetica f-heavy lh-30 ls-n-2 mb-0 c-black'><b>audiovisual</b></p>
-            <p className='f-40 f-helvetica f-heavy lh-30 ls-n-2 mb-0 c-black'><b>comunicación</b></p>
+          <div className='w-fit-content d-flex flex-column bannerPhrase'>
+            <p className='f-40 f-helvetica f-heavy lh-30 ls-n-2 mb-0 '><b>diseño</b></p>
+            <p className='f-40 f-helvetica f-heavy lh-30 ls-n-2 mb-0 '><b>audiovisual</b></p>
+            <p className='f-40 f-helvetica f-heavy lh-30 ls-n-2 mb-0 '><b>comunicación</b></p>
           </div>
         </div>
       </div>
@@ -539,7 +539,7 @@ export const SectionBanner = (props: ItemType & { setModalInfo: Function }) => {
   }
 
   return (
-    <div className='Section SectionBanner col-12' style={style} onClick={() => { clickeable ? setModalInfo(props as ItemType) : () => { } }}>
+    <div className='Section SectionBanner' style={style} onClick={() => { clickeable ? setModalInfo(props as ItemType) : () => { } }}>
       <Shown partiallyVisible={true} >
         {title || description ? (
           <div className='SectionText'>
