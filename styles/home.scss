@@ -10,14 +10,14 @@ body {
   width: 100vw;
   padding: 0px 25px;
 
-  .logo {
-    color: blue;
+  h1 {
+    span {
+      color: white;
+    }
   }
-
-  .bannerPhrase {
-    p {
-
-      color: $black;
+  .bannerPhrase{
+    p{
+      color: black;
     }
   }
 }
