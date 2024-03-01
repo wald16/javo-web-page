@@ -11,12 +11,15 @@ body {
   padding: 0px 25px;
 
   h1 {
+    margin-top: -20px;
+
     span {
       color: white;
     }
   }
-  .bannerPhrase{
-    p{
+
+  .bannerPhrase {
+    p {
       color: black;
     }
   }
@@ -42,11 +45,6 @@ body {
   height: 100%;
 }
 
-.sectionLarge {
-  .mobileImage {
-    display: none !important;
-  }
-}
 
 
 .Section {
@@ -88,6 +86,12 @@ body {
     background-size: cover;
   }
 
+  .textModule {
+    p {
+      color: purple !important;
+    }
+  }
+
   &.proyects {
     .SectionText {
       position: absolute;
@@ -96,7 +100,7 @@ body {
       top: 0px;
       left: 0px;
       display: flex;
-      justify-content: flex-end;
+      justify-content: flex-start;
       align-content: end;
       flex-wrap: wrap;
 
@@ -109,8 +113,10 @@ body {
     }
   }
 
+
   .SectionText {
     position: absolute;
+
     width: 100%;
     height: 100%;
     top: 0px;
@@ -139,7 +145,8 @@ body {
 
     .SectionImage,
     .mobileImage {
-      height: 60vh !important;
+      height: 50vh !important;
+
     }
   }
 
@@ -147,7 +154,7 @@ body {
 
     .SectionImage,
     .mobileImage {
-      height: 60vh !important;
+      height: 50vh !important;
     }
   }
 }
@@ -156,12 +163,33 @@ body {
   height: fit-content;
   min-height: 80vh;
 
+  @media screen and (max-width:768px) {
+    min-height: 40vh;
+  }
+
   .title {
     display: block;
+    font-size: 80px !important;
+    font-family: helvetica !important;
+    font-weight:500;
+    margin-top: 5px;
+    margin-bottom: 5px !important;
+    // letter-spacing: -3px;
+
+    @media screen and (max-width:768px) {
+      font-size: 50px !important;
+      line-height: 45px !important;
+    }
   }
 
   .description {
-    background-color: blue;
+    width: 100vw !important;
+    // background-color: blue;
+    font-family: helvetica !important;
+    @media screen and (max-width:768px) {
+      font-size: 30px !important;
+      line-height: 30px !important;
+    }
   }
 }
 
@@ -175,6 +203,10 @@ body {
   font-family: helvetica;
   font-weight: bold;
   padding-left: 30px;
+
+  @media screen and (max-width:1200px) {
+    height: fit-content;
+  }
 
   @media screen and (max-width:1024px) {
     height: fit-content;
@@ -194,7 +226,7 @@ body {
       // width: 500px;
       font-size: 33px;
       font-weight: bold;
-      line-height: 30px;
+      line-height: 31px;
       max-width: 500px;
       margin-left: 10px;
       margin-bottom: 30px;
@@ -202,13 +234,16 @@ body {
       color: #7E7E7E;
       font-family: Helvetica;
 
-
+      @media screen and (max-width:768px) {
+        margin-left: 5px;
+      }
     }
   }
 
 
   @media (max-width:768px) {
     padding: 10px;
+
   }
 
   .row {
@@ -494,7 +529,7 @@ body {
   background-color: $white;
   font-size: 80px;
   font-weight: bold;
-  padding-left: 10px;
+  padding:0px 20px;
   font-family: helvetica;
   color: #7E7E7E;
 
@@ -667,12 +702,13 @@ body {
         text-align: left;
         flex-direction: column;
         height: 140px;
-        margin-bottom: -40px;
+        margin-bottom: -55px;
+        
 
         p {
           // color: #a5a5a5;
-          font-size: 45px;
-          margin-bottom: 10px;
+          font-size: 35px;
+          margin-bottom: 5px;
 
           font-weight: bolder;
           // background-color: red;
@@ -681,7 +717,7 @@ body {
 
       .city {
         color: $black;
-        font-size: 40px;
+        font-size: 35px;
         font-weight: bolder;
         display: flex;
         justify-content: end;
@@ -698,10 +734,10 @@ body {
 
     .right {
       // background-color: blue;
-      font-size: 40px;
+      font-size: 35px;
       color: #7E7E7E;
       margin-right: 30px;
-      margin-bottom: -100px;
+      margin-bottom: -110px;
       font-weight: bolder;
 
 

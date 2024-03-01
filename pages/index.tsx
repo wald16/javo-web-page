@@ -26,18 +26,29 @@ export type ItemType = {
   extraClass?: string,
   secondaryImgs?: { src: string, position: string }[],
   secondaryVideos?: string[],
-  details: string
+  details: string,
+
 }
 
 const text =
   <>
-    Hacemos
+    hacemos
     <br />
-    comuicación
+    comunicación
     <br />
     visual
   </>
+
+const description =
+  <>
+    Diseñamos y desarrollamos <br />
+    proyectos efectivos <br />
+    que potencian relatos<br />
+    y fortalecen marcas.
+
+  </>
 const _text = text as unknown
+const _description = description as unknown
 const config: ItemType[] = [
 
   {
@@ -121,12 +132,12 @@ const config: ItemType[] = [
     mobileHeight: "320px",
     mobileMinHeight: "auto",
     fontSize: 70,
-    clickeable: false,
+    clickeable: true,
     title: _text as string,
     titleColor: "white",
     descriptionColor: "#FF5500",
 
-    description: "diseñamos y desarrollamos proyectos efectivos que potencian relatos y fortalecen marcas",
+    description: _description as string,
     textAlign: "left",
     category: "espacios",
     extraClass: "textModule",
@@ -145,7 +156,7 @@ const config: ItemType[] = [
     mobileHeight: "720px",
     mobileMinHeight: "auto",
     category: "espacios",
-    clickeable: false,
+    clickeable: true,
     secondaryImgs: [
       { src: "/images/img8.jpg", position: "top" },
       { src: "/images/img2.jpg", position: "top" },
@@ -235,7 +246,7 @@ const config: ItemType[] = [
     mobileHeight: "420px",
     mobileMinHeight: "auto",
     img: "/images/img10.jpg",
-    clickeable: false,
+    clickeable: true,
     // title: "LARGE BUT SHORTER",
     category: "campañas",
     showOnlyOnFilter: false,
@@ -246,10 +257,10 @@ const config: ItemType[] = [
     title: "lorem ipsum",
     img: "/images/img9.jpg",
     titleColor: "white",
-    textAlign: "end",
+    textAlign: "left",
     minHeight: "500px",
     height: "50vw",
-    clickeable: false,
+    clickeable: true,
     showOnlyOnFilter: false,
     category: "identidad",
     extraClass: "proyects"
@@ -619,7 +630,7 @@ export const Footer = () => {
 
         <div className="textContent">
           <div className="textTitle">campañas</div>
-          <div className="text">Encaminamos la solucion visual de campañas comerciales y del universo publico, en la dimensión y escala acorde a cada circunstancia</div>
+          <div className="text">Encaminamos la solución visual de campañas comerciales y del universo público; en la dimensión y escala acorde a cada circunstancia.</div>
         </div>
         <div className="textContent">
           <div className="textTitle">ciudades</div>
@@ -639,7 +650,7 @@ export const Footer = () => {
           return (
             <div className="biographie" key={b.key} onMouseEnter={() => handleHover(b.key, b.text, b.key)} onMouseLeave={() => handleHover("", "", "")} >
               <div className={b.key === activeBio || activeBio === "" ? "biographieImg active" : "biographieImg inactive"} style={{ backgroundImage: `url(${b.src})` }} ></div>
-              <div className={b.key === activeBio || activeBio === "" ? "biographieName active" : "biographieName"}><p> {b.name} </p>  </div>
+              <div className={b.key === activeBio  ? "biographieName active" : "biographieName"}><p> {b.name} </p>  </div>
             </div>
           )
         })}
@@ -704,12 +715,12 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
           </div>
           {modalInfo.secondaryVideos && (
             <div className={`imgBg tabSelector ${selection == "Video" ? "active" : ""}`} onClick={() => setSelection("Video")}>
-              <p className='mb-0 px-2  f-32 lh-32'>audioVisual</p>
+              <p className='mb-0 px-2  f-32 lh-32'>audiovisual</p>
             </div>
           )}
           {modalInfo.secondaryImgs && (
             <div className={`imgBg tabSelector ${selection == "Graphic" ? "active" : ""}`} onClick={() => setSelection("Graphic")}>
-              <p className='mb-0 px-2  f-32 lh-32'>grafica</p>
+              <p className='mb-0 px-2  f-32 lh-32'>gráfica</p>
             </div>
           )}
         </div>
