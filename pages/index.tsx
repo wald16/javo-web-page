@@ -648,13 +648,24 @@ export const Footer = () => {
       <div className="biographies">
         {biographies.map((b, i) => {
           return (
-            <div className="biographie" key={b.key} onMouseEnter={() => handleHover(b.key, b.text, b.key)} onMouseLeave={() => handleHover("", "", "")} >
-              <div className={b.key === activeBio || activeBio === "" ? "biographieImg active" : "biographieImg inactive"} style={{ backgroundImage: `url(${b.src})` }} ></div>
-              <div className={b.key === activeBio  ? "biographieName active" : "biographieName"}><p> {b.name} </p>  </div>
-            </div>
+            <>
+              <div className="biographie d-none d-md-flex" key={b.key} onMouseEnter={() => handleHover(b.key, b.text, b.key)} onMouseLeave={() => handleHover("", "", "")} >
+                <div className={b.key === activeBio || activeBio === "" ? "biographieImg active" : "biographieImg inactive"} style={{ backgroundImage: `url(${b.src})` }} ></div>
+                <div className={b.key === activeBio ? "biographieName active" : "biographieName"}><p> {b.name} </p>  </div>
+              </div>
+
+              <a href="#biographieText" className='d-flex d-md-none' >
+                <div className="biographie" key={b.key} onMouseEnter={() => handleHover(b.key, b.text, b.key)} onMouseLeave={() => handleHover("", "", "")} >
+                  <div className={b.key === activeBio || activeBio === "" ? "biographieImg active" : "biographieImg inactive"} style={{ backgroundImage: `url(${b.src})` }} ></div>
+                  <div className={b.key === activeBio ? "biographieName active" : "biographieName"}><p> {b.name} </p>  </div>
+                </div>
+              </a>
+
+
+            </>
           )
         })}
-        <div className={activeBio !== "" ? "biographieText" : "d-none"}>
+        <div id='biographieText' className={activeBio !== "" ? "biographieText" : "d-none"}>
           <p className='name'>
             {bioName}:
           </p>
@@ -763,114 +774,3 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
 }
 
 
-{/* <div className="modalTitle">
-<p>
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, eaque.
-</p>
-</div>
-<div className="modalText">
-<p>
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-  Porro, necessitatibus voluptates! Atque, dolorem a similique alias
-  quisquam consequatur ut dignissimos enim deserunt corrupti suscipit
-  placeat eveniet reiciendis inventore natus aliquam, temporibus ratione
-  dolor. Iste iusto quisquam ea consectetur similique ipsa laborum obcaecati
-  commodi. Atque earum cupiditate tenetur, quibusdam rerum qui?
-</p>
-</div> */}
-
-
-// <div className={`${active ? "d-none" : "modalButton"}`} onClick={() => { setActive(!active) }}>
-// <img src="/icons/chevronup.png" alt="" />
-// </div>
-// <div className="modalTextContainer">
-
-// <div className="title">
-//   Lorem ipsum dolor sit amet.
-// </div>
-
-// <div className="text">
-//   HOLA MUNDO
-// </div>
-// </div>
-
-
-// <div className='footer col-12 p-0'>
-//   <div className="footerTextHolder">
-//     <div className="footerTitle">
-//       buscamos
-//     </div>
-//     <div className="footerText">
-//       <p>
-//         resolver cada nueva situación
-//       </p>
-//       <p>
-//         con potencia, buen diseño
-//       </p>
-//       <p>
-//         y eficacia.
-//       </p>
-//     </div>
-//   </div>
-//   <div className="blockContainer">
-//     {content.map((c, i) => {
-//       return (
-//         <div key={i} className='block'>
-//           <div className="blockTitle">
-//             <p>{c.title}</p>
-//           </div>
-//           <div className="blockText">
-//             <p>{c.text}</p>
-//           </div>
-//         </div>
-//       )
-//     })}
-//   </div>
-//   <div className="biographies">
-//     {biographies.map((b, i) => {
-//       return (
-//         <>
-//           <div key={i} onMouseEnter={() => handleHover(b.key, b.text)} onMouseLeave={() => handleHover("", "")} className="biographie">
-//             <div className={b.key === activeBio || activeBio === "" ? "image active" : "image"} style={{ backgroundImage: `url(${b.src})` }}>
-//             </div>
-//             <div className={b.key === activeBio || activeBio === "" ? "name active" : "name"}>
-//               <p>{b.name}</p>
-//             </div>
-//           </div>
-//         </>
-//       )
-//     })}
-//     <div className={activeBio !== "" ? "text active" : "d-none"}>
-//       <p>{bioText}</p>
-
-//     </div>
-//   </div>
-//   <div className="finalContent">
-//     <div className="sectionLeft">
-//       <div className="brand">
-//         <p>aire</p>
-
-//       </div>
-//       <div className="texts">
-
-//         <div className='phrase w-fit-content mb-0 phrase d-flex flex-column'>
-//           <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>diseño</b></p>
-//           <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>audiovisual</b></p>
-//           <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 mb-0 c-gray'><b>comunicación</b></p>
-//         </div>
-//         <div className='city' >
-//           <p>
-//             Buenos Aires
-//           </p>
-//         </div>
-//       </div>
-//     </div>
-//     <div className="sectionRight">
-//       <div className="mail">
-//         <p>
-//           xxxxxxxxx@gamil.com
-//         </p>
-//       </div>
-//     </div>
-//   </div>
-// </div>
