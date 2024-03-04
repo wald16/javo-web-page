@@ -9,7 +9,7 @@ body {
 .bannerContent {
   width: 100vw;
   padding: 0px 25px;
-  padding-top:20px ;
+  padding-top: 20px;
 
   h1 {
     margin-top: -20px;
@@ -535,8 +535,23 @@ body {
   font-family: helvetica;
   color: #7E7E7E;
 
+
+  .titleWrapper {
+
+    margin-top: 20px;
+
+    @media screen and (max-width:768px) {
+      justify-content: center;
+      text-align: center;
+      padding: 0px 45px 0px 5px;
+
+    }
+
+    // background-color: red;
+  }
+
   @media screen and (max-width:768px) {
-    padding: 0px 20px 0px 5px
+    padding: 0px 5px 0px 25px;
   }
 
   .title {
@@ -551,6 +566,7 @@ body {
 
     @media screen and (max-width:768px) {
       font-size: 65px;
+      margin-left: 15px;
     }
 
   }
@@ -583,6 +599,7 @@ body {
     justify-content: left;
 
     // background-color: red;
+
     @media screen and (max-width:768px) {
       flex-direction: column;
     }
@@ -596,8 +613,10 @@ body {
 
       // margin: 10px;
       // background-color: green;
+
       @media screen and (max-width:768px) {
         max-width: 100%;
+        margin-bottom: -30px;
       }
 
       .textTitle {
@@ -605,6 +624,19 @@ body {
         font-family: helvetica;
         color: $black;
         font-weight: bolder;
+
+        @media screen and (max-width:1200px) {
+          font-size: 25px;
+        }
+
+        @media screen and (max-width:768px) {
+          font-size: 40px;
+          line-height: 30px;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 10px;
+        }
       }
 
       .text {
@@ -614,8 +646,18 @@ body {
         font-weight: 400;
         line-height: 25px;
 
+        @media screen and (max-width:1200px) {
+          font-size: 15px;
+          // line-height: -20px;
+          line-height: 15px;
+        }
+
         @media screen and (max-width:768px) {
-          font-size: 25px;
+          font-size: 35px;
+          line-height: 30px;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
         }
       }
     }
@@ -637,7 +679,7 @@ body {
     .biographie {
       font-size: 30px;
       width: 20%;
-      height: 200px;
+      height: 290px;
       display: flex;
       flex-direction: column;
       font-weight: bolder;
@@ -645,8 +687,12 @@ body {
 
       @media screen and (max-width:768px) {
         width: 100%;
-        height: 500px;
+        height: 400px;
         margin-bottom: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 200px;
       }
 
       .biographieImg {
@@ -660,7 +706,7 @@ body {
 
         @media screen and (max-width:768px) {
           background-position: top;
-          height: 80vh;
+          height: 50vh;
         }
 
         &.active {
@@ -689,11 +735,15 @@ body {
     .biographieText {
       width: 50%;
       // background-color: red;
-      height: 240px;
+      height: 290px;
+      display: flex;
+      flex-direction: column;
       padding: 10px;
       color: black;
-      margin-top: -15px;
+      margin-top: 0px;
       margin-left: 20px;
+
+
 
       @media screen and (max-width:768px) {
         // margin-top: -200px;
@@ -715,12 +765,18 @@ body {
         font-size: 25px;
         font-weight: 400;
 
-        @media screen and (max-width:768px) {
-          font-size: 20px;
+        @media screen and (max-width:1200px) {
+          font-size: 18px;
+          line-height: 25px;
         }
       }
     }
 
+    .mobileBiographieText {
+      height: fit-content;
+      font-size: 20px;
+      // margin-top: -650px;
+    }
   }
 
   .finalContent {
