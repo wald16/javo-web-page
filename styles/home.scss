@@ -535,7 +535,7 @@ body {
   color: #7E7E7E;
 
   @media screen and (max-width:1200px) {
-    padding: 0px 20px 0px 10px
+    padding: 0px 20px 0px 5px
   }
 
   .title {
@@ -627,7 +627,7 @@ body {
     height: fit-content;
     display: flex;
     color: $black;
-    padding-left: 10px;
+    padding-left: 0px;
 
     @media screen and (max-width:1200px) {
       flex-direction: column;
@@ -713,6 +713,7 @@ body {
         line-height: 30px;
         font-size: 25px;
         font-weight: 400;
+
         @media screen and (max-width:1200px) {
           font-size: 20px;
         }
@@ -731,6 +732,8 @@ body {
     justify-content: space-between;
     font-family: helvetica;
     color: #7E7E7E;
+
+
 
     .left {
       display: flex;
@@ -794,6 +797,88 @@ body {
 
 
     }
+  }
+
+  .mobileFinalContent {
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+
+    .brandAndPhrase {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      // justify-content: center;
+      margin-bottom: -60px;
+
+      .brand {
+        font-size: 70px;
+        font-weight: bolder;
+        color: $orange;
+        letter-spacing: -2px;
+        margin-bottom: -50px
+      }
+
+      .phrase {
+        margin: 0px;
+        margin-left: 10px;
+        margin-right: 10px;
+        color: #7E7E7E;
+        display: flex;
+        justify-content: center;
+        text-align: left;
+        flex-direction: column;
+        height: 140px;
+        margin-bottom: -20px;
+
+        p {
+          // color: #a5a5a5;
+          font-size: 25px;
+          margin-bottom: -5px;
+
+          font-weight: bolder;
+          // background-color: red;
+        }
+      }
+    }
+
+    .cityAndContact {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      // justify-content: center;
+      
+
+      .city {
+        color: $black;
+        font-size: 20px;
+        font-weight: bolder;
+        display: flex;
+        justify-content: end;
+        text-align: left;
+        flex-direction: column;
+        height: 100px;
+        margin-left: 5px;
+        // margin-bottom: -25px;
+
+        p {
+          margin-bottom: -10px;
+        }
+      }
+
+      .contact {
+        font-size: 10px;
+        color: #7E7E7E;
+        margin-left: 10px;
+        margin-bottom: -110px;
+        font-weight: bolder;
+
+      }
+    }
+
+
+
   }
 }
 

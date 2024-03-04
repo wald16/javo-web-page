@@ -676,7 +676,7 @@ export const Footer = () => {
       </div>
 
 
-      <div className="finalContent">
+      <div className="finalContent d-none d-xl-flex  ">
         <div className="left">
           <div className="brand">
             aire
@@ -696,6 +696,29 @@ export const Footer = () => {
           <div className="contact">
             xxxxxxxxx@gmail.com
           </div>
+        </div>
+      </div>
+      <div className="mobileFinalContent  d-flex d-xl-none">
+        <div className="brandAndPhrase">
+          <div className="brand">aire</div>
+          <div className="phrase">
+            <div className="phrase">
+              <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>diseño</b></p>
+              <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>audiovisual</b></p>
+              <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>comunicación</b></p>
+            </div>
+          </div>
+        </div>
+        <div className="cityAndContact">
+          <div className="city">
+            <p>
+              Buenos Aires
+            </p>
+          </div>
+          <div className="contact">
+            <p>xxxxxxxxx@gmail.com</p>
+          </div>
+
         </div>
       </div>
     </div>
