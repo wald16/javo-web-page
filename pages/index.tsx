@@ -664,9 +664,9 @@ export const Footer = () => {
 
               </div>
               <div className={activeBio === b.key ? "mobileBiographieText  d-flex d-md-none" : "d-none"}>
-                <p className='name'>
+                {/* <p className='name'>
                   {bioName}:
-                </p>
+                </p> */}
                 <p className='text'>
                   {bioText}
                 </p>
@@ -688,7 +688,7 @@ export const Footer = () => {
       </div>
 
 
-      <div className="finalContent">
+      <div className="finalContent d-none d-md-flex">
         <div className="left">
           <div className="brand">
             aire
@@ -705,6 +705,28 @@ export const Footer = () => {
           </div>
         </div>
         <div className="right">
+          <div className="contact">
+            xxxxxxxxx@gmail.com
+          </div>
+        </div>
+      </div>
+      <div className="mobileFinalContent  d-flex d-md-none ">
+        <div className="up">
+          <div className="brand">
+            aire
+          </div>
+          <div className="phrase">
+            <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>diseño</b></p>
+            <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>audiovisual</b></p>
+            <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>comunicación</b></p>
+          </div>
+        </div>
+        <div className="down">
+          <div className="city">
+            <p>
+              Buenos Aires
+            </p>
+          </div>
           <div className="contact">
             xxxxxxxxx@gmail.com
           </div>

@@ -653,11 +653,16 @@ body {
         }
 
         @media screen and (max-width:768px) {
-          font-size: 35px;
+          font-size: 25px;
           line-height: 30px;
           text-align: center;
           justify-content: center;
           align-items: center;
+        }
+
+        @media screen and (max-width:500px) {
+          font-size: 19px;
+          line-height: 25px;
         }
       }
     }
@@ -693,6 +698,7 @@ body {
         flex-direction: column;
         justify-content: space-between;
         height: 200px;
+        margin-left: -10px;
       }
 
       .biographieImg {
@@ -706,7 +712,7 @@ body {
 
         @media screen and (max-width:768px) {
           background-position: top;
-          height: 50vh;
+          height: 300px;
         }
 
         &.active {
@@ -775,7 +781,53 @@ body {
     .mobileBiographieText {
       height: fit-content;
       font-size: 20px;
+      margin-left: -10px;
       // margin-top: -650px;
+    }
+  }
+
+  .mobileFinalContent {
+    display: flex;
+    flex-direction: column;
+
+    .brand {
+      font-size: 150px;
+      font-weight: bolder;
+      color: $orange;
+      letter-spacing: -5px;
+      margin-bottom: -30px;
+    }
+
+    .phrase {
+      p {
+        font-size: 40px;
+        font-family: Helvetica;
+        font-weight: 800;
+        line-height: 30px;
+        margin-bottom: 0px;
+      }
+    }
+
+    .city {
+      font-size: 40px;
+      font-family: Helvetica;
+      font-weight: 800;
+      line-height: 30px;
+      margin-bottom: 40px;
+      margin-top: 40px;
+      color: $black;
+    }
+    .contact{
+      font-size: 40px;
+      font-family: Helvetica;
+      font-weight: 800;
+      line-height: 30px;
+      margin-bottom: 0px;
+      margin-bottom: 40px;
+      // color: $black;
+      @media screen and (max-width:500px){
+        font-size: 20px;
+      }
     }
   }
 
