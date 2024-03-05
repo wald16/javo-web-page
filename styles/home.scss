@@ -327,7 +327,7 @@ body {
 
 .resetButton {
   background-color: $orange;
-  padding: 10px;
+  padding: 5px;
   border-radius: 100%;
   width: 60px;
   height: 60px;
@@ -516,6 +516,8 @@ body {
         justify-content: end;
         display: flex;
         margin-top: 23px;
+        z-index: 999;
+        position: relative;
 
         .imgBg {
           background-color: black;
@@ -862,9 +864,11 @@ body {
       margin-left: -10px;
       display: flex;
       flex-direction: column;
+
       @media screen and (max-width:768px) {
         margin-top: -20px;
       }
+
       .name {
         line-height: 25px;
         font-size: 30px;
@@ -883,6 +887,7 @@ body {
           line-height: 25px;
         }
       }
+
       // margin-top: -650px;
     }
   }
@@ -957,6 +962,7 @@ body {
         color: $orange;
         letter-spacing: -5px;
         margin-bottom: -30px;
+
         @media screen and (max-width:1200px) {
           font-size: 130px;
         }
@@ -981,6 +987,7 @@ body {
           margin-bottom: 5px;
 
           font-weight: bolder;
+
           // background-color: red;
           @media screen and (max-width:1200px) {
             font-size: 25px;
@@ -1006,7 +1013,10 @@ body {
 
         @media screen and (max-width:1200px) {
           font-size: 20px;
-          p{margin-bottom: -20px;}
+
+          p {
+            margin-bottom: -20px;
+          }
         }
       }
     }
