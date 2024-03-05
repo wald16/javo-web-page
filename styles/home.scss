@@ -345,6 +345,9 @@ body {
     animation: smallerBounce 1s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
+
+    width: 60px;
+    height: 60px;
   }
 
   &.active {
