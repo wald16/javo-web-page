@@ -80,7 +80,7 @@ const config: ItemType[] = [
     height: "40vh",
     category: "campañas",
     secondaryImgs: [
-      { src: "/images/img4.jpg", position: "top" },
+      { src: "/images/img4.jpg", position: "center" },
       { src: "/images/img2.jpg", position: "top" },
       { src: "/images/img4.jpg", position: "top" },
     ]
@@ -595,13 +595,14 @@ export const Footer = () => {
       name: "Javier Cerruti",
       src: "/images/img1.jpg",
       key: "Javier",
+
       text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sequi tempore tenetur ab nemo! Facilis totam debitis eos dolor veritatis iusto sapiente earum accusantium ea eligendi exercitationem aut, ducimus consequatur nobis incidunt omnis fuga? Aperiam esse et odit? Minus provident ipsum nulla inventore veniam adipisci sapiente facilis quibusdam qui natus! rabia",
     },
 
     {
       name: "Gustavo Wald",
       src: "/images/img12.jpeg",
-      key: "gustavo",
+      key: "Gustavo",
       text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sequi tempore tenetur ab nemo! Facilis totam debitis eos dolor veritatis iusto sapiente earum accusantium ea eligendi exercitationem aut, ducimus consequatur nobis incidunt omnis fuga? Aperiam esse et odit? Minus provident ipsum nulla inventore veniam adipisci sapiente facilis quibusdam qui natus! rabia",
 
     }
@@ -658,17 +659,14 @@ export const Footer = () => {
 
               <div className="biographie d-flex d-md-none" key={b.key} onMouseEnter={() => handleHover(b.key, b.text, b.key)} onMouseLeave={() => handleHover("", "", "")} >
                 <div>
-                  <div className={b.key === activeBio || activeBio === "" ? "biographieImg active" : "biographieImg inactive"} style={{ backgroundImage: `url(${b.src})` }} ></div>
-                  <div className={b.key === activeBio ? "biographieName active" : "biographieName"}><p> {b.name} </p>  </div>
+                  <div className={"biographieImg active"} style={{ backgroundImage: `url(${b.src})` }} ></div>
+                  <div className={"biographieName active"}><p> {b.name}: </p>  </div>
                 </div>
 
               </div>
-              <div className={activeBio === b.key ? "mobileBiographieText  d-flex d-md-none" : "d-none"}>
-                {/* <p className='name'>
-                  {bioName}:
-                </p> */}
+              <div className={"mobileBiographieText  d-flex d-md-none"}>
                 <p className='text'>
-                  {bioText}
+                  {b.text}
                 </p>
               </div>
 
