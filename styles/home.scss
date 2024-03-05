@@ -59,6 +59,8 @@ body {
   background-position: bottom;
 
   &:hover {
+    cursor: pointer;
+
     .title {
       transition: all ease-in 1s;
       display: block;
@@ -376,7 +378,8 @@ body {
       width: 80%;
       height: 50%;
     }
-    .modalContent{
+
+    .modalContent {
       height: 100%;
     }
 
@@ -458,7 +461,7 @@ body {
 
       .tabs {
         display: flex;
-        margin-top: -118px;
+        margin-top: -116px;
         // background-color: black;
 
         .tabSelector {
@@ -471,6 +474,15 @@ body {
           text-align: center;
           justify-content: center;
           color: #a5a5a5;
+          transition: all ease-in 0.2s;
+
+          &:hover {
+            cursor: pointer;
+            background-color: #3a3e47;
+            color: $green;
+            filter: brightness(1.5);
+
+          }
 
           @media screen and (max-width:768px) {
             width: 50%;
@@ -480,6 +492,10 @@ body {
           &.active {
             background-color: #3a3e47;
             color: $green;
+
+            &:hover {
+              filter: brightness(1)
+            }
           }
         }
       }
@@ -487,12 +503,13 @@ body {
       .closer {
         justify-content: end;
         display: flex;
-        margin-top: 27px;
-        margin-right: 5px;
+        margin-top: 23px;
 
         .imgBg {
           background-color: black;
           opacity: 0.6;
+          transition: all ease-in 0.2s;
+          cursor: pointer;
 
           &:hover {
             opacity: 1;
@@ -644,11 +661,12 @@ body {
     // margin-top: 100px;
     display: flex;
     justify-content: left;
-
+    padding-left: 5px;
     // background-color: red;
 
     @media screen and (max-width:768px) {
       flex-direction: column;
+      padding-left: 0px;
     }
 
     .textContent {
@@ -722,10 +740,11 @@ body {
     height: fit-content;
     display: flex;
     color: $black;
-    padding-left: 0px;
+    padding-left: 15px;
 
     @media screen and (max-width:768px) {
       flex-direction: column;
+      padding-left: 0px;
     }
 
     .biographie {
