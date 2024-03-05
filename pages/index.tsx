@@ -758,16 +758,19 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
               <img src="/icons/cruz.png" alt="" />
             </div>
           </div>
-          {modalInfo.secondaryVideos && (
-            <div className={`imgBg tabSelector ${selection == "Video" ? "active" : ""}`} onClick={() => setSelection("Video")}>
-              <p className='mb-0 px-2  f-32 lh-32'>audiovisual</p>
-            </div>
-          )}
-          {modalInfo.secondaryImgs && (
-            <div className={`imgBg tabSelector ${selection == "Graphic" ? "active" : ""}`} onClick={() => setSelection("Graphic")}>
-              <p className='mb-0 px-2  f-32 lh-32'>gráfica</p>
-            </div>
-          )}
+          <div className="tabs">
+
+            {modalInfo.secondaryVideos && (
+              <div className={`imgBg tabSelector ${selection == "Video" ? "active" : ""}`} onClick={() => setSelection("Video")}>
+                <p className='mb-0 px-2  lh-32'>audiovisual</p>
+              </div>
+            )}
+            {modalInfo.secondaryImgs && (
+              <div className={`imgBg tabSelector ${selection == "Graphic" ? "active" : ""}`} onClick={() => setSelection("Graphic")}>
+                <p className='mb-0 px-2  lh-32'>gráfica</p>
+              </div>
+            )}
+          </div>
         </div>
         <div className="modalContent">
 

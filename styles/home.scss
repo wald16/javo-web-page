@@ -376,6 +376,9 @@ body {
       width: 80%;
       height: 50%;
     }
+    .modalContent{
+      height: 100%;
+    }
 
     .modaltextContainer {
       width: 55%;
@@ -452,6 +455,50 @@ body {
       position: absolute;
       width: 100%;
       margin-top: -24px;
+
+      .tabs {
+        display: flex;
+        margin-top: -118px;
+        // background-color: black;
+
+        .tabSelector {
+          background-color: #7E7E7E;
+          padding: 10px;
+          width: 200px;
+          font-family: helvetica;
+          font-size: 32px;
+          align-items: center;
+          text-align: center;
+          justify-content: center;
+          color: #a5a5a5;
+
+          @media screen and (max-width:768px) {
+            width: 50%;
+            font-size: 22px;
+          }
+
+          &.active {
+            background-color: #3a3e47;
+            color: $green;
+          }
+        }
+      }
+
+      .closer {
+        justify-content: end;
+        display: flex;
+        margin-top: 27px;
+        margin-right: 5px;
+
+        .imgBg {
+          background-color: black;
+          opacity: 0.6;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
 
     }
 
@@ -817,15 +864,17 @@ body {
       margin-top: 40px;
       color: $black;
     }
-    .contact{
+
+    .contact {
       font-size: 40px;
       font-family: Helvetica;
       font-weight: 800;
       line-height: 30px;
       margin-bottom: 0px;
       margin-bottom: 40px;
+
       // color: $black;
-      @media screen and (max-width:500px){
+      @media screen and (max-width:500px) {
         font-size: 20px;
       }
     }
