@@ -326,7 +326,7 @@ body {
 }
 
 .resetButton {
-  background-color: $orange;
+  background-color: #a5a5a5;
   padding: 5px;
   border-radius: 100%;
   width: 60px;
@@ -340,6 +340,10 @@ body {
   align-items: center;
   transition: all ease 1s;
   margin-bottom: 30px;
+
+  &:hover {
+    background-color: #7E7E7E;
+  }
 
   img {
     animation: smallerBounce 1s;
@@ -476,7 +480,7 @@ body {
 
       .tabs {
         display: flex;
-        margin-top: -116px;
+        margin-top: -115px;
         // background-color: black;
 
         .tabSelector {
@@ -518,7 +522,7 @@ body {
       .closer {
         justify-content: end;
         display: flex;
-        margin-top: 23px;
+        margin-top: 24px;
         z-index: 999;
         position: relative;
 
@@ -1032,7 +1036,8 @@ body {
       margin-bottom: -100px;
       font-weight: bolder;
       // background-color: red;
-margin-right: 100px;
+      margin-right: 100px;
+
       @media screen and (max-width:1200px) {
         font-size: 20px;
       }
