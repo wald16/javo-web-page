@@ -129,8 +129,8 @@ const config: ItemType[] = [
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
     minHeight: "400px",
     height: "70vh",
-    mobileHeight: "320px",
-    mobileMinHeight: "auto",
+    mobileHeight: "360px",
+    mobileMinHeight: "720",
     fontSize: 70,
     // clickeable: true,
     title: _text as string,
@@ -153,7 +153,7 @@ const config: ItemType[] = [
     minHeight: "500px",
     img: "/images/img8.jpg",
     height: "100vh",
-    mobileHeight: "720px",
+    mobileHeight: "520px",
     mobileMinHeight: "auto",
     category: "espacios",
     clickeable: true,
@@ -243,7 +243,7 @@ const config: ItemType[] = [
     textAlign: "end",
     minHeight: "300px",
     height: "30vh",
-    mobileHeight: "420px",
+    mobileHeight: "520px",
     mobileMinHeight: "auto",
     img: "/images/img10.jpg",
     clickeable: true,
@@ -269,7 +269,7 @@ const config: ItemType[] = [
     showOnlyOnFilter: false,
     category: "identidad",
     extraClass: "proyects",
-    mobileHeight:"720px",
+    mobileHeight: "520px",
     secondaryImgs: [
       { src: "/images/img7.jpg", position: "top" },
       { src: "/images/img2.jpg", position: "top" },
@@ -329,23 +329,28 @@ export default function HomePage() {
         <Home />
         <Video />
         <FilterBar activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
-        <div className='container-fluid'>
-          <div className='row'>
-            {config.filter(checkFilter).map((item, index) => (BuildSectionComponent(item, index, setModalInfo)))}
+        <div className="container">
+          <div className='container-fluid'>
+            <div className='row'>
+              {config.filter(checkFilter).map((item, index) => (BuildSectionComponent(item, index, setModalInfo)))}
+            </div>
           </div>
         </div>
 
-
         {modalInfo && (<Modal modalInfo={modalInfo} setModalInfo={setModalInfo} />)}
-        <Footer />
+        <div className="container">
+
+          <Footer />
+        </div>
       </main>
     </>
   )
 }
 export const Home = () => {
   return (
-    <div className='Home stretch'>
-      <div className=''>
+    <div className="container ">
+      <div className='Home stretch'>
+
         <div className='row justify-content-between align-items-center bannerContent'>
           <div className='w-fit-content d-flex'>
             <h1 className='f-150 f-helvetica f-heavy mb-0'>
@@ -359,6 +364,7 @@ export const Home = () => {
             <p className='f-40 f-helvetica f-heavy lh-30 ls-n-2 mb-0 '><b>comunicación</b></p>
           </div>
         </div>
+
       </div>
     </div>
   )

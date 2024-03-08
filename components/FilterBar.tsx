@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import React from 'react';
+import React, { useState } from 'react';
 
 export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: string, setActiveFilter: Function }) => {
     const router = useRouter();
@@ -70,64 +70,85 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
         })
         return index
     }
+    const [displayButton, setDisplayButton] = useState<boolean>(false)
+
+    React.useEffect(() => {
+
+
+        window.addEventListener('scroll', function () {
+            let scroll = window.scrollY
+            if (scroll > 1200) { setDisplayButton(true) } else {
+                setDisplayButton(false)
+            }
+        });
+
+    }, [])
+
+
+
 
     return (
         <>
-            <div id="filter" className={`Filter ${active ? "active" : ""}`}>
-                <div className='row'>
-                    <div className='col-12 pushedCol'>
-                        <div className=" items">
-                            {items.map((i, index) => {
-                                if (i.key !== "nosotros") {
-                                    return (
-                                        <div className="itemContainer" key={index}>
-                                            <div className={`item col-2 col-md-12  ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text)} key={i.key} ><p>{i.name}</p></div>
-                                            {i.key == activeFilter && (
-                                                <div className={`text d-flex d-xl-none ${i.key == activeFilter ? "active" : ""}`}>
-                                                    {text}
-                                                </div>
-                                            )}
-                                        </div>
-                                    )
-                                } else {
-                                    return (
-                                        <a href="#nosotros"  key={index}>
-                                            <div className="itemContainer">
-                                                <div className={`item col-2 col-md-12  ${i.key == activeFilter ? "active" : ""}`} key={i.key} ><p>{i.name}</p></div>
+            <div className="container">
+
+
+                <div id="filter" className={`Filter ${active ? "active" : ""}`}>
+                    <div className='row'>
+                        <div className='col-12 pushedCol'>
+                            <div className=" items">
+                                {items.map((i, index) => {
+                                    if (i.key !== "nosotros") {
+                                        return (
+                                            <div className="itemContainer" key={index}>
+                                                <div className={`item col-2 col-md-12  ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text)} key={i.key} ><p>{i.name}</p></div>
                                                 {i.key == activeFilter && (
                                                     <div className={`text d-flex d-xl-none ${i.key == activeFilter ? "active" : ""}`}>
                                                         {text}
                                                     </div>
                                                 )}
                                             </div>
-                                        </a>
-                                    )
-                                }
-                            })}
-                        </div>
-                        <div className=" items">
+                                        )
+                                    } else {
+                                        return (
+                                            <a href="#nosotros" key={index}>
+                                                <div className="itemContainer">
+                                                    <div className={`item col-2 col-md-12  ${i.key == activeFilter ? "active" : ""}`} key={i.key} ><p>{i.name}</p></div>
+                                                    {i.key == activeFilter && (
+                                                        <div className={`text d-flex d-xl-none ${i.key == activeFilter ? "active" : ""}`}>
+                                                            {text}
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            </a>
+                                        )
+                                    }
+                                })}
+                            </div>
+                            <div className=" items">
 
-                            {[...items].filter((i: any, _index: number) => (_index <= getLastPositionActive())).map((i, index) => {
-                                return (
-                                    <div className="itemContainer" key={index}>
-                                        <div className={`item col-2 col-md-12 opacity-0 h-0 d-none d-lg-flex ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text)} key={i.key} ><p>{i.name}</p></div>
-                                        {i.key == activeFilter && (
-                                            <div className={`text d-none d-xl-flex ${i.key == activeFilter ? "active" : ""}`}>
-                                                {text}
-                                            </div>
-                                        )}
-                                    </div>
-                                )
-                            })}
+                                {[...items].filter((i: any, _index: number) => (_index <= getLastPositionActive())).map((i, index) => {
+                                    return (
+                                        <div className="itemContainer" key={index}>
+                                            <div className={`item col-2 col-md-12 opacity-0 h-0 d-none d-lg-flex ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text)} key={i.key} ><p>{i.name}</p></div>
+                                            {i.key == activeFilter && (
+                                                <div className={`text d-none d-xl-flex ${i.key == activeFilter ? "active" : ""}`}>
+                                                    {text}
+                                                </div>
+                                            )}
+                                        </div>
+                                    )
+                                })}
+                            </div>
                         </div>
                     </div>
                 </div>
+                <a href="#filter" className={`${displayButton ? "" : "d-none"}`}>
+                    <div onClick={() => reset()} className={`resetButton ${active ? "active" : ""}`}>
+                        <img src={` ${active ? "icons/reset.png" : "icons/flecha.png"}`} alt="" />
+                    </div>
+                </a>
             </div>
-            <a href="#filter">
-                <div onClick={() => reset()} className={`resetButton ${active ? "active" : ""}`}>
-                    <img src={` ${active ? "icons/reset.png" : "icons/flecha.png"}`} alt="" />
-                </div>
-            </a>
+
         </>
     )
 }
