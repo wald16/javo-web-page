@@ -144,22 +144,7 @@ body {
     }
   }
 
-  @media screen and (max-width:768px) {
 
-    .SectionImage,
-    .mobileImage {
-      height: 50vh !important;
-
-    }
-  }
-
-  @media screen and (max-width:768px) {
-
-    .SectionImage,
-    .mobileImage {
-      height: 50vh !important;
-    }
-  }
 }
 
 .textModule {
@@ -480,7 +465,7 @@ body {
 
       .tabs {
         display: flex;
-        margin-top: -115px;
+        margin-top: -116px;
         // background-color: black;
 
         .tabSelector {
@@ -523,6 +508,7 @@ body {
         justify-content: end;
         display: flex;
         margin-top: 24px;
+        // background-color: ;
         z-index: 999;
         position: relative;
 
@@ -620,23 +606,20 @@ body {
   font-family: helvetica;
   color: #7E7E7E;
 
+  @media screen and (max-width:768px) {
+    padding: 0px;
+  }
 
   .titleWrapper {
 
     margin-top: 20px;
 
     @media screen and (max-width:768px) {
-      justify-content: center;
-      text-align: center;
-      padding: 0px 45px 0px 5px;
-
+      // background-color: red;
+      justify-content: flex-start;
     }
 
     // background-color: red;
-  }
-
-  @media screen and (max-width:768px) {
-    padding: 0px 5px 0px 25px;
   }
 
   .title {
@@ -678,7 +661,7 @@ body {
     margin: auto;
     height: fit-content;
     min-height: 100px;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
     // margin-top: 100px;
     display: flex;
     justify-content: left;
@@ -688,6 +671,7 @@ body {
     @media screen and (max-width:768px) {
       flex-direction: column;
       padding-left: 0px;
+      margin-left: 5px;
     }
 
     .textContent {
@@ -702,7 +686,7 @@ body {
 
       @media screen and (max-width:768px) {
         max-width: 100%;
-        margin-bottom: -30px;
+        margin-bottom: -70px;
       }
 
       .textTitle {
@@ -718,9 +702,7 @@ body {
         @media screen and (max-width:768px) {
           font-size: 40px;
           line-height: 30px;
-          text-align: center;
-          justify-content: center;
-          align-items: center;
+
           margin-bottom: 10px;
         }
       }
@@ -741,14 +723,11 @@ body {
         @media screen and (max-width:768px) {
           font-size: 25px;
           line-height: 30px;
-          text-align: center;
-          justify-content: center;
-          align-items: center;
         }
 
         @media screen and (max-width:500px) {
           font-size: 19px;
-          line-height: 25px;
+          line-height: 20px;
         }
       }
     }
@@ -765,7 +744,7 @@ body {
 
     @media screen and (max-width:768px) {
       flex-direction: column;
-      padding-left: 0px;
+      padding-left: 25px;
     }
 
     .biographie {
@@ -785,7 +764,7 @@ body {
         flex-direction: column;
         justify-content: space-between;
         height: 200px;
-        margin-left: -10px;
+        margin-left: -15px;
       }
 
       .biographieImg {
@@ -841,6 +820,7 @@ body {
       @media screen and (max-width:768px) {
         // margin-top: -200px;
         margin-left: -10px;
+        margin-right: 10px;
         width: 100%;
         height: fit-content;
       }
@@ -874,6 +854,8 @@ body {
 
       @media screen and (max-width:768px) {
         margin-top: -20px;
+        padding-right: 20px;
+
       }
 
       .name {
@@ -902,7 +884,7 @@ body {
   .mobileFinalContent {
     display: flex;
     flex-direction: column;
-
+padding-left: 20px;
     .brand {
       font-size: 150px;
       font-weight: bolder;

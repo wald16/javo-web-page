@@ -132,7 +132,7 @@ const config: ItemType[] = [
     mobileHeight: "320px",
     mobileMinHeight: "auto",
     fontSize: 70,
-    clickeable: true,
+    // clickeable: true,
     title: _text as string,
     titleColor: "white",
     descriptionColor: "#FF5500",
@@ -250,6 +250,11 @@ const config: ItemType[] = [
     // title: "LARGE BUT SHORTER",
     category: "campañas",
     showOnlyOnFilter: false,
+    secondaryImgs: [
+      { src: "/images/img7.jpg", position: "top" },
+      { src: "/images/img2.jpg", position: "top" },
+      { src: "/images/img7.jpg", position: "top" },
+    ]
   },
   {
     type: "large",
@@ -263,7 +268,13 @@ const config: ItemType[] = [
     clickeable: true,
     showOnlyOnFilter: false,
     category: "identidad",
-    extraClass: "proyects"
+    extraClass: "proyects",
+    mobileHeight:"720px",
+    secondaryImgs: [
+      { src: "/images/img7.jpg", position: "top" },
+      { src: "/images/img2.jpg", position: "top" },
+      { src: "/images/img7.jpg", position: "top" },
+    ]
   },
 
 ]
@@ -745,66 +756,117 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
       return true
     } else return false
   }
-  return (
-    <div className='Modal-Wrapper'>
-      <div className="modalBody">
 
-        <div className="modalHeader">
+  if (modalInfo.secondaryImgs && modalInfo.secondaryVideos) {
+    return (
+      <div className='Modal-Wrapper'>
+        <div className="modalBody">
 
-          <div className='closer'>
-            <div className="imgBg" onClick={() => { setModalInfo(undefined) }}>
-              <img src="/icons/cruz.png" alt="" />
-            </div>
-          </div>
-          <div className="tabs">
+          <div className="modalHeader">
 
-            {modalInfo.secondaryVideos && (
-              <div className={`imgBg tabSelector ${selection == "Video" ? "active" : ""}`} onClick={() => setSelection("Video")}>
-                <p className='mb-0 px-2  lh-32'>audiovisual</p>
-              </div>
-            )}
-            {modalInfo.secondaryImgs && (
-              <div className={`imgBg tabSelector ${selection == "Graphic" ? "active" : ""}`} onClick={() => setSelection("Graphic")}>
-                <p className='mb-0 px-2  lh-32'>gráfica</p>
-              </div>
-            )}
-          </div>
-        </div>
-        <div className="modalContent">
-
-          {selection === "Graphic" && modalInfo.secondaryImgs && (
-            <div className='Graphic'>
-              <div className="modalImages">
-                {modalInfo.secondaryImgs.map((image: { src: string, position: string }, index: number) => {
-
-                  return (
-                    <img src={image.src} key={index} style={{ objectPosition: image.position }} className={lastImageChecker(index) ? "lastImg" : ""} alt="" />
-                  )
-                })}
+            <div className='closer'>
+              <div className="imgBg" onClick={() => { setModalInfo(undefined) }}>
+                <img src="/icons/cruz.png" alt="" />
               </div>
             </div>
-          )}
-          {selection === "Video" && modalInfo.secondaryVideos && (
-            <div className='Video'>
-              <div className="modalImages">
-                {modalInfo.secondaryVideos.map((src, index) => {
-                  return (
-                    <video key={index} className="bannerVideo" autoPlay={true} muted loop src={src} typeof="video/mp4"></video>
-                  )
-                })}
-              </div>
-              {modalInfo.secondaryVideos.length > 2 && (
-                <div className={`${active ? "d-none" : "modalButton"}`} onClick={() => { setActive(true) }}>
-                  <img src="/icons/chevronup.png" />
+            <div className={`tabs`} >
+
+              {modalInfo.secondaryVideos && (
+                <div className={`imgBg tabSelector ${selection == "Video" ? "active" : ""}`} onClick={() => setSelection("Video")}>
+                  <p className='mb-0 px-2  lh-32'>audiovisual</p>
+                </div>
+              )}
+              {modalInfo.secondaryImgs && (
+                <div className={`imgBg tabSelector ${selection == "Graphic" ? "active" : ""}`} onClick={() => setSelection("Graphic")}>
+                  <p className='mb-0 px-2  lh-32'>gráfica</p>
                 </div>
               )}
             </div>
-          )}
+          </div>
+          <div className="modalContent">
 
+            {selection === "Graphic" && modalInfo.secondaryImgs && (
+              <div className='Graphic'>
+                <div className="modalImages">
+                  {modalInfo.secondaryImgs.map((image: { src: string, position: string }, index: number) => {
+
+                    return (
+                      <img src={image.src} key={index} style={{ objectPosition: image.position }} className={lastImageChecker(index) ? "lastImg" : ""} alt="" />
+                    )
+                  })}
+                </div>
+              </div>
+            )}
+            {selection === "Video" && modalInfo.secondaryVideos && (
+              <div className='Video'>
+                <div className="modalImages">
+                  {modalInfo.secondaryVideos.map((src, index) => {
+                    return (
+                      <video key={index} className="bannerVideo" autoPlay={true} muted loop src={src} typeof="video/mp4"></video>
+                    )
+                  })}
+                </div>
+                {modalInfo.secondaryVideos.length > 2 && (
+                  <div className={`${active ? "d-none" : "modalButton"}`} onClick={() => { setActive(true) }}>
+                    <img src="/icons/chevronup.png" />
+                  </div>
+                )}
+              </div>
+            )}
+
+          </div>
         </div>
       </div>
-    </div>
-  )
+    )
+  } else {
+    return (
+      <div className='Modal-Wrapper'>
+        <div className="modalBody">
+
+          <div className="modalHeader">
+
+            <div className='closer'>
+              <div className="imgBg" onClick={() => { setModalInfo(undefined) }}>
+                <img src="/icons/cruz.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="modalContent">
+
+            {selection === "Graphic" && modalInfo.secondaryImgs && (
+              <div className='Graphic'>
+                <div className="modalImages">
+                  {modalInfo.secondaryImgs.map((image: { src: string, position: string }, index: number) => {
+
+                    return (
+                      <img src={image.src} key={index} style={{ objectPosition: image.position }} className={lastImageChecker(index) ? "lastImg" : ""} alt="" />
+                    )
+                  })}
+                </div>
+              </div>
+            )}
+            {selection === "Video" && modalInfo.secondaryVideos && (
+              <div className='Video'>
+                <div className="modalImages">
+                  {modalInfo.secondaryVideos.map((src, index) => {
+                    return (
+                      <video key={index} className="bannerVideo" autoPlay={true} muted loop src={src} typeof="video/mp4"></video>
+                    )
+                  })}
+                </div>
+                {modalInfo.secondaryVideos.length > 2 && (
+                  <div className={`${active ? "d-none" : "modalButton"}`} onClick={() => { setActive(true) }}>
+                    <img src="/icons/chevronup.png" />
+                  </div>
+                )}
+              </div>
+            )}
+
+          </div>
+        </div>
+      </div>
+    )
+  }
 
 }
 
