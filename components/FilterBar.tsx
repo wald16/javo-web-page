@@ -77,7 +77,8 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
 
         window.addEventListener('scroll', function () {
             let scroll = window.scrollY
-            if (scroll > 1200) { setDisplayButton(true) } else {
+            console.log(scroll)
+            if (scroll > 1150) { setDisplayButton(true) } else {
                 setDisplayButton(false)
             }
         });
