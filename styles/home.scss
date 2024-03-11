@@ -225,6 +225,7 @@ body {
 
   // display: flex;
   .itemContainer {
+    margin-bottom: -20px;
     .text {
       // background-color: red;
       // 
@@ -234,14 +235,14 @@ body {
       line-height: 31px;
       max-width: 500px;
       margin-left: 10px;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
       margin-top: 10px;
       color: #7E7E7E;
       font-family: Helvetica;
 
       @media screen and (max-width:768px) {
         margin-left: 5px;
-        margin-bottom: -20px;
+        margin-bottom: 25px;
       }
     }
   }
@@ -263,6 +264,8 @@ body {
 
   .items,
   .mobileItems {
+    // background-color: red;
+    padding-bottom: 10px;
     @media screen and (max-width: 1200px) {
       flex-direction: column;
 
@@ -288,7 +291,7 @@ body {
 
       @media (max-width:768px) {
         margin: 10px 0px;
-        margin-bottom: -20px;
+        // margin-bottom: -20px;
       }
 
       &:hover {
