@@ -6,6 +6,10 @@ body {
   padding: 0%;
 }
 
+.container{
+  background-color: black;
+}
+
 .bannerContent {
   // width: 100vw;
   width: 100%;
@@ -379,8 +383,8 @@ body {
     width: fit-content;
     height: fit-content;
     min-width: 300px;
-    width: 75%;
-    height: 70%;
+    width: 50%;
+    height: 60%;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -416,58 +420,6 @@ body {
       align-items: center;
       justify-content: center;
     }
-
-    // .closer {
-    //   font-size: 40px;
-    //   z-index: 99;
-    //   display: flex;
-    //   justify-content: end;
-    //   position: fixed;
-
-    //   .imgBg {
-    //     width: fit-content;
-    //     height: 64px;
-    //     cursor: pointer;
-    //     background-color: rgba(0, 0, 0, 0.725);
-    //   }
-
-    //   .tabSelector {
-    //     position: relative;
-    //     top: -55px;
-    //     height: 55px;
-    //     padding: 20px;
-    //     display: flex;
-    //     align-items: center;
-    //     font-family: helvetica;
-    //     background-color: #7E7E7E;
-    //     color: $gray;
-    //     transition: all ease-in 0.2s;
-
-    //     &.active {
-    //       transition: all ease-in 0.2s;
-    //       color: $green;
-    //       background-color: #3A3E47;
-    //     }
-
-    //     &:hover {
-    //       transition: all ease-in 0.2s;
-    //       color: $green;
-    //     }
-    //   }
-
-    //   img {
-
-    //     transition: all ease-in 0.2s;
-
-    //     &:hover {
-    //       font-size: 70px;
-    //       cursor: pointer;
-    //       scale: 1.05;
-    //       transition: all ease-in 0.2s
-    //     }
-
-    //   }
-    // }
     .modalHeader {
 
       position: absolute;
