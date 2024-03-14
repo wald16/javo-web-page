@@ -685,7 +685,7 @@ export const Footer = () => {
               <div className="biographie d-flex d-md-none" key={b.key} onMouseEnter={() => handleHover(b.key, b.text, b.key)} onMouseLeave={() => handleHover("", "", "")} >
                 <div>
                   <div className={"biographieImg active"} style={{ backgroundImage: `url(${b.src})` }} ></div>
-                  <div className={"biographieName active"}><p> {b.name}: </p>  </div>
+                  <div className={"biographieName"}><p> {b.name}: </p>  </div>
                 </div>
 
               </div>

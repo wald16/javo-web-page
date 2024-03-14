@@ -671,6 +671,7 @@ body {
       margin-left: 10px;
       height: fit-content;
       min-height: 250px;
+      margin-bottom: 20px;
 
       // margin: 10px;
       // background-color: green;
@@ -842,6 +843,7 @@ body {
       margin-left: -10px;
       display: flex;
       flex-direction: column;
+      color:#7E7E7E;
 
       @media screen and (max-width:768px) {
         margin-top: -20px;
@@ -853,6 +855,7 @@ body {
         line-height: 25px;
         font-size: 30px;
         font-weight: bolder;
+        color:#7E7E7E;
         // background-color: red;
         margin-bottom: 5px;
       }
@@ -878,7 +881,7 @@ body {
     padding-left: 20px;
 
     .brand {
-      font-size: 150px;
+      font-size: 100px;
       font-weight: bolder;
       color: $orange;
       letter-spacing: -5px;
@@ -887,7 +890,7 @@ body {
 
     .phrase {
       p {
-        font-size: 40px;
+        font-size: 30px;
         font-family: Helvetica;
         font-weight: 800;
         line-height: 30px;
@@ -896,7 +899,7 @@ body {
     }
 
     .city {
-      font-size: 40px;
+      font-size: 30px;
       font-family: Helvetica;
       font-weight: 800;
       line-height: 30px;
