@@ -61,6 +61,7 @@ const config: ItemType[] = [
     title: "lorem ipsum",
     titleColor: "white",
     textAlign: "end",
+    mobileHeight:"35vh",
     category: "campañas",
     secondaryImgs: [
       { src: "/images/img3.jpg", position: "top" },
@@ -79,6 +80,7 @@ const config: ItemType[] = [
     minHeight: "400px",
     height: "40vh",
     category: "campañas",
+    mobileHeight:"35vh",
     secondaryImgs: [
       { src: "/images/img4.jpg", position: "center" },
       { src: "/images/img2.jpg", position: "top" },
@@ -95,6 +97,7 @@ const config: ItemType[] = [
     img: "/images/img5.jpg",
     minHeight: "400px",
     height: "40vh",
+    mobileHeight:"35vh",
     category: "identidad",
     secondaryImgs: [
       { src: "/images/img5.jpg", position: "top" },
@@ -112,6 +115,7 @@ const config: ItemType[] = [
     img: "/images/img13.jpg",
     minHeight: "400px",
     height: "40vh",
+    mobileHeight:"35vh",
     category: "identidad",
     secondaryImgs: [
       { src: "/images/img13.jpg", position: "top" },
@@ -129,7 +133,7 @@ const config: ItemType[] = [
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
     minHeight: "500px",
     height: "70vh",
-    mobileHeight: "360px",
+    mobileHeight: "60vh",
     mobileMinHeight: "720",
     fontSize: 70,
     // clickeable: true,
@@ -144,138 +148,142 @@ const config: ItemType[] = [
 
   },
 
-  // {
-  //   type: "large",
-  //   details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-  //   title: "lorem ipsum",
-  //   titleColor: "white",
-  //   textAlign: "end",
-  //   minHeight: "500px",
-  //   img: "/images/img8.jpg",
-  //   height: "100vh",
-  //   mobileHeight: "520px",
-  //   mobileMinHeight: "auto",
-  //   category: "espacios",
-  //   clickeable: true,
-  //   secondaryImgs: [
-  //     { src: "/images/img8.jpg", position: "top" },
-  //     { src: "/images/img2.jpg", position: "top" },
-  //     { src: "/images/img8.jpg", position: "top" },
-  //   ]
+  {
+    type: "large",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "lorem ipsum",
+    titleColor: "white",
+    textAlign: "end",
+    minHeight: "500px",
+    img: "/images/img8.jpg",
+    height: "100vh",
+    mobileHeight: "60vh",
+    mobileMinHeight: "auto",
+    category: "espacios",
+    clickeable: true,
+    secondaryImgs: [
+      { src: "/images/img8.jpg", position: "top" },
+      { src: "/images/img2.jpg", position: "top" },
+      { src: "/images/img8.jpg", position: "top" },
+    ]
 
-  // },
-  // {
-  //   type: "small",
-  //   details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-  //   title: "lorem ipsum",
-  //   clickeable: true,
-  //   img: "/images/img14.jpg",
-  //   category: "identidad",
-  //   minHeight: "400px",
-  //   height: "40vh",
-  //   titleColor: "white",
-  //   textAlign: "end",
-  //   secondaryImgs: [
-  //     { src: "/images/img14.jpg", position: "top" },
-  //     { src: "/images/img12.jpg", position: "top" },
-  //     { src: "/images/img14.jpg", position: "top" },
-  //   ]
-  // },
-  // {
-  //   type: "small",
-  //   details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-  //   title: "lorem ipsum",
-  //   titleColor: "white",
-  //   textAlign: "end",
-  //   clickeable: true,
-  //   img: "/images/img11.jpg",
-  //   minHeight: "400px",
-  //   category: "identidad",
-  //   height: "40vh",
-  //   secondaryImgs: [
-  //     { src: "/images/img11.jpg", position: "top" },
-  //     { src: "/images/img12.jpg", position: "top" },
-  //     { src: "/images/img11.jpg", position: "top" },
-  //   ]
-  // },
-  // {
-  //   type: "small",
-  //   details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-  //   title: "lorem ipsum",
-  //   titleColor: "white",
-  //   textAlign: "end",
-  //   clickeable: true,
-  //   img: "/images/img6.jpg",
-  //   minHeight: "400px",
-  //   category: "nosotros",
-  //   height: "40vh",
-  //   secondaryImgs: [
-  //     { src: "/images/img6.jpg", position: "top" },
-  //     { src: "/images/img2.jpg", position: "top" },
-  //     { src: "/images/img6.jpg", position: "top" },
-  //   ]
+  },
+  {
+    type: "small",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "lorem ipsum",
+    clickeable: true,
+    img: "/images/img14.jpg",
+    category: "identidad",
+    minHeight: "400px",
+    mobileHeight:"35vh",
+    height: "40vh",
+    titleColor: "white",
+    textAlign: "end",
+    secondaryImgs: [
+      { src: "/images/img14.jpg", position: "top" },
+      { src: "/images/img12.jpg", position: "top" },
+      { src: "/images/img14.jpg", position: "top" },
+    ]
+  },
+  {
+    type: "small",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "lorem ipsum",
+    titleColor: "white",
+    textAlign: "end",
+    clickeable: true,
+    img: "/images/img11.jpg",
+    minHeight: "400px",
+    category: "identidad",
+    height: "40vh",
+    mobileHeight:"35vh",
+    secondaryImgs: [
+      { src: "/images/img11.jpg", position: "top" },
+      { src: "/images/img12.jpg", position: "top" },
+      { src: "/images/img11.jpg", position: "top" },
+    ]
+  },
+  {
+    type: "small",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "lorem ipsum",
+    titleColor: "white",
+    textAlign: "end",
+    clickeable: true,
+    img: "/images/img6.jpg",
+    minHeight: "400px",
+    category: "nosotros",
+    height: "40vh",
+    mobileHeight:"35vh",
+    secondaryImgs: [
+      { src: "/images/img6.jpg", position: "top" },
+      { src: "/images/img2.jpg", position: "top" },
+      { src: "/images/img6.jpg", position: "top" },
+    ]
 
-  // },
-  // {
-  //   category: "nosotros",
-  //   type: "small",
-  //   details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-  //   title: "lorem ipsum",
-  //   titleColor: "white",
-  //   textAlign: "end",
-  //   clickeable: true,
-  //   img: "/images/img7.jpg",
-  //   minHeight: "400px",
-  //   height: "40vh",
-  //   secondaryImgs: [
-  //     { src: "/images/img7.jpg", position: "top" },
-  //     { src: "/images/img2.jpg", position: "top" },
-  //     { src: "/images/img7.jpg", position: "top" },
-  //   ]
+  },
+  {
+    category: "nosotros",
+    type: "small",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "lorem ipsum",
+    titleColor: "white",
+    textAlign: "end",
+    clickeable: true,
+    img: "/images/img7.jpg",
+    minHeight: "400px",
+    height: "40vh",
+    mobileHeight:"35vh",
+    secondaryImgs: [
+      { src: "/images/img7.jpg", position: "top" },
+      { src: "/images/img2.jpg", position: "top" },
+      { src: "/images/img7.jpg", position: "top" },
+    ]
 
-  // },
+  },
 
-  // {
-  //   type: "large",
-  //   details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-  //   title: "lorem ipsum",
-  //   titleColor: "white",
-  //   textAlign: "end",
-  //   minHeight: "300px",
-  //   height: "30vh",
-  //   mobileHeight: "520px",
-  //   mobileMinHeight: "auto",
-  //   img: "/images/img10.jpg",
-  //   clickeable: true,
-  //   // title: "LARGE BUT SHORTER",
-  //   category: "campañas",
-  //   showOnlyOnFilter: false,
-  //   secondaryImgs: [
-  //     { src: "/images/img7.jpg", position: "top" },
-  //     { src: "/images/img2.jpg", position: "top" },
-  //     { src: "/images/img7.jpg", position: "top" },
-  //   ]
-  // },
-  // {
-  //   type: "large",
-  //   details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-  //   title: "lorem ipsum",
-  //   img: "/images/img9.jpg",
-  //   titleColor: "white",
-  //   textAlign: "left",
-  //   minHeight: "500px",
-  //   height: "50vw",
-  //   clickeable: true,
-  //   showOnlyOnFilter: false,
-  //   category: "identidad",
-  //   extraClass: "proyects",
-  //   mobileHeight: "520px",
-  //   secondaryImgs: [
-  //     { src: "/images/img7.jpg", position: "top" },
-  //     { src: "/images/img2.jpg", position: "top" },
-  //     { src: "/images/img7.jpg", position: "top" },
-  //   ]
-  // },
+  {
+    type: "large",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "lorem ipsum",
+    titleColor: "white",
+    textAlign: "end",
+    minHeight: "300px",
+    height: "30vh",
+    mobileHeight: "60vh",
+    // mobileMinHeight: "auto",
+    img: "/images/img10.jpg",
+    clickeable: true,
+    // title: "LARGE BUT SHORTER",
+    category: "campañas",
+    showOnlyOnFilter: false,
+    secondaryImgs: [
+      { src: "/images/img7.jpg", position: "top" },
+      { src: "/images/img2.jpg", position: "top" },
+      { src: "/images/img7.jpg", position: "top" },
+    ]
+  },
+  {
+    type: "large",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "lorem ipsum",
+    img: "/images/img9.jpg",
+    titleColor: "white",
+    textAlign: "left",
+    minHeight: "500px",
+    height: "50vw",
+    clickeable: true,
+    showOnlyOnFilter: false,
+    category: "identidad",
+    extraClass: "proyects",
+    mobileHeight: "60vh",
+    secondaryImgs: [
+      { src: "/images/img7.jpg", position: "top" },
+      { src: "/images/img2.jpg", position: "top" },
+      { src: "/images/img7.jpg", position: "top" },
+    ]
+  },
 
 ]
 
@@ -421,7 +429,7 @@ export const SectionLarge = (props: ItemType & { setModalInfo: Function }) => {
     justifyContent: textAlign ? textAlign : "start",
     display: "flex",
     flexDirection: "column" as "column",
-    textShadow: "0px 0px 7px black",
+    // textShadow: "0px 0px 7px black",
 
   }
   if (video) {
@@ -507,7 +515,7 @@ export const SectionSmall = (props: ItemType & { setModalInfo: Function }) => {
     justifyContent: textAlign ? textAlign : "start",
     display: "flex",
     flexDirection: "column" as "column",
-    textShadow: "0px 0px 7px black",
+    // textShadow: "0px 0px 7px black",
   }
 
   return (
@@ -563,7 +571,7 @@ export const SectionBanner = (props: ItemType & { setModalInfo: Function }) => {
     justifyContent: textAlign ? textAlign : "start",
     display: "flex",
     flexDirection: "column" as "column",
-    textShadow: "0px 0px 7px black",
+    // textShadow: "0px 0px 7px black",
   }
 
   return (

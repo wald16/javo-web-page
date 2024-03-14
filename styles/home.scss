@@ -17,11 +17,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   // padding: 0px 25px;
   // padding-top: 20px;
+  @media screen and (max-width:768px) {
+    align-content: flex-start;
+    margin-left: -20px;
+    flex-direction: column;
+  }
 
   h1 {
-
+    @media screen and (max-width:768px) {
+      font-size: 100px !important;
+    }
 
     span {
       color: white;
@@ -31,6 +39,12 @@ body {
   .bannerPhrase {
 
     p {
+      @media screen and (max-width:768px) {
+        font-size: 30px !important;
+        margin-bottom: -10px !important;
+        margin-left: 30px;
+      }
+
       color: black;
     }
   }
@@ -40,6 +54,10 @@ body {
   background-color: $orange;
   min-height: 90vh;
   z-index: 9999;
+
+  @media screen and (max-width:768px) {
+    min-height: 70vh;
+  }
 }
 
 .clickeable {
@@ -74,6 +92,7 @@ body {
     .title {
       transition: all ease-in 1s;
       display: block;
+      font-family: helvetica;
     }
   }
 
@@ -106,7 +125,7 @@ body {
   }
 
   .textModule {
-  
+
     p {
       color: purple !important;
     }
@@ -127,6 +146,7 @@ body {
       .SectionTextHolder {
         .title {
           color: $gray !important;
+          font-family: Helvetica;
           // font-size: 50px !important;
         }
       }
@@ -145,10 +165,11 @@ body {
 
     .SectionTextHolder {
       padding: 10px;
+
       @media screen and (min-width:768px) {
         padding-left: 35px;
       }
-  
+
       .title {
         margin-bottom: 20px;
         // margin-left: 20px;
@@ -214,16 +235,13 @@ body {
   align-items: center;
   font-family: helvetica;
   font-weight: bold;
+
   // padding-left: 30px;
-  @media screen and (min-width:768px){
+  @media screen and (min-width:768px) {
     padding-left: 25px;
   }
 
   @media screen and (max-width:1200px) {
-    height: fit-content;
-  }
-
-  @media screen and (max-width:1024px) {
     height: fit-content;
   }
 
@@ -237,6 +255,10 @@ body {
   // display: flex;
   .itemContainer {
     margin-bottom: -20px;
+
+    @media screen and (max-width:1200px) {
+      margin-bottom: -10px;
+    }
 
     .text {
       // background-color: red;
@@ -302,10 +324,6 @@ body {
         margin: 0px 5px;
       }
 
-      @media (max-width:768px) {
-        margin: 10px 0px;
-        // margin-bottom: -20px;
-      }
 
       &:hover {
         transition: all ease 0.3s;
