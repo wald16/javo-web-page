@@ -676,20 +676,20 @@ export const Footer = () => {
         {biographies.map((b, i) => {
           return (
             <>
-              <div className="biographie d-none d-md-flex" key={b.key} onMouseEnter={() => handleHover(b.key, b.text, b.key)} onMouseLeave={() => handleHover("", "", "")} >
+              <div className="biographie desktop" key={b.key} onMouseEnter={() => handleHover(b.key, b.text, b.key)} onMouseLeave={() => handleHover("", "", "")} >
                 <div className={b.key === activeBio || activeBio === "" ? "biographieImg active" : "biographieImg inactive"} style={{ backgroundImage: `url(${b.src})` }} ></div>
                 <div className={b.key === activeBio ? "biographieName active" : "biographieName"}><p> {b.name} </p>  </div>
               </div>
 
 
-              <div className="biographie d-flex d-md-none" key={b.key} onMouseEnter={() => handleHover(b.key, b.text, b.key)} onMouseLeave={() => handleHover("", "", "")} >
+              <div className="biographie mobile" key={b.key} onMouseEnter={() => handleHover(b.key, b.text, b.key)} onMouseLeave={() => handleHover("", "", "")} >
                 <div>
                   <div className={"biographieImg active"} style={{ backgroundImage: `url(${b.src})` }} ></div>
                   <div className={"biographieName"}><p> {b.name}: </p>  </div>
                 </div>
 
               </div>
-              <div className={"mobileBiographieText  d-flex d-md-none"}>
+              <div className={"mobileBiographieText mobile"}>
                 <p className='text'>
                   {b.text}
                 </p>
@@ -700,7 +700,7 @@ export const Footer = () => {
             </>
           )
         })}
-        <div id='biographieText ' className={activeBio !== "" ? "biographieText d-none d-md-flex" : "d-none"}>
+        <div id='biographieText' className={activeBio !== "" ? "biographieText desktop d-md-flex" : "desktop d-none"}>
           <p className='name'>
             {bioName}:
           </p>
@@ -711,7 +711,7 @@ export const Footer = () => {
       </div>
 
 
-      <div className="finalContent d-none d-md-flex">
+      <div className="finalContent d-flex">
         <div className="left">
           <div className="brand">
             aire
@@ -733,7 +733,7 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="mobileFinalContent  d-flex d-md-none ">
+      {/* <div className="mobileFinalContent  d-flex d-md-none ">
         <div className="up">
           <div className="brand">
             aire
@@ -754,7 +754,7 @@ export const Footer = () => {
             xxxxxxxxx@gmail.com
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

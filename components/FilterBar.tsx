@@ -46,12 +46,16 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
             setActiveFilter(undefined)
             setActive(false)
             setText("")
-
-        }
-        else {
+        } else {
             setActiveFilter(key)
             setActive(true)
             setText(_text)
+            setTimeout(() =>{
+                if(window.innerWidth < 768) {
+                    const ele = document.querySelector("#"+key)
+                    if(ele) ele.scrollIntoView({ behavior: "smooth" })
+                }
+            },100)
         }
     }
 
@@ -100,7 +104,7 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
                                 {items.map((i, index) => {
                                     if (i.key !== "nosotros") {
                                         return (
-                                            <div className="itemContainer" key={index}>
+                                            <div className="itemContainer" id={i.key} key={index}>
                                                 <div className={`item col-2 col-md-12  ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text)} key={i.key} ><p>{i.name}</p></div>
                                                 {i.key == activeFilter && (
                                                     <div className={`text d-flex d-xl-none ${i.key == activeFilter ? "active" : ""}`}>
@@ -111,7 +115,7 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
                                         )
                                     } else {
                                         return (
-                                            <a href="#nosotros" key={index}>
+                                            <a href="#nosotros" onClick={() => setActiveFilter("")} key={index}>
                                                 <div className="itemContainer">
                                                     <div className={`item col-2 col-md-12  ${i.key == activeFilter ? "active" : ""}`} key={i.key} ><p>{i.name}</p></div>
                                                     {i.key == activeFilter && (
