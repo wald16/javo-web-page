@@ -133,7 +133,7 @@ const config: ItemType[] = [
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
     minHeight: "500px",
     height: "500px",
-    mobileHeight: "300px",
+    mobileHeight: "340px",
     mobileMinHeight: "720",
     fontSize: 70,
     // clickeable: true,
