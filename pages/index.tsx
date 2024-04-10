@@ -61,7 +61,7 @@ const config: ItemType[] = [
     title: "lorem ipsum",
     titleColor: "white",
     textAlign: "end",
-    mobileHeight:"35vh",
+    mobileHeight: "35vh",
     category: "campañas",
     secondaryImgs: [
       { src: "/images/img3.jpg", position: "top" },
@@ -80,7 +80,7 @@ const config: ItemType[] = [
     minHeight: "400px",
     height: "40vh",
     category: "campañas",
-    mobileHeight:"35vh",
+    mobileHeight: "35vh",
     secondaryImgs: [
       { src: "/images/img4.jpg", position: "center" },
       { src: "/images/img2.jpg", position: "top" },
@@ -97,7 +97,7 @@ const config: ItemType[] = [
     img: "/images/img5.jpg",
     minHeight: "400px",
     height: "40vh",
-    mobileHeight:"35vh",
+    mobileHeight: "35vh",
     category: "identidad",
     secondaryImgs: [
       { src: "/images/img5.jpg", position: "top" },
@@ -115,7 +115,7 @@ const config: ItemType[] = [
     img: "/images/img13.jpg",
     minHeight: "400px",
     height: "40vh",
-    mobileHeight:"35vh",
+    mobileHeight: "35vh",
     category: "identidad",
     secondaryImgs: [
       { src: "/images/img13.jpg", position: "top" },
@@ -176,7 +176,7 @@ const config: ItemType[] = [
     img: "/images/img14.jpg",
     category: "identidad",
     minHeight: "400px",
-    mobileHeight:"35vh",
+    mobileHeight: "35vh",
     height: "40vh",
     titleColor: "white",
     textAlign: "end",
@@ -197,7 +197,7 @@ const config: ItemType[] = [
     minHeight: "400px",
     category: "identidad",
     height: "40vh",
-    mobileHeight:"35vh",
+    mobileHeight: "35vh",
     secondaryImgs: [
       { src: "/images/img11.jpg", position: "top" },
       { src: "/images/img12.jpg", position: "top" },
@@ -215,7 +215,7 @@ const config: ItemType[] = [
     minHeight: "400px",
     category: "nosotros",
     height: "40vh",
-    mobileHeight:"35vh",
+    mobileHeight: "35vh",
     secondaryImgs: [
       { src: "/images/img6.jpg", position: "top" },
       { src: "/images/img2.jpg", position: "top" },
@@ -234,7 +234,7 @@ const config: ItemType[] = [
     img: "/images/img7.jpg",
     minHeight: "400px",
     height: "40vh",
-    mobileHeight:"35vh",
+    mobileHeight: "35vh",
     secondaryImgs: [
       { src: "/images/img7.jpg", position: "top" },
       { src: "/images/img2.jpg", position: "top" },
@@ -621,14 +621,14 @@ export const Footer = () => {
       src: "/images/img1.jpg",
       key: "Javier",
 
-      text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sequi tempore tenetur ab nemo! Facilis totam debitis eos dolor veritatis iusto sapiente earum accusantium ea eligendi exercitationem aut, ducimus consequatur nobis incidunt omnis fuga? Aperiam esse et odit? Minus provident ipsum nulla inventore veniam adipisci sapiente facilis quibusdam qui natus! rabia",
+      text: "Productor y realizador audiovisual. Integré y dirigí equipos de producción tanto a nivel público como privado adoptando como eje profesional la importancia de entender el lenguaje audiovisual como parte central de la estrategia comunicacional. Realicé numerosas campañas comerciales y dirigí la producción audiovisual de contenidos de comunicación del Gobierno Nacional entre 2019 y 2023.",
     },
 
     {
       name: "Gustavo Wald",
       src: "/images/img12.jpeg",
       key: "Gustavo",
-      text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sequi tempore tenetur ab nemo! Facilis totam debitis eos dolor veritatis iusto sapiente earum accusantium ea eligendi exercitationem aut, ducimus consequatur nobis incidunt omnis fuga? Aperiam esse et odit? Minus provident ipsum nulla inventore veniam adipisci sapiente facilis quibusdam qui natus! rabia",
+      text: "Diseñador gráfico. Entiendo la emisión gráfica como el acto de comunicación visual en el cual el gesto gráfico condensa y corporiza aquello que se busca (o es bueno) decir. Mi trayectoria profesional resultó en especializarme en la mirada estratégica que fortalece el acto de comunicación. Estuve a cargo del diseño de la comunicación visual de la Ciudad de Buenos Aires y, recientemente, del Gobierno Nacional.",
 
     }
   ]
@@ -645,11 +645,14 @@ export const Footer = () => {
       <div className="titleWrapper">
         <div className="titleContent">
           <p className='title'>
-            buscamos
+            somos
           </p>
         </div>
         <div className="subtitleContent">
-          <p className='subTitle'>resolver cada nueva situación <br /> con potencia, buen diseño <br /> y eficacia.  </p>
+          <p className='subTitle'>un equipo que busca resolver
+            cada nueva situación con potencia,
+            buen diseño y eficacia.
+          </p>
         </div>
       </div>
 

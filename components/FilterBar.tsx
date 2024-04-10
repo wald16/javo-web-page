@@ -8,28 +8,28 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
         {
             key: "identidad",
             name: "identidad",
-            text: "Lorem ipsum amb al rabia magnis dis parturient montes nascetur ridiculus mus"
+            text: "Identidad es aquello que distingue. Requiere implementar adecuadas decisiones estratégicas."
         },
         {
             key: "campañas",
             name: "campañas",
-            text: "Lorem ipsum amb al rabia magnis dis parturient montes nascetur ridiculus mus"
+            text: "Implementamos la solución visual de campañas del universo comercial, público y político que estimulan sentidos y potencian relatos."
 
         },
         {
             key: "ciudades",
             name: "ciudades",
-            text: "Lorem ipsum amb al rabia magnis dis parturient montes nascetur ridiculus mus"
+            text: "La comunicación visual de ciudades requiere diseñar experiencias ciudadanas útiles y eficientes; es lo que sabemos hacer."
         },
         {
             key: "espacios",
             name: "espacios",
-            text: "Lorem ipsum amb al rabia magnis dis parturient montes nascetur ridiculus mus"
+            text: "Diseñamos espacios expositivos de alto impacto que expresan y fortalecen la imagen de marca."
         },
         {
             key: "poupurri",
             name: "poupurri",
-            text: "Lorem ipsum amb al rabia magnis dis parturient montes nascetur ridiculus mus"
+            text: "Cada proyecto a desarrollar es un nuevo desafío que nos gusta transitar."
         },
         {
             key: "nosotros",
