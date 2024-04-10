@@ -8,28 +8,28 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
         {
             key: "identidad",
             name: "identidad",
-            text: "Identidad es aquello que distingue. Requiere implementar adecuadas decisiones estratégicas."
+            text: "Identidad es aquello que distingue.<br/>Requiere implementar adecuadas<br/>decisiones estratégicas."
         },
         {
             key: "campañas",
             name: "campañas",
-            text: "Implementamos la solución visual de campañas del universo comercial, público y político que estimulan sentidos y potencian relatos."
+            text: "Implementamos la solución visual<br/>de campañas del universo comercial,<br/>público y político que estimulan sentidos<br/>y potencian relatos."
 
         },
         {
             key: "ciudades",
             name: "ciudades",
-            text: "La comunicación visual de ciudades requiere diseñar experiencias ciudadanas útiles y eficientes; es lo que sabemos hacer."
+            text: "La comunicación visual de ciudades<br/>requiere diseñar experiencias ciudadanas<br/>útiles y eficientes; es lo que sabemos hacer."
         },
         {
             key: "espacios",
             name: "espacios",
-            text: "Diseñamos espacios expositivos de alto impacto que expresan y fortalecen la imagen de marca."
+            text: "Diseñamos espacios<br/>expositivos de alto impacto<br/>que expresan y fortalecen<br/>la imagen de marca."
         },
         {
             key: "poupurri",
             name: "poupurri",
-            text: "Cada proyecto a desarrollar es un nuevo desafío que nos gusta transitar."
+            text: "Cada proyecto a desarrollar<br/>es un nuevo desafío que<br/>nos gusta transitar."
         },
         {
             key: "nosotros",
@@ -108,7 +108,7 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
                                                 <div className={`item col-2 col-md-12  ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text)} key={i.key} ><p>{i.name}</p></div>
                                                 {i.key == activeFilter && (
                                                     <div className={`text d-flex d-xl-none ${i.key == activeFilter ? "active" : ""}`}>
-                                                        {text}
+                                                        <p dangerouslySetInnerHTML={{ __html: text}} />
                                                     </div>
                                                 )}
                                             </div>
@@ -120,7 +120,7 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
                                                     <div className={`item col-2 col-md-12  ${i.key == activeFilter ? "active" : ""}`} key={i.key} ><p>{i.name}</p></div>
                                                     {i.key == activeFilter && (
                                                         <div className={`text d-flex d-xl-none ${i.key == activeFilter ? "active" : ""}`}>
-                                                            {text}
+                                                            <p dangerouslySetInnerHTML={{ __html: text}} />
                                                         </div>
                                                     )}
                                                 </div>
@@ -137,7 +137,7 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
                                             <div className={`item col-2 col-md-12 opacity-0 h-0 d-none d-lg-flex ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text)} key={i.key} ><p>{i.name}</p></div>
                                             {i.key == activeFilter && (
                                                 <div className={`text d-none d-xl-flex ${i.key == activeFilter ? "active" : ""}`}>
-                                                    {text}
+                                                    <p dangerouslySetInnerHTML={{ __html: text}} />
                                                 </div>
                                             )}
                                         </div>
