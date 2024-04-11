@@ -704,9 +704,9 @@ export const Footer = () => {
           )
         })}
         <div id='biographieText' className={activeBio !== "" ? "biographieText desktop d-md-flex" : "desktop d-none"}>
-          <p className='name'>
+          {/* <p className='name'>
             {bioName}:
-          </p>
+          </p> */}
           <p className='text'>
             {bioText}
           </p>

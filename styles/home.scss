@@ -633,9 +633,13 @@ body {
     margin-bottom: -20px;
     font-family: helvetica;
     font-weight: 800;
-
+    line-height: 80px;
+    margin-top: 14px;
+    margin-bottom: 0px;
     @media screen and (max-width:768px) {
       font-size: 65px;
+      line-height: 45px;
+
       // margin-left: 15px;
     }
 
@@ -646,7 +650,7 @@ body {
     word-spacing: -5px;
     // margin-left: 15px;
     font-size: 65px;
-    line-height: 65px;
+    line-height: 55px;
     font-weight: 700;
     color: #7E7E7E;
     // font-weight: bold;
@@ -711,6 +715,7 @@ body {
 
       .text {
         font-size: 23px;
+        margin-right: 10px;
         color: $gray;
         font-family: helvetica;
         font-weight: 400;
@@ -740,6 +745,7 @@ body {
   }
 
   .biographies {
+    align-items: center;
     width: 100%;
     // background-color: green;
     margin-bottom: 30px;
@@ -856,8 +862,9 @@ body {
       }
 
       .text {
-        line-height: 30px;
-        font-size: 25px;
+        color: grey;
+        line-height: 24px;
+        font-size: 22px;
         font-weight: 400;
 
         @media screen and (max-width:1200px) {
@@ -902,10 +909,12 @@ body {
         line-height: 30px;
         font-size: 25px;
         font-weight: 400;
+        margin-bottom: 0px;
 
         @media screen and (max-width:1200px) {
           font-size: 18px;
           line-height: 25px;
+          margin-bottom: 1rem;
         }
       }
 
