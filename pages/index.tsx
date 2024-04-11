@@ -649,9 +649,9 @@ export const Footer = () => {
           </p>
         </div>
         <div className="subtitleContent">
-          <p className='subTitle'>un equipo que busca resolver
-            cada nueva situación con potencia,
-            buen diseño y eficacia.
+          <p className='subTitle'>un equipo que busca resolver<br/>
+            cada nueva situación con potencia,<br/>
+            buen diseño y eficacia.<br/>
           </p>
         </div>
       </div>
