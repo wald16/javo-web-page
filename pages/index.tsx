@@ -151,7 +151,7 @@ const config: ItemType[] = [
   {
     type: "large",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-    title: "lorem ipsum",
+    title: "IT Joven",
     titleColor: "white",
     textAlign: "end",
     minHeight: "500px",
@@ -162,9 +162,23 @@ const config: ItemType[] = [
     category: "espacios",
     clickeable: true,
     secondaryImgs: [
-      { src: "/images/img8.jpg", position: "top" },
-      { src: "/images/img2.jpg", position: "top" },
-      { src: "/images/img8.jpg", position: "top" },
+      { src: "/images/it_joven_01.jpg", position: "top" },
+      { src: "/images/it_joven_02.jpg", position: "top" },
+      { src: "/images/it_joven_03.jpg", position: "top" },
+      { src: "/images/it_joven_04.jpg", position: "top" },
+      { src: "/images/it_joven_05.jpg", position: "top" },
+      { src: "/images/it_joven_06.jpg", position: "top" },
+      { src: "/images/it_joven_07.jpg", position: "top" },
+      { src: "/images/it_joven_08.jpg", position: "top" },
+      { src: "/images/it_joven_09.jpg", position: "top" },
+      { src: "/images/it_joven_10.jpg", position: "top" },
+      { src: "/images/it_joven_11.jpg", position: "top" },
+      { src: "/images/it_joven_12.jpg", position: "top" },
+      { src: "/images/it_joven_13.jpg", position: "top" },
+    ],
+    secondaryVideos: [
+      // "/videos/it_joven_01.mp4",
+      "/videos/it_joven_02.mp4",
     ]
 
   },
@@ -189,7 +203,7 @@ const config: ItemType[] = [
   {
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-    title: "lorem ipsum",
+    title: "Clacso 2018",
     titleColor: "white",
     textAlign: "end",
     clickeable: true,
@@ -199,9 +213,30 @@ const config: ItemType[] = [
     height: "40vh",
     mobileHeight: "35vh",
     secondaryImgs: [
-      { src: "/images/img11.jpg", position: "top" },
-      { src: "/images/img12.jpg", position: "top" },
-      { src: "/images/img11.jpg", position: "top" },
+      { src: "/images/clacso_2018_01.jpg", position: "top" },
+      { src: "/images/clacso_2018_02.jpg", position: "top" },
+      { src: "/images/clacso_2018_03.jpg", position: "top" },
+      { src: "/images/clacso_2018_04.jpg", position: "top" },
+      { src: "/images/clacso_2018_05.jpg", position: "top" },
+      { src: "/images/clacso_2018_06.jpg", position: "top" },
+      { src: "/images/clacso_2018_07.jpg", position: "top" },
+      { src: "/images/clacso_2018_08.jpg", position: "top" },
+      { src: "/images/clacso_2018_09.jpg", position: "top" },
+      { src: "/images/clacso_2018_10.jpg", position: "top" },
+      { src: "/images/clacso_2018_11.jpg", position: "top" },
+      { src: "/images/clacso_2018_12.jpg", position: "top" },
+      { src: "/images/clacso_2018_13.jpg", position: "top" },
+      { src: "/images/clacso_2018_14.jpg", position: "top" },
+      { src: "/images/clacso_2018_15.jpg", position: "top" },
+      { src: "/images/clacso_2018_16.jpg", position: "top" },
+      { src: "/images/clacso_2018_17.jpg", position: "top" },
+      { src: "/images/clacso_2018_18.jpg", position: "top" },
+      { src: "/images/clacso_2018_19.jpg", position: "top" },
+      { src: "/images/clacso_2018_20.jpg", position: "top" },
+      { src: "/images/clacso_2018_21.jpg", position: "top" },
+      { src: "/images/clacso_2018_22.jpg", position: "top" },
+      { src: "/images/clacso_2018_23.jpg", position: "top" }
+
     ]
   },
   {
