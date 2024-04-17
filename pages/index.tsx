@@ -24,7 +24,7 @@ export type ItemType = {
   video?: string,
   bkg?: string,
   extraClass?: string,
-  secondaryImgs?: { src: string, position: string }[],
+  secondaryMedia?: { src: string, position: string, type:string }[],
   secondaryVideos?: string[],
   details: string,
 
@@ -63,10 +63,10 @@ const config: ItemType[] = [
     textAlign: "end",
     mobileHeight: "35vh",
     category: "campañas",
-    secondaryImgs: [
-      { src: "/images/img3.jpg", position: "top" },
-      { src: "/images/img2.jpg", position: "top" },
-      { src: "/images/img3.jpg", position: "top" },
+    secondaryMedia: [
+      { src: "/images/img3.jpg", position: "top", type:"img" },
+      { src: "/images/img2.jpg", position: "top", type:"img" },
+      { src: "/images/img3.jpg", position: "top", type:"img" },
     ]
   },
   {
@@ -81,10 +81,10 @@ const config: ItemType[] = [
     height: "40vh",
     category: "campañas",
     mobileHeight: "35vh",
-    secondaryImgs: [
-      { src: "/images/img4.jpg", position: "center" },
-      { src: "/images/img2.jpg", position: "top" },
-      { src: "/images/img4.jpg", position: "top" },
+    secondaryMedia: [
+      { src: "/images/img4.jpg", position: "center", type:"img" },
+      { src: "/images/img2.jpg", position: "top", type:"img" },
+      { src: "/images/img4.jpg", position: "top", type:"img" },
     ]
   },
   {
@@ -99,10 +99,10 @@ const config: ItemType[] = [
     height: "40vh",
     mobileHeight: "35vh",
     category: "identidad",
-    secondaryImgs: [
-      { src: "/images/img5.jpg", position: "top" },
-      { src: "/images/img2.jpg", position: "top" },
-      { src: "/images/img5.jpg", position: "top" },
+    secondaryMedia: [
+      { src: "/images/img5.jpg", position: "top", type:"img" },
+      { src: "/images/img2.jpg", position: "top", type:"img" },
+      { src: "/images/img5.jpg", position: "top", type:"img" },
     ]
   },
   {
@@ -117,10 +117,10 @@ const config: ItemType[] = [
     height: "40vh",
     mobileHeight: "35vh",
     category: "identidad",
-    secondaryImgs: [
-      { src: "/images/img13.jpg", position: "top" },
-      { src: "/images/img12.jpg", position: "top" },
-      { src: "/images/img13.jpg", position: "top" },
+    secondaryMedia: [
+      { src: "/images/img13.jpg", position: "top", type:"img" },
+      { src: "/images/img12.jpg", position: "top", type:"img" },
+      { src: "/images/img13.jpg", position: "top", type:"img" },
     ],
     secondaryVideos: [
       "/videos/banner.mp4",
@@ -161,26 +161,22 @@ const config: ItemType[] = [
     mobileMinHeight: "auto",
     category: "espacios",
     clickeable: true,
-    secondaryImgs: [
-      { src: "/images/it_joven_01.jpg", position: "top" },
-      { src: "/images/it_joven_02.jpg", position: "top" },
-      { src: "/images/it_joven_03.jpg", position: "top" },
-      { src: "/images/it_joven_04.jpg", position: "top" },
-      { src: "/images/it_joven_05.jpg", position: "top" },
-      { src: "/images/it_joven_06.jpg", position: "top" },
-      { src: "/images/it_joven_07.jpg", position: "top" },
-      { src: "/images/it_joven_08.jpg", position: "top" },
-      { src: "/images/it_joven_09.jpg", position: "top" },
-      { src: "/images/it_joven_10.jpg", position: "top" },
-      { src: "/images/it_joven_11.jpg", position: "top" },
-      { src: "/images/it_joven_12.jpg", position: "top" },
-      { src: "/images/it_joven_13.jpg", position: "top" },
+    secondaryMedia: [
+      { src: "/videos/it_joven_02.mp4", position: "top", type:"video" },
+      { src: "/images/it_joven_01.jpg", position: "top", type:"img" },
+      { src: "/images/it_joven_02.jpg", position: "top", type:"img" },
+      { src: "/images/it_joven_03.jpg", position: "top", type:"img" },
+      { src: "/images/it_joven_04.jpg", position: "top", type:"img" },
+      { src: "/images/it_joven_05.jpg", position: "top", type:"img" },
+      { src: "/images/it_joven_06.jpg", position: "top", type:"img" },
+      { src: "/images/it_joven_07.jpg", position: "top", type:"img" },
+      { src: "/images/it_joven_08.jpg", position: "top", type:"img" },
+      { src: "/images/it_joven_09.jpg", position: "top", type:"img" },
+      { src: "/images/it_joven_10.jpg", position: "top", type:"img" },
+      { src: "/images/it_joven_11.jpg", position: "top", type:"img" },
+      { src: "/images/it_joven_12.jpg", position: "top", type:"img" },
+      { src: "/images/it_joven_13.jpg", position: "top", type:"img" },
     ],
-    secondaryVideos: [
-      // "/videos/it_joven_01.mp4",
-      "/videos/it_joven_02.mp4",
-    ]
-
   },
   {
     type: "small",
@@ -194,10 +190,10 @@ const config: ItemType[] = [
     height: "40vh",
     titleColor: "white",
     textAlign: "end",
-    secondaryImgs: [
-      { src: "/images/img14.jpg", position: "top" },
-      { src: "/images/img12.jpg", position: "top" },
-      { src: "/images/img14.jpg", position: "top" },
+    secondaryMedia: [
+      { src: "/images/img14.jpg", position: "top", type:"img" },
+      { src: "/images/img12.jpg", position: "top", type:"img" },
+      { src: "/images/img14.jpg", position: "top", type:"img" },
     ]
   },
   {
@@ -212,30 +208,30 @@ const config: ItemType[] = [
     category: "identidad",
     height: "40vh",
     mobileHeight: "35vh",
-    secondaryImgs: [
-      { src: "/images/clacso_2018_01.jpg", position: "top" },
-      { src: "/images/clacso_2018_02.jpg", position: "top" },
-      { src: "/images/clacso_2018_03.jpg", position: "top" },
-      { src: "/images/clacso_2018_04.jpg", position: "top" },
-      { src: "/images/clacso_2018_05.jpg", position: "top" },
-      { src: "/images/clacso_2018_06.jpg", position: "top" },
-      { src: "/images/clacso_2018_07.jpg", position: "top" },
-      { src: "/images/clacso_2018_08.jpg", position: "top" },
-      { src: "/images/clacso_2018_09.jpg", position: "top" },
-      { src: "/images/clacso_2018_10.jpg", position: "top" },
-      { src: "/images/clacso_2018_11.jpg", position: "top" },
-      { src: "/images/clacso_2018_12.jpg", position: "top" },
-      { src: "/images/clacso_2018_13.jpg", position: "top" },
-      { src: "/images/clacso_2018_14.jpg", position: "top" },
-      { src: "/images/clacso_2018_15.jpg", position: "top" },
-      { src: "/images/clacso_2018_16.jpg", position: "top" },
-      { src: "/images/clacso_2018_17.jpg", position: "top" },
-      { src: "/images/clacso_2018_18.jpg", position: "top" },
-      { src: "/images/clacso_2018_19.jpg", position: "top" },
-      { src: "/images/clacso_2018_20.jpg", position: "top" },
-      { src: "/images/clacso_2018_21.jpg", position: "top" },
-      { src: "/images/clacso_2018_22.jpg", position: "top" },
-      { src: "/images/clacso_2018_23.jpg", position: "top" }
+    secondaryMedia: [
+      { src: "/images/clacso_2018_01.jpg", position: "top", type:"img" },
+      { src: "/images/clacso_2018_02.jpg", position: "top", type:"img" },
+      { src: "/images/clacso_2018_03.jpg", position: "top", type:"img" },
+      { src: "/images/clacso_2018_04.jpg", position: "top", type:"img" },
+      { src: "/images/clacso_2018_05.jpg", position: "top", type:"img" },
+      { src: "/images/clacso_2018_06.jpg", position: "top", type:"img" },
+      { src: "/images/clacso_2018_07.jpg", position: "top", type:"img" },
+      { src: "/images/clacso_2018_08.jpg", position: "top", type:"img"},
+      { src: "/images/clacso_2018_09.jpg", position: "top", type:"img" },
+      { src: "/images/clacso_2018_10.jpg", position: "top", type:"img" },
+      { src: "/images/clacso_2018_11.jpg", position: "top", type:"img" },
+      { src: "/images/clacso_2018_12.jpg", position: "top", type:"img" },
+      { src: "/images/clacso_2018_13.jpg", position: "top", type:"img" },
+      { src: "/images/clacso_2018_14.jpg", position: "top", type:"img" },
+      { src: "/images/clacso_2018_15.jpg", position: "top", type:"img" },
+      { src: "/images/clacso_2018_16.jpg", position: "top", type:"img" },
+      { src: "/images/clacso_2018_17.jpg", position: "top", type:"img" },
+      { src: "/images/clacso_2018_18.jpg", position: "top", type:"img" },
+      { src: "/images/clacso_2018_19.jpg", position: "top", type:"img" },
+      { src: "/images/clacso_2018_20.jpg", position: "top", type:"img" },
+      { src: "/images/clacso_2018_21.jpg", position: "top", type:"img" },
+      { src: "/images/clacso_2018_22.jpg", position: "top", type:"img" },
+      { src: "/images/clacso_2018_23.jpg", position: "top", type:"img" }
 
     ]
   },
@@ -251,10 +247,10 @@ const config: ItemType[] = [
     category: "nosotros",
     height: "40vh",
     mobileHeight: "35vh",
-    secondaryImgs: [
-      { src: "/images/img6.jpg", position: "top" },
-      { src: "/images/img2.jpg", position: "top" },
-      { src: "/images/img6.jpg", position: "top" },
+    secondaryMedia: [
+      { src: "/images/img6.jpg", position: "top", type:"img" },
+      { src: "/images/img2.jpg", position: "top", type:"img" },
+      { src: "/images/img6.jpg", position: "top", type:"img" },
     ]
 
   },
@@ -270,10 +266,10 @@ const config: ItemType[] = [
     minHeight: "400px",
     height: "40vh",
     mobileHeight: "35vh",
-    secondaryImgs: [
-      { src: "/images/img7.jpg", position: "top" },
-      { src: "/images/img2.jpg", position: "top" },
-      { src: "/images/img7.jpg", position: "top" },
+    secondaryMedia: [
+      { src: "/images/img7.jpg", position: "top", type:"img" },
+      { src: "/images/img2.jpg", position: "top", type:"img" },
+      { src: "/images/img7.jpg", position: "top", type:"img" },
     ]
 
   },
@@ -293,10 +289,10 @@ const config: ItemType[] = [
     // title: "LARGE BUT SHORTER",
     category: "campañas",
     showOnlyOnFilter: false,
-    secondaryImgs: [
-      { src: "/images/img7.jpg", position: "top" },
-      { src: "/images/img2.jpg", position: "top" },
-      { src: "/images/img7.jpg", position: "top" },
+    secondaryMedia: [
+      { src: "/images/img7.jpg", position: "top", type:"img" },
+      { src: "/images/img2.jpg", position: "top", type:"img" },
+      { src: "/images/img7.jpg", position: "top", type:"img" },
     ]
   },
   {
@@ -313,10 +309,10 @@ const config: ItemType[] = [
     category: "identidad",
     extraClass: "proyects",
     mobileHeight: "60vh",
-    secondaryImgs: [
-      { src: "/images/img7.jpg", position: "top" },
-      { src: "/images/img2.jpg", position: "top" },
-      { src: "/images/img7.jpg", position: "top" },
+    secondaryMedia: [
+      { src: "/images/img7.jpg", position: "top", type:"img" },
+      { src: "/images/img2.jpg", position: "top", type:"img" },
+      { src: "/images/img7.jpg", position: "top", type:"img" },
     ]
   },
 
@@ -800,17 +796,17 @@ export const Footer = () => {
 
 export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, modalInfo: ItemType }) => {
   const [active, setActive] = React.useState<Boolean>(false)
-  const checkItems = modalInfo.secondaryImgs ? "Graphic" : "Video"
+  const checkItems = modalInfo.secondaryMedia ? "Graphic" : "Video"
   const [selection, setSelection] = React.useState<"Video" | "Graphic">(checkItems)
   const lastImageChecker = (_index: number) => {
     _index = _index + 1
-    const length = modalInfo.secondaryImgs?.length
+    const length = modalInfo.secondaryMedia?.length
     if (_index === length) {
       return true
     } else return false
   }
 
-  if (modalInfo.secondaryImgs && modalInfo.secondaryVideos) {
+  if (modalInfo.secondaryMedia && modalInfo.secondaryVideos) {
     return (
       <div className='Modal-Wrapper'>
         <div className="modalBody">
@@ -829,7 +825,7 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
                   <p className='mb-0 px-2  lh-32'>audiovisual</p>
                 </div>
               )}
-              {modalInfo.secondaryImgs && (
+              {modalInfo.secondaryMedia && (
                 <div className={`imgBg tabSelector ${selection == "Graphic" ? "active" : ""}`} onClick={() => setSelection("Graphic")}>
                   <p className='mb-0 px-2  lh-32'>gráfica</p>
                 </div>
@@ -838,14 +834,19 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
           </div>
           <div className="modalContent">
 
-            {selection === "Graphic" && modalInfo.secondaryImgs && (
-              <div className='Graphic'>
+            {selection === "Graphic" && modalInfo.secondaryMedia && (
+              <div className='Graphic Video'>
                 <div className="modalImages">
-                  {modalInfo.secondaryImgs.map((image: { src: string, position: string }, index: number) => {
-
-                    return (
-                      <img src={image.src} key={index} style={{ objectPosition: image.position }} className={lastImageChecker(index) ? "lastImg" : ""} alt="" />
-                    )
+                  {modalInfo.secondaryMedia.map((image: { src: string, position: string, type:string }, index: number) => {
+                    if(image.type == "img") {
+                      return (
+                        <img src={image.src} key={index} style={{ objectPosition: image.position }} className={lastImageChecker(index) ? "lastImg" : ""} alt="" />
+                      )
+                    } else {
+                      return (
+                        <video key={index} className="bannerVideo" autoPlay={true} muted loop src={image.src} typeof="video/mp4"></video>
+                      )
+                    }
                   })}
                 </div>
               </div>
@@ -855,7 +856,7 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
                 <div className="modalImages">
                   {modalInfo.secondaryVideos.map((src, index) => {
                     return (
-                      <video key={index} className="bannerVideo" autoPlay={true} muted loop src={src} typeof="video/mp4"></video>
+                      <video key={index} height={"100%"} className="bannerVideo" autoPlay={true} muted loop src={src} typeof="video/mp4"></video>
                     )
                   })}
                 </div>
@@ -886,14 +887,19 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
           </div>
           <div className="modalContent">
 
-            {selection === "Graphic" && modalInfo.secondaryImgs && (
+            {selection === "Graphic" && modalInfo.secondaryMedia && (
               <div className='Graphic'>
                 <div className="modalImages">
-                  {modalInfo.secondaryImgs.map((image: { src: string, position: string }, index: number) => {
-
-                    return (
-                      <img src={image.src} key={index} style={{ objectPosition: image.position }} className={lastImageChecker(index) ? "lastImg" : ""} alt="" />
-                    )
+                {modalInfo.secondaryMedia.map((image: { src: string, position: string, type:string }, index: number) => {
+                    if(image.type == "img") {
+                      return (
+                        <img src={image.src} key={index} style={{ objectPosition: image.position }} className={lastImageChecker(index) ? "lastImg" : ""} alt="" />
+                      )
+                    } else {
+                      return (
+                        <video key={index} className="bannerVideo" autoPlay={true} muted loop src={image.src} typeof="video/mp4"></video>
+                      )
+                    }
                   })}
                 </div>
               </div>

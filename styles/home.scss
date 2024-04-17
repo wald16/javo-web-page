@@ -431,7 +431,10 @@ body {
     flex-direction: column;
     justify-content: space-between;
     // overflow-y: auto;
-
+    @media screen and (max-height: 800px) {
+      width: 900px;
+      height: 80%;
+    }
     @media screen and (max-width: 1000px) {
       width: 80vw;
       height: 70vh;
@@ -587,7 +590,7 @@ body {
         //   max-height: 420px;
         // }
 
-        border-bottom: 5px solid black;
+        // border-bottom: 5px solid black;
       }
 
       .lastImg {
