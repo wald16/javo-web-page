@@ -56,46 +56,48 @@ const config: ItemType[] = [
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
     clickeable: true,
     img: "/images/img3.jpg",
-    minHeight: "400px",
+    minHeight: "360px",
     height: "40vh",
-    title: "lorem ipsum",
+    title: "Casa del Bicentenario",
     titleColor: "white",
     textAlign: "end",
     mobileHeight: "35vh",
     category: "campañas",
     secondaryMedia: [
-      { src: "/images/img3.jpg", position: "top", type:"img" },
+      { src: "/images/img3b.jpg", position: "top", type:"img" },
       { src: "/images/img2.jpg", position: "top", type:"img" },
-      { src: "/images/img3.jpg", position: "top", type:"img" },
+      { src: "/videos/it_joven_02.mp4", position: "top", type:"video" },
+      { src: "/images/img3b.jpg", position: "top", type:"img" },
+      { src: "/images/img2.jpg", position: "top", type:"img" },
     ]
   },
   {
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-    title: "lorem ipsum",
+    title: "Clacso 2018",
     titleColor: "white",
     textAlign: "end",
     clickeable: true,
     img: "/images/img4.jpg",
-    minHeight: "400px",
+    minHeight: "360px",
     height: "40vh",
     category: "campañas",
     mobileHeight: "35vh",
     secondaryMedia: [
-      { src: "/images/img4.jpg", position: "center", type:"img" },
+      { src: "/images/img4b.jpg", position: "center", type:"img" },
       { src: "/images/img2.jpg", position: "top", type:"img" },
-      { src: "/images/img4.jpg", position: "top", type:"img" },
+      { src: "/images/img4b.jpg", position: "top", type:"img" },
     ]
   },
   {
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-    title: "lorem ipsum",
+    title: "Tráfico Ilícito",
     titleColor: "white",
     textAlign: "end",
     clickeable: true,
     img: "/images/img5.jpg",
-    minHeight: "400px",
+    minHeight: "360px",
     height: "40vh",
     mobileHeight: "35vh",
     category: "identidad",
@@ -108,12 +110,12 @@ const config: ItemType[] = [
   {
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-    title: "lorem ipsum",
+    title: "Soberanía",
     titleColor: "white",
     textAlign: "end",
     clickeable: true,
     img: "/images/img13.jpg",
-    minHeight: "400px",
+    minHeight: "360px",
     height: "40vh",
     mobileHeight: "35vh",
     category: "identidad",
@@ -123,7 +125,7 @@ const config: ItemType[] = [
       { src: "/images/img13.jpg", position: "top", type:"img" },
     ],
     secondaryVideos: [
-      "/videos/banner.mp4",
+      "/videos/it_joven_02.mp4",
     ]
   },
 
@@ -143,7 +145,6 @@ const config: ItemType[] = [
 
     description: _description as string,
     textAlign: "left",
-    category: "espacios",
     extraClass: "textModule",
 
   },
@@ -154,46 +155,57 @@ const config: ItemType[] = [
     title: "IT Joven",
     titleColor: "white",
     textAlign: "end",
-    minHeight: "500px",
+    minHeight: "680px",
     img: "/images/img8.jpg",
-    height: "100vh",
-    mobileHeight: "60vh",
+    height: "80vh",
+    mobileHeight: "45vh",
     mobileMinHeight: "auto",
     category: "espacios",
     clickeable: true,
     secondaryMedia: [
-      { src: "/videos/it_joven_02.mp4", position: "top", type:"video" },
-      { src: "/images/it_joven_01.jpg", position: "top", type:"img" },
-      { src: "/images/it_joven_02.jpg", position: "top", type:"img" },
-      { src: "/images/it_joven_03.jpg", position: "top", type:"img" },
-      { src: "/images/it_joven_04.jpg", position: "top", type:"img" },
-      { src: "/images/it_joven_05.jpg", position: "top", type:"img" },
-      { src: "/images/it_joven_06.jpg", position: "top", type:"img" },
-      { src: "/images/it_joven_07.jpg", position: "top", type:"img" },
-      { src: "/images/it_joven_08.jpg", position: "top", type:"img" },
-      { src: "/images/it_joven_09.jpg", position: "top", type:"img" },
-      { src: "/images/it_joven_10.jpg", position: "top", type:"img" },
-      { src: "/images/it_joven_11.jpg", position: "top", type:"img" },
-      { src: "/images/it_joven_12.jpg", position: "top", type:"img" },
-      { src: "/images/it_joven_13.jpg", position: "top", type:"img" },
+      { src: "/videos/JOB_IT_JOVEN/2023_04_10_IT_Joven_Injuve_30seg_16_9.mp4", position: "top", type:"video" },
+      //{ src: "/videos/JOB_IT_JOVEN/2023_04_10_IT_Joven_Injuve_30seg_9_16.mp4", position: "top", type:"video" },
+      { src: "/images/JOB_IT_JOVEN/1_IT_JOVEN_ID_sobre_degadee_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_IT_JOVEN/2_IT_JOVEN_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_IT_JOVEN/3_IT_JOVEN_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_IT_JOVEN/4_IT_JOVEN_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_IT_JOVEN/5_IT_JOVEN_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_IT_JOVEN/6_IT_JOVEN_Chupete_vertical_PPL_TI_JOVEN_Flatt_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_IT_JOVEN/7_IT_JOVEN_SEXT_sextuple_estacion_de_subte_con_bici_IT_JOVEN_Flatt_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_IT_JOVEN/8_IT_JOVEN_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_IT_JOVEN/9_IT_JOVEN_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_IT_JOVEN/10_IT_JOVEN_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_IT_JOVEN/11_IT_JOVEN_grafismo_degadee_calido_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_IT_JOVEN/12_IT_JOVEN_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_IT_JOVEN/13_IT_JOVEN_800_job_web.jpg", position: "top", type:"img" },
     ],
   },
   {
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-    title: "lorem ipsum",
+    title: "Soberanía",
     clickeable: true,
     img: "/images/img14.jpg",
     category: "identidad",
-    minHeight: "400px",
+    minHeight: "360px",
     mobileHeight: "35vh",
     height: "40vh",
     titleColor: "white",
     textAlign: "end",
     secondaryMedia: [
-      { src: "/images/img14.jpg", position: "top", type:"img" },
-      { src: "/images/img12.jpg", position: "top", type:"img" },
-      { src: "/images/img14.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Soberania/1_Soberania_1200_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Soberania/2_Soberania_1200_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Soberania/3_Soberania_1200_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Soberania/4_Soberania_1200_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Soberania/5_Soberania_1200_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Soberania/6_Soberania_1200_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Soberania/7_Soberania_1200_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Soberania/8_Soberania_1200_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Soberania/9_Soberania_1200_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Soberania/10_Soberania_1200_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Soberania/11_Soberania_1200_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Soberania/12_Soberania_1200_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Soberania/13_Soberania_1200_job_web.jpg", position: "top", type:"img" },
     ]
   },
   {
@@ -204,34 +216,34 @@ const config: ItemType[] = [
     textAlign: "end",
     clickeable: true,
     img: "/images/img11.jpg",
-    minHeight: "400px",
+    minHeight: "360px",
     category: "identidad",
     height: "40vh",
     mobileHeight: "35vh",
     secondaryMedia: [
-      { src: "/images/clacso_2018_01.jpg", position: "top", type:"img" },
-      { src: "/images/clacso_2018_02.jpg", position: "top", type:"img" },
-      { src: "/images/clacso_2018_03.jpg", position: "top", type:"img" },
-      { src: "/images/clacso_2018_04.jpg", position: "top", type:"img" },
-      { src: "/images/clacso_2018_05.jpg", position: "top", type:"img" },
-      { src: "/images/clacso_2018_06.jpg", position: "top", type:"img" },
-      { src: "/images/clacso_2018_07.jpg", position: "top", type:"img" },
-      { src: "/images/clacso_2018_08.jpg", position: "top", type:"img"},
-      { src: "/images/clacso_2018_09.jpg", position: "top", type:"img" },
-      { src: "/images/clacso_2018_10.jpg", position: "top", type:"img" },
-      { src: "/images/clacso_2018_11.jpg", position: "top", type:"img" },
-      { src: "/images/clacso_2018_12.jpg", position: "top", type:"img" },
-      { src: "/images/clacso_2018_13.jpg", position: "top", type:"img" },
-      { src: "/images/clacso_2018_14.jpg", position: "top", type:"img" },
-      { src: "/images/clacso_2018_15.jpg", position: "top", type:"img" },
-      { src: "/images/clacso_2018_16.jpg", position: "top", type:"img" },
-      { src: "/images/clacso_2018_17.jpg", position: "top", type:"img" },
-      { src: "/images/clacso_2018_18.jpg", position: "top", type:"img" },
-      { src: "/images/clacso_2018_19.jpg", position: "top", type:"img" },
-      { src: "/images/clacso_2018_20.jpg", position: "top", type:"img" },
-      { src: "/images/clacso_2018_21.jpg", position: "top", type:"img" },
-      { src: "/images/clacso_2018_22.jpg", position: "top", type:"img" },
-      { src: "/images/clacso_2018_23.jpg", position: "top", type:"img" }
+      { src: "/images/JOB_Clacso_2018/1_Clacso_2018_IMG_8315_flatt_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Clacso_2018/2_Clacso_2018_IMG_8372_flatt_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Clacso_2018/3_Clacso_2018_IMG_8318_flatt_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Clacso_2018/4_Clacso_2018_IMG_8386_flatt_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Clacso_2018/5_Clacso_2018_IMG_8382_flatt_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Clacso_2018/6_Clacso_2018_IMG_8379_Flatt_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Clacso_2018/7_Clacso_2018_IMG_8383_flatt_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Clacso_2018/8_Clacso_2018_IMG_8409_flatt_800_job_web.jpg", position: "top", type:"img"},
+      { src: "/images/JOB_Clacso_2018/9_Clacso_2018_edificios_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Clacso_2018/10_Clacso_2018_117_Clacso2018_Relevamiento_20181119_JAD9307_800_job_we.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Clacso_2018/11_Clacso_2018_100_Clacso2018_Relevamiento_20181119_JAD9277_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Clacso_2018/12_Clacso_2018_112_Clacso2018_Relevamiento_20181119_JAD9297_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Clacso_2018/13_Clacso_2018_IMG_8374_flatt_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Clacso_2018/14_Clacso_2018_117_Clacso2018_Carteleria_20181119_MG_7073_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Clacso_2018/15_Clacso_2018_IMG_8442_flatt_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Clacso_2018/16_Clacso_2018_IMG_8378_flatt_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Clacso_2018/17_Clacso_2018_clacso2018_poster_ext_foto_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Clacso_2018/18_Clacso_2018_IMG_8267_flatt_1400_retocada_sin_texto_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Clacso_2018/19_Clacso_2018_IMG_8300_flatt_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Clacso_2018/20_Clacso_2018_IMG_8538_flatt_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Clacso_2018/21_Clacso_2018_IMG_8758_flatt_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Clacso_2018/22_Clacso_2018_3_almohadones_Negro_arriba_y_abajo_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Clacso_2018/23_Clacso_2018_IMG_8764_flatt_800_job_web.jpg", position: "top", type:"img" }
 
     ]
   },
@@ -243,7 +255,7 @@ const config: ItemType[] = [
     textAlign: "end",
     clickeable: true,
     img: "/images/img6.jpg",
-    minHeight: "400px",
+    minHeight: "360px",
     category: "nosotros",
     height: "40vh",
     mobileHeight: "35vh",
@@ -258,18 +270,31 @@ const config: ItemType[] = [
     category: "nosotros",
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-    title: "lorem ipsum",
+    title: "MICA",
     titleColor: "white",
     textAlign: "end",
     clickeable: true,
     img: "/images/img7.jpg",
-    minHeight: "400px",
+    minHeight: "360px",
     height: "40vh",
     mobileHeight: "35vh",
     secondaryMedia: [
-      { src: "/images/img7.jpg", position: "top", type:"img" },
-      { src: "/images/img2.jpg", position: "top", type:"img" },
-      { src: "/images/img7.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_MICA_2013/1_MICA_2013_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_MICA_2013/2_MICA_2013_DSCN2769_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_MICA_2013/3_MICA_2013_DSCN2803_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_MICA_2013/4_MICA_2013_DSCN2815_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_MICA_2013/5_MICA_2013_DSCN2773_800_job_web.jpg", position: "top", type:"img" },    
+      { src: "/images/JOB_MICA_2013/6_MICA_2013_DSCN2777_800_job_web.jpg", position: "top", type:"img" }, 
+      { src: "/images/JOB_MICA_2013/7_MICA_2013_DSCN2919_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_MICA_2013/8_MICA_2013_DSCN3005_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_MICA_2013/9_MICA_2013_DSCN2991_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_MICA_2013/10_MICA_2013_DSCN2953_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_MICA_2013/11_MICA_2013_DSCN2945_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_MICA_2013/12_MICA_2013_DSCN2943_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_MICA_2013/13_MICA_2013_DSCN3053_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_MICA_2013/14_MICA_2013_DSCN3049_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_MICA_2013/15_MICA_2013_DSCN3085_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_MICA_2013/16_MICA_2013_DSCN3087_800_job_web.jpg", position: "top", type:"img" },
     ]
 
   },
@@ -280,7 +305,7 @@ const config: ItemType[] = [
     title: "lorem ipsum",
     titleColor: "white",
     textAlign: "end",
-    minHeight: "300px",
+    minHeight: "360px",
     height: "30vh",
     mobileHeight: "60vh",
     // mobileMinHeight: "auto",
@@ -302,8 +327,8 @@ const config: ItemType[] = [
     img: "/images/img9.jpg",
     titleColor: "white",
     textAlign: "left",
-    minHeight: "500px",
-    height: "50vw",
+    minHeight: "680px",
+    height: "30vw",
     clickeable: true,
     showOnlyOnFilter: false,
     category: "identidad",
@@ -359,7 +384,7 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>Javo Web App</title>
+        <title>Cerruti Wald</title>
         <meta name="description" content="Generated by Javo Web App" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -392,15 +417,14 @@ export const Home = () => {
 
         <div className='row justify-content-between align-items-center bannerContent'>
           <div className='w-fit-content d-flex'>
-            <h1 className='f-150 f-helvetica f-heavy mb-0'>
-              <span className='ls-n-7'>ai</span>
-              <span className="ls-n-2">re</span>
+            <h1 className='f-100 f-helvetica f-heavy mb-0'>
+              <span className='ls-n-1'>br</span>
+              <span className='ls-n-2'>ava</span>
             </h1>
           </div>
           <div className='w-fit-content d-flex flex-column bannerPhrase'>
-            <p className='f-40 f-helvetica f-heavy lh-30 ls-n-2 mb-0 '><b>diseño</b></p>
-            <p className='f-40 f-helvetica f-heavy lh-30 ls-n-2 mb-0 '><b>audiovisual</b></p>
-            <p className='f-40 f-helvetica f-heavy lh-30 ls-n-2 mb-0 '><b>comunicación</b></p>
+            <p className='f-35 f-helvetica f-regular lh-30 ls-n-2 mb-0 '><b>comunicación</b></p>
+            <p className='f-35 f-helvetica f-regular lh-30 ls-n-2 mb-0 '><b>visual</b></p>
           </div>
         </div>
 
@@ -681,9 +705,7 @@ export const Footer = () => {
         </div>
         <div className="subtitleContent">
           <p className='subTitle'>
-            un equipo que busca&nbsp;resolver
-            cada nueva situación con&nbsp;potencia,
-            buen&nbsp;diseño y eficacia.
+            un equipo que busca resolver<br/>cada nueva situación con potencia,<br/>buen diseño y eficacia.
           </p>
         </div>
       </div>
@@ -692,17 +714,17 @@ export const Footer = () => {
 
         <div className="textContent">
           <div className="textTitle">campañas</div>
-          <div className="text">Encaminamos la solución visual de campañas comerciales y del universo público; en la dimensión y escala acorde a cada circunstancia.</div>
+          <div className="text">Implementamos la solución visual de campañas comerciales, públicas<br/>y políticas en la dimensión<br/>y escala adecuadas para cada circunstancia.</div>
         </div>
         <div className="textContent">
           <div className="textTitle">ciudades</div>
-          <div className="text">Abordamos el universo de comunicación visual que la gestión de ciudades requiere; con criterio global y práctico para la gestión y la comunidad.</div>
+          <div className="text">Abordamos la comunicación visual que la gestión de ciudades requiere con el adecuado cruce entre las demandas de la gestión<br/>y las prioridades de la comunidad.</div>
         </div> <div className="textContent">
           <div className="textTitle">espacios</div>
-          <div className="text">Diseñamos espacios expositivos de alto impacto, combinando poder con sutileza. Experiencias sensoriales, bellas y efectivas que perfeccionan relatos y fortalecen marcas.</div>
+          <div className="text">Diseñamos espacios expositivos de alto impacto, combinando poder con sutileza. Experiencias sensoriales, bellas y efectivas que perfeccionan relatos<br/>y fortalecen marcas.</div>
         </div> <div className="textContent">
-          <div className="textTitle">consultoria</div>
-          <div className="text">Sabemos orientar, diseñar y optimizar equipos de diseño y producción audiovisual de organizaciones; en la búsqueda de maximizar sus potencialidades.</div>
+          <div className="textTitle">consultoría</div>
+          <div className="text">Sabemos orientar, diseñar<br/>y optimizar equipos de diseño y producción audiovisual<br/>de organizaciones en la búsqueda de maximizar<br/>sus potencialidades.</div>
         </div>
 
       </div>
@@ -749,22 +771,22 @@ export const Footer = () => {
       <div className="finalContent d-flex">
         <div className="left">
           <div className="brand">
-            aire
+            cerruti
+            wald
           </div>
           <div className="phrase">
-            <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>diseño</b></p>
-            <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>audiovisual</b></p>
             <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>comunicación</b></p>
+            <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>visual</b></p>
           </div>
           <div className="city">
             <p>
-              Buenos Aires
+              
             </p>
           </div>
         </div>
         <div className="right">
           <div className="contact">
-            xxxxxxxxx@gmail.com
+            cerrutiwald@gmail.com +54 911-0000 0000 Buenos Aires
           </div>
         </div>
       </div>
@@ -844,7 +866,7 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
                       )
                     } else {
                       return (
-                        <video key={index} className="bannerVideo" autoPlay={true} muted loop src={image.src} typeof="video/mp4"></video>
+                        <video key={index} className="bannerVideo" controls autoPlay={false} src={image.src} typeof="video/mp4"></video>
                       )
                     }
                   })}
@@ -856,7 +878,7 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
                 <div className="modalImages">
                   {modalInfo.secondaryVideos.map((src, index) => {
                     return (
-                      <video key={index} height={"100%"} className="bannerVideo" autoPlay={true} muted loop src={src} typeof="video/mp4"></video>
+                      <video key={index} height={"100%"} className="bannerVideo" controls autoPlay={false} src={src} typeof="video/mp4"></video>
                     )
                   })}
                 </div>
@@ -897,7 +919,7 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
                       )
                     } else {
                       return (
-                        <video key={index} className="bannerVideo" autoPlay={true} muted loop src={image.src} typeof="video/mp4"></video>
+                        <video key={index} className="bannerVideo" controls autoPlay={false} src={image.src} typeof="video/mp4"></video>
                       )
                     }
                   })}
@@ -909,7 +931,7 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
                 <div className="modalImages">
                   {modalInfo.secondaryVideos.map((src, index) => {
                     return (
-                      <video key={index} className="bannerVideo" autoPlay={true} muted loop src={src} typeof="video/mp4"></video>
+                      <video key={index} className="bannerVideo" controls autoPlay={false} src={src} typeof="video/mp4"></video>
                     )
                   })}
                 </div>

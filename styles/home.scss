@@ -19,12 +19,12 @@ body {
 .bannerContent {
   // width: 100vw;
   width: 100%;
-  margin-left: 0px;
+  margin-left: -30px; // margen cerruti wald solo
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  // padding: 0px 25px;
+  padding: 30px 25px; // Margenes Caratula
+  
   // padding-top: 20px;
   @media screen and (max-width:768px) {
     align-content: flex-start;
@@ -34,7 +34,7 @@ body {
 
   h1 {
     @media screen and (max-width:768px) {
-      font-size: 100px !important;
+      font-size: 65px !important;
     }
 
     span {
@@ -48,7 +48,9 @@ body {
       @media screen and (max-width:768px) {
         font-size: 30px !important;
         margin-bottom: -8px !important;
-        margin-left: 30px;
+        line-height: 30PX !important;
+        margin-left: -188px;
+        align-items:center;
       }
 
       color: black;
@@ -58,12 +60,12 @@ body {
 
 .Home {
   background-color: $orange;
-  min-height: 90vh;
+  min-height: 80vh; // Altura Caratula Naranja
   z-index: 9999;
   padding: 0px 35px;
 
   @media screen and (max-width:768px) {
-    min-height: 70vh;
+    min-height: 70vh; // Altura caratula mobile
     padding: 0px;
   }
 }
@@ -175,22 +177,25 @@ body {
     display: flex;
 
     .SectionTextHolder {
-      padding: 10px;
+      margin-left: 0px;
+      padding: 20px;
 
       @media screen and (min-width:768px) {
-        padding-left: 35px;
+        padding-left: 0px;
       }
 
       .title {
+        padding-left: 40px;
         margin-bottom: 5px;
-        // margin-left: 20px;
-        font-size: 40px;
-        line-height: 70px;
+        font-size: 35px;
+        line-height: 65px;
       }
 
       .description {
-        line-height: 50px;
-        width: 70%;
+        line-height: 44px;
+        word-spacing: -3px;
+        width: 100%;
+
         // padding-left: 20px;
       }
     }
@@ -199,7 +204,7 @@ body {
 
 }
 
-.textModule {
+.textModule { //texto "hacemos comunicacion visual"
   height: fit-content;
   width: 100%;
 
@@ -208,6 +213,7 @@ body {
 
 
   .title {
+    margin-left: -40px;
     display: block;
     font-size: 80px !important;
     font-family: helvetica !important;
@@ -223,6 +229,7 @@ body {
   }
 
   .description {
+    font-size: 45px !important;
     width: 100% !important;
     font-family: helvetica !important;
 
@@ -239,7 +246,7 @@ body {
 
 .Filter {
   width: 100%;
-  height: 150px;
+  height: 10px;
   justify-content: left;
   background-color: black;
   padding-bottom: 20px;
@@ -258,7 +265,7 @@ body {
 
   &.active {
 
-    height: fit-content;
+    height: 220px; //altura negro con filtro activo
   }
 
 
@@ -279,7 +286,7 @@ body {
       font-weight: bold;
       line-height: 31px;
       max-width: 100%;
-      margin-left: 10px;
+      margin-left: 5px; //texto filtro alineado con titulo
       margin-bottom: 30px;
       margin-top: 14px;
       color: #7E7E7E;
@@ -299,7 +306,7 @@ body {
   }
 
   .row {
-    // margin-top: 15px;
+    margin-top: 0px;
   }
 
   .pushedCol {
@@ -608,7 +615,7 @@ body {
   background-color: $white;
   font-size: 80px;
   font-weight: bold;
-  padding: 20px;
+  padding: 5px 40px;
   font-family: helvetica;
   color: #7E7E7E;
 
@@ -618,7 +625,7 @@ body {
 
   .titleWrapper {
 
-    margin-top: 20px;
+    margin-top: 0px;
 
     @media screen and (max-width:768px) {
       // background-color: red;
@@ -630,14 +637,14 @@ body {
 
   .title {
     color: black;
-    font-size: 130px;
+    font-size: 120px;
     letter-spacing: -5px;
     margin-top: -20px;
     // margin-left: 10px;
     margin-bottom: -20px;
     font-family: helvetica;
     font-weight: 800;
-    line-height: 96px;
+    line-height: 75px;
     margin-top: 14px;
     margin-bottom: 0px;
 
@@ -654,18 +661,21 @@ body {
     font-family: helvetica;
     word-spacing: -5px;
     // margin-left: 15px;
-    font-size: 50px;
-    line-height: 42px;
+    font-size: 45px;
+    line-height: 37px;
     font-weight: 700;
     max-width: 940px;
     color: #7E7E7E;
     // font-weight: bold;
+    margin-top: 15px;
     margin-bottom: 25px;
 
     @media screen and (max-width:768px) {
-      font-size: 30px;
+      font-size: 29px;
       line-height: 28px;
       max-width: 550px;
+      margin-top: 2px;
+      margin-bottom: 2px;
 
     }
   }
@@ -676,9 +686,10 @@ body {
     height: fit-content;
     min-height: 100px;
     margin-bottom: 50px;
-    // margin-top: 100px;
+    margin-top: 30px;
     display: flex;
     justify-content: left;
+    padding-right: 5%;
     // padding-left: 5px;
     // background-color: red;
 
@@ -704,17 +715,17 @@ body {
       }
 
       .textTitle {
-        font-size: 40px;
+        font-size: 30px;
         font-family: helvetica;
         color: $black;
-        font-weight: bolder;
+        font-weight: bold;
 
         @media screen and (max-width:1200px) {
           font-size: 25px;
         }
 
         @media screen and (max-width:768px) {
-          font-size: 40px;
+          font-size: 30px;
           line-height: 30px;
 
           margin-bottom: 10px;
@@ -722,12 +733,12 @@ body {
       }
 
       .text {
-        font-size: 23px;
+        font-size: 20px;
         margin-right: 10px;
         color: $gray;
         font-family: helvetica;
-        font-weight: 400;
-        line-height: 25px;
+        font-weight:100;
+        line-height: 22px;
 
         @media screen and (max-width:1200px) {
           font-size: 15px;
@@ -768,12 +779,12 @@ body {
     }
 
     .biographie {
-      font-size: 30px;
+      font-size: 25px;
       min-width: 250px;
       height: 290px;
       display: flex;
       flex-direction: column;
-      font-weight: bolder;
+      font-weight: 500;
       color: #a5a5a5;
 
       &.mobile {
@@ -801,11 +812,11 @@ body {
 
       .biographieImg {
         width: 100%;
-        height: 200px;
+        height: 140px;
         background-position: center;
         background-size: cover;
         filter: grayscale(0.6);
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         transition: all ease-in 0.2s;
 
         @media screen and (max-width:1000px) {
@@ -842,7 +853,7 @@ body {
       height: 290px;
       display: flex;
       flex-direction: column;
-      padding: 10px;
+      padding: 2px;
       color: black;
       margin-top: -10px;
       margin-left: 20px;
@@ -1044,11 +1055,13 @@ body {
       align-items: end;
 
       .brand {
-        font-size: 150px;
+        width: 25%;
+        font-size: 60px;
         font-weight: bolder;
         color: $orange;
-        letter-spacing: -5px;
-        line-height: 144px;
+        letter-spacing: 0px;
+        line-height: 50px;
+        margin-bottom: 25px;
 
 
       }
@@ -1059,23 +1072,24 @@ body {
 
       .phrase {
         margin: 0px;
-        margin-left: 20px;
-        margin-right: 20px;
-        color: #7E7E7E;
+        margin-left: 70px;
+        margin-right: 0px;
+        color: #000000;
         display: flex;
         justify-content: center;
         text-align: left;
         flex-direction: column;
-        height: 140px;
+        height: 100px;
         // margin-bottom: -55px;
 
 
         p {
           // color: #a5a5a5;
-          font-size: 35px;
-          margin-bottom: 5px;
-
-          font-weight: bolder;
+          font-size: 25px;
+          line-height: 20px;
+          margin-bottom: 0px;
+          margin-left: 0px;
+          font-weight: normal;
 
           // background-color: red;
           @media screen and (max-width:1200px) {
@@ -1097,14 +1111,14 @@ body {
         margin-bottom: 0px;
 
         p {
-          // margin-bottom: -35px;
+          margin-bottom: 0px;
         }
 
         @media screen and (max-width:1200px) {
           font-size: 20px;
 
           p {
-            // margin-bottom: -20px;
+            margin-bottom: 0px;
           }
         }
       }
@@ -1112,14 +1126,14 @@ body {
 
     .right {
       // background-color: blue;
-      font-size: 35px;
+      font-size: 20px;
       color: #7E7E7E;
       // margin-right: 30px;
       // margin-bottom: -100px;
       font-weight: bolder;
       // background-color: red;
       // margin-right: 100px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
 
 
       @media screen and (max-width:1400px) {
