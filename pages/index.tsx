@@ -59,8 +59,8 @@ const config: ItemType[] = [
     minHeight: "360px",
     height: "40vh",
     title: "Casa del Bicentenario",
-    description: "Señalética",
-    descriptionColor: "white",
+    //description: "Señalética",
+    //descriptionColor: "white",
     titleColor: "white",
     textAlign: "end",
     mobileHeight: "35vh",
@@ -707,7 +707,7 @@ export const Footer = () => {
         </div>
         <div className="subtitleContent">
           <p className='subTitle'>
-            un equipo que busca resolver<br/>cada nueva situación con&nbsp;potencia,<br/>buen diseño y eficacia.
+            un equipo que busca resolver<br/>cada nueva situación con&nbsp;potencia,<br/>buen diseño y eficacia. 
           </p>
         </div>
       </div>

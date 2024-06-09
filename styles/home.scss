@@ -99,13 +99,13 @@ body {
   &:hover {
     cursor: pointer;
 
-    .title, .description {
+    .title {
       transition: all ease-in 1s;
       display: block;
     }
   }
 
-  .title, .description {
+  .title {
     display: none;
     font-family: helvetica;
     // text-transform: capitalize;
@@ -116,9 +116,6 @@ body {
   @media screen and (max-width:768px) {
     .title {
       display: block;
-    }
-    .description {
-      display: none !important;
     }
   }
 
@@ -191,14 +188,13 @@ body {
         padding-left: 40px;
         margin-bottom: 5px;
         font-size: 35px;
-        line-height: 20px;
+        line-height: 65px;
       }
 
       .description {
         line-height: 44px;
         word-spacing: -3px;
         width: 100%;
-        margin-left: 40px;
 
         // padding-left: 20px;
       }
@@ -1014,15 +1010,7 @@ body {
     justify-content: space-between;
     font-family: helvetica;
     color: #7E7E7E;
-    
-    .contact {
-      font-size: 20px;
-      line-height: 30px;
-      p {
-        font-size: 30px;
 
-      }
-    }
     @media screen and (max-width:1400px) {
       flex-direction: column;
       align-items: self-start;
