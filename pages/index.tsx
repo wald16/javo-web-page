@@ -59,6 +59,8 @@ const config: ItemType[] = [
     minHeight: "360px",
     height: "40vh",
     title: "Casa del Bicentenario",
+    description: "Señalética",
+    descriptionColor: "white",
     titleColor: "white",
     textAlign: "end",
     mobileHeight: "35vh",
@@ -582,7 +584,7 @@ export const SectionSmall = (props: ItemType & { setModalInfo: Function }) => {
           <div className='SectionText'>
             <div className='SectionTextHolder' style={textStyle}>
               {title && <p className='f-50 lh-48 title' style={titleStyle}><b>{title}</b></p>}
-              {description && <p className='f-50 lh-48' style={descriptionStyle}><b>{description}</b></p>}
+              {description && <p className='f-20 lh-48 description' style={descriptionStyle}><b>{description}</b></p>}
             </div>
           </div>
         ) : <></>}
@@ -705,7 +707,7 @@ export const Footer = () => {
         </div>
         <div className="subtitleContent">
           <p className='subTitle'>
-            un equipo que busca resolver<br/>cada nueva situación con potencia,<br/>buen diseño y eficacia.
+            un equipo que busca resolver<br/>cada nueva situación con&nbsp;potencia,<br/>buen diseño y eficacia.
           </p>
         </div>
       </div>
@@ -786,7 +788,7 @@ export const Footer = () => {
         </div>
         <div className="right">
           <div className="contact">
-            cerrutiwald@gmail.com +54 911-0000 0000 Buenos Aires
+            cerrutiwald@gmail.com +54 911-0000 0000 <p>Buenos Aires</p>
           </div>
         </div>
       </div>
