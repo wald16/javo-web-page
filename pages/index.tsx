@@ -675,7 +675,7 @@ export const Footer = () => {
   const biographies = [
     {
       name: "Javier Cerruti",
-      src: "/images/img1.jpg",
+      src: "/images/fotojavi.jpg",
       key: "Javier",
 
       text: "Productor y realizador audiovisual. Integré y dirigí equipos de producción tanto a nivel público como privado adoptando como eje profesional la importancia de entender el lenguaje audiovisual como parte central de la estrategia comunicacional. Realicé numerosas campañas comerciales y dirigí la producción audiovisual de contenidos de comunicación del Gobierno Nacional entre 2019 y 2023.",
