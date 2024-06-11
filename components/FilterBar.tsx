@@ -8,40 +8,47 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
         {
             key: "identidad",
             name: "identidad",
-            text: "Identidad es aquello que distingue.<br/>Requiere implementar adecuadas<br/>decisiones estratégicas."
+            text: "Identidad es aquello que distingue.<br/>Requiere implementar adecuadas<br/>decisiones estratégicas.",
+            text2: "Identidad es aquello<br/>que distingue.<br/>Requiere implementar adecuadas decisiones<br/>estratégicas."
         },
         {
             key: "campañas",
             name: "campañas",
-            text: "Implementamos la solución visual<br/>de campañas del universo comercial,<br/>público y político que estimulan sentidos<br/>y potencian relatos."
+            text: "Implementamos la solución visual<br/>de campañas del universo comercial,<br/>público y político que estimulan sentidos<br/>y potencian relatos.",
+            text2: "Implementamos la solución visual de campañas<br/>del universo comercial, público y político<br/>que estimulan sentidos<br/>y potencian relatos."
 
         },
         {
             key: "ciudades",
             name: "ciudades",
-            text: "La comunicación visual de ciudades<br/>requiere diseñar experiencias ciudadanas<br/>útiles y eficientes; es lo que sabemos hacer."
+            text: "La comunicación visual de ciudades<br/>requiere diseñar experiencias ciudadanas<br/>útiles y eficientes; es lo que sabemos hacer.",
+            text2: "La comunicación visual<br/>de ciudades requiere diseñar experiencias ciudadanas útiles<br/>y eficientes;<br/>es lo que sabemos hacer."
         },
         {
             key: "espacios",
             name: "espacios",
-            text: "Diseñamos espacios<br/>expositivos de alto impacto<br/>que expresan y fortalecen<br/>la imagen de marca."
+            text: "Diseñamos espacios<br/>expositivos de alto impacto<br/>que expresan y fortalecen<br/>la imagen de marca.",
+            text2: "Diseñamos espacios<br/>expositivos de alto impacto<br/>que expresan y fortalecen<br/>la imagen de marca."
         },
         {
             key: "poupurri",
             name: "poupurri",
-            text: "Cada proyecto a desarrollar<br/>es un nuevo desafío que<br/>nos gusta transitar."
+            text: "Cada proyecto a desarrollar<br/>es un nuevo desafío que<br/>nos gusta transitar.",
+            text2: "Cada proyecto a desarrollar es un nuevo desafío<br/>que nos gusta transitar."
         },
         {
             key: "nosotros",
             name: "nosotros",
-            text: ""
+            text: "",
+            text2: ""
         },
     ]
+    
 
     const [active, setActive] = React.useState(false);
     const [text, setText] = React.useState("")
 
-    const handleClick = (key: string, _text: string) => {
+    const handleClick = (key: string, _text: string, _text2: string) => {
         if (key == activeFilter) {
             setActiveFilter(undefined)
             setActive(false)
@@ -52,6 +59,7 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
             setText(_text)
             setTimeout(() =>{
                 if(window.innerWidth < 768) {
+                    setText(_text2)
                     const ele = document.querySelector("#"+key)
                     if(ele) ele.scrollIntoView({ behavior: "smooth" })
                 }
@@ -105,7 +113,7 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
                                     if (i.key !== "nosotros") {
                                         return (
                                             <div className="itemContainer" id={i.key} key={index}>
-                                                <div className={`item col-2 col-md-12  ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text)} key={i.key} ><p>{i.name}</p></div>
+                                                <div className={`item col-2 col-md-12  ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text, i.text2)} key={i.key} ><p>{i.name}</p></div>
                                                 {i.key == activeFilter && (
                                                     <div className={`text d-flex d-xl-none ${i.key == activeFilter ? "active" : ""}`}>
                                                         <p dangerouslySetInnerHTML={{ __html: text}} />
@@ -134,7 +142,7 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
                                 {[...items].filter((i: any, _index: number) => (_index <= getLastPositionActive())).map((i, index) => {
                                     return (
                                         <div className="itemContainer" key={index}>
-                                            <div className={`item col-2 col-md-12 opacity-0 h-0 d-none d-lg-flex ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text)} key={i.key} ><p>{i.name}</p></div>
+                                            <div className={`item col-2 col-md-12 opacity-0 h-0 d-none d-lg-flex ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text, i.text2)} key={i.key} ><p>{i.name}</p></div>
                                             {i.key == activeFilter && (
                                                 <div className={`text d-none d-xl-flex ${i.key == activeFilter ? "active" : ""}`}>
                                                     <p dangerouslySetInnerHTML={{ __html: text}} />
