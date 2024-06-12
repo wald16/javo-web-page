@@ -309,7 +309,7 @@ const config: ItemType[] = [
     textAlign: "end",
     minHeight: "360px",
     height: "30vh",
-    mobileHeight: "60vh",
+    mobileHeight: "35vh",
     // mobileMinHeight: "auto",
     img: "/images/img10.jpg",
     clickeable: true,
@@ -346,7 +346,7 @@ const config: ItemType[] = [
     type: "large",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
     title: "lorem ipsum",
-    img: "/images/Mercedes_1600_job_web_HOME_alargada_A.jpg",
+    img: "/images/Mercedes_1600_job_web_HOME_alargada_C.jpg",
     titleColor: "white",
     textAlign: "left",
     minHeight: "360px",
@@ -355,7 +355,7 @@ const config: ItemType[] = [
     showOnlyOnFilter: false,
     category: "ciudades",
     extraClass: "proyects",
-    mobileHeight: "60vh",
+    mobileHeight: "35vh",
     secondaryMedia: [
     ]
   },
@@ -477,7 +477,7 @@ export const SectionLarge = (props: ItemType & { setModalInfo: Function }) => {
 
   const style = {
     backgroundImage: `url(${img})`,
-    height: height ? height : "50vw",
+    //height: height ? height : "50vw",
     minHeight: minHeight ? minHeight : "auto",
     display: "flex",
 
