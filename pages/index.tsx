@@ -269,7 +269,7 @@ const config: ItemType[] = [
 
   },
   {
-    category: "nosotros",
+    category: "identidad",
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
     title: "MICA",
@@ -340,6 +340,23 @@ const config: ItemType[] = [
       { src: "/images/img7.jpg", position: "top", type:"img" },
       { src: "/images/img2.jpg", position: "top", type:"img" },
       { src: "/images/img7.jpg", position: "top", type:"img" },
+    ]
+  },
+  {
+    type: "large",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "lorem ipsum",
+    img: "/images/Mercedes_1600_job_web_HOME_alargada_A.jpg",
+    titleColor: "white",
+    textAlign: "left",
+    minHeight: "360px",
+    height: "30vw",
+    clickeable: true,
+    showOnlyOnFilter: false,
+    category: "ciudades",
+    extraClass: "proyects",
+    mobileHeight: "60vh",
+    secondaryMedia: [
     ]
   },
 
