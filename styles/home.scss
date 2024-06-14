@@ -118,6 +118,7 @@ body {
   @media screen and (max-width:768px) {
     .title {
       display: block;
+      margin-left: -10px;
     }
   }
 
@@ -191,6 +192,12 @@ body {
         margin-bottom: 5px;
         font-size: 35px;
         line-height: 65px;
+        @media screen and (max-width:768px) {
+          font-size: 30px;
+          margin-bottom: 0px;
+          line-height: 30px;
+          padding-left: 10px;
+        }
       }
 
       .description {
@@ -227,6 +234,7 @@ body {
     @media screen and (max-width:768px) {
       font-size: 50px !important;
       line-height: 45px !important;
+      margin-left: -10px;
     }
   }
 

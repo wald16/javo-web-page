@@ -352,7 +352,7 @@ const config: ItemType[] = [
     minHeight: "360px",
     height: "30vw",
     clickeable: true,
-    showOnlyOnFilter: false,
+    showOnlyOnFilter: true,
     category: "ciudades",
     extraClass: "proyects",
     mobileHeight: "35vh",
