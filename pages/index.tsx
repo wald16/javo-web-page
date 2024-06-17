@@ -431,7 +431,7 @@ export default function HomePage() {
 }
 export const Home = () => {
   return (
-    <div className="container ">
+    <div className="container">
       <div className='Home stretch'>
 
         <div className='row justify-content-between align-items-center bannerContent'>
@@ -802,9 +802,9 @@ export const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="right">
-          <div className="contact">
-            cerrutiwald@gmail.com +54 911-0000 0000 <p>Buenos Aires</p>
+        <div className="right col-7">
+          <div className="contact d-flex">
+             cerrutiwald@gmail.com +54 911-0000 0000 <p>Buenos Aires</p>
           </div>
         </div>
       </div>
