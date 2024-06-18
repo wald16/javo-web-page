@@ -37,6 +37,12 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
             text2: "Cada proyecto a desarrollar es un nuevo desafío<br/>que nos gusta transitar."
         },
         {
+            key: "impacto",
+            name: "impacto",
+            text: "Text1",
+            text2: "Text2"
+        },
+        {
             key: "nosotros",
             name: "nosotros",
             text: "",
