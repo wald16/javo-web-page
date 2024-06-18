@@ -907,15 +907,13 @@ export const Footer = () => {
             <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>comunicación</b></p>
             <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>visual</b></p>
           </div>
-          <div className="city">
-            <p>
-              
-            </p>
-          </div>
         </div>
-        <div className="right col-7">
-          <div className="contact d-flex">
-             cerrutiwald@gmail.com +54 911-0000 0000 <p>Buenos Aires</p>
+        <div className="right d-flex col-12">
+          <div className="contact">
+            cerrutiwald@gmail.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+54 911-0000 0000
+          </div>
+          <div className="city">
+            Buenos Aires
           </div>
         </div>
       </div>
