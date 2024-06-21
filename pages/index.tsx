@@ -924,7 +924,7 @@ export const Footer = () => {
         </div>
         <div className="right d-flex col-12">
           <div className="contact">
-            cerrutiwald@gmail.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+54 911-0000 0000
+            cerrutiwald@gmail.com +54 911-0000 0000
           </div>
           <div className="city">
             Buenos Aires
