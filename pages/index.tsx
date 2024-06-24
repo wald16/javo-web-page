@@ -922,11 +922,14 @@ export const Footer = () => {
             <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>visual</b></p>
           </div>
         </div>
-        <div className="right d-flex col-12">
+        <div className="right d-flex col-6">
           <div className="contact">
-            cerrutiwald@gmail.com +54 911-0000 0000
+            cerrutiwald@gmail.com
           </div>
-          <div className="city">
+          <div className='contact'>
+            +54&nbsp;911-0000&nbsp;0000
+          </div>
+          <div className="city lh-25">
             Buenos Aires
           </div>
         </div>
