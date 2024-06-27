@@ -24,7 +24,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 30px 25px; // Margenes Caratula
-  
+
   // padding-top: 20px;
   @media screen and (max-width:768px) {
     align-content: flex-start;
@@ -52,7 +52,7 @@ body {
         margin-bottom: -8px !important;
         line-height: 30PX !important;
         margin-left: -0px;
-        align-items:center;
+        align-items: center;
       }
 
       color: black;
@@ -76,7 +76,7 @@ body {
   cursor: pointer;
 
   &:hover {
-    filter: hue-rotate(180deg);
+    filter: contrast(1.2);
     transition: all 2s ease; // Added transition for rotation
   }
 }
@@ -105,6 +105,11 @@ body {
       transition: all ease-in 1s;
       display: block;
     }
+
+    .description {
+      transition: all ease-in 1s;
+      display: block;
+    }
   }
 
   .title {
@@ -115,10 +120,20 @@ body {
 
   }
 
+  .description {
+    display: none;
+    font-family: helvetica;
+  }
+
   @media screen and (max-width:768px) {
     .title {
       display: block;
-      margin-left: -10px;
+      margin-left: 10px;
+    }
+
+    .description {
+      display: block;
+      margin-left: 10px;
     }
   }
 
@@ -129,7 +144,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all 1s ease-in;
+    transition: width 2s, height 4s;
     min-height: 400px;
   }
 
@@ -180,30 +195,42 @@ body {
     display: flex;
 
     .SectionTextHolder {
-      margin-left: 0px;
-      padding: 20px;
+      margin-left: -15px;
+      padding-left: 10px;
 
-      @media screen and (min-width:768px) {
-        padding-left: 0px;
+      @media screen and (max-width:768px) {
+        margin-left: -15px;
+        padding-left: 10px;
       }
 
       .title {
-        padding-left: 40px;
-        margin-bottom: 5px;
-        font-size: 35px;
+        padding-left: 35px;
+        margin-bottom: 13px;
+        font-size: 33px;
         line-height: 65px;
+
         @media screen and (max-width:768px) {
-          font-size: 30px;
-          margin-bottom: 0px;
+          font-size: 28px;
+          margin-bottom: 18px;
           line-height: 30px;
-          padding-left: 10px;
+          padding-left: 13px;
         }
       }
 
       .description {
-        line-height: 44px;
-        word-spacing: -3px;
-        width: 100%;
+        margin-top: -52px;
+        padding-left: 35px;
+        margin-bottom: 7px;
+        font-size: 26px;
+        line-height: 65px;
+
+        @media screen and (max-width:768px) {
+          margin-top: -22px;
+          font-size: 24px;
+          margin-bottom: 18px;
+          line-height: 30px;
+          padding-left: 13px;
+        }
 
         // padding-left: 20px;
       }
@@ -213,7 +240,8 @@ body {
 
 }
 
-.textModule { //texto "hacemos comunicacion visual"
+.textModule {
+  //texto "hacemos comunicacion visual"
   height: fit-content;
   width: 100%;
 
@@ -222,12 +250,12 @@ body {
 
 
   .title {
-    margin-left: -40px;
+    margin-left: -31px;
     display: block;
     font-size: 80px !important;
     font-family: helvetica !important;
     font-weight: 500;
-    margin-top: 5px;
+    margin-top: 25px;
     margin-bottom: 5px !important;
     // letter-spacing: -3px;
 
@@ -238,10 +266,14 @@ body {
     }
   }
 
-  .description {
+  .description2 {
+    margin-left: 5px;
     font-size: 45px !important;
     width: 100% !important;
     font-family: helvetica !important;
+    line-height: 38px;
+    word-spacing: -3px;
+    letter-spacing: 1.2px;
 
     @media screen and (max-width:768px) {
       font-size: 30px !important;
@@ -263,6 +295,7 @@ body {
   align-items: center;
   font-family: helvetica;
   font-weight: bold;
+
   // padding-left: 30px;
 
   @media screen and (max-width:1200px) {
@@ -386,7 +419,7 @@ body {
   background-color: #ebf5f5;
   padding: 5px;
   border-radius: 100%;
-  width: 60px;
+  width: 80x;
   height: 60px;
   position: fixed;
   bottom: 40px;
@@ -398,6 +431,7 @@ body {
   transition: all ease 1s;
   margin-bottom: 30px;
 
+
   &:hover {
     background-color: #81c0c0;
   }
@@ -407,12 +441,18 @@ body {
     animation-direction: alternate;
     animation-iteration-count: infinite;
 
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
   }
 
   &.active {
+
+    width: 80px;
+
+
     img {
+      width: 75px;
+      height: 75px;
 
       animation: none;
     }
@@ -429,7 +469,7 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.644);
+  background-color: rgba(0, 0, 0, 0.747);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -448,11 +488,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     // overflow-y: auto;
     @media screen and (max-height: 800px) {
       width: 900px;
       height: 80%;
     }
+
     @media screen and (max-width: 1000px) {
       width: 80vw;
       height: 70vh;
@@ -537,10 +579,11 @@ body {
         position: relative;
 
         .imgBg {
-          background-color: black;
           opacity: 0.6;
           transition: all ease-in 0.2s;
           cursor: pointer;
+          padding: 10px;
+          margin-right: 5px;
 
           &:hover {
             opacity: 1;
@@ -673,13 +716,14 @@ body {
     word-spacing: -5px;
     // margin-left: 15px;
     font-size: 45px;
-    line-height: 37px;
+    line-height: 40px;
     font-weight: 700;
     max-width: 940px;
     color: #7E7E7E;
     // font-weight: bold;
-    margin-top: 15px;
+    margin-top: 5px;
     margin-bottom: 25px;
+    letter-spacing: -0.8px;
 
     @media screen and (max-width:768px) {
       font-size: 29px;
@@ -697,7 +741,7 @@ body {
     height: fit-content;
     min-height: 100px;
     margin-bottom: 50px;
-    margin-top: 30px;
+    margin-top: 25px;
     display: flex;
     justify-content: left;
     padding-right: 5%;
@@ -714,7 +758,7 @@ body {
       max-width: 25%;
       // margin-right: 20px;
       // margin-left: 10px;
-      height: fit-content;
+      margin-top: -3px;
       // min-height: 250px;
 
       // margin: 10px;
@@ -746,10 +790,11 @@ body {
       .text {
         font-size: 20px;
         margin-right: 10px;
-        color: $gray;
+        color: rgb(128, 128, 128);
         font-family: helvetica;
-        font-weight:100;
+        font-weight: 100;
         line-height: 22px;
+
 
         @media screen and (max-width:1200px) {
           font-size: 15px;
@@ -783,6 +828,7 @@ body {
     display: flex;
     color: $black;
     // padding-left: 15px;
+    padding-top: 10px;
 
     @media screen and (max-width:1000px) {
       flex-direction: column;
@@ -845,10 +891,12 @@ body {
       }
 
       .biographieName {
+        font-size: 22px;
         color: #a5a5a5;
         font-weight: bolder;
         font-family: helvetica;
         transition: all ease-in 0.2s;
+        word-spacing: -1px;
 
         @media screen and (max-width:768px) {
           // margin-bottom: -500px;
@@ -861,7 +909,7 @@ body {
     }
 
     .biographieText {
-      width: 50%;
+      width: 53%;
       // background-color: red;
       height: 290px;
       display: flex;
@@ -974,7 +1022,7 @@ body {
       font-size: 100px;
       font-weight: bolder;
       color: $orange;
-      letter-spacing: -5px;
+      letter-spacing: -3px;
       margin-bottom: -30px;
     }
 
@@ -1023,15 +1071,20 @@ body {
     justify-content: space-between;
     font-family: helvetica;
     color: #7E7E7E;
-    
+    letter-spacing: 0.5px;
+    word-spacing: -5px;
+
     .contact {
       font-size: 20px;
       height: 30px;
       font-weight: bold;
+      margin-left: -5px;
+      word-spacing: -3px;
     }
+
     .city {
       //color: $black;
-      font-size: 30px;
+      font-size: 28px;
       font-weight: bold;
       //display: flex;
       justify-content: end;
@@ -1050,7 +1103,7 @@ body {
         font-size: 60px;
         font-weight: bolder;
         color: $orange;
-        letter-spacing: 0px;
+        letter-spacing: -2px;
         line-height: 50px;
         margin-bottom: 25px;
 
@@ -1093,19 +1146,20 @@ body {
       // margin-right: 100px;
       margin-bottom: 25px;
     }
+
     @media screen and (max-width:1024px) {
       flex-direction: column;
       align-items: self-start;
-  
+
       .left {
         flex-direction: column;
         align-items: self-start;
       }
-  
+
       .brand {
         margin-bottom: 0px !important;
       }
-  
+
       .phrase {
         margin: 0px !important;
         height: auto !important;
@@ -1113,7 +1167,7 @@ body {
         width: 100%;
       }
 
-      .right{
+      .right {
         flex-direction: column;
         align-items: self-start;
       }
@@ -1123,6 +1177,7 @@ body {
         line-height: 14px;
         height: fit-content;
         margin-top: 10px;
+
       }
 
       .city {

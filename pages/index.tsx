@@ -17,6 +17,8 @@ export type ItemType = {
   textAlign?: string;
   description?: string;
   descriptionColor?: string;
+  description2?: string;
+  description2Color?: string;
   minHeight?: string;
   mobileHeight?: string;
   mobileMinHeight?: string;
@@ -24,7 +26,7 @@ export type ItemType = {
   video?: string,
   bkg?: string,
   extraClass?: string,
-  secondaryMedia?: { src: string, position: string, type:string }[],
+  secondaryMedia?: { src: string, position: string, type: string }[],
   secondaryVideos?: string[],
   details: string,
 
@@ -47,8 +49,18 @@ const description =
     y fortalecen marcas.
 
   </>
+
+const description2 =
+  <>
+    Diseñamos y desarrollamos <br />
+    proyectos efectivos <br />
+    que potencian relatos<br />
+    y fortalecen marcas.
+
+  </>
 const _text = text as unknown
 const _description = description as unknown
+const _description2 = description2 as unknown
 const config: ItemType[] = [
 
   {
@@ -66,18 +78,18 @@ const config: ItemType[] = [
     mobileHeight: "35vh",
     category: "campañas",
     secondaryMedia: [
-      { src: "/images/img3b.jpg", position: "top", type:"img" },
-      { src: "/images/img2.jpg", position: "top", type:"img" },
-      { src: "/videos/it_joven_02.mp4", position: "top", type:"video" },
-      { src: "/images/img3b.jpg", position: "top", type:"img" },
-      { src: "/images/img2.jpg", position: "top", type:"img" },
+      { src: "/images/img3b.jpg", position: "top", type: "img" },
+      { src: "/images/img2.jpg", position: "top", type: "img" },
+      { src: "/videos/it_joven_02.mp4", position: "top", type: "video" },
+      { src: "/images/img3b.jpg", position: "top", type: "img" },
+      { src: "/images/img2.jpg", position: "top", type: "img" },
     ]
   },
   {
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
     title: "Clacso 2018",
-    titleColor: "white",
+    titleColor: "#606060",
     textAlign: "end",
     clickeable: true,
     img: "/images/img4.jpg",
@@ -86,15 +98,17 @@ const config: ItemType[] = [
     category: "campañas",
     mobileHeight: "35vh",
     secondaryMedia: [
-      { src: "/images/img4b.jpg", position: "center", type:"img" },
-      { src: "/images/img2.jpg", position: "top", type:"img" },
-      { src: "/images/img4b.jpg", position: "top", type:"img" },
+      { src: "/images/img4b.jpg", position: "center", type: "img" },
+      { src: "/images/img2.jpg", position: "top", type: "img" },
+      { src: "/images/img4b.jpg", position: "top", type: "img" },
     ]
   },
   {
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
     title: "Tráfico Ilícito",
+    description: "señalética",
+    descriptionColor: "#A09F97",
     titleColor: "white",
     textAlign: "end",
     clickeable: true,
@@ -104,9 +118,9 @@ const config: ItemType[] = [
     mobileHeight: "35vh",
     category: "identidad",
     secondaryMedia: [
-      { src: "/images/img5.jpg", position: "top", type:"img" },
-      { src: "/images/img2.jpg", position: "top", type:"img" },
-      { src: "/images/img5.jpg", position: "top", type:"img" },
+      { src: "/images/img5.jpg", position: "top", type: "img" },
+      { src: "/images/img2.jpg", position: "top", type: "img" },
+      { src: "/images/img5.jpg", position: "top", type: "img" },
     ]
   },
   {
@@ -122,9 +136,9 @@ const config: ItemType[] = [
     mobileHeight: "35vh",
     category: "identidad",
     secondaryMedia: [
-      { src: "/images/img13.jpg", position: "top", type:"img" },
-      { src: "/images/img12.jpg", position: "top", type:"img" },
-      { src: "/images/img13.jpg", position: "top", type:"img" },
+      { src: "/images/img13.jpg", position: "top", type: "img" },
+      { src: "/images/img12.jpg", position: "top", type: "img" },
+      { src: "/images/img13.jpg", position: "top", type: "img" },
     ],
     secondaryVideos: [
       "/videos/it_joven_02.mp4",
@@ -146,6 +160,7 @@ const config: ItemType[] = [
     descriptionColor: "#FF5500",
 
     description: _description as string,
+    description2: _description2 as string,
     textAlign: "left",
     extraClass: "textModule",
 
@@ -165,21 +180,21 @@ const config: ItemType[] = [
     category: "espacios",
     clickeable: true,
     secondaryMedia: [
-      { src: "/videos/JOB_IT_JOVEN/2023_04_10_IT_Joven_Injuve_30seg_16_9.mp4", position: "top", type:"video" },
+      { src: "/videos/JOB_IT_JOVEN/2023_04_10_IT_Joven_Injuve_30seg_16_9.mp4", position: "top", type: "video" },
       //{ src: "/videos/JOB_IT_JOVEN/2023_04_10_IT_Joven_Injuve_30seg_9_16.mp4", position: "top", type:"video" },
-      { src: "/images/JOB_IT_JOVEN/1_IT_JOVEN_ID_sobre_degadee_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_IT_JOVEN/2_IT_JOVEN_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_IT_JOVEN/3_IT_JOVEN_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_IT_JOVEN/4_IT_JOVEN_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_IT_JOVEN/5_IT_JOVEN_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_IT_JOVEN/6_IT_JOVEN_Chupete_vertical_PPL_TI_JOVEN_Flatt_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_IT_JOVEN/7_IT_JOVEN_SEXT_sextuple_estacion_de_subte_con_bici_IT_JOVEN_Flatt_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_IT_JOVEN/8_IT_JOVEN_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_IT_JOVEN/9_IT_JOVEN_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_IT_JOVEN/10_IT_JOVEN_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_IT_JOVEN/11_IT_JOVEN_grafismo_degadee_calido_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_IT_JOVEN/12_IT_JOVEN_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_IT_JOVEN/13_IT_JOVEN_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_IT_JOVEN/1_IT_JOVEN_ID_sobre_degadee_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_IT_JOVEN/2_IT_JOVEN_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_IT_JOVEN/3_IT_JOVEN_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_IT_JOVEN/4_IT_JOVEN_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_IT_JOVEN/5_IT_JOVEN_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_IT_JOVEN/6_IT_JOVEN_Chupete_vertical_PPL_TI_JOVEN_Flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_IT_JOVEN/7_IT_JOVEN_SEXT_sextuple_estacion_de_subte_con_bici_IT_JOVEN_Flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_IT_JOVEN/8_IT_JOVEN_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_IT_JOVEN/9_IT_JOVEN_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_IT_JOVEN/10_IT_JOVEN_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_IT_JOVEN/11_IT_JOVEN_grafismo_degadee_calido_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_IT_JOVEN/12_IT_JOVEN_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_IT_JOVEN/13_IT_JOVEN_800_job_web.jpg", position: "top", type: "img" },
     ],
   },
   {
@@ -195,19 +210,19 @@ const config: ItemType[] = [
     titleColor: "white",
     textAlign: "end",
     secondaryMedia: [
-      { src: "/images/JOB_Soberania/1_Soberania_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Soberania/2_Soberania_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Soberania/3_Soberania_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Soberania/4_Soberania_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Soberania/5_Soberania_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Soberania/6_Soberania_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Soberania/7_Soberania_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Soberania/8_Soberania_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Soberania/9_Soberania_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Soberania/10_Soberania_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Soberania/11_Soberania_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Soberania/12_Soberania_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Soberania/13_Soberania_1200_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Soberania/1_Soberania_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Soberania/2_Soberania_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Soberania/3_Soberania_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Soberania/4_Soberania_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Soberania/5_Soberania_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Soberania/6_Soberania_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Soberania/7_Soberania_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Soberania/8_Soberania_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Soberania/9_Soberania_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Soberania/10_Soberania_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Soberania/11_Soberania_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Soberania/12_Soberania_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Soberania/13_Soberania_1200_job_web.jpg", position: "top", type: "img" },
     ]
   },
   {
@@ -223,29 +238,29 @@ const config: ItemType[] = [
     height: "40vh",
     mobileHeight: "35vh",
     secondaryMedia: [
-      { src: "/images/JOB_Clacso_2018/1_Clacso_2018_IMG_8315_flatt_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Clacso_2018/2_Clacso_2018_IMG_8372_flatt_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Clacso_2018/3_Clacso_2018_IMG_8318_flatt_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Clacso_2018/4_Clacso_2018_IMG_8386_flatt_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Clacso_2018/5_Clacso_2018_IMG_8382_flatt_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Clacso_2018/6_Clacso_2018_IMG_8379_Flatt_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Clacso_2018/7_Clacso_2018_IMG_8383_flatt_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Clacso_2018/8_Clacso_2018_IMG_8409_flatt_800_job_web.jpg", position: "top", type:"img"},
-      { src: "/images/JOB_Clacso_2018/9_Clacso_2018_edificios_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Clacso_2018/10_Clacso_2018_117_Clacso2018_Relevamiento_20181119_JAD9307_800_job_we.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Clacso_2018/11_Clacso_2018_100_Clacso2018_Relevamiento_20181119_JAD9277_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Clacso_2018/12_Clacso_2018_112_Clacso2018_Relevamiento_20181119_JAD9297_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Clacso_2018/13_Clacso_2018_IMG_8374_flatt_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Clacso_2018/14_Clacso_2018_117_Clacso2018_Carteleria_20181119_MG_7073_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Clacso_2018/15_Clacso_2018_IMG_8442_flatt_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Clacso_2018/16_Clacso_2018_IMG_8378_flatt_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Clacso_2018/17_Clacso_2018_clacso2018_poster_ext_foto_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Clacso_2018/18_Clacso_2018_IMG_8267_flatt_1400_retocada_sin_texto_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Clacso_2018/19_Clacso_2018_IMG_8300_flatt_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Clacso_2018/20_Clacso_2018_IMG_8538_flatt_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Clacso_2018/21_Clacso_2018_IMG_8758_flatt_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Clacso_2018/22_Clacso_2018_3_almohadones_Negro_arriba_y_abajo_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Clacso_2018/23_Clacso_2018_IMG_8764_flatt_800_job_web.jpg", position: "top", type:"img" }
+      { src: "/images/JOB_Clacso_2018/1_Clacso_2018_IMG_8315_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/2_Clacso_2018_IMG_8372_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/3_Clacso_2018_IMG_8318_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/4_Clacso_2018_IMG_8386_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/5_Clacso_2018_IMG_8382_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/6_Clacso_2018_IMG_8379_Flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/7_Clacso_2018_IMG_8383_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/8_Clacso_2018_IMG_8409_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/9_Clacso_2018_edificios_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/10_Clacso_2018_117_Clacso2018_Relevamiento_20181119_JAD9307_800_job_we.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/11_Clacso_2018_100_Clacso2018_Relevamiento_20181119_JAD9277_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/12_Clacso_2018_112_Clacso2018_Relevamiento_20181119_JAD9297_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/13_Clacso_2018_IMG_8374_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/14_Clacso_2018_117_Clacso2018_Carteleria_20181119_MG_7073_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/15_Clacso_2018_IMG_8442_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/16_Clacso_2018_IMG_8378_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/17_Clacso_2018_clacso2018_poster_ext_foto_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/18_Clacso_2018_IMG_8267_flatt_1400_retocada_sin_texto_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/19_Clacso_2018_IMG_8300_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/20_Clacso_2018_IMG_8538_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/21_Clacso_2018_IMG_8758_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/22_Clacso_2018_3_almohadones_Negro_arriba_y_abajo_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/23_Clacso_2018_IMG_8764_flatt_800_job_web.jpg", position: "top", type: "img" }
 
     ]
   },
@@ -253,7 +268,7 @@ const config: ItemType[] = [
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
     title: "lorem ipsum",
-    titleColor: "white",
+    titleColor: "black",
     textAlign: "end",
     clickeable: true,
     img: "/images/img6.jpg",
@@ -262,9 +277,9 @@ const config: ItemType[] = [
     height: "40vh",
     mobileHeight: "35vh",
     secondaryMedia: [
-      { src: "/images/img6.jpg", position: "top", type:"img" },
-      { src: "/images/img2.jpg", position: "top", type:"img" },
-      { src: "/images/img6.jpg", position: "top", type:"img" },
+      { src: "/images/img6.jpg", position: "top", type: "img" },
+      { src: "/images/img2.jpg", position: "top", type: "img" },
+      { src: "/images/img6.jpg", position: "top", type: "img" },
     ]
 
   },
@@ -273,7 +288,7 @@ const config: ItemType[] = [
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
     title: "MICA",
-    titleColor: "white",
+    titleColor: "black",
     textAlign: "end",
     clickeable: true,
     img: "/images/img7.jpg",
@@ -281,22 +296,22 @@ const config: ItemType[] = [
     height: "40vh",
     mobileHeight: "35vh",
     secondaryMedia: [
-      { src: "/images/JOB_MICA_2013/1_MICA_2013_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_MICA_2013/2_MICA_2013_DSCN2769_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_MICA_2013/3_MICA_2013_DSCN2803_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_MICA_2013/4_MICA_2013_DSCN2815_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_MICA_2013/5_MICA_2013_DSCN2773_800_job_web.jpg", position: "top", type:"img" },    
-      { src: "/images/JOB_MICA_2013/6_MICA_2013_DSCN2777_800_job_web.jpg", position: "top", type:"img" }, 
-      { src: "/images/JOB_MICA_2013/7_MICA_2013_DSCN2919_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_MICA_2013/8_MICA_2013_DSCN3005_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_MICA_2013/9_MICA_2013_DSCN2991_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_MICA_2013/10_MICA_2013_DSCN2953_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_MICA_2013/11_MICA_2013_DSCN2945_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_MICA_2013/12_MICA_2013_DSCN2943_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_MICA_2013/13_MICA_2013_DSCN3053_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_MICA_2013/14_MICA_2013_DSCN3049_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_MICA_2013/15_MICA_2013_DSCN3085_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_MICA_2013/16_MICA_2013_DSCN3087_800_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_MICA_2013/1_MICA_2013_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_MICA_2013/2_MICA_2013_DSCN2769_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_MICA_2013/3_MICA_2013_DSCN2803_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_MICA_2013/4_MICA_2013_DSCN2815_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_MICA_2013/5_MICA_2013_DSCN2773_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_MICA_2013/6_MICA_2013_DSCN2777_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_MICA_2013/7_MICA_2013_DSCN2919_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_MICA_2013/8_MICA_2013_DSCN3005_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_MICA_2013/9_MICA_2013_DSCN2991_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_MICA_2013/10_MICA_2013_DSCN2953_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_MICA_2013/11_MICA_2013_DSCN2945_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_MICA_2013/12_MICA_2013_DSCN2943_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_MICA_2013/13_MICA_2013_DSCN3053_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_MICA_2013/14_MICA_2013_DSCN3049_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_MICA_2013/15_MICA_2013_DSCN3085_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_MICA_2013/16_MICA_2013_DSCN3087_800_job_web.jpg", position: "top", type: "img" },
     ]
 
   },
@@ -305,7 +320,7 @@ const config: ItemType[] = [
     type: "large",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
     title: "lorem ipsum",
-    titleColor: "white",
+    titleColor: "black",
     textAlign: "end",
     minHeight: "360px",
     height: "30vh",
@@ -317,9 +332,9 @@ const config: ItemType[] = [
     category: "campañas",
     showOnlyOnFilter: false,
     secondaryMedia: [
-      { src: "/images/img7.jpg", position: "top", type:"img" },
-      { src: "/images/img2.jpg", position: "top", type:"img" },
-      { src: "/images/img7.jpg", position: "top", type:"img" },
+      { src: "/images/img7.jpg", position: "top", type: "img" },
+      { src: "/images/img2.jpg", position: "top", type: "img" },
+      { src: "/images/img7.jpg", position: "top", type: "img" },
     ]
   },
   {
@@ -337,9 +352,9 @@ const config: ItemType[] = [
     extraClass: "proyects",
     mobileHeight: "60vh",
     secondaryMedia: [
-      { src: "/images/img7.jpg", position: "top", type:"img" },
-      { src: "/images/img2.jpg", position: "top", type:"img" },
-      { src: "/images/img7.jpg", position: "top", type:"img" },
+      { src: "/images/img7.jpg", position: "top", type: "img" },
+      { src: "/images/img2.jpg", position: "top", type: "img" },
+      { src: "/images/img7.jpg", position: "top", type: "img" },
     ]
   },
 
@@ -358,43 +373,43 @@ const config: ItemType[] = [
     extraClass: "proyects",
     mobileHeight: "35vh",
     secondaryMedia: [
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/1_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/2_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/3_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/4_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/5_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/6_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/7_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/8_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/9_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/10_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/11_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/12_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/13_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/14_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/15_gobBsAs_850_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/16_gobBsAs_850_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/17_gobBsAs_850_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/18_gobBsAs_850_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/19_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/20_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/21_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/22_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/23_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/24_gobBsAs_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/25_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/26_gobBsAs_850_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/27_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/28_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/29_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/30_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/31_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/32_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/33_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/34_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/35_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/36_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/37_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/1_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/2_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/3_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/4_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/5_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/6_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/7_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/8_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/9_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/10_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/11_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/12_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/13_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/14_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/15_gobBsAs_850_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/16_gobBsAs_850_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/17_gobBsAs_850_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/18_gobBsAs_850_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/19_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/20_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/21_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/22_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/23_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/24_gobBsAs_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/25_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/26_gobBsAs_850_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/27_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/28_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/29_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/30_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/31_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/32_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/33_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/34_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/35_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/36_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/37_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
     ]
   },
 
@@ -413,43 +428,43 @@ const config: ItemType[] = [
     extraClass: "proyects",
     mobileHeight: "35vh",
     secondaryMedia: [
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/1_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/2_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/3_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/4_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/5_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/6_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/7_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/8_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/9_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/10_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/11_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/12_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/13_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/14_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/15_gobBsAs_850_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/16_gobBsAs_850_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/17_gobBsAs_850_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/18_gobBsAs_850_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/19_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/20_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/21_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/22_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/23_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/24_gobBsAs_800_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/25_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/26_gobBsAs_850_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/27_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/28_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/29_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/30_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/31_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/32_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/33_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/34_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/35_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/36_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_gobBsAs_ciudad_impacto/37_gobBsAs_1200_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/1_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/2_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/3_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/4_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/5_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/6_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/7_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/8_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/9_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/10_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/11_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/12_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/13_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/14_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/15_gobBsAs_850_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/16_gobBsAs_850_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/17_gobBsAs_850_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/18_gobBsAs_850_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/19_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/20_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/21_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/22_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/23_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/24_gobBsAs_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/25_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/26_gobBsAs_850_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/27_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/28_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/29_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/30_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/31_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/32_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/33_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/34_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/35_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/36_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_gobBsAs_ciudad_impacto/37_gobBsAs_1200_job_web.jpg", position: "top", type: "img" },
     ]
   },
 
@@ -468,20 +483,20 @@ const config: ItemType[] = [
     extraClass: "proyects",
     mobileHeight: "35vh",
     secondaryMedia: [
-      { src: "/images/JOB_Mercedes_ciudad/1_Mercedes_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Mercedes_ciudad/2_Mercedes_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Mercedes_ciudad/3_Mercedes_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Mercedes_ciudad/4_Mercedes_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Mercedes_ciudad/5_Mercedes_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Mercedes_ciudad/6_Mercedes_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Mercedes_ciudad/7_Mercedes_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Mercedes_ciudad/8_Mercedes_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Mercedes_ciudad/9_Mercedes_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Mercedes_ciudad/10_Mercedes_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Mercedes_ciudad/11_Mercedes_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Mercedes_ciudad/12_Mercedes_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Mercedes_ciudad/13_Mercedes_1200_job_web.jpg", position: "top", type:"img" },
-      { src: "/images/JOB_Mercedes_ciudad/14_Mercedes_1200_job_web.jpg", position: "top", type:"img" },
+      { src: "/images/JOB_Mercedes_ciudad/1_Mercedes_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Mercedes_ciudad/2_Mercedes_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Mercedes_ciudad/3_Mercedes_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Mercedes_ciudad/4_Mercedes_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Mercedes_ciudad/5_Mercedes_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Mercedes_ciudad/6_Mercedes_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Mercedes_ciudad/7_Mercedes_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Mercedes_ciudad/8_Mercedes_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Mercedes_ciudad/9_Mercedes_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Mercedes_ciudad/10_Mercedes_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Mercedes_ciudad/11_Mercedes_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Mercedes_ciudad/12_Mercedes_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Mercedes_ciudad/13_Mercedes_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Mercedes_ciudad/14_Mercedes_1200_job_web.jpg", position: "top", type: "img" },
     ]
   },
 
@@ -528,7 +543,7 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>Brava</title>
+        <title>brava</title>
         <meta name="description" content="Generated by Javo Web App" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -562,13 +577,12 @@ export const Home = () => {
         <div className='row justify-content-between align-items-center bannerContent'>
           <div className='w-fit-content d-flex'>
             <h1 className='f-100 f-helvetica f-heavy mb-0'>
-              <span className='ls-n-1'>br</span>
-              <span className='ls-n-2'>ava</span>
+              <span className='ls-n-1'>brava</span>
             </h1>
           </div>
           <div className='w-fit-content d-flex flex-column bannerPhrase'>
-            <p className='f-35 f-helvetica f-regular lh-30 ls-n-2 mb-0 '><b>comunicación</b></p>
-            <p className='f-35 f-helvetica f-regular lh-30 ls-n-2 mb-0 '><b>visual</b></p>
+            <p className='f-30 f-helvetica f-regular lh-30 ls-n-2 mb-0 '><b>comunicación</b></p>
+            <p className='f-30 f-helvetica f-regular lh-30 ls-n-2 mb-0 '><b>visual</b></p>
           </div>
         </div>
 
@@ -591,6 +605,8 @@ export const SectionLarge = (props: ItemType & { setModalInfo: Function }) => {
     textAlign,
     description,
     descriptionColor,
+    description2,
+    description2Color,
     minHeight,
     mobileHeight,
     mobileMinHeight,
@@ -624,6 +640,11 @@ export const SectionLarge = (props: ItemType & { setModalInfo: Function }) => {
     color: descriptionColor ? descriptionColor : "black"
   }
 
+  const description2Style = {
+    color: descriptionColor ? descriptionColor : "black"
+  }
+
+
   const textStyle = {
     justifyContent: textAlign ? textAlign : "start",
     display: "flex",
@@ -637,11 +658,11 @@ export const SectionLarge = (props: ItemType & { setModalInfo: Function }) => {
         <Shown partiallyVisible={true} >
           {/* <video src="/videos/banner.mp4" autoPlay={true} loop={true} muted={true} className='bannerVideo' id="myVideo"> */}
           {/* </video> */}
-          {title || description ? (
+          {title || description2 ? (
             <div className='SectionText'>
               <div className='SectionTextHolder' style={textStyle}>
                 {title && <p className='f-50 lh-48 title' style={titleStyle}><b>{title}</b></p>}
-                {description && <p className='f-50 lh-48 description' style={descriptionStyle}><b>{description}</b></p>}
+                {description2 && <p className='f-50 lh-48 description2' style={description2Style}><b>{description2}</b></p>}
               </div>
             </div>
           ) : <></>}
@@ -654,11 +675,11 @@ export const SectionLarge = (props: ItemType & { setModalInfo: Function }) => {
         <Shown partiallyVisible={true} >
           <div className='SectionImage d-none d-md-flex' style={style} />
           <div className='SectionImage mobileImage d-flex d-md-none' style={styleMobile} />
-          {title || description ? (
+          {title || description2 ? (
             <div className='SectionText'>
               <div className='SectionTextHolder' style={textStyle}>
                 {title && <p className='f-50 lh-48 title' style={titleStyle}><b>{title}</b></p>}
-                {description && <p className='f-50 lh-48 description' style={descriptionStyle}><b>{description}</b></p>}
+                {description2 && <p className='f-50 lh-48 description2' style={description2Style}><b>{description2}</b></p>}
               </div>
             </div>
           ) : <></>}
@@ -849,7 +870,7 @@ export const Footer = () => {
         </div>
         <div className="subtitleContent">
           <p className='subTitle'>
-            un equipo que busca resolver<br/>cada nueva situación con&nbsp;potencia,<br/>buen diseño y eficacia. 
+            un equipo que busca resolver<br />cada nueva situación con&nbsp;potencia,<br />buen diseño y eficacia.
           </p>
         </div>
       </div>
@@ -858,17 +879,17 @@ export const Footer = () => {
 
         <div className="textContent">
           <div className="textTitle">campañas</div>
-          <div className="text">Implementamos la solución visual de campañas comerciales, públicas<br/>y políticas en la dimensión<br/>y escala adecuadas para cada circunstancia.</div>
+          <div className="text">Implementamos la solución visual de campañas comerciales, públicas<br />y políticas en la dimensión<br />y escala adecuadas para cada circunstancia.</div>
         </div>
         <div className="textContent">
           <div className="textTitle">ciudades</div>
-          <div className="text">Abordamos la comunicación visual que la gestión de ciudades requiere con el adecuado cruce entre las demandas de la gestión<br/>y las prioridades de la comunidad.</div>
+          <div className="text">Abordamos la comunicación visual que la gestión de ciudades requiere con el adecuado cruce entre las demandas de la gestión<br />y las prioridades de la comunidad.</div>
         </div> <div className="textContent">
           <div className="textTitle">espacios</div>
-          <div className="text">Diseñamos espacios expositivos de alto impacto, combinando poder con sutileza. Experiencias sensoriales, bellas y efectivas que perfeccionan relatos<br/>y fortalecen marcas.</div>
+          <div className="text">Diseñamos espacios expositivos de alto impacto, combinando poder con sutileza. Experiencias sensoriales, bellas y efectivas que perfeccionan relatos<br />y fortalecen marcas.</div>
         </div> <div className="textContent">
           <div className="textTitle">consultoría</div>
-          <div className="text">Sabemos orientar, diseñar<br/>y optimizar equipos de diseño y producción audiovisual<br/>de organizaciones en la búsqueda de maximizar<br/>sus potencialidades.</div>
+          <div className="text">Sabemos orientar, diseñar<br />y optimizar equipos de diseño y producción audiovisual<br />de organizaciones en la búsqueda de maximizar<br />sus potencialidades.</div>
         </div>
 
       </div>
@@ -917,7 +938,7 @@ export const Footer = () => {
           <div className="brand">
             brava
           </div>
-{/*          <div className="phrase">
+          {/*          <div className="phrase">
             <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>comunicación</b></p>
             <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>visual</b></p>
           </div>
@@ -925,11 +946,9 @@ export const Footer = () => {
         </div>
         <div className="right d-flex col-6">
           <div className="contact">
-            cerrutiwald@gmail.com
+            cerrutiwald@gmail.com  &nbsp;  +54&nbsp;9&nbsp;11 0000&nbsp;0000
           </div>
-          <div className='contact'>
-            +54&nbsp;9&nbsp;11-0000&nbsp;0000
-          </div>
+
           <div className="city lh-25">
             Buenos Aires
           </div>
@@ -1004,8 +1023,8 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
             {selection === "Graphic" && modalInfo.secondaryMedia && (
               <div className='Graphic Video'>
                 <div className="modalImages">
-                  {modalInfo.secondaryMedia.map((image: { src: string, position: string, type:string }, index: number) => {
-                    if(image.type == "img") {
+                  {modalInfo.secondaryMedia.map((image: { src: string, position: string, type: string }, index: number) => {
+                    if (image.type == "img") {
                       return (
                         <img src={image.src} key={index} style={{ objectPosition: image.position }} className={lastImageChecker(index) ? "lastImg" : ""} alt="" />
                       )
@@ -1057,8 +1076,8 @@ export const Modal = ({ setModalInfo, modalInfo }: { setModalInfo: Function, mod
             {selection === "Graphic" && modalInfo.secondaryMedia && (
               <div className='Graphic'>
                 <div className="modalImages">
-                {modalInfo.secondaryMedia.map((image: { src: string, position: string, type:string }, index: number) => {
-                    if(image.type == "img") {
+                  {modalInfo.secondaryMedia.map((image: { src: string, position: string, type: string }, index: number) => {
+                    if (image.type == "img") {
                       return (
                         <img src={image.src} key={index} style={{ objectPosition: image.position }} className={lastImageChecker(index) ? "lastImg" : ""} alt="" />
                       )
