@@ -67,40 +67,57 @@ const config: ItemType[] = [
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
     clickeable: true,
-    img: "/images/img3.jpg",
+    img: "/images/JOB_TINA/Tina_Home.jpg",
     minHeight: "360px",
     height: "40vh",
-    title: "Casa del Bicentenario",
+    title: "Tina",
     //description: "Señalética",
     //descriptionColor: "white",
-    titleColor: "white",
+    titleColor: "#606060",
     textAlign: "end",
     mobileHeight: "35vh",
     category: "campañas",
     secondaryMedia: [
-      { src: "/images/img3b.jpg", position: "top", type: "img" },
-      { src: "/images/img2.jpg", position: "top", type: "img" },
-      { src: "/videos/it_joven_02.mp4", position: "top", type: "video" },
-      { src: "/images/img3b.jpg", position: "top", type: "img" },
-      { src: "/images/img2.jpg", position: "top", type: "img" },
+      { src: "/videos/JOB_TINA/2022_09_27_Tina_16_9.mp4", position: "top", type: "video" },
     ]
   },
   {
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
     title: "Clacso 2018",
-    titleColor: "#606060",
+    titleColor: "white",
     textAlign: "end",
     clickeable: true,
-    img: "/images/img4.jpg",
+    img: "/images/img11.jpg",
     minHeight: "360px",
+    category: "identidad",
     height: "40vh",
-    category: "campañas",
     mobileHeight: "35vh",
     secondaryMedia: [
-      { src: "/images/img4b.jpg", position: "center", type: "img" },
-      { src: "/images/img2.jpg", position: "top", type: "img" },
-      { src: "/images/img4b.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/1_Clacso_2018_IMG_8315_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/2_Clacso_2018_IMG_8372_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/3_Clacso_2018_IMG_8318_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/4_Clacso_2018_IMG_8386_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/5_Clacso_2018_IMG_8382_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/6_Clacso_2018_IMG_8379_Flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/7_Clacso_2018_IMG_8383_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/8_Clacso_2018_IMG_8409_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/9_Clacso_2018_edificios_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/10_Clacso_2018_117_Clacso2018_Relevamiento_20181119_JAD9307_800_job_we.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/11_Clacso_2018_100_Clacso2018_Relevamiento_20181119_JAD9277_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/12_Clacso_2018_112_Clacso2018_Relevamiento_20181119_JAD9297_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/13_Clacso_2018_IMG_8374_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/14_Clacso_2018_117_Clacso2018_Carteleria_20181119_MG_7073_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/15_Clacso_2018_IMG_8442_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/16_Clacso_2018_IMG_8378_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/17_Clacso_2018_clacso2018_poster_ext_foto_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/18_Clacso_2018_IMG_8267_flatt_1400_retocada_sin_texto_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/19_Clacso_2018_IMG_8300_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/20_Clacso_2018_IMG_8538_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/21_Clacso_2018_IMG_8758_flatt_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/22_Clacso_2018_3_almohadones_Negro_arriba_y_abajo_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Clacso_2018/23_Clacso_2018_IMG_8764_flatt_800_job_web.jpg", position: "top", type: "img" }
+
     ]
   },
   {
@@ -123,6 +140,7 @@ const config: ItemType[] = [
       { src: "/images/img5.jpg", position: "top", type: "img" },
     ]
   },
+  /*
   {
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
@@ -144,8 +162,25 @@ const config: ItemType[] = [
       "/videos/it_joven_02.mp4",
     ]
   },
-
-
+*/
+{
+  type: "small",
+  details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+  title: "Argentina te Busca",
+  //description: "señalética",
+  //descriptionColor: "#A09F97",
+  titleColor: "white",
+  textAlign: "end",
+  clickeable: true,
+  img: "/images/JOB_Argentina_Te_Busca/Argentina_Te_Busca_Home.jpg",
+  minHeight: "360px",
+  height: "40vh",
+  mobileHeight: "35vh",
+  category: "campañas",
+  secondaryMedia: [
+    { src: "/videos/JOB_Argentina_Te_Busca/2022_03_14_Argentina_te_busca_16_9.mp4", position: "top", type: "video" },
+  ]
+},
   {
     type: "large",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
@@ -229,39 +264,18 @@ const config: ItemType[] = [
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
     title: "Clacso 2018",
-    titleColor: "white",
+    titleColor: "#606060",
     textAlign: "end",
     clickeable: true,
-    img: "/images/img11.jpg",
+    img: "/images/img4.jpg",
     minHeight: "360px",
-    category: "identidad",
     height: "40vh",
+    category: "campañas",
     mobileHeight: "35vh",
     secondaryMedia: [
-      { src: "/images/JOB_Clacso_2018/1_Clacso_2018_IMG_8315_flatt_800_job_web.jpg", position: "top", type: "img" },
-      { src: "/images/JOB_Clacso_2018/2_Clacso_2018_IMG_8372_flatt_800_job_web.jpg", position: "top", type: "img" },
-      { src: "/images/JOB_Clacso_2018/3_Clacso_2018_IMG_8318_flatt_800_job_web.jpg", position: "top", type: "img" },
-      { src: "/images/JOB_Clacso_2018/4_Clacso_2018_IMG_8386_flatt_800_job_web.jpg", position: "top", type: "img" },
-      { src: "/images/JOB_Clacso_2018/5_Clacso_2018_IMG_8382_flatt_800_job_web.jpg", position: "top", type: "img" },
-      { src: "/images/JOB_Clacso_2018/6_Clacso_2018_IMG_8379_Flatt_800_job_web.jpg", position: "top", type: "img" },
-      { src: "/images/JOB_Clacso_2018/7_Clacso_2018_IMG_8383_flatt_800_job_web.jpg", position: "top", type: "img" },
-      { src: "/images/JOB_Clacso_2018/8_Clacso_2018_IMG_8409_flatt_800_job_web.jpg", position: "top", type: "img" },
-      { src: "/images/JOB_Clacso_2018/9_Clacso_2018_edificios_800_job_web.jpg", position: "top", type: "img" },
-      { src: "/images/JOB_Clacso_2018/10_Clacso_2018_117_Clacso2018_Relevamiento_20181119_JAD9307_800_job_we.jpg", position: "top", type: "img" },
-      { src: "/images/JOB_Clacso_2018/11_Clacso_2018_100_Clacso2018_Relevamiento_20181119_JAD9277_800_job_web.jpg", position: "top", type: "img" },
-      { src: "/images/JOB_Clacso_2018/12_Clacso_2018_112_Clacso2018_Relevamiento_20181119_JAD9297_800_job_web.jpg", position: "top", type: "img" },
-      { src: "/images/JOB_Clacso_2018/13_Clacso_2018_IMG_8374_flatt_800_job_web.jpg", position: "top", type: "img" },
-      { src: "/images/JOB_Clacso_2018/14_Clacso_2018_117_Clacso2018_Carteleria_20181119_MG_7073_800_job_web.jpg", position: "top", type: "img" },
-      { src: "/images/JOB_Clacso_2018/15_Clacso_2018_IMG_8442_flatt_800_job_web.jpg", position: "top", type: "img" },
-      { src: "/images/JOB_Clacso_2018/16_Clacso_2018_IMG_8378_flatt_800_job_web.jpg", position: "top", type: "img" },
-      { src: "/images/JOB_Clacso_2018/17_Clacso_2018_clacso2018_poster_ext_foto_800_job_web.jpg", position: "top", type: "img" },
-      { src: "/images/JOB_Clacso_2018/18_Clacso_2018_IMG_8267_flatt_1400_retocada_sin_texto_800_job_web.jpg", position: "top", type: "img" },
-      { src: "/images/JOB_Clacso_2018/19_Clacso_2018_IMG_8300_flatt_800_job_web.jpg", position: "top", type: "img" },
-      { src: "/images/JOB_Clacso_2018/20_Clacso_2018_IMG_8538_flatt_800_job_web.jpg", position: "top", type: "img" },
-      { src: "/images/JOB_Clacso_2018/21_Clacso_2018_IMG_8758_flatt_800_job_web.jpg", position: "top", type: "img" },
-      { src: "/images/JOB_Clacso_2018/22_Clacso_2018_3_almohadones_Negro_arriba_y_abajo_800_job_web.jpg", position: "top", type: "img" },
-      { src: "/images/JOB_Clacso_2018/23_Clacso_2018_IMG_8764_flatt_800_job_web.jpg", position: "top", type: "img" }
-
+      { src: "/images/img4b.jpg", position: "center", type: "img" },
+      { src: "/images/img2.jpg", position: "top", type: "img" },
+      { src: "/images/img4b.jpg", position: "top", type: "img" },
     ]
   },
   {
@@ -499,7 +513,25 @@ const config: ItemType[] = [
       { src: "/images/JOB_Mercedes_ciudad/14_Mercedes_1200_job_web.jpg", position: "top", type: "img" },
     ]
   },
-
+  {
+    type: "small",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    clickeable: true,
+    showOnlyOnFilter: true,
+    img: "/images/JOB_Dia_Del_Lector/Dia_Del_Lector_Home.jpg",
+    minHeight: "360px",
+    height: "40vh",
+    title: "Tina",
+    //description: "Señalética",
+    //descriptionColor: "white",
+    titleColor: "#606060",
+    textAlign: "end",
+    mobileHeight: "35vh",
+    category: "poupurri",
+    secondaryMedia: [
+      { src: "/videos/JOB_Dia_Del_Lector/2022_08_23_Borges_web.mp4", position: "top", type: "video" },
+    ]
+  },
 ]
 
 export default function HomePage() {
