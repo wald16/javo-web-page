@@ -517,7 +517,6 @@ const config: ItemType[] = [
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
     clickeable: true,
-    showOnlyOnFilter: true,
     img: "/images/JOB_Dia_Del_Lector/Dia_Del_Lector_Home.jpg",
     minHeight: "360px",
     height: "40vh",
@@ -527,6 +526,7 @@ const config: ItemType[] = [
     titleColor: "#606060",
     textAlign: "end",
     mobileHeight: "35vh",
+    showOnlyOnFilter: true,
     category: "poupurri",
     secondaryMedia: [
       { src: "/videos/JOB_Dia_Del_Lector/2022_08_23_Borges_web.mp4", position: "top", type: "video" },
