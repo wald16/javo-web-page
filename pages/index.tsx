@@ -244,24 +244,24 @@ const config: ItemType[] = [
     ]
   },
 */
-{
-  type: "small",
-  details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-  title: "Argentina te Busca",
-  //description: "señalética",
-  //descriptionColor: "#A09F97",
-  titleColor: "white",
-  textAlign: "end",
-  clickeable: true,
-  img: "/images/JOB_Argentina_Te_Busca/Argentina_Te_Busca_Home.jpg",
-  minHeight: "360px",
-  height: "40vh",
-  mobileHeight: "35vh",
-  category: "campañas",
-  secondaryMedia: [
-    { src: "/videos/JOB_Argentina_Te_Busca/2022_03_14_Argentina_te_busca_16_9.mp4", position: "top", type: "video" },
-  ]
-},
+  {
+    type: "small",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "Argentina te Busca",
+    //description: "señalética",
+    //descriptionColor: "#A09F97",
+    titleColor: "white",
+    textAlign: "end",
+    clickeable: true,
+    img: "/images/JOB_Argentina_Te_Busca/Argentina_Te_Busca_Home.jpg",
+    minHeight: "360px",
+    height: "40vh",
+    mobileHeight: "35vh",
+    category: "campañas",
+    secondaryMedia: [
+      { src: "/videos/JOB_Argentina_Te_Busca/2022_03_14_Argentina_te_busca_16_9.mp4", position: "top", type: "video" },
+    ]
+  },
   {
     type: "large",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
@@ -1049,7 +1049,7 @@ export const Footer = () => {
         </div>
         <div className="right d-flex col-6">
           <div className="contact">
-            cerrutiwald@gmail.com  &nbsp;  +54&nbsp;9&nbsp;11 0000&nbsp;0000
+            agenciabrava@gmail.com  &nbsp;  +54&nbsp;9&nbsp;11 0000&nbsp;0000
           </div>
 
           <div className="city lh-25">

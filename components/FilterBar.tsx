@@ -32,7 +32,7 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
         },
         {
             key: "poupurri",
-            name: "poupurri",
+            name: "+más",
             text: "Cada proyecto a desarrollar<br/>es un nuevo desafío que<br/>nos gusta transitar.",
             text2: "Cada proyecto a desarrollar es un nuevo desafío<br/>que nos gusta transitar."
         },
@@ -51,7 +51,7 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
             text2: ""
         },
     ]
-    
+
 
     const [active, setActive] = React.useState(false);
     const [text, setText] = React.useState("")
@@ -65,13 +65,13 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
             setActiveFilter(key)
             setActive(true)
             setText(_text)
-            setTimeout(() =>{
-                if(window.innerWidth < 768) {
+            setTimeout(() => {
+                if (window.innerWidth < 768) {
                     setText(_text2)
-                    const ele = document.querySelector("#"+key)
-                    if(ele) ele.scrollIntoView({ behavior: "smooth" })
+                    const ele = document.querySelector("#" + key)
+                    if (ele) ele.scrollIntoView({ behavior: "smooth" })
                 }
-            },100)
+            }, 100)
         }
     }
 
@@ -124,7 +124,7 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
                                                 <div className={`item col-2 col-md-12  ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text, i.text2)} key={i.key} ><p>{i.name}</p></div>
                                                 {i.key == activeFilter && (
                                                     <div className={`text d-flex d-xl-none ${i.key == activeFilter ? "active" : ""}`}>
-                                                        <p dangerouslySetInnerHTML={{ __html: text}} />
+                                                        <p dangerouslySetInnerHTML={{ __html: text }} />
                                                     </div>
                                                 )}
                                             </div>
@@ -136,7 +136,7 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
                                                     <div className={`item col-2 col-md-12  ${i.key == activeFilter ? "active" : ""}`} key={i.key} ><p>{i.name}</p></div>
                                                     {i.key == activeFilter && (
                                                         <div className={`text d-flex d-xl-none ${i.key == activeFilter ? "active" : ""}`}>
-                                                            <p dangerouslySetInnerHTML={{ __html: text}} />
+                                                            <p dangerouslySetInnerHTML={{ __html: text }} />
                                                         </div>
                                                     )}
                                                 </div>
@@ -153,7 +153,7 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
                                             <div className={`item col-2 col-md-12 opacity-0 h-0 d-none d-lg-flex ${i.key == activeFilter ? "active" : ""}`} onClick={() => handleClick(i.key, i.text, i.text2)} key={i.key} ><p>{i.name}</p></div>
                                             {i.key == activeFilter && (
                                                 <div className={`text d-none d-xl-flex ${i.key == activeFilter ? "active" : ""}`}>
-                                                    <p dangerouslySetInnerHTML={{ __html: text}} />
+                                                    <p dangerouslySetInnerHTML={{ __html: text }} />
                                                 </div>
                                             )}
                                         </div>
