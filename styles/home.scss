@@ -141,12 +141,11 @@ body {
 
   .SectionImage {
     width: 100%;
-    height: 100%;
+    height: auto;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     transition: width 2s, height 4s;
-    min-height: 400px;
   }
 
   .mobileImage {
@@ -249,7 +248,9 @@ body {
   width: 100%;
 
   // padding-left: -30px;
-
+  @media screen and (max-width:768px) {
+    height: 290px;
+  }
 
 
   .title {
@@ -263,9 +264,10 @@ body {
     // letter-spacing: -3px;
 
     @media screen and (max-width:768px) {
-      font-size: 50px !important;
-      line-height: 45px !important;
-      margin-left: -10px;
+      margin-top: 15px;
+      font-size: 43px !important;
+      line-height: 35px !important;
+      margin-left: -3px;
     }
   }
 
@@ -274,13 +276,13 @@ body {
     font-size: 45px !important;
     width: 100% !important;
     font-family: helvetica !important;
-    line-height: 38px;
+    line-height: 43px;
     word-spacing: -3px;
     letter-spacing: 1.2px;
 
     @media screen and (max-width:768px) {
-      font-size: 30px !important;
-      line-height: 30px !important;
+      font-size: 23px !important;
+      line-height: 25px !important;
     }
 
     @media screen and (max-width:400px) {
@@ -468,6 +470,16 @@ body {
       cursor: pointer;
     }
   }
+
+  @media screen and (max-height: 768px) {
+    width: 70px;
+    height: 50px;
+
+    &:hover {
+      background-color: #ebf5f5;
+    }
+  }
+
 }
 
 .Modal-Wrapper {
@@ -854,8 +866,7 @@ body {
     padding-top: 10px;
 
     @media screen and (max-width:1000px) {
-      flex-direction: column;
-      // padding-left: 25px;
+      display: flex;
     }
 
     .biographie {
@@ -872,16 +883,20 @@ body {
       }
 
       @media screen and (max-width:1000px) {
+        min-width: 0px;
+        margin-top: -20px;
+
+
+
         &.mobile {
           display: flex;
+
         }
 
         &.desktop {
           display: none;
         }
 
-        width: 100%;
-        height: 400px;
         margin-bottom: 20px;
         display: flex;
         flex-direction: column;
@@ -902,8 +917,8 @@ body {
         @media screen and (max-width:1000px) {
           background-position: top;
           background-size: cover;
-          width: 220px;
-          height: 140px;
+          width: 160px;
+          height: 100px;
         }
 
         &.active {
@@ -922,6 +937,8 @@ body {
         word-spacing: -1px;
 
         @media screen and (max-width:768px) {
+          font-size: 18px;
+
           // margin-bottom: -500px;
         }
 
@@ -965,6 +982,7 @@ body {
 
       @media screen and (min-width:1500px) {
         margin-right: 90px;
+
       }
 
       .name {
@@ -1002,7 +1020,7 @@ body {
 
       @media screen and (max-width:1000px) {
         &.mobile {
-          display: flex;
+          display: none;
         }
 
         &.desktop {
@@ -1105,13 +1123,13 @@ body {
       font-size: 20px;
       height: 40px;
       font-weight: bold;
-      margin-left: -5px;
+      margin-left: -25px;
       word-spacing: -3px;
 
 
       @media screen and (max-width:1500px) {
         font-size: 17px;
-        margin-left: -5px;
+        margin-left: -25px;
         margin-top: 2px;
       }
 
@@ -1133,7 +1151,8 @@ body {
       }
 
       @media screen and (max-width:768px) {
-        font-size: 20px;
+        font-size: 18px;
+        word-spacing: 0.01px;
       }
 
 
@@ -1152,12 +1171,15 @@ body {
         letter-spacing: -2px;
         line-height: 50px;
         margin-bottom: 38px;
+        cursor: pointer;
 
 
         @media screen and (max-width:768px) {
           font-size: 50px;
+          margin-top: -60px;
         }
       }
+
 
       .phrase {
         margin: 0px;
@@ -1228,7 +1250,7 @@ body {
         font-size: 15px;
         line-height: 23px;
         height: fit-content;
-        margin-top: 10px;
+        margin-top: -10px;
         margin-left: 2px;
 
       }

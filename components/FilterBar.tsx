@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 
+
+
 export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: string, setActiveFilter: Function }) => {
     const router = useRouter();
 
@@ -80,6 +82,8 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
         setText("")
         setActive(false)
     }
+
+
 
     const getLastPositionActive = () => {
         let index = 0;
@@ -172,7 +176,9 @@ export const FilterBar = ({ activeFilter, setActiveFilter }: { activeFilter?: st
 
         </>
     )
+
 }
+
 
 
 {/* <div className='items'> */ }

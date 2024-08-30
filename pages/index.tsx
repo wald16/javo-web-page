@@ -1010,7 +1010,7 @@ export const Footer = () => {
               <div className="biographie mobile" key={b.key} onMouseEnter={() => handleHover(b.key, b.text, b.key)} onMouseLeave={() => handleHover("", "", "")} >
                 <div>
                   <div className={"biographieImg active"} style={{ backgroundImage: `url(${b.src})` }} ></div>
-                  <div className={"biographieName"}><p> {b.name}: </p>  </div>
+                  <div className={"biographieName"}><p> {b.name} </p>  </div>
                 </div>
 
               </div>
@@ -1038,7 +1038,7 @@ export const Footer = () => {
 
       <div className="finalContent d-flex">
         <div className="left">
-          <div className="brand">
+          <div className="brand" onClick={() => document.getElementById('top').scrollIntoView({ behavior: 'smooth' })}>
             brava
           </div>
           {/*          <div className="phrase">
