@@ -674,8 +674,8 @@ export default function HomePage() {
 }
 export const Home = () => {
   return (
-    <div className="container" id="top" >
-      <div className='Home stretch'>
+    <div className="container">
+      <div className='Home stretch' id='top'>
 
         <div className='row justify-content-between align-items-center bannerContent'>
           <div className='w-fit-content d-flex'>
