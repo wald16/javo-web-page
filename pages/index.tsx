@@ -652,7 +652,7 @@ export default function HomePage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`stretch`}>
-        <Home id="top" />
+        <Home />
         <Video />
         <FilterBar activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
         <div className="container">
@@ -674,7 +674,7 @@ export default function HomePage() {
 }
 export const Home = () => {
   return (
-    <div className="container">
+    <div className="container" id="top" >
       <div className='Home stretch'>
 
         <div className='row justify-content-between align-items-center bannerContent'>
