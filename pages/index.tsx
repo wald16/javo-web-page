@@ -66,7 +66,7 @@ const config: ItemType[] = [
   {
     type: "large",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-    title: "Presidencia",
+    title: "",
     titleColor: "#606060",
     textAlign: "end",
     minHeight: "500px",
@@ -157,7 +157,7 @@ const config: ItemType[] = [
   {
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-    title: "Clacso 2018",
+    title: "",
     titleColor: "white",
     textAlign: "end",
     clickeable: true,
@@ -247,7 +247,7 @@ const config: ItemType[] = [
   {
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-    title: "Argentina te Busca",
+    title: "Argentina te busca",
     //description: "señalética",
     //descriptionColor: "#A09F97",
     titleColor: "white",
@@ -285,7 +285,7 @@ const config: ItemType[] = [
   {
     type: "large",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-    title: "IT Joven",
+    title: "",
     titleColor: "white",
     textAlign: "end",
     minHeight: "680px",
@@ -338,7 +338,7 @@ const config: ItemType[] = [
     img: "/images/JOB_TINA/Tina_Home.jpg",
     minHeight: "360px",
     height: "40vh",
-    title: "Tina",
+    title: "",
     //description: "Señalética",
     //descriptionColor: "white",
     titleColor: "#606060",
@@ -372,7 +372,7 @@ const config: ItemType[] = [
     category: "espacios",
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-    title: "MICA",
+    title: "",
     titleColor: "black",
     textAlign: "end",
     clickeable: true,
@@ -1026,9 +1026,6 @@ export const Footer = () => {
           )
         })}
         <div id='biographieText' className={activeBio !== "" ? "biographieText desktop d-md-flex" : "desktop d-none"}>
-          {/* <p className='name'>
-            {bioName}:
-          </p> */}
           <p className='text'>
             {bioText}
           </p>

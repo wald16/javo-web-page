@@ -48,10 +48,10 @@ body {
 
     p {
       @media screen and (max-width:768px) {
-        font-size: 21px !important;
+        font-size: 19px !important;
         margin-bottom: -8px !important;
         line-height: 27PX !important;
-        margin-left: -20px;
+        margin-left: -30px;
         align-items: center;
         letter-spacing: 0.01px;
       }
@@ -206,7 +206,7 @@ body {
       .title {
         padding-left: 35px;
         margin-bottom: 13px;
-        font-size: 33px;
+        font-size: 30px;
         line-height: 65px;
 
         @media screen and (max-width:768px) {
@@ -323,7 +323,7 @@ body {
     margin-bottom: -20px;
 
     @media screen and (max-width:1200px) {
-      margin-bottom: -10px;
+      margin-bottom: -13px;
     }
 
     .text {
@@ -336,11 +336,11 @@ body {
       max-width: 100%;
       margin-left: 5px; //texto filtro alineado con titulo
       margin-bottom: 30px;
-      margin-top: 14px;
+      margin-top: -20px;
       color: #7E7E7E;
       font-family: Helvetica;
 
-      @media screen and (max-width:768px) {
+      @media screen and (max-width:1200px) {
         margin-left: 0px;
         margin-bottom: 25px;
         margin-top: 0px;
@@ -351,6 +351,7 @@ body {
 
   @media (max-width:768px) {
     padding: 10px;
+
 
   }
 
@@ -367,10 +368,12 @@ body {
   .items,
   .mobileItems {
     // background-color: red;
-    padding-bottom: 10px;
+    padding-bottom: 40px;
 
     @media screen and (max-width: 1200px) {
       flex-direction: column;
+      padding-bottom: 20px;
+
 
     }
 
@@ -601,6 +604,17 @@ body {
           cursor: pointer;
           padding: 10px;
           margin-right: 5px;
+
+          @media screen and (max-width:768px) {
+            img {
+              width: 40px;
+              height: auto;
+              margin-right: -6px;
+            }
+          }
+
+
+
 
           &:hover {
             opacity: 1;
@@ -860,13 +874,13 @@ body {
     // background-color: green;
     margin-bottom: 30px;
     height: fit-content;
-    display: flex;
+    display: none;
     color: $black;
     // padding-left: 15px;
     padding-top: 10px;
 
     @media screen and (max-width:1000px) {
-      display: flex;
+      display: none;
     }
 
     .biographie {
@@ -929,9 +943,9 @@ body {
       }
 
       .biographieName {
-        font-size: 22px;
+        font-size: 20px;
         color: #a5a5a5;
-        font-weight: bolder;
+        font-weight: 500;
         font-family: helvetica;
         transition: all ease-in 0.2s;
         word-spacing: -1px;
@@ -949,7 +963,7 @@ body {
     }
 
     .biographieText {
-      width: 53%;
+      width: 43%;
       // background-color: red;
       height: 290px;
       display: flex;
@@ -995,8 +1009,8 @@ body {
 
       .text {
         color: grey;
-        line-height: 24px;
-        font-size: 22px;
+        line-height: 22px;
+        font-size: 20px;
         font-weight: 400;
 
         @media screen and (max-width:1200px) {
