@@ -675,7 +675,7 @@ export default function HomePage() {
 export const Home = () => {
   return (
     <div className="container">
-      <div className='Home stretch'>
+      <div className='Home stretch' id='top'>
 
         <div className='row justify-content-between align-items-center bannerContent'>
           <div className='w-fit-content d-flex'>
@@ -1035,9 +1035,18 @@ export const Footer = () => {
 
       <div className="finalContent d-flex">
         <div className="left">
-          <div className="brand" onClick={() => document.getElementById('top').scrollIntoView({ behavior: 'smooth' })}>
+          <div
+            className="brand"
+            onClick={() => {
+              const element = document.getElementById('top');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
             brava
           </div>
+
           {/*          <div className="phrase">
             <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>comunicación</b></p>
             <p className='f-30 f-helvetica f-heavy lh-25 ls-n-2 c-gray'><b>visual</b></p>
