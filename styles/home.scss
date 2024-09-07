@@ -225,7 +225,7 @@ body {
         line-height: 65px;
 
         @media screen and (max-width:768px) {
-          font-size: 25px;
+          font-size: 23px;
           margin-bottom: 18px;
           line-height: 20px;
           padding-left: 13px;
@@ -526,7 +526,7 @@ body {
 
     // overflow-y: auto;
     @media screen and (max-height: 800px) {
-      width: 900px;
+      width: 700px;
       height: 80%;
     }
 
@@ -619,12 +619,30 @@ body {
           cursor: pointer;
           padding: 10px;
           margin-right: 5px;
+          margin-top: 8px;
+
+          img {
+            width: 50px;
+            height: auto;
+
+          }
+
 
           @media screen and (max-width:768px) {
             img {
               width: 40px;
               height: auto;
               margin-right: -6px;
+            }
+          }
+
+          @media screen and (max-width:1240px) {
+            img {
+              width: 40px;
+              height: auto;
+              margin-right: 10px;
+              margin-top: -1px;
+
             }
           }
 
