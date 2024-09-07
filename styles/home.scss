@@ -87,6 +87,21 @@ body {
   height: 100%;
 }
 
+.mobile-only-project {
+  display: block;
+
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
+}
+
+.desktop-only-project {
+  display: block;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
 
 
 .Section {

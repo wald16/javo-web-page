@@ -30,7 +30,6 @@ export type ItemType = {
   secondaryVideos?: string[],
   details: string,
 
-
 }
 
 const text =
@@ -79,6 +78,81 @@ const config: ItemType[] = [
     // title: "LARGE BUT SHORTER",
     category: "identidad",
     showOnlyOnFilter: false,
+    extraClass: "desktop-only-project",
+    secondaryMedia: [
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_01.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_02.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_03.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_04.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_05.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_06.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_07.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_08.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_09.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_10.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_11.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_12.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_13.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_14.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_15.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_16.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_17.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_18.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_19.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_20.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_21.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_22.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_23.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_24.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_25.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_26.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_27.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_28.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_29.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_30.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_31.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_32.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_33.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_34.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_35.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_36.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_37.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_38.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_39.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_40.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_41.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_42.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_43.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_44.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_45.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_46.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_47.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_48.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_49.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_50.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_51.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_52.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_53.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_54.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_55.jpg", position: "top", type: "img" },
+    ]
+  },
+  {
+    type: "large",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "",
+    titleColor: "#606060",
+    textAlign: "end",
+    minHeight: "500px",
+    height: "30vh",
+    mobileHeight: "35vh",
+    // mobileMinHeight: "auto",
+    img: "/images/JOB_Presidencia/Presidencia_1200_job_web_HOME_mobile.jpg",
+    clickeable: true,
+    // title: "LARGE BUT SHORTER",
+    category: "identidad",
+    showOnlyOnFilter: false,
+    extraClass: "mobile-only-project",
     secondaryMedia: [
       { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_01.jpg", position: "top", type: "img" },
       { src: "/images/JOB_Presidencia/Presidencia_1200_job_web_02.jpg", position: "top", type: "img" },
@@ -149,6 +223,7 @@ const config: ItemType[] = [
     height: "40vh",
     category: "poupurri",
     mobileHeight: "35vh",
+    extraClass: "mobile-only-project",
     secondaryMedia: [
       { src: "/images/img4b.jpg", position: "center", type: "img" },
       { src: "/images/img2.jpg", position: "top", type: "img" },
@@ -843,7 +918,7 @@ export const SectionSmall = (props: ItemType & { setModalInfo: Function }) => {
   }
 
   return (
-    <div className={`Section SectionSmall col-12 col-md-6 p-0 ${clickeable ? "clickeable" : ""}`} onClick={() => { clickeable ? setModalInfo(props as ItemType) : () => { } }}>
+    <div className={`Section SectionSmall col-12 col-md-6 p-0 ${clickeable ? "clickeable" : ""} ${props.extraClass || ""}`} onClick={() => { clickeable ? setModalInfo(props as ItemType) : () => { } }}>
       <Shown partiallyVisible={true} >
         <div className='SectionImage d-none d-md-flex' style={style} />
         <div className='SectionImage mobileImage d-flex d-md-none' style={styleMobile} />
