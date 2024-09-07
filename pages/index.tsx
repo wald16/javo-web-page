@@ -474,7 +474,7 @@ const config: ItemType[] = [
   {
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-    title: "Segunda Dosis",
+    title: " Dosis",
     description: "",
     descriptionColor: "#A09F97",
     titleColor: "white",
@@ -493,7 +493,7 @@ const config: ItemType[] = [
   {
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-    title: "Segunda Dosis",
+    title: "",
     description: "",
     descriptionColor: "#A09F97",
     titleColor: "white",
