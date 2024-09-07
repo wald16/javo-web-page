@@ -66,7 +66,7 @@ const config: ItemType[] = [
   {
     type: "large",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-    title: "",
+    title: "AAA",
     titleColor: "#606060",
     textAlign: "end",
     minHeight: "500px",
