@@ -30,6 +30,7 @@ export type ItemType = {
   secondaryVideos?: string[],
   details: string,
 
+
 }
 
 const text =
