@@ -504,7 +504,7 @@ const config: ItemType[] = [
     height: "40vh",
     mobileHeight: "35vh",
     category: "campaña",
-    extraClass: "desktop-only-project",
+    extraClass: "mobile-only-project",
     secondaryMedia: [
       { src: "/videos/JOB_Segunda_Dosis/2021_12_22_Animacion_Segunda_Dosis_16_9_v3.mp4", position: "top", type: "video" },
     ]
@@ -513,7 +513,7 @@ const config: ItemType[] = [
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
     clickeable: true,
-    img: "/images/JOB_TINA/job_Tina_HOME_mobile.jpg",
+    img: "/images/JOB_TINA/job_Tina_HOME_desktop.jpg",
     minHeight: "360px",
     height: "40vh",
     title: "",
@@ -523,7 +523,7 @@ const config: ItemType[] = [
     textAlign: "end",
     mobileHeight: "35vh",
     category: "campañas",
-    extraClass: "mobile-only-project",
+    extraClass: "desktop-only-project",
     secondaryMedia: [
       { src: "/videos/JOB_TINA/2022_09_27_Tina_16_9.mp4", position: "top", type: "video" },
       { src: "/images/JOB_TINA/job_Tina_1.jpg", position: "top", type: "img" },
@@ -540,7 +540,7 @@ const config: ItemType[] = [
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
     clickeable: true,
-    img: "/images/JOB_TINA/job_Tina_HOME_desktop.jpg",
+    img: "/images/JOB_TINA/job_Tina_HOME_mobile.jpg",
     minHeight: "360px",
     height: "40vh",
     title: "",
