@@ -436,7 +436,7 @@ const config: ItemType[] = [
   {
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-    title: "lorem ipsum",
+    title: "",
     img: "/images/JOB_StarBi/StarBi_job_web_HOME.jpg",
     titleColor: "white",
     textAlign: "left",
@@ -731,6 +731,36 @@ const config: ItemType[] = [
   {
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "",
+    titleColor: "black",
+    textAlign: "end",
+    clickeable: true,
+    img: "/images/JOB_Trafico_Ilicito/Trafico_ilicito_1200_job_web_HOME.jpg",
+    minHeight: "360px",
+    category: "campañas",
+    height: "40vh",
+    mobileHeight: "35vh",
+    showOnlyOnFilter: true,
+    secondaryMedia: [
+      { src: "/images/JOB_Trafico_Ilicito/1_Trafico_ilicito_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Trafico_Ilicito/2_Trafico_ilicito_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Trafico_Ilicito/3_Trafico_ilicito_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Trafico_Ilicito/4_Trafico_ilicito_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Trafico_Ilicito/5_Trafico_ilicito_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Trafico_Ilicito/6_Trafico_ilicito_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Trafico_Ilicito/7_Trafico_ilicito_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Trafico_Ilicito/8_Trafico_ilicito_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Trafico_Ilicito/9_Trafico_ilicito_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Trafico_Ilicito/10_Trafico_ilicito_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Trafico_Ilicito/11_Trafico_ilicito_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Trafico_Ilicito/12_Trafico_ilicito_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Trafico_Ilicito/13_Trafico_ilicito_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Trafico_Ilicito/14_Trafico_ilicito_1200_job_web.jpg", position: "top", type: "img" },
+    ]
+  },
+  {
+    type: "small",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
     title: "Diagnóstico Maipú",
     titleColor: "black",
     textAlign: "end",
@@ -745,7 +775,6 @@ const config: ItemType[] = [
       { src: "/images/img2.jpg", position: "top", type: "img" },
       { src: "/images/img6.jpg", position: "top", type: "img" },
     ]
-
   },
   {
     category: "espacios",
