@@ -525,9 +525,9 @@ const config: ItemType[] = [
     category: "campañas",
     extraClass: "desktop-only-project",
     secondaryMedia: [
-      { src: "/videos/JOB_TINA/2022_09_27_Tina_16_9.mp4", position: "top", type: "video" },
       { src: "/images/JOB_TINA/job_Tina_1.jpg", position: "top", type: "img" },
       { src: "/images/JOB_TINA/job_Tina_2.jpg", position: "top", type: "img" },
+      { src: "/videos/JOB_TINA/2022_09_27_Tina_16_9.mp4", position: "top", type: "video" },
       { src: "/images/JOB_TINA/job_Tina_3.jpg", position: "top", type: "img" },
       { src: "/images/JOB_TINA/job_Tina_4.jpg", position: "top", type: "img" },
       { src: "/images/JOB_TINA/job_Tina_5.jpg", position: "top", type: "img" },
@@ -552,9 +552,9 @@ const config: ItemType[] = [
     category: "campañas",
     extraClass: "mobile-only-project",
     secondaryMedia: [
-      { src: "/videos/JOB_TINA/2022_09_27_Tina_16_9.mp4", position: "top", type: "video" },
       { src: "/images/JOB_TINA/job_Tina_1.jpg", position: "top", type: "img" },
       { src: "/images/JOB_TINA/job_Tina_2.jpg", position: "top", type: "img" },
+      { src: "/videos/JOB_TINA/2022_09_27_Tina_16_9.mp4", position: "top", type: "video" },
       { src: "/images/JOB_TINA/job_Tina_3.jpg", position: "top", type: "img" },
       { src: "/images/JOB_TINA/job_Tina_4.jpg", position: "top", type: "img" },
       { src: "/images/JOB_TINA/job_Tina_5.jpg", position: "top", type: "img" },
