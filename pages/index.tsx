@@ -413,12 +413,12 @@ const config: ItemType[] = [
   {
     type: "small",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
-    title: "lorem ipsum",
+    title: "",
     img: "/images/JOB_In_Situ/1_insitu_1200_job_web_HOME.jpg",
     titleColor: "white",
     textAlign: "left",
     minHeight: "360px",
-    height: "30vw",
+    height: "25vw",
     clickeable: true,
     showOnlyOnFilter: true,
     category: "identidad",
@@ -431,6 +431,26 @@ const config: ItemType[] = [
       { src: "/images/JOB_In_Situ/4_insitu_1200_job_web.jpg", position: "top", type: "img" },
       { src: "/images/JOB_In_Situ/5_insitu_1200_job_web.jpg", position: "top", type: "img" },
       { src: "/images/JOB_In_Situ/6_insitu_1200_job_web.jpg", position: "top", type: "img" },
+    ]
+  },
+  {
+    type: "small",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "lorem ipsum",
+    img: "/images/JOB_StarBi/StarBi_job_web_HOME.jpg",
+    titleColor: "white",
+    textAlign: "left",
+    minHeight: "360px",
+    height: "25vw",
+    clickeable: true,
+    showOnlyOnFilter: true,
+    category: "identidad",
+    extraClass: "proyects",
+    mobileHeight: "35vh",
+    secondaryMedia: [
+      { src: "/images/JOB_StarBi/1_StarBi_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_StarBi/2_StarBi_800_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_StarBi/3_StarBi_800_job_web.jpg", position: "top", type: "img" },
     ]
   },
   {
