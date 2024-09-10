@@ -262,7 +262,7 @@ const config: ItemType[] = [
     titleColor: "#606060",
     textAlign: "end",
     clickeable: true,
-    img: "/images/JOB_Imparable/job_Imparable_HOME_desktop.jpg",
+    img: "/images/JOB_Imparable/job_Imparable_HOME_mobile.jpg",
     minHeight: "360px",
     height: "40vh",
     category: "poupurri",
