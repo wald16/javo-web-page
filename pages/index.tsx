@@ -734,9 +734,38 @@ const config: ItemType[] = [
       { src: "/images/JOB_MICA_2013/15_MICA_2013_DSCN3085_800_job_web.jpg", position: "top", type: "img" },
       { src: "/images/JOB_MICA_2013/16_MICA_2013_DSCN3087_800_job_web.jpg", position: "top", type: "img" },
     ]
-
   },
-
+  {
+    category: "espacios",
+    type: "small",
+    details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
+    title: "",
+    titleColor: "black",
+    textAlign: "end",
+    clickeable: true,
+    img: "/images/JOB_Experiencia_Cultura_Feria_del_libro_2016/ExperienciaCultura_2016_1200_job_web_HOME.jpg",
+    minHeight: "360px",
+    height: "40vh",
+    mobileHeight: "35vh",
+    showOnlyOnFilter: true,
+    secondaryMedia: [
+      { src: "/images/JOB_Experiencia_Cultura_Feria_del_libro_2016/1_ExperienciaCultura_2016_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Experiencia_Cultura_Feria_del_libro_2016/2_ExperienciaCultura_2016_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Experiencia_Cultura_Feria_del_libro_2016/3_ExperienciaCultura_2016_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Experiencia_Cultura_Feria_del_libro_2016/4_ExperienciaCultura_2016_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Experiencia_Cultura_Feria_del_libro_2016/5_ExperienciaCultura_2016_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Experiencia_Cultura_Feria_del_libro_2016/6_ExperienciaCultura_2016_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Experiencia_Cultura_Feria_del_libro_2016/7_ExperienciaCultura_2016_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Experiencia_Cultura_Feria_del_libro_2016/8_ExperienciaCultura_2016_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Experiencia_Cultura_Feria_del_libro_2016/9_ExperienciaCultura_2016_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Experiencia_Cultura_Feria_del_libro_2016/10_ExperienciaCultura_2016_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Experiencia_Cultura_Feria_del_libro_2016/11_ExperienciaCultura_2016_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Experiencia_Cultura_Feria_del_libro_2016/12_ExperienciaCultura_2016_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Experiencia_Cultura_Feria_del_libro_2016/13_ExperienciaCultura_2016_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Experiencia_Cultura_Feria_del_libro_2016/14_ExperienciaCultura_2016_1200_job_web.jpg", position: "top", type: "img" },
+      { src: "/images/JOB_Experiencia_Cultura_Feria_del_libro_2016/15_ExperienciaCultura_2016_1200_job_web.jpg", position: "top", type: "img" },
+    ]
+  },
   {
     type: "large",
     details: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia dolor debitis corrupti voluptate tenetur tempore sunt cupiditate. Deleniti, eligendi.",
